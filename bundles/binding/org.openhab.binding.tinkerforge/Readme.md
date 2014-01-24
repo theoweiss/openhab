@@ -20,4 +20,4 @@
      * when binding is running use the Tinkerforge autoreconnect feature
 # other changes
    * updated Tinkerforge API to 2.0.12
- 
+   * updated Tinkerforge API to 2.0.14
