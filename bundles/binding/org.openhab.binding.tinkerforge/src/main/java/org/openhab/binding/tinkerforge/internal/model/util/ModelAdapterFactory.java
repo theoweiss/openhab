@@ -19,6 +19,7 @@ import org.openhab.binding.tinkerforge.internal.model.CallbackListener;
 import org.openhab.binding.tinkerforge.internal.model.DigitalActor;
 import org.openhab.binding.tinkerforge.internal.model.DigitalSensor;
 import org.openhab.binding.tinkerforge.internal.model.Ecosystem;
+import org.openhab.binding.tinkerforge.internal.model.GenericDevice;
 import org.openhab.binding.tinkerforge.internal.model.IODevice;
 import org.openhab.binding.tinkerforge.internal.model.InterruptListener;
 import org.openhab.binding.tinkerforge.internal.model.MActor;
@@ -38,24 +39,24 @@ import org.openhab.binding.tinkerforge.internal.model.MBrickletTemperature;
 import org.openhab.binding.tinkerforge.internal.model.MDevice;
 import org.openhab.binding.tinkerforge.internal.model.MDualRelay;
 import org.openhab.binding.tinkerforge.internal.model.MDualRelayBricklet;
-import org.openhab.binding.tinkerforge.internal.model.MInSwitchActor;
 import org.openhab.binding.tinkerforge.internal.model.MIndustrialDigitalIn;
 import org.openhab.binding.tinkerforge.internal.model.MIndustrialQuadRelay;
 import org.openhab.binding.tinkerforge.internal.model.MIndustrialQuadRelayBricklet;
 import org.openhab.binding.tinkerforge.internal.model.MLCD20x4Backlight;
 import org.openhab.binding.tinkerforge.internal.model.MLCD20x4Button;
 import org.openhab.binding.tinkerforge.internal.model.MLCDSubDevice;
-import org.openhab.binding.tinkerforge.internal.model.MOutSwitchActor;
 import org.openhab.binding.tinkerforge.internal.model.MSensor;
 import org.openhab.binding.tinkerforge.internal.model.MServo;
 import org.openhab.binding.tinkerforge.internal.model.MSubDevice;
 import org.openhab.binding.tinkerforge.internal.model.MSubDeviceHolder;
-import org.openhab.binding.tinkerforge.internal.model.MSwitchActor;
 import org.openhab.binding.tinkerforge.internal.model.MTFConfigConsumer;
 import org.openhab.binding.tinkerforge.internal.model.MTextActor;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.OHConfig;
 import org.openhab.binding.tinkerforge.internal.model.OHTFDevice;
+import org.openhab.binding.tinkerforge.internal.model.SwitchActor;
+import org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple;
+import org.openhab.binding.tinkerforge.internal.model.SwitchActorWc;
 import org.openhab.binding.tinkerforge.internal.model.TFBaseConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.TFBrickDCConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.TFConfig;
@@ -167,19 +168,19 @@ public class ModelAdapterFactory extends AdapterFactoryImpl
         return createMActorAdapter();
       }
       @Override
-      public Adapter caseMSwitchActor(MSwitchActor object)
+      public Adapter caseSwitchActor(SwitchActor object)
       {
-        return createMSwitchActorAdapter();
+        return createSwitchActorAdapter();
       }
       @Override
-      public Adapter caseMOutSwitchActor(MOutSwitchActor object)
+      public Adapter caseSwitchActorSimple(SwitchActorSimple object)
       {
-        return createMOutSwitchActorAdapter();
+        return createSwitchActorSimpleAdapter();
       }
       @Override
-      public Adapter caseMInSwitchActor(MInSwitchActor object)
+      public Adapter caseSwitchActorWc(SwitchActorWc object)
       {
-        return createMInSwitchActorAdapter();
+        return createSwitchActorWcAdapter();
       }
       @Override
       public Adapter caseGenericDevice(GenericDevice object)
@@ -669,46 +670,46 @@ public class ModelAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.openhab.binding.tinkerforge.internal.model.MSwitchActor <em>MSwitch Actor</em>}'.
+   * Creates a new adapter for an object of class '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActor <em>Switch Actor</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.openhab.binding.tinkerforge.internal.model.MSwitchActor
+   * @see org.openhab.binding.tinkerforge.internal.model.SwitchActor
    * @generated
    */
-  public Adapter createMSwitchActorAdapter()
+  public Adapter createSwitchActorAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.openhab.binding.tinkerforge.internal.model.MOutSwitchActor <em>MOut Switch Actor</em>}'.
+   * Creates a new adapter for an object of class '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple <em>Switch Actor Simple</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.openhab.binding.tinkerforge.internal.model.MOutSwitchActor
+   * @see org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple
    * @generated
    */
-  public Adapter createMOutSwitchActorAdapter()
+  public Adapter createSwitchActorSimpleAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.openhab.binding.tinkerforge.internal.model.MInSwitchActor <em>MIn Switch Actor</em>}'.
+   * Creates a new adapter for an object of class '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActorWc <em>Switch Actor Wc</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.openhab.binding.tinkerforge.internal.model.MInSwitchActor
+   * @see org.openhab.binding.tinkerforge.internal.model.SwitchActorWc
    * @generated
    */
-  public Adapter createMInSwitchActorAdapter()
+  public Adapter createSwitchActorWcAdapter()
   {
     return null;
   }

@@ -70,10 +70,7 @@ import com.tinkerforge.TimeoutException;
  */
 public class MServoImpl extends MinimalEObjectImpl.Container implements MServo
 {
-	private static final short OFF_POSITION = -9000;
-	private static final short ON_POSITION = 9000;
-
-/**
+	/**
    * The default value of the '{@link #getSwitchState() <em>Switch State</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -82,7 +79,6 @@ public class MServoImpl extends MinimalEObjectImpl.Container implements MServo
    * @ordered
    */
   protected static final OnOffValue SWITCH_STATE_EDEFAULT = null;
-
   /**
    * The cached value of the '{@link #getSwitchState() <em>Switch State</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -92,8 +88,10 @@ public class MServoImpl extends MinimalEObjectImpl.Container implements MServo
    * @ordered
    */
   protected OnOffValue switchState = SWITCH_STATE_EDEFAULT;
+  private static final short OFF_POSITION = -9000;
+	private static final short ON_POSITION = 9000;
 
-  /**
+/**
    * The default value of the '{@link #getLogger() <em>Logger</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

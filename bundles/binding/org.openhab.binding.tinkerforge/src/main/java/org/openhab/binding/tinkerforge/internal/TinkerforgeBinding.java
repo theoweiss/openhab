@@ -38,11 +38,9 @@ import org.openhab.binding.tinkerforge.internal.model.IODevice;
 import org.openhab.binding.tinkerforge.internal.model.MBaseDevice;
 import org.openhab.binding.tinkerforge.internal.model.MBrickd;
 import org.openhab.binding.tinkerforge.internal.model.MDevice;
-import org.openhab.binding.tinkerforge.internal.model.MInSwitchActor;
 import org.openhab.binding.tinkerforge.internal.model.MSensor;
 import org.openhab.binding.tinkerforge.internal.model.MSubDevice;
 import org.openhab.binding.tinkerforge.internal.model.MSubDeviceHolder;
-import org.openhab.binding.tinkerforge.internal.model.MSwitchActor;
 import org.openhab.binding.tinkerforge.internal.model.MTFConfigConsumer;
 import org.openhab.binding.tinkerforge.internal.model.MTextActor;
 import org.openhab.binding.tinkerforge.internal.model.ModelFactory;
@@ -50,6 +48,9 @@ import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.NoSubIds;
 import org.openhab.binding.tinkerforge.internal.model.OHConfig;
 import org.openhab.binding.tinkerforge.internal.model.OHTFDevice;
+import org.openhab.binding.tinkerforge.internal.model.SwitchActor;
+import org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple;
+import org.openhab.binding.tinkerforge.internal.model.SwitchActorWc;
 import org.openhab.binding.tinkerforge.internal.model.TFBaseConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.TFBrickDCConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.TFConfig;
@@ -427,8 +428,8 @@ public class TinkerforgeBinding extends
 	 * Processes change events from the {@link Ecosystem}. Sensor values from
 	 * {@link MSensor} are handled by
 	 * {@link #processSensorValue(MSensor, Notification) processSensorValue},
-	 * actor values from {@link MSwitchActore} are handled by
-	 * {@link #processSwitchActorValue(MSwitchActor, Notification)
+	 * actor values from {@link SwitchActor} are handled by
+	 * {@link #processSwitchActorValue(SwitchActor, Notification)
 	 * processSwitchActorValue}. (no add or remove events, these are handled in
 	 * {@link #initializeTFDevices(Notification) initializeTFDevices}).
 	 * 
@@ -444,11 +445,11 @@ public class TinkerforgeBinding extends
 			if (featureID == ModelPackage.MSENSOR__SENSOR_VALUE) {
 				processValue((MBaseDevice) sensor, notification);
 			}
-		} else if (notification.getNotifier() instanceof MSwitchActor) {
-			MSwitchActor switchActor = (MSwitchActor) notification
+		} else if (notification.getNotifier() instanceof SwitchActor) {
+			SwitchActor switchActor = (SwitchActor) notification
 					.getNotifier();
-			int featureID = notification.getFeatureID(MSwitchActor.class);
-			if (featureID == ModelPackage.MSWITCH_ACTOR__SWITCH_STATE) {
+			int featureID = notification.getFeatureID(SwitchActor.class);
+			if (featureID == ModelPackage.SWITCH_ACTOR__SWITCH_STATE) {
 				processValue((MBaseDevice) switchActor, notification);
 			}
 		} else {
@@ -617,13 +618,22 @@ public class TinkerforgeBinding extends
 			if (mDevice instanceof MSensor) {
 				postUpdate(deviceUid, deviceSubId,
 						((MSensor<?>) mDevice).fetchSensorValue());
-			} else if (mDevice instanceof MInSwitchActor
+			} else if (mDevice instanceof SwitchActor
 					&& item instanceof SwitchItem) {
-				OnOffValue switchState = ((MInSwitchActor) mDevice)
+			  if (mDevice instanceof SwitchActorSimple){
+				OnOffValue switchState = ((SwitchActorSimple) mDevice)
 						.fetchSwitchState();
 				postUpdate(deviceUid, deviceSubId, switchState);
 				logger.debug("execute called: found MInSwitchActor state: {}",
 						switchState);
+			  }
+			  else if (mDevice instanceof SwitchActorWc){
+                OnOffValue switchState = ((SwitchActorWc) mDevice)
+                    .fetchSwitchState(provider.getDeviceOptions(itemName));
+                    postUpdate(deviceUid, deviceSubId, switchState);
+                      logger.debug("execute called: found SwitchActorWc state: {}",
+                    switchState);
+			  }
 			} else if (mDevice instanceof DigitalActor) {
 				HighLowValue highLowValue = ((DigitalActor) mDevice)
 						.fetchDigitalValue();
@@ -737,6 +747,7 @@ public class TinkerforgeBinding extends
 					String deviceUid = provider.getUid(itemName);
 					String deviceSubId = provider.getSubId(itemName);
 					String deviceName = provider.getName(itemName);
+					DeviceOptions conf = provider.getDeviceOptions(itemName);
 					if (deviceName != null) {
 						String[] ids = getDeviceIdsForDeviceName(deviceName);
 						deviceUid = ids[0];
@@ -751,11 +762,17 @@ public class TinkerforgeBinding extends
 						if (command instanceof OnOffType) {
 							logger.trace("{} found onoff command",
 									LoggerConstants.COMMAND);
-							if (mDevice instanceof MInSwitchActor) {
+							if (mDevice instanceof SwitchActor) {
 								OnOffType cmd = (OnOffType) command;
 								OnOffValue state = cmd == OnOffType.OFF ? OnOffValue.OFF
 										: OnOffValue.ON;
-								((MSwitchActor) mDevice).turnSwitch(state);
+								if (mDevice instanceof SwitchActorSimple){
+								  ((SwitchActorSimple) mDevice).turnSwitch(state);
+								} 
+								else if (mDevice instanceof SwitchActorWc) 
+								{
+								  ((SwitchActorWc) mDevice).turnSwitch(state, conf);
+								}
 							}
 							else if (mDevice instanceof DigitalActor){
 								OnOffType cmd = (OnOffType) command;

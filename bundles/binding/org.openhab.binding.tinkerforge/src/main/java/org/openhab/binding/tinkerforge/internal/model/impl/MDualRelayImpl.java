@@ -217,6 +217,19 @@ private short relayNum;
    * <!-- end-user-doc -->
    * @generated
    */
+  public void setSwitchState(OnOffValue newSwitchState)
+  {
+    OnOffValue oldSwitchState = switchState;
+    switchState = newSwitchState;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MDUAL_RELAY__SWITCH_STATE, oldSwitchState, switchState));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Logger getLogger()
   {
     return logger;
@@ -759,19 +772,6 @@ private short relayNum;
 		setSwitchState(switchValue);
 		return switchValue;
 	}
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSwitchState(OnOffValue newSwitchState)
-  {
-    OnOffValue oldSwitchState = switchState;
-    switchState = newSwitchState;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MDUAL_RELAY__SWITCH_STATE, oldSwitchState, switchState));
-  }
 
 	
 } //MDualRelayImpl

@@ -19,7 +19,7 @@ package org.openhab.binding.tinkerforge.internal.model;
  * @model
  * @generated
  */
-public interface MLCD20x4Backlight extends MInSwitchActor, MLCDSubDevice
+public interface MLCD20x4Backlight extends SwitchActorSimple, MLCDSubDevice
 {
   /**
    * Returns the value of the '<em><b>Device Type</b></em>' attribute.

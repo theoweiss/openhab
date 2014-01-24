@@ -27,7 +27,7 @@ import org.openhab.binding.tinkerforge.internal.model.MLCDSubDevice;
 import org.openhab.binding.tinkerforge.internal.model.MSubDevice;
 import org.openhab.binding.tinkerforge.internal.model.MSubDeviceHolder;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
-import org.openhab.binding.tinkerforge.internal.types.OnOffValue;
+import org.openhab.binding.tinkerforge.internal.types.HighLowValue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,7 +43,7 @@ import com.tinkerforge.BrickletLCD20x4;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl#getSwitchState <em>Switch State</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl#getSensorValue <em>Sensor Value</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl#getLogger <em>Logger</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl#getUid <em>Uid</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl#getEnabledA <em>Enabled A</em>}</li>
@@ -60,24 +60,14 @@ import com.tinkerforge.BrickletLCD20x4;
 public class MLCD20x4ButtonImpl extends MinimalEObjectImpl.Container implements MLCD20x4Button
 {
   /**
-   * The default value of the '{@link #getSwitchState() <em>Switch State</em>}' attribute.
+   * The cached value of the '{@link #getSensorValue() <em>Sensor Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSwitchState()
+   * @see #getSensorValue()
    * @generated
    * @ordered
    */
-  protected static final OnOffValue SWITCH_STATE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getSwitchState() <em>Switch State</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSwitchState()
-   * @generated
-   * @ordered
-   */
-  protected OnOffValue switchState = SWITCH_STATE_EDEFAULT;
+  protected HighLowValue sensorValue;
 
   /**
    * The default value of the '{@link #getLogger() <em>Logger</em>}' attribute.
@@ -249,9 +239,9 @@ private ButtonReleasedListener buttonReleasedListener;
    * <!-- end-user-doc -->
    * @generated
    */
-  public OnOffValue getSwitchState()
+  public HighLowValue getSensorValue()
   {
-    return switchState;
+    return sensorValue;
   }
 
   /**
@@ -259,12 +249,12 @@ private ButtonReleasedListener buttonReleasedListener;
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSwitchState(OnOffValue newSwitchState)
+  public void setSensorValue(HighLowValue newSensorValue)
   {
-    OnOffValue oldSwitchState = switchState;
-    switchState = newSwitchState;
+    HighLowValue oldSensorValue = sensorValue;
+    sensorValue = newSensorValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MLCD2_0X4_BUTTON__SWITCH_STATE, oldSwitchState, switchState));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MLCD2_0X4_BUTTON__SENSOR_VALUE, oldSensorValue, sensorValue));
   }
 
   /**
@@ -478,7 +468,7 @@ private ButtonReleasedListener buttonReleasedListener;
    * @generated NOT
    */
 	public void enable() {
-		setSwitchState(OnOffValue.UNDEF);
+		setSensorValue(HighLowValue.UNDEF);
 		MBrickletLCD20x4 masterBrick = getMbrick();
 		if (masterBrick == null) {
 			logger.error("{} No brick found for Button: {} ",
@@ -503,16 +493,16 @@ private ButtonReleasedListener buttonReleasedListener;
 	@Override
 	public void buttonPressed(short buttonChangedButtonNum) {
 		if (buttonChangedButtonNum == buttonNum){
-			if (switchState == OnOffValue.OFF){
-				setSwitchState(OnOffValue.ON);
+			if (getSensorValue() == HighLowValue.LOW){
+				setSensorValue(HighLowValue.HIGH);
 				logger.debug("set switch state on");
 			}
-			else if (switchState == OnOffValue.ON){
-				setSwitchState(OnOffValue.OFF);
+			else if (getSensorValue() == HighLowValue.HIGH){
+              setSensorValue(HighLowValue.LOW);
 				logger.debug("set switch state on");
 			}
 			else {
-				setSwitchState(OnOffValue.ON);
+              setSensorValue(HighLowValue.HIGH);
 				logger.debug("set switch state on");				
 			}
 		}
@@ -560,19 +550,7 @@ private ButtonReleasedListener buttonReleasedListener;
    * <!-- end-user-doc -->
    * @generated
    */
-  public void turnSwitch(OnOffValue state)
-  {
-    // TODO: implement this method
-    // Ensure that you remove @generated or mark it @generated NOT
-    throw new UnsupportedOperationException();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public OnOffValue fetchSwitchState()
+  public HighLowValue fetchSensorValue()
   {
     // TODO: implement this method
     // Ensure that you remove @generated or mark it @generated NOT
@@ -639,8 +617,8 @@ private ButtonReleasedListener buttonReleasedListener;
   {
     switch (featureID)
     {
-      case ModelPackage.MLCD2_0X4_BUTTON__SWITCH_STATE:
-        return getSwitchState();
+      case ModelPackage.MLCD2_0X4_BUTTON__SENSOR_VALUE:
+        return getSensorValue();
       case ModelPackage.MLCD2_0X4_BUTTON__LOGGER:
         return getLogger();
       case ModelPackage.MLCD2_0X4_BUTTON__UID:
@@ -671,8 +649,8 @@ private ButtonReleasedListener buttonReleasedListener;
   {
     switch (featureID)
     {
-      case ModelPackage.MLCD2_0X4_BUTTON__SWITCH_STATE:
-        setSwitchState((OnOffValue)newValue);
+      case ModelPackage.MLCD2_0X4_BUTTON__SENSOR_VALUE:
+        setSensorValue((HighLowValue)newValue);
         return;
       case ModelPackage.MLCD2_0X4_BUTTON__LOGGER:
         setLogger((Logger)newValue);
@@ -709,8 +687,8 @@ private ButtonReleasedListener buttonReleasedListener;
   {
     switch (featureID)
     {
-      case ModelPackage.MLCD2_0X4_BUTTON__SWITCH_STATE:
-        setSwitchState(SWITCH_STATE_EDEFAULT);
+      case ModelPackage.MLCD2_0X4_BUTTON__SENSOR_VALUE:
+        setSensorValue((HighLowValue)null);
         return;
       case ModelPackage.MLCD2_0X4_BUTTON__LOGGER:
         setLogger(LOGGER_EDEFAULT);
@@ -747,8 +725,8 @@ private ButtonReleasedListener buttonReleasedListener;
   {
     switch (featureID)
     {
-      case ModelPackage.MLCD2_0X4_BUTTON__SWITCH_STATE:
-        return SWITCH_STATE_EDEFAULT == null ? switchState != null : !SWITCH_STATE_EDEFAULT.equals(switchState);
+      case ModelPackage.MLCD2_0X4_BUTTON__SENSOR_VALUE:
+        return sensorValue != null;
       case ModelPackage.MLCD2_0X4_BUTTON__LOGGER:
         return LOGGER_EDEFAULT == null ? logger != null : !LOGGER_EDEFAULT.equals(logger);
       case ModelPackage.MLCD2_0X4_BUTTON__UID:
@@ -897,11 +875,8 @@ private ButtonReleasedListener buttonReleasedListener;
       case ModelPackage.MLCD2_0X4_BUTTON___DISABLE:
         disable();
         return null;
-      case ModelPackage.MLCD2_0X4_BUTTON___TURN_SWITCH__ONOFFVALUE:
-        turnSwitch((OnOffValue)arguments.get(0));
-        return null;
-      case ModelPackage.MLCD2_0X4_BUTTON___FETCH_SWITCH_STATE:
-        return fetchSwitchState();
+      case ModelPackage.MLCD2_0X4_BUTTON___FETCH_SENSOR_VALUE:
+        return fetchSensorValue();
     }
     return super.eInvoke(operationID, arguments);
   }
@@ -917,8 +892,8 @@ private ButtonReleasedListener buttonReleasedListener;
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (switchState: ");
-    result.append(switchState);
+    result.append(" (sensorValue: ");
+    result.append(sensorValue);
     result.append(", logger: ");
     result.append(logger);
     result.append(", uid: ");

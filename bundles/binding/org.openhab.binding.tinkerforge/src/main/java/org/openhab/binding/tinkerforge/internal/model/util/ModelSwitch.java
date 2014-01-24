@@ -18,6 +18,7 @@ import org.openhab.binding.tinkerforge.internal.model.CallbackListener;
 import org.openhab.binding.tinkerforge.internal.model.DigitalActor;
 import org.openhab.binding.tinkerforge.internal.model.DigitalSensor;
 import org.openhab.binding.tinkerforge.internal.model.Ecosystem;
+import org.openhab.binding.tinkerforge.internal.model.GenericDevice;
 import org.openhab.binding.tinkerforge.internal.model.IODevice;
 import org.openhab.binding.tinkerforge.internal.model.InterruptListener;
 import org.openhab.binding.tinkerforge.internal.model.MActor;
@@ -37,24 +38,24 @@ import org.openhab.binding.tinkerforge.internal.model.MBrickletTemperature;
 import org.openhab.binding.tinkerforge.internal.model.MDevice;
 import org.openhab.binding.tinkerforge.internal.model.MDualRelay;
 import org.openhab.binding.tinkerforge.internal.model.MDualRelayBricklet;
-import org.openhab.binding.tinkerforge.internal.model.MInSwitchActor;
 import org.openhab.binding.tinkerforge.internal.model.MIndustrialDigitalIn;
 import org.openhab.binding.tinkerforge.internal.model.MIndustrialQuadRelay;
 import org.openhab.binding.tinkerforge.internal.model.MIndustrialQuadRelayBricklet;
 import org.openhab.binding.tinkerforge.internal.model.MLCD20x4Backlight;
 import org.openhab.binding.tinkerforge.internal.model.MLCD20x4Button;
 import org.openhab.binding.tinkerforge.internal.model.MLCDSubDevice;
-import org.openhab.binding.tinkerforge.internal.model.MOutSwitchActor;
 import org.openhab.binding.tinkerforge.internal.model.MSensor;
 import org.openhab.binding.tinkerforge.internal.model.MServo;
 import org.openhab.binding.tinkerforge.internal.model.MSubDevice;
 import org.openhab.binding.tinkerforge.internal.model.MSubDeviceHolder;
-import org.openhab.binding.tinkerforge.internal.model.MSwitchActor;
 import org.openhab.binding.tinkerforge.internal.model.MTFConfigConsumer;
 import org.openhab.binding.tinkerforge.internal.model.MTextActor;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.OHConfig;
 import org.openhab.binding.tinkerforge.internal.model.OHTFDevice;
+import org.openhab.binding.tinkerforge.internal.model.SwitchActor;
+import org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple;
+import org.openhab.binding.tinkerforge.internal.model.SwitchActorWc;
 import org.openhab.binding.tinkerforge.internal.model.TFBaseConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.TFBrickDCConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.TFConfig;
@@ -180,26 +181,26 @@ public class ModelSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ModelPackage.MSWITCH_ACTOR:
+      case ModelPackage.SWITCH_ACTOR:
       {
-        MSwitchActor mSwitchActor = (MSwitchActor)theEObject;
-        T result = caseMSwitchActor(mSwitchActor);
+        SwitchActor switchActor = (SwitchActor)theEObject;
+        T result = caseSwitchActor(switchActor);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ModelPackage.MOUT_SWITCH_ACTOR:
+      case ModelPackage.SWITCH_ACTOR_SIMPLE:
       {
-        MOutSwitchActor mOutSwitchActor = (MOutSwitchActor)theEObject;
-        T result = caseMOutSwitchActor(mOutSwitchActor);
-        if (result == null) result = caseMSwitchActor(mOutSwitchActor);
+        SwitchActorSimple switchActorSimple = (SwitchActorSimple)theEObject;
+        T result = caseSwitchActorSimple(switchActorSimple);
+        if (result == null) result = caseSwitchActor(switchActorSimple);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ModelPackage.MIN_SWITCH_ACTOR:
+      case ModelPackage.SWITCH_ACTOR_WC:
       {
-        MInSwitchActor mInSwitchActor = (MInSwitchActor)theEObject;
-        T result = caseMInSwitchActor(mInSwitchActor);
-        if (result == null) result = caseMSwitchActor(mInSwitchActor);
+        SwitchActorWc switchActorWc = (SwitchActorWc)theEObject;
+        T result = caseSwitchActorWc(switchActorWc);
+        if (result == null) result = caseSwitchActor(switchActorWc);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -279,10 +280,10 @@ public class ModelSwitch<T> extends Switch<T>
       {
         MServo mServo = (MServo)theEObject;
         T result = caseMServo(mServo);
-        if (result == null) result = caseMInSwitchActor(mServo);
+        if (result == null) result = caseSwitchActorSimple(mServo);
         if (result == null) result = caseMSubDevice(mServo);
         if (result == null) result = caseMTFConfigConsumer(mServo);
-        if (result == null) result = caseMSwitchActor(mServo);
+        if (result == null) result = caseSwitchActor(mServo);
         if (result == null) result = caseMBaseDevice(mServo);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -291,10 +292,10 @@ public class ModelSwitch<T> extends Switch<T>
       {
         MBrickDC mBrickDC = (MBrickDC)theEObject;
         T result = caseMBrickDC(mBrickDC);
-        if (result == null) result = caseMInSwitchActor(mBrickDC);
+        if (result == null) result = caseSwitchActorSimple(mBrickDC);
         if (result == null) result = caseMDevice(mBrickDC);
         if (result == null) result = caseMTFConfigConsumer(mBrickDC);
-        if (result == null) result = caseMSwitchActor(mBrickDC);
+        if (result == null) result = caseSwitchActor(mBrickDC);
         if (result == null) result = caseMBaseDevice(mBrickDC);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -323,9 +324,9 @@ public class ModelSwitch<T> extends Switch<T>
       {
         MIndustrialQuadRelay mIndustrialQuadRelay = (MIndustrialQuadRelay)theEObject;
         T result = caseMIndustrialQuadRelay(mIndustrialQuadRelay);
-        if (result == null) result = caseMInSwitchActor(mIndustrialQuadRelay);
+        if (result == null) result = caseSwitchActorSimple(mIndustrialQuadRelay);
         if (result == null) result = caseMSubDevice(mIndustrialQuadRelay);
-        if (result == null) result = caseMSwitchActor(mIndustrialQuadRelay);
+        if (result == null) result = caseSwitchActor(mIndustrialQuadRelay);
         if (result == null) result = caseMBaseDevice(mIndustrialQuadRelay);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -393,9 +394,9 @@ public class ModelSwitch<T> extends Switch<T>
       {
         MDualRelay mDualRelay = (MDualRelay)theEObject;
         T result = caseMDualRelay(mDualRelay);
-        if (result == null) result = caseMInSwitchActor(mDualRelay);
+        if (result == null) result = caseSwitchActorSimple(mDualRelay);
         if (result == null) result = caseMSubDevice(mDualRelay);
-        if (result == null) result = caseMSwitchActor(mDualRelay);
+        if (result == null) result = caseSwitchActor(mDualRelay);
         if (result == null) result = caseMBaseDevice(mDualRelay);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -486,9 +487,9 @@ public class ModelSwitch<T> extends Switch<T>
       {
         MLCD20x4Backlight mlcd20x4Backlight = (MLCD20x4Backlight)theEObject;
         T result = caseMLCD20x4Backlight(mlcd20x4Backlight);
-        if (result == null) result = caseMInSwitchActor(mlcd20x4Backlight);
+        if (result == null) result = caseSwitchActorSimple(mlcd20x4Backlight);
         if (result == null) result = caseMLCDSubDevice(mlcd20x4Backlight);
-        if (result == null) result = caseMSwitchActor(mlcd20x4Backlight);
+        if (result == null) result = caseSwitchActor(mlcd20x4Backlight);
         if (result == null) result = caseMSubDevice(mlcd20x4Backlight);
         if (result == null) result = caseMBaseDevice(mlcd20x4Backlight);
         if (result == null) result = defaultCase(theEObject);
@@ -498,9 +499,8 @@ public class ModelSwitch<T> extends Switch<T>
       {
         MLCD20x4Button mlcd20x4Button = (MLCD20x4Button)theEObject;
         T result = caseMLCD20x4Button(mlcd20x4Button);
-        if (result == null) result = caseMOutSwitchActor(mlcd20x4Button);
+        if (result == null) result = caseMSensor(mlcd20x4Button);
         if (result == null) result = caseMLCDSubDevice(mlcd20x4Button);
-        if (result == null) result = caseMSwitchActor(mlcd20x4Button);
         if (result == null) result = caseMSubDevice(mlcd20x4Button);
         if (result == null) result = caseMBaseDevice(mlcd20x4Button);
         if (result == null) result = defaultCase(theEObject);
@@ -878,49 +878,49 @@ public class ModelSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>MSwitch Actor</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Switch Actor</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>MSwitch Actor</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Switch Actor</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseMSwitchActor(MSwitchActor object)
+  public T caseSwitchActor(SwitchActor object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>MOut Switch Actor</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Switch Actor Simple</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>MOut Switch Actor</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Switch Actor Simple</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseMOutSwitchActor(MOutSwitchActor object)
+  public T caseSwitchActorSimple(SwitchActorSimple object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>MIn Switch Actor</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Switch Actor Wc</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>MIn Switch Actor</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Switch Actor Wc</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseMInSwitchActor(MInSwitchActor object)
+  public T caseSwitchActorWc(SwitchActorWc object)
   {
     return null;
   }

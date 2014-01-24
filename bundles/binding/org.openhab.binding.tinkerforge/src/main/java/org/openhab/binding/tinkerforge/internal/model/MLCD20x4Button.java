@@ -8,6 +8,8 @@
  */
 package org.openhab.binding.tinkerforge.internal.model;
 
+import org.openhab.binding.tinkerforge.internal.types.HighLowValue;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -24,10 +26,10 @@ package org.openhab.binding.tinkerforge.internal.model;
  * </p>
  *
  * @see org.openhab.binding.tinkerforge.internal.model.ModelPackage#getMLCD20x4Button()
- * @model
+ * @model superTypes="org.openhab.binding.tinkerforge.internal.model.MSensor<org.openhab.binding.tinkerforge.internal.model.DigitalValue> org.openhab.binding.tinkerforge.internal.model.MLCDSubDevice"
  * @generated
  */
-public interface MLCD20x4Button extends MOutSwitchActor, MLCDSubDevice
+public interface MLCD20x4Button extends MSensor<HighLowValue>, MLCDSubDevice
 {
   /**
    * Returns the value of the '<em><b>Device Type</b></em>' attribute.

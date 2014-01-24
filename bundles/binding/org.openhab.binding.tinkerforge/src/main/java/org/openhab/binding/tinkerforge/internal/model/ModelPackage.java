@@ -208,26 +208,6 @@ public interface ModelPackage extends EPackage
   int MACTOR = 6;
 
   /**
-   * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.MSwitchActor <em>MSwitch Actor</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.openhab.binding.tinkerforge.internal.model.MSwitchActor
-   * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMSwitchActor()
-   * @generated
-   */
-  int MSWITCH_ACTOR = 7;
-
-  /**
-   * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.MInSwitchActor <em>MIn Switch Actor</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.openhab.binding.tinkerforge.internal.model.MInSwitchActor
-   * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMInSwitchActor()
-   * @generated
-   */
-  int MIN_SWITCH_ACTOR = 9;
-
-  /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickDCImpl <em>MBrick DC</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -266,16 +246,6 @@ public interface ModelPackage extends EPackage
    * @generated
    */
   int MBRICKLET_INDUSTRIAL_DIGITAL_IN4 = 24;
-
-  /**
-   * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.MOutSwitchActor <em>MOut Switch Actor</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.openhab.binding.tinkerforge.internal.model.MOutSwitchActor
-   * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMOutSwitchActor()
-   * @generated
-   */
-  int MOUT_SWITCH_ACTOR = 8;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.MSubDevice <em>MSub Device</em>}' class.
@@ -973,49 +943,14 @@ public interface ModelPackage extends EPackage
   int MACTOR_OPERATION_COUNT = 0;
 
   /**
-   * The feature id for the '<em><b>Switch State</b></em>' attribute.
+   * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActor <em>Switch Actor</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * @see org.openhab.binding.tinkerforge.internal.model.SwitchActor
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getSwitchActor()
    * @generated
-   * @ordered
    */
-  int MSWITCH_ACTOR__SWITCH_STATE = 0;
-
-  /**
-   * The number of structural features of the '<em>MSwitch Actor</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MSWITCH_ACTOR_FEATURE_COUNT = 1;
-
-  /**
-   * The operation id for the '<em>Turn Switch</em>' operation.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MSWITCH_ACTOR___TURN_SWITCH__ONOFFVALUE = 0;
-
-  /**
-   * The operation id for the '<em>Fetch Switch State</em>' operation.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MSWITCH_ACTOR___FETCH_SWITCH_STATE = 1;
-
-  /**
-   * The number of operations of the '<em>MSwitch Actor</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MSWITCH_ACTOR_OPERATION_COUNT = 2;
+  int SWITCH_ACTOR = 7;
 
   /**
    * The feature id for the '<em><b>Switch State</b></em>' attribute.
@@ -1024,43 +959,35 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MOUT_SWITCH_ACTOR__SWITCH_STATE = MSWITCH_ACTOR__SWITCH_STATE;
+  int SWITCH_ACTOR__SWITCH_STATE = 0;
 
   /**
-   * The number of structural features of the '<em>MOut Switch Actor</em>' class.
+   * The number of structural features of the '<em>Switch Actor</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MOUT_SWITCH_ACTOR_FEATURE_COUNT = MSWITCH_ACTOR_FEATURE_COUNT + 0;
+  int SWITCH_ACTOR_FEATURE_COUNT = 1;
 
   /**
-   * The operation id for the '<em>Turn Switch</em>' operation.
+   * The number of operations of the '<em>Switch Actor</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MOUT_SWITCH_ACTOR___TURN_SWITCH__ONOFFVALUE = MSWITCH_ACTOR___TURN_SWITCH__ONOFFVALUE;
+  int SWITCH_ACTOR_OPERATION_COUNT = 0;
 
   /**
-   * The operation id for the '<em>Fetch Switch State</em>' operation.
+   * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple <em>Switch Actor Simple</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * @see org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getSwitchActorSimple()
    * @generated
-   * @ordered
    */
-  int MOUT_SWITCH_ACTOR___FETCH_SWITCH_STATE = MSWITCH_ACTOR___FETCH_SWITCH_STATE;
-
-  /**
-   * The number of operations of the '<em>MOut Switch Actor</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MOUT_SWITCH_ACTOR_OPERATION_COUNT = MSWITCH_ACTOR_OPERATION_COUNT + 0;
+  int SWITCH_ACTOR_SIMPLE = 8;
 
   /**
    * The feature id for the '<em><b>Switch State</b></em>' attribute.
@@ -1069,16 +996,16 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MIN_SWITCH_ACTOR__SWITCH_STATE = MSWITCH_ACTOR__SWITCH_STATE;
+  int SWITCH_ACTOR_SIMPLE__SWITCH_STATE = SWITCH_ACTOR__SWITCH_STATE;
 
   /**
-   * The number of structural features of the '<em>MIn Switch Actor</em>' class.
+   * The number of structural features of the '<em>Switch Actor Simple</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MIN_SWITCH_ACTOR_FEATURE_COUNT = MSWITCH_ACTOR_FEATURE_COUNT + 0;
+  int SWITCH_ACTOR_SIMPLE_FEATURE_COUNT = SWITCH_ACTOR_FEATURE_COUNT + 0;
 
   /**
    * The operation id for the '<em>Turn Switch</em>' operation.
@@ -1087,7 +1014,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MIN_SWITCH_ACTOR___TURN_SWITCH__ONOFFVALUE = MSWITCH_ACTOR___TURN_SWITCH__ONOFFVALUE;
+  int SWITCH_ACTOR_SIMPLE___TURN_SWITCH__ONOFFVALUE = SWITCH_ACTOR_OPERATION_COUNT + 0;
 
   /**
    * The operation id for the '<em>Fetch Switch State</em>' operation.
@@ -1096,16 +1023,71 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MIN_SWITCH_ACTOR___FETCH_SWITCH_STATE = MSWITCH_ACTOR___FETCH_SWITCH_STATE;
+  int SWITCH_ACTOR_SIMPLE___FETCH_SWITCH_STATE = SWITCH_ACTOR_OPERATION_COUNT + 1;
 
   /**
-   * The number of operations of the '<em>MIn Switch Actor</em>' class.
+   * The number of operations of the '<em>Switch Actor Simple</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MIN_SWITCH_ACTOR_OPERATION_COUNT = MSWITCH_ACTOR_OPERATION_COUNT + 0;
+  int SWITCH_ACTOR_SIMPLE_OPERATION_COUNT = SWITCH_ACTOR_OPERATION_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActorWc <em>Switch Actor Wc</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.openhab.binding.tinkerforge.internal.model.SwitchActorWc
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getSwitchActorWc()
+   * @generated
+   */
+  int SWITCH_ACTOR_WC = 9;
+
+  /**
+   * The feature id for the '<em><b>Switch State</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SWITCH_ACTOR_WC__SWITCH_STATE = SWITCH_ACTOR__SWITCH_STATE;
+
+  /**
+   * The number of structural features of the '<em>Switch Actor Wc</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SWITCH_ACTOR_WC_FEATURE_COUNT = SWITCH_ACTOR_FEATURE_COUNT + 0;
+
+  /**
+   * The operation id for the '<em>Turn Switch</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SWITCH_ACTOR_WC___TURN_SWITCH__ONOFFVALUE_DEVICEOPTIONS = SWITCH_ACTOR_OPERATION_COUNT + 0;
+
+  /**
+   * The operation id for the '<em>Fetch Switch State</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SWITCH_ACTOR_WC___FETCH_SWITCH_STATE__DEVICEOPTIONS = SWITCH_ACTOR_OPERATION_COUNT + 1;
+
+  /**
+   * The number of operations of the '<em>Switch Actor Wc</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SWITCH_ACTOR_WC_OPERATION_COUNT = SWITCH_ACTOR_OPERATION_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.GenericDevice <em>Generic Device</em>}' class.
@@ -1769,7 +1751,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__SWITCH_STATE = MIN_SWITCH_ACTOR__SWITCH_STATE;
+  int MSERVO__SWITCH_STATE = SWITCH_ACTOR_SIMPLE__SWITCH_STATE;
 
   /**
    * The feature id for the '<em><b>Logger</b></em>' attribute.
@@ -1778,7 +1760,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__LOGGER = MIN_SWITCH_ACTOR_FEATURE_COUNT + 0;
+  int MSERVO__LOGGER = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Uid</b></em>' attribute.
@@ -1787,7 +1769,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__UID = MIN_SWITCH_ACTOR_FEATURE_COUNT + 1;
+  int MSERVO__UID = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Enabled A</b></em>' attribute.
@@ -1796,7 +1778,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__ENABLED_A = MIN_SWITCH_ACTOR_FEATURE_COUNT + 2;
+  int MSERVO__ENABLED_A = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Sub Id</b></em>' attribute.
@@ -1805,7 +1787,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__SUB_ID = MIN_SWITCH_ACTOR_FEATURE_COUNT + 3;
+  int MSERVO__SUB_ID = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Mbrick</b></em>' container reference.
@@ -1814,7 +1796,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__MBRICK = MIN_SWITCH_ACTOR_FEATURE_COUNT + 4;
+  int MSERVO__MBRICK = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Tf Config</b></em>' containment reference.
@@ -1823,7 +1805,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__TF_CONFIG = MIN_SWITCH_ACTOR_FEATURE_COUNT + 5;
+  int MSERVO__TF_CONFIG = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Device Type</b></em>' attribute.
@@ -1832,7 +1814,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__DEVICE_TYPE = MIN_SWITCH_ACTOR_FEATURE_COUNT + 6;
+  int MSERVO__DEVICE_TYPE = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 6;
 
   /**
    * The feature id for the '<em><b>Velocity</b></em>' attribute.
@@ -1841,7 +1823,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__VELOCITY = MIN_SWITCH_ACTOR_FEATURE_COUNT + 7;
+  int MSERVO__VELOCITY = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 7;
 
   /**
    * The feature id for the '<em><b>Acceleration</b></em>' attribute.
@@ -1850,7 +1832,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__ACCELERATION = MIN_SWITCH_ACTOR_FEATURE_COUNT + 8;
+  int MSERVO__ACCELERATION = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 8;
 
   /**
    * The feature id for the '<em><b>Pulse Width Min</b></em>' attribute.
@@ -1859,7 +1841,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__PULSE_WIDTH_MIN = MIN_SWITCH_ACTOR_FEATURE_COUNT + 9;
+  int MSERVO__PULSE_WIDTH_MIN = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 9;
 
   /**
    * The feature id for the '<em><b>Pulse Width Max</b></em>' attribute.
@@ -1868,7 +1850,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__PULSE_WIDTH_MAX = MIN_SWITCH_ACTOR_FEATURE_COUNT + 10;
+  int MSERVO__PULSE_WIDTH_MAX = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 10;
 
   /**
    * The feature id for the '<em><b>Period</b></em>' attribute.
@@ -1877,7 +1859,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__PERIOD = MIN_SWITCH_ACTOR_FEATURE_COUNT + 11;
+  int MSERVO__PERIOD = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 11;
 
   /**
    * The feature id for the '<em><b>Output Voltage</b></em>' attribute.
@@ -1886,7 +1868,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__OUTPUT_VOLTAGE = MIN_SWITCH_ACTOR_FEATURE_COUNT + 12;
+  int MSERVO__OUTPUT_VOLTAGE = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 12;
 
   /**
    * The feature id for the '<em><b>Servo Current Position</b></em>' attribute.
@@ -1895,7 +1877,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__SERVO_CURRENT_POSITION = MIN_SWITCH_ACTOR_FEATURE_COUNT + 13;
+  int MSERVO__SERVO_CURRENT_POSITION = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 13;
 
   /**
    * The feature id for the '<em><b>Servo Destination Position</b></em>' attribute.
@@ -1904,7 +1886,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO__SERVO_DESTINATION_POSITION = MIN_SWITCH_ACTOR_FEATURE_COUNT + 14;
+  int MSERVO__SERVO_DESTINATION_POSITION = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 14;
 
   /**
    * The number of structural features of the '<em>MServo</em>' class.
@@ -1913,7 +1895,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO_FEATURE_COUNT = MIN_SWITCH_ACTOR_FEATURE_COUNT + 15;
+  int MSERVO_FEATURE_COUNT = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 15;
 
   /**
    * The operation id for the '<em>Turn Switch</em>' operation.
@@ -1922,7 +1904,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO___TURN_SWITCH__ONOFFVALUE = MIN_SWITCH_ACTOR___TURN_SWITCH__ONOFFVALUE;
+  int MSERVO___TURN_SWITCH__ONOFFVALUE = SWITCH_ACTOR_SIMPLE___TURN_SWITCH__ONOFFVALUE;
 
   /**
    * The operation id for the '<em>Fetch Switch State</em>' operation.
@@ -1931,7 +1913,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO___FETCH_SWITCH_STATE = MIN_SWITCH_ACTOR___FETCH_SWITCH_STATE;
+  int MSERVO___FETCH_SWITCH_STATE = SWITCH_ACTOR_SIMPLE___FETCH_SWITCH_STATE;
 
   /**
    * The operation id for the '<em>Enable</em>' operation.
@@ -1940,7 +1922,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO___ENABLE = MIN_SWITCH_ACTOR_OPERATION_COUNT + 1;
+  int MSERVO___ENABLE = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 1;
 
   /**
    * The operation id for the '<em>Disable</em>' operation.
@@ -1949,7 +1931,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO___DISABLE = MIN_SWITCH_ACTOR_OPERATION_COUNT + 2;
+  int MSERVO___DISABLE = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 2;
 
   /**
    * The operation id for the '<em>Init</em>' operation.
@@ -1958,7 +1940,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO___INIT = MIN_SWITCH_ACTOR_OPERATION_COUNT + 3;
+  int MSERVO___INIT = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 3;
 
   /**
    * The number of operations of the '<em>MServo</em>' class.
@@ -1967,7 +1949,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MSERVO_OPERATION_COUNT = MIN_SWITCH_ACTOR_OPERATION_COUNT + 4;
+  int MSERVO_OPERATION_COUNT = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Switch State</b></em>' attribute.
@@ -1976,7 +1958,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__SWITCH_STATE = MIN_SWITCH_ACTOR__SWITCH_STATE;
+  int MBRICK_DC__SWITCH_STATE = SWITCH_ACTOR_SIMPLE__SWITCH_STATE;
 
   /**
    * The feature id for the '<em><b>Logger</b></em>' attribute.
@@ -1985,7 +1967,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__LOGGER = MIN_SWITCH_ACTOR_FEATURE_COUNT + 0;
+  int MBRICK_DC__LOGGER = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Uid</b></em>' attribute.
@@ -1994,7 +1976,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__UID = MIN_SWITCH_ACTOR_FEATURE_COUNT + 1;
+  int MBRICK_DC__UID = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Enabled A</b></em>' attribute.
@@ -2003,7 +1985,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__ENABLED_A = MIN_SWITCH_ACTOR_FEATURE_COUNT + 2;
+  int MBRICK_DC__ENABLED_A = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Tinkerforge Device</b></em>' attribute.
@@ -2012,7 +1994,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__TINKERFORGE_DEVICE = MIN_SWITCH_ACTOR_FEATURE_COUNT + 3;
+  int MBRICK_DC__TINKERFORGE_DEVICE = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Ip Connection</b></em>' attribute.
@@ -2021,7 +2003,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__IP_CONNECTION = MIN_SWITCH_ACTOR_FEATURE_COUNT + 4;
+  int MBRICK_DC__IP_CONNECTION = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Connected Uid</b></em>' attribute.
@@ -2030,7 +2012,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__CONNECTED_UID = MIN_SWITCH_ACTOR_FEATURE_COUNT + 5;
+  int MBRICK_DC__CONNECTED_UID = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Position</b></em>' attribute.
@@ -2039,7 +2021,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__POSITION = MIN_SWITCH_ACTOR_FEATURE_COUNT + 6;
+  int MBRICK_DC__POSITION = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 6;
 
   /**
    * The feature id for the '<em><b>Device Identifier</b></em>' attribute.
@@ -2048,7 +2030,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__DEVICE_IDENTIFIER = MIN_SWITCH_ACTOR_FEATURE_COUNT + 7;
+  int MBRICK_DC__DEVICE_IDENTIFIER = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2057,7 +2039,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__NAME = MIN_SWITCH_ACTOR_FEATURE_COUNT + 8;
+  int MBRICK_DC__NAME = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 8;
 
   /**
    * The feature id for the '<em><b>Brickd</b></em>' container reference.
@@ -2066,7 +2048,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__BRICKD = MIN_SWITCH_ACTOR_FEATURE_COUNT + 9;
+  int MBRICK_DC__BRICKD = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 9;
 
   /**
    * The feature id for the '<em><b>Tf Config</b></em>' containment reference.
@@ -2075,7 +2057,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__TF_CONFIG = MIN_SWITCH_ACTOR_FEATURE_COUNT + 10;
+  int MBRICK_DC__TF_CONFIG = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 10;
 
   /**
    * The feature id for the '<em><b>Device Type</b></em>' attribute.
@@ -2084,7 +2066,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__DEVICE_TYPE = MIN_SWITCH_ACTOR_FEATURE_COUNT + 11;
+  int MBRICK_DC__DEVICE_TYPE = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 11;
 
   /**
    * The feature id for the '<em><b>Velocity</b></em>' attribute.
@@ -2093,7 +2075,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__VELOCITY = MIN_SWITCH_ACTOR_FEATURE_COUNT + 12;
+  int MBRICK_DC__VELOCITY = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 12;
 
   /**
    * The feature id for the '<em><b>Current Velocity</b></em>' attribute.
@@ -2102,7 +2084,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__CURRENT_VELOCITY = MIN_SWITCH_ACTOR_FEATURE_COUNT + 13;
+  int MBRICK_DC__CURRENT_VELOCITY = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 13;
 
   /**
    * The feature id for the '<em><b>Acceleration</b></em>' attribute.
@@ -2111,7 +2093,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__ACCELERATION = MIN_SWITCH_ACTOR_FEATURE_COUNT + 14;
+  int MBRICK_DC__ACCELERATION = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 14;
 
   /**
    * The feature id for the '<em><b>Pwm Frequency</b></em>' attribute.
@@ -2120,7 +2102,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__PWM_FREQUENCY = MIN_SWITCH_ACTOR_FEATURE_COUNT + 15;
+  int MBRICK_DC__PWM_FREQUENCY = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 15;
 
   /**
    * The feature id for the '<em><b>Drive Mode</b></em>' attribute.
@@ -2129,7 +2111,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__DRIVE_MODE = MIN_SWITCH_ACTOR_FEATURE_COUNT + 16;
+  int MBRICK_DC__DRIVE_MODE = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 16;
 
   /**
    * The feature id for the '<em><b>Switch On Velocity</b></em>' attribute.
@@ -2138,7 +2120,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC__SWITCH_ON_VELOCITY = MIN_SWITCH_ACTOR_FEATURE_COUNT + 17;
+  int MBRICK_DC__SWITCH_ON_VELOCITY = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 17;
 
   /**
    * The number of structural features of the '<em>MBrick DC</em>' class.
@@ -2147,7 +2129,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC_FEATURE_COUNT = MIN_SWITCH_ACTOR_FEATURE_COUNT + 18;
+  int MBRICK_DC_FEATURE_COUNT = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 18;
 
   /**
    * The operation id for the '<em>Turn Switch</em>' operation.
@@ -2156,7 +2138,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC___TURN_SWITCH__ONOFFVALUE = MIN_SWITCH_ACTOR___TURN_SWITCH__ONOFFVALUE;
+  int MBRICK_DC___TURN_SWITCH__ONOFFVALUE = SWITCH_ACTOR_SIMPLE___TURN_SWITCH__ONOFFVALUE;
 
   /**
    * The operation id for the '<em>Fetch Switch State</em>' operation.
@@ -2165,7 +2147,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC___FETCH_SWITCH_STATE = MIN_SWITCH_ACTOR___FETCH_SWITCH_STATE;
+  int MBRICK_DC___FETCH_SWITCH_STATE = SWITCH_ACTOR_SIMPLE___FETCH_SWITCH_STATE;
 
   /**
    * The operation id for the '<em>Enable</em>' operation.
@@ -2174,7 +2156,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC___ENABLE = MIN_SWITCH_ACTOR_OPERATION_COUNT + 1;
+  int MBRICK_DC___ENABLE = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 1;
 
   /**
    * The operation id for the '<em>Disable</em>' operation.
@@ -2183,7 +2165,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC___DISABLE = MIN_SWITCH_ACTOR_OPERATION_COUNT + 2;
+  int MBRICK_DC___DISABLE = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 2;
 
   /**
    * The operation id for the '<em>Init</em>' operation.
@@ -2192,7 +2174,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC___INIT = MIN_SWITCH_ACTOR_OPERATION_COUNT + 3;
+  int MBRICK_DC___INIT = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 3;
 
   /**
    * The number of operations of the '<em>MBrick DC</em>' class.
@@ -2201,7 +2183,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MBRICK_DC_OPERATION_COUNT = MIN_SWITCH_ACTOR_OPERATION_COUNT + 4;
+  int MBRICK_DC_OPERATION_COUNT = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Logger</b></em>' attribute.
@@ -2525,7 +2507,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINDUSTRIAL_QUAD_RELAY__SWITCH_STATE = MIN_SWITCH_ACTOR__SWITCH_STATE;
+  int MINDUSTRIAL_QUAD_RELAY__SWITCH_STATE = SWITCH_ACTOR_SIMPLE__SWITCH_STATE;
 
   /**
    * The feature id for the '<em><b>Logger</b></em>' attribute.
@@ -2534,7 +2516,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINDUSTRIAL_QUAD_RELAY__LOGGER = MIN_SWITCH_ACTOR_FEATURE_COUNT + 0;
+  int MINDUSTRIAL_QUAD_RELAY__LOGGER = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Uid</b></em>' attribute.
@@ -2543,7 +2525,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINDUSTRIAL_QUAD_RELAY__UID = MIN_SWITCH_ACTOR_FEATURE_COUNT + 1;
+  int MINDUSTRIAL_QUAD_RELAY__UID = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Enabled A</b></em>' attribute.
@@ -2552,7 +2534,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINDUSTRIAL_QUAD_RELAY__ENABLED_A = MIN_SWITCH_ACTOR_FEATURE_COUNT + 2;
+  int MINDUSTRIAL_QUAD_RELAY__ENABLED_A = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Sub Id</b></em>' attribute.
@@ -2561,7 +2543,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINDUSTRIAL_QUAD_RELAY__SUB_ID = MIN_SWITCH_ACTOR_FEATURE_COUNT + 3;
+  int MINDUSTRIAL_QUAD_RELAY__SUB_ID = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Mbrick</b></em>' container reference.
@@ -2570,7 +2552,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINDUSTRIAL_QUAD_RELAY__MBRICK = MIN_SWITCH_ACTOR_FEATURE_COUNT + 4;
+  int MINDUSTRIAL_QUAD_RELAY__MBRICK = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Device Type</b></em>' attribute.
@@ -2579,7 +2561,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINDUSTRIAL_QUAD_RELAY__DEVICE_TYPE = MIN_SWITCH_ACTOR_FEATURE_COUNT + 5;
+  int MINDUSTRIAL_QUAD_RELAY__DEVICE_TYPE = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>MIndustrial Quad Relay</em>' class.
@@ -2588,7 +2570,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINDUSTRIAL_QUAD_RELAY_FEATURE_COUNT = MIN_SWITCH_ACTOR_FEATURE_COUNT + 6;
+  int MINDUSTRIAL_QUAD_RELAY_FEATURE_COUNT = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 6;
 
   /**
    * The operation id for the '<em>Turn Switch</em>' operation.
@@ -2597,7 +2579,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINDUSTRIAL_QUAD_RELAY___TURN_SWITCH__ONOFFVALUE = MIN_SWITCH_ACTOR___TURN_SWITCH__ONOFFVALUE;
+  int MINDUSTRIAL_QUAD_RELAY___TURN_SWITCH__ONOFFVALUE = SWITCH_ACTOR_SIMPLE___TURN_SWITCH__ONOFFVALUE;
 
   /**
    * The operation id for the '<em>Fetch Switch State</em>' operation.
@@ -2606,7 +2588,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINDUSTRIAL_QUAD_RELAY___FETCH_SWITCH_STATE = MIN_SWITCH_ACTOR___FETCH_SWITCH_STATE;
+  int MINDUSTRIAL_QUAD_RELAY___FETCH_SWITCH_STATE = SWITCH_ACTOR_SIMPLE___FETCH_SWITCH_STATE;
 
   /**
    * The operation id for the '<em>Init</em>' operation.
@@ -2615,7 +2597,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINDUSTRIAL_QUAD_RELAY___INIT = MIN_SWITCH_ACTOR_OPERATION_COUNT + 0;
+  int MINDUSTRIAL_QUAD_RELAY___INIT = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 0;
 
   /**
    * The operation id for the '<em>Enable</em>' operation.
@@ -2624,7 +2606,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINDUSTRIAL_QUAD_RELAY___ENABLE = MIN_SWITCH_ACTOR_OPERATION_COUNT + 1;
+  int MINDUSTRIAL_QUAD_RELAY___ENABLE = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 1;
 
   /**
    * The operation id for the '<em>Disable</em>' operation.
@@ -2633,7 +2615,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINDUSTRIAL_QUAD_RELAY___DISABLE = MIN_SWITCH_ACTOR_OPERATION_COUNT + 2;
+  int MINDUSTRIAL_QUAD_RELAY___DISABLE = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 2;
 
   /**
    * The number of operations of the '<em>MIndustrial Quad Relay</em>' class.
@@ -2642,7 +2624,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MINDUSTRIAL_QUAD_RELAY_OPERATION_COUNT = MIN_SWITCH_ACTOR_OPERATION_COUNT + 3;
+  int MINDUSTRIAL_QUAD_RELAY_OPERATION_COUNT = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Msubdevices</b></em>' containment reference list.
@@ -3452,7 +3434,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MDUAL_RELAY__SWITCH_STATE = MIN_SWITCH_ACTOR__SWITCH_STATE;
+  int MDUAL_RELAY__SWITCH_STATE = SWITCH_ACTOR_SIMPLE__SWITCH_STATE;
 
   /**
    * The feature id for the '<em><b>Logger</b></em>' attribute.
@@ -3461,7 +3443,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MDUAL_RELAY__LOGGER = MIN_SWITCH_ACTOR_FEATURE_COUNT + 0;
+  int MDUAL_RELAY__LOGGER = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Uid</b></em>' attribute.
@@ -3470,7 +3452,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MDUAL_RELAY__UID = MIN_SWITCH_ACTOR_FEATURE_COUNT + 1;
+  int MDUAL_RELAY__UID = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Enabled A</b></em>' attribute.
@@ -3479,7 +3461,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MDUAL_RELAY__ENABLED_A = MIN_SWITCH_ACTOR_FEATURE_COUNT + 2;
+  int MDUAL_RELAY__ENABLED_A = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Sub Id</b></em>' attribute.
@@ -3488,7 +3470,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MDUAL_RELAY__SUB_ID = MIN_SWITCH_ACTOR_FEATURE_COUNT + 3;
+  int MDUAL_RELAY__SUB_ID = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Mbrick</b></em>' container reference.
@@ -3497,7 +3479,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MDUAL_RELAY__MBRICK = MIN_SWITCH_ACTOR_FEATURE_COUNT + 4;
+  int MDUAL_RELAY__MBRICK = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Device Type</b></em>' attribute.
@@ -3506,7 +3488,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MDUAL_RELAY__DEVICE_TYPE = MIN_SWITCH_ACTOR_FEATURE_COUNT + 5;
+  int MDUAL_RELAY__DEVICE_TYPE = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>MDual Relay</em>' class.
@@ -3515,7 +3497,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MDUAL_RELAY_FEATURE_COUNT = MIN_SWITCH_ACTOR_FEATURE_COUNT + 6;
+  int MDUAL_RELAY_FEATURE_COUNT = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 6;
 
   /**
    * The operation id for the '<em>Turn Switch</em>' operation.
@@ -3524,7 +3506,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MDUAL_RELAY___TURN_SWITCH__ONOFFVALUE = MIN_SWITCH_ACTOR___TURN_SWITCH__ONOFFVALUE;
+  int MDUAL_RELAY___TURN_SWITCH__ONOFFVALUE = SWITCH_ACTOR_SIMPLE___TURN_SWITCH__ONOFFVALUE;
 
   /**
    * The operation id for the '<em>Fetch Switch State</em>' operation.
@@ -3533,7 +3515,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MDUAL_RELAY___FETCH_SWITCH_STATE = MIN_SWITCH_ACTOR___FETCH_SWITCH_STATE;
+  int MDUAL_RELAY___FETCH_SWITCH_STATE = SWITCH_ACTOR_SIMPLE___FETCH_SWITCH_STATE;
 
   /**
    * The operation id for the '<em>Init</em>' operation.
@@ -3542,7 +3524,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MDUAL_RELAY___INIT = MIN_SWITCH_ACTOR_OPERATION_COUNT + 0;
+  int MDUAL_RELAY___INIT = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 0;
 
   /**
    * The operation id for the '<em>Enable</em>' operation.
@@ -3551,7 +3533,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MDUAL_RELAY___ENABLE = MIN_SWITCH_ACTOR_OPERATION_COUNT + 1;
+  int MDUAL_RELAY___ENABLE = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 1;
 
   /**
    * The operation id for the '<em>Disable</em>' operation.
@@ -3560,7 +3542,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MDUAL_RELAY___DISABLE = MIN_SWITCH_ACTOR_OPERATION_COUNT + 2;
+  int MDUAL_RELAY___DISABLE = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 2;
 
   /**
    * The number of operations of the '<em>MDual Relay</em>' class.
@@ -3569,7 +3551,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MDUAL_RELAY_OPERATION_COUNT = MIN_SWITCH_ACTOR_OPERATION_COUNT + 3;
+  int MDUAL_RELAY_OPERATION_COUNT = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Sensor Value</b></em>' attribute.
@@ -4929,7 +4911,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BACKLIGHT__SWITCH_STATE = MIN_SWITCH_ACTOR__SWITCH_STATE;
+  int MLCD2_0X4_BACKLIGHT__SWITCH_STATE = SWITCH_ACTOR_SIMPLE__SWITCH_STATE;
 
   /**
    * The feature id for the '<em><b>Logger</b></em>' attribute.
@@ -4938,7 +4920,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BACKLIGHT__LOGGER = MIN_SWITCH_ACTOR_FEATURE_COUNT + 0;
+  int MLCD2_0X4_BACKLIGHT__LOGGER = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Uid</b></em>' attribute.
@@ -4947,7 +4929,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BACKLIGHT__UID = MIN_SWITCH_ACTOR_FEATURE_COUNT + 1;
+  int MLCD2_0X4_BACKLIGHT__UID = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Enabled A</b></em>' attribute.
@@ -4956,7 +4938,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BACKLIGHT__ENABLED_A = MIN_SWITCH_ACTOR_FEATURE_COUNT + 2;
+  int MLCD2_0X4_BACKLIGHT__ENABLED_A = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Sub Id</b></em>' attribute.
@@ -4965,7 +4947,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BACKLIGHT__SUB_ID = MIN_SWITCH_ACTOR_FEATURE_COUNT + 3;
+  int MLCD2_0X4_BACKLIGHT__SUB_ID = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Mbrick</b></em>' container reference.
@@ -4974,7 +4956,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BACKLIGHT__MBRICK = MIN_SWITCH_ACTOR_FEATURE_COUNT + 4;
+  int MLCD2_0X4_BACKLIGHT__MBRICK = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Device Type</b></em>' attribute.
@@ -4983,7 +4965,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BACKLIGHT__DEVICE_TYPE = MIN_SWITCH_ACTOR_FEATURE_COUNT + 5;
+  int MLCD2_0X4_BACKLIGHT__DEVICE_TYPE = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>MLCD2 0x4 Backlight</em>' class.
@@ -4992,7 +4974,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BACKLIGHT_FEATURE_COUNT = MIN_SWITCH_ACTOR_FEATURE_COUNT + 6;
+  int MLCD2_0X4_BACKLIGHT_FEATURE_COUNT = SWITCH_ACTOR_SIMPLE_FEATURE_COUNT + 6;
 
   /**
    * The operation id for the '<em>Turn Switch</em>' operation.
@@ -5001,7 +4983,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BACKLIGHT___TURN_SWITCH__ONOFFVALUE = MIN_SWITCH_ACTOR___TURN_SWITCH__ONOFFVALUE;
+  int MLCD2_0X4_BACKLIGHT___TURN_SWITCH__ONOFFVALUE = SWITCH_ACTOR_SIMPLE___TURN_SWITCH__ONOFFVALUE;
 
   /**
    * The operation id for the '<em>Fetch Switch State</em>' operation.
@@ -5010,7 +4992,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BACKLIGHT___FETCH_SWITCH_STATE = MIN_SWITCH_ACTOR___FETCH_SWITCH_STATE;
+  int MLCD2_0X4_BACKLIGHT___FETCH_SWITCH_STATE = SWITCH_ACTOR_SIMPLE___FETCH_SWITCH_STATE;
 
   /**
    * The operation id for the '<em>Init</em>' operation.
@@ -5019,7 +5001,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BACKLIGHT___INIT = MIN_SWITCH_ACTOR_OPERATION_COUNT + 0;
+  int MLCD2_0X4_BACKLIGHT___INIT = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 0;
 
   /**
    * The operation id for the '<em>Enable</em>' operation.
@@ -5028,7 +5010,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BACKLIGHT___ENABLE = MIN_SWITCH_ACTOR_OPERATION_COUNT + 1;
+  int MLCD2_0X4_BACKLIGHT___ENABLE = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 1;
 
   /**
    * The operation id for the '<em>Disable</em>' operation.
@@ -5037,7 +5019,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BACKLIGHT___DISABLE = MIN_SWITCH_ACTOR_OPERATION_COUNT + 2;
+  int MLCD2_0X4_BACKLIGHT___DISABLE = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 2;
 
   /**
    * The number of operations of the '<em>MLCD2 0x4 Backlight</em>' class.
@@ -5046,7 +5028,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BACKLIGHT_OPERATION_COUNT = MIN_SWITCH_ACTOR_OPERATION_COUNT + 3;
+  int MLCD2_0X4_BACKLIGHT_OPERATION_COUNT = SWITCH_ACTOR_SIMPLE_OPERATION_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl <em>MLCD2 0x4 Button</em>}' class.
@@ -5059,13 +5041,13 @@ public interface ModelPackage extends EPackage
   int MLCD2_0X4_BUTTON = 38;
 
   /**
-   * The feature id for the '<em><b>Switch State</b></em>' attribute.
+   * The feature id for the '<em><b>Sensor Value</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON__SWITCH_STATE = MOUT_SWITCH_ACTOR__SWITCH_STATE;
+  int MLCD2_0X4_BUTTON__SENSOR_VALUE = MSENSOR__SENSOR_VALUE;
 
   /**
    * The feature id for the '<em><b>Logger</b></em>' attribute.
@@ -5074,7 +5056,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON__LOGGER = MOUT_SWITCH_ACTOR_FEATURE_COUNT + 0;
+  int MLCD2_0X4_BUTTON__LOGGER = MSENSOR_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Uid</b></em>' attribute.
@@ -5083,7 +5065,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON__UID = MOUT_SWITCH_ACTOR_FEATURE_COUNT + 1;
+  int MLCD2_0X4_BUTTON__UID = MSENSOR_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Enabled A</b></em>' attribute.
@@ -5092,7 +5074,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON__ENABLED_A = MOUT_SWITCH_ACTOR_FEATURE_COUNT + 2;
+  int MLCD2_0X4_BUTTON__ENABLED_A = MSENSOR_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Sub Id</b></em>' attribute.
@@ -5101,7 +5083,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON__SUB_ID = MOUT_SWITCH_ACTOR_FEATURE_COUNT + 3;
+  int MLCD2_0X4_BUTTON__SUB_ID = MSENSOR_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Mbrick</b></em>' container reference.
@@ -5110,7 +5092,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON__MBRICK = MOUT_SWITCH_ACTOR_FEATURE_COUNT + 4;
+  int MLCD2_0X4_BUTTON__MBRICK = MSENSOR_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Device Type</b></em>' attribute.
@@ -5119,7 +5101,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON__DEVICE_TYPE = MOUT_SWITCH_ACTOR_FEATURE_COUNT + 5;
+  int MLCD2_0X4_BUTTON__DEVICE_TYPE = MSENSOR_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Button Num</b></em>' attribute.
@@ -5128,7 +5110,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON__BUTTON_NUM = MOUT_SWITCH_ACTOR_FEATURE_COUNT + 6;
+  int MLCD2_0X4_BUTTON__BUTTON_NUM = MSENSOR_FEATURE_COUNT + 6;
 
   /**
    * The feature id for the '<em><b>Callback Period</b></em>' attribute.
@@ -5137,7 +5119,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON__CALLBACK_PERIOD = MOUT_SWITCH_ACTOR_FEATURE_COUNT + 7;
+  int MLCD2_0X4_BUTTON__CALLBACK_PERIOD = MSENSOR_FEATURE_COUNT + 7;
 
   /**
    * The number of structural features of the '<em>MLCD2 0x4 Button</em>' class.
@@ -5146,25 +5128,16 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON_FEATURE_COUNT = MOUT_SWITCH_ACTOR_FEATURE_COUNT + 8;
+  int MLCD2_0X4_BUTTON_FEATURE_COUNT = MSENSOR_FEATURE_COUNT + 8;
 
   /**
-   * The operation id for the '<em>Turn Switch</em>' operation.
+   * The operation id for the '<em>Fetch Sensor Value</em>' operation.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON___TURN_SWITCH__ONOFFVALUE = MOUT_SWITCH_ACTOR___TURN_SWITCH__ONOFFVALUE;
-
-  /**
-   * The operation id for the '<em>Fetch Switch State</em>' operation.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MLCD2_0X4_BUTTON___FETCH_SWITCH_STATE = MOUT_SWITCH_ACTOR___FETCH_SWITCH_STATE;
+  int MLCD2_0X4_BUTTON___FETCH_SENSOR_VALUE = MSENSOR___FETCH_SENSOR_VALUE;
 
   /**
    * The operation id for the '<em>Init</em>' operation.
@@ -5173,7 +5146,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON___INIT = MOUT_SWITCH_ACTOR_OPERATION_COUNT + 0;
+  int MLCD2_0X4_BUTTON___INIT = MSENSOR_OPERATION_COUNT + 0;
 
   /**
    * The operation id for the '<em>Enable</em>' operation.
@@ -5182,7 +5155,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON___ENABLE = MOUT_SWITCH_ACTOR_OPERATION_COUNT + 1;
+  int MLCD2_0X4_BUTTON___ENABLE = MSENSOR_OPERATION_COUNT + 1;
 
   /**
    * The operation id for the '<em>Disable</em>' operation.
@@ -5191,7 +5164,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON___DISABLE = MOUT_SWITCH_ACTOR_OPERATION_COUNT + 2;
+  int MLCD2_0X4_BUTTON___DISABLE = MSENSOR_OPERATION_COUNT + 2;
 
   /**
    * The number of operations of the '<em>MLCD2 0x4 Button</em>' class.
@@ -5200,7 +5173,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MLCD2_0X4_BUTTON_OPERATION_COUNT = MOUT_SWITCH_ACTOR_OPERATION_COUNT + 3;
+  int MLCD2_0X4_BUTTON_OPERATION_COUNT = MSENSOR_OPERATION_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>TF Config</em>' class.
@@ -5916,6 +5889,16 @@ public interface ModelPackage extends EPackage
    * @generated
    */
   int ENUM = 80;
+
+  /**
+   * The meta object id for the '<em>Device Options</em>' data type.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.openhab.binding.tinkerforge.internal.DeviceOptions
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getDeviceOptions()
+   * @generated
+   */
+  int DEVICE_OPTIONS = 81;
 
   /**
    * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.TFConfig <em>TF Config</em>}'.
@@ -6805,65 +6788,85 @@ public interface ModelPackage extends EPackage
   EClass getMActor();
 
   /**
-   * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.MSwitchActor <em>MSwitch Actor</em>}'.
+   * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActor <em>Switch Actor</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>MSwitch Actor</em>'.
-   * @see org.openhab.binding.tinkerforge.internal.model.MSwitchActor
+   * @return the meta object for class '<em>Switch Actor</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.SwitchActor
    * @generated
    */
-  EClass getMSwitchActor();
+  EClass getSwitchActor();
 
   /**
-   * Returns the meta object for the attribute '{@link org.openhab.binding.tinkerforge.internal.model.MSwitchActor#getSwitchState <em>Switch State</em>}'.
+   * Returns the meta object for the attribute '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActor#getSwitchState <em>Switch State</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Switch State</em>'.
-   * @see org.openhab.binding.tinkerforge.internal.model.MSwitchActor#getSwitchState()
-   * @see #getMSwitchActor()
+   * @see org.openhab.binding.tinkerforge.internal.model.SwitchActor#getSwitchState()
+   * @see #getSwitchActor()
    * @generated
    */
-  EAttribute getMSwitchActor_SwitchState();
+  EAttribute getSwitchActor_SwitchState();
 
   /**
-   * Returns the meta object for the '{@link org.openhab.binding.tinkerforge.internal.model.MSwitchActor#turnSwitch(org.openhab.binding.tinkerforge.internal.types.OnOffValue) <em>Turn Switch</em>}' operation.
+   * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple <em>Switch Actor Simple</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Switch Actor Simple</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple
+   * @generated
+   */
+  EClass getSwitchActorSimple();
+
+  /**
+   * Returns the meta object for the '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple#turnSwitch(org.openhab.binding.tinkerforge.internal.types.OnOffValue) <em>Turn Switch</em>}' operation.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the '<em>Turn Switch</em>' operation.
-   * @see org.openhab.binding.tinkerforge.internal.model.MSwitchActor#turnSwitch(org.openhab.binding.tinkerforge.internal.types.OnOffValue)
+   * @see org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple#turnSwitch(org.openhab.binding.tinkerforge.internal.types.OnOffValue)
    * @generated
    */
-  EOperation getMSwitchActor__TurnSwitch__OnOffValue();
+  EOperation getSwitchActorSimple__TurnSwitch__OnOffValue();
 
   /**
-   * Returns the meta object for the '{@link org.openhab.binding.tinkerforge.internal.model.MSwitchActor#fetchSwitchState() <em>Fetch Switch State</em>}' operation.
+   * Returns the meta object for the '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple#fetchSwitchState() <em>Fetch Switch State</em>}' operation.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the '<em>Fetch Switch State</em>' operation.
-   * @see org.openhab.binding.tinkerforge.internal.model.MSwitchActor#fetchSwitchState()
+   * @see org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple#fetchSwitchState()
    * @generated
    */
-  EOperation getMSwitchActor__FetchSwitchState();
+  EOperation getSwitchActorSimple__FetchSwitchState();
 
   /**
-   * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.MOutSwitchActor <em>MOut Switch Actor</em>}'.
+   * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActorWc <em>Switch Actor Wc</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>MOut Switch Actor</em>'.
-   * @see org.openhab.binding.tinkerforge.internal.model.MOutSwitchActor
+   * @return the meta object for class '<em>Switch Actor Wc</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.SwitchActorWc
    * @generated
    */
-  EClass getMOutSwitchActor();
+  EClass getSwitchActorWc();
 
   /**
-   * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.MInSwitchActor <em>MIn Switch Actor</em>}'.
+   * Returns the meta object for the '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActorWc#turnSwitch(org.openhab.binding.tinkerforge.internal.types.OnOffValue, org.openhab.binding.tinkerforge.internal.DeviceOptions) <em>Turn Switch</em>}' operation.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>MIn Switch Actor</em>'.
-   * @see org.openhab.binding.tinkerforge.internal.model.MInSwitchActor
+   * @return the meta object for the '<em>Turn Switch</em>' operation.
+   * @see org.openhab.binding.tinkerforge.internal.model.SwitchActorWc#turnSwitch(org.openhab.binding.tinkerforge.internal.types.OnOffValue, org.openhab.binding.tinkerforge.internal.DeviceOptions)
    * @generated
    */
-  EClass getMInSwitchActor();
+  EOperation getSwitchActorWc__TurnSwitch__OnOffValue_DeviceOptions();
+
+  /**
+   * Returns the meta object for the '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActorWc#fetchSwitchState(org.openhab.binding.tinkerforge.internal.DeviceOptions) <em>Fetch Switch State</em>}' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the '<em>Fetch Switch State</em>' operation.
+   * @see org.openhab.binding.tinkerforge.internal.model.SwitchActorWc#fetchSwitchState(org.openhab.binding.tinkerforge.internal.DeviceOptions)
+   * @generated
+   */
+  EOperation getSwitchActorWc__FetchSwitchState__DeviceOptions();
 
   /**
    * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.GenericDevice <em>Generic Device</em>}'.
@@ -8280,6 +8283,17 @@ public interface ModelPackage extends EPackage
   EDataType getEnum();
 
   /**
+   * Returns the meta object for data type '{@link org.openhab.binding.tinkerforge.internal.DeviceOptions <em>Device Options</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for data type '<em>Device Options</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.DeviceOptions
+   * @model instanceClass="org.openhab.binding.tinkerforge.internal.DeviceOptions"
+   * @generated
+   */
+  EDataType getDeviceOptions();
+
+  /**
    * Returns the meta object for data type '{@link com.tinkerforge.BrickletDualRelay <em>MTinker Bricklet Dual Relay</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -9021,14 +9035,14 @@ public interface ModelPackage extends EPackage
     EClass MACTOR = eINSTANCE.getMActor();
 
     /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MSwitchActor <em>MSwitch Actor</em>}' class.
+     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActor <em>Switch Actor</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MSwitchActor
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMSwitchActor()
+     * @see org.openhab.binding.tinkerforge.internal.model.SwitchActor
+     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getSwitchActor()
      * @generated
      */
-    EClass MSWITCH_ACTOR = eINSTANCE.getMSwitchActor();
+    EClass SWITCH_ACTOR = eINSTANCE.getSwitchActor();
 
     /**
      * The meta object literal for the '<em><b>Switch State</b></em>' attribute feature.
@@ -9036,7 +9050,17 @@ public interface ModelPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute MSWITCH_ACTOR__SWITCH_STATE = eINSTANCE.getMSwitchActor_SwitchState();
+    EAttribute SWITCH_ACTOR__SWITCH_STATE = eINSTANCE.getSwitchActor_SwitchState();
+
+    /**
+     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple <em>Switch Actor Simple</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple
+     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getSwitchActorSimple()
+     * @generated
+     */
+    EClass SWITCH_ACTOR_SIMPLE = eINSTANCE.getSwitchActorSimple();
 
     /**
      * The meta object literal for the '<em><b>Turn Switch</b></em>' operation.
@@ -9044,7 +9068,7 @@ public interface ModelPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EOperation MSWITCH_ACTOR___TURN_SWITCH__ONOFFVALUE = eINSTANCE.getMSwitchActor__TurnSwitch__OnOffValue();
+    EOperation SWITCH_ACTOR_SIMPLE___TURN_SWITCH__ONOFFVALUE = eINSTANCE.getSwitchActorSimple__TurnSwitch__OnOffValue();
 
     /**
      * The meta object literal for the '<em><b>Fetch Switch State</b></em>' operation.
@@ -9052,27 +9076,33 @@ public interface ModelPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EOperation MSWITCH_ACTOR___FETCH_SWITCH_STATE = eINSTANCE.getMSwitchActor__FetchSwitchState();
+    EOperation SWITCH_ACTOR_SIMPLE___FETCH_SWITCH_STATE = eINSTANCE.getSwitchActorSimple__FetchSwitchState();
 
     /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MOutSwitchActor <em>MOut Switch Actor</em>}' class.
+     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.SwitchActorWc <em>Switch Actor Wc</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MOutSwitchActor
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMOutSwitchActor()
+     * @see org.openhab.binding.tinkerforge.internal.model.SwitchActorWc
+     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getSwitchActorWc()
      * @generated
      */
-    EClass MOUT_SWITCH_ACTOR = eINSTANCE.getMOutSwitchActor();
+    EClass SWITCH_ACTOR_WC = eINSTANCE.getSwitchActorWc();
 
     /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MInSwitchActor <em>MIn Switch Actor</em>}' class.
+     * The meta object literal for the '<em><b>Turn Switch</b></em>' operation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MInSwitchActor
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMInSwitchActor()
      * @generated
      */
-    EClass MIN_SWITCH_ACTOR = eINSTANCE.getMInSwitchActor();
+    EOperation SWITCH_ACTOR_WC___TURN_SWITCH__ONOFFVALUE_DEVICEOPTIONS = eINSTANCE.getSwitchActorWc__TurnSwitch__OnOffValue_DeviceOptions();
+
+    /**
+     * The meta object literal for the '<em><b>Fetch Switch State</b></em>' operation.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EOperation SWITCH_ACTOR_WC___FETCH_SWITCH_STATE__DEVICEOPTIONS = eINSTANCE.getSwitchActorWc__FetchSwitchState__DeviceOptions();
 
     /**
      * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.GenericDevice <em>Generic Device</em>}' class.
@@ -10251,6 +10281,16 @@ public interface ModelPackage extends EPackage
      * @generated
      */
     EDataType ENUM = eINSTANCE.getEnum();
+
+    /**
+     * The meta object literal for the '<em>Device Options</em>' data type.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.openhab.binding.tinkerforge.internal.DeviceOptions
+     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getDeviceOptions()
+     * @generated
+     */
+    EDataType DEVICE_OPTIONS = eINSTANCE.getDeviceOptions();
 
     /**
      * The meta object literal for the '<em>MTinker Bricklet Dual Relay</em>' data type.

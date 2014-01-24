@@ -28,6 +28,7 @@ import org.openhab.binding.tinkerforge.internal.types.DecimalValue
 import org.openhab.binding.tinkerforge.internal.types.OnOffValue
 import org.openhab.binding.tinkerforge.internal.types.HighLowValue
 import com.tinkerforge.BrickletIO16
+import org.openhab.binding.tinkerforge.internal.DeviceOptions
 
 /**
  * @author Theo Weiss
@@ -56,6 +57,7 @@ type MTinkerBrickletBarometer wraps BrickletBarometer
 type MTinkerBrickletAmbientLight wraps BrickletAmbientLight
 type MTinkerBrickletLCD20x4 wraps BrickletLCD20x4
 type Enum wraps Enum
+type DeviceOptions wraps org.openhab.binding.tinkerforge.internal.DeviceOptions
 
 class Ecosystem {
 	MLogger logger
@@ -114,16 +116,18 @@ interface MSubDeviceHolder<S extends MSubDevice<?>> {
 interface MActor{
 }
 
-interface MSwitchActor {
+interface SwitchActor {
 	SwitchState switchState
+}
+
+interface SwitchActorSimple extends SwitchActor{
 	op void turnSwitch(SwitchState state)
 	op SwitchState fetchSwitchState()
 }
 
-interface MOutSwitchActor extends MSwitchActor{
-}
-
-interface MInSwitchActor extends MSwitchActor{
+interface SwitchActorWc extends SwitchActor{
+	op void turnSwitch(SwitchState state, DeviceOptions opts)
+	op SwitchState fetchSwitchState(DeviceOptions opts)
 }
 
 interface GenericDevice {
@@ -163,7 +167,7 @@ class MBrickServo extends MDevice<MTinkerBrickServo>, MSubDeviceHolder<MServo> {
 	//int outputVoltage = "5000"
 }
 
-class MServo extends MInSwitchActor, MSubDevice<MBrickServo>, 
+class MServo extends SwitchActorSimple, MSubDevice<MBrickServo>, 
 					MTFConfigConsumer<TFServoConfiguration>{
 	readonly String deviceType = "servo"
 	int velocity = "30000"
@@ -182,7 +186,7 @@ enum DCDriveMode {
 	Coast = 1
 }
 
-class MBrickDC extends MInSwitchActor, MDevice<MTinkerBrickDC>, 
+class MBrickDC extends SwitchActorSimple, MDevice<MTinkerBrickDC>, 
 		MTFConfigConsumer<TFBrickDCConfiguration>{
 	readonly String deviceType = "brick_dc"
 	op void init(){}
@@ -204,7 +208,7 @@ class MIndustrialQuadRelayBricklet extends
 			MSubDeviceHolder<MIndustrialQuadRelay>{
 }
 
-class MIndustrialQuadRelay extends MInSwitchActor, 
+class MIndustrialQuadRelay extends SwitchActorSimple, 
 				MSubDevice<MIndustrialQuadRelayBricklet>{
 	readonly String deviceType = "industrial_quad_relay"
 }
@@ -244,7 +248,7 @@ class DigitalSensor extends IODevice, MSensor<DigitalValue>,
 	int pin
 }
 
-class MDualRelay extends MInSwitchActor, MSubDevice<MDualRelayBricklet>{
+class MDualRelay extends SwitchActorSimple, MSubDevice<MDualRelayBricklet>{
 	readonly String deviceType = "dual_relay"
 }
 
@@ -310,11 +314,11 @@ class MBrickletLCD20x4 extends MDevice<MTinkerBrickletLCD20x4>, MTextActor,
 	readonly String errorPrefix = "openhab Error:"
 }
 
-class MLCD20x4Backlight extends MInSwitchActor, MLCDSubDevice{
+class MLCD20x4Backlight extends SwitchActorSimple, MLCDSubDevice{
 	readonly String deviceType = "backlight"
 }
 
-class MLCD20x4Button extends MOutSwitchActor, MLCDSubDevice{
+class MLCD20x4Button extends MSensor<DigitalValue>, MLCDSubDevice{
 	readonly String deviceType = "lcd_button"
 	short buttonNum
 	int callbackPeriod

@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.openhab.binding.tinkerforge.internal.DeviceOptions;
 import org.openhab.binding.tinkerforge.internal.model.*;
 import org.openhab.binding.tinkerforge.internal.model.BarometerSubIDs;
 import org.openhab.binding.tinkerforge.internal.model.DCDriveMode;
@@ -248,6 +249,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
         return createMTinkerBrickletLCD20x4FromString(eDataType, initialValue);
       case ModelPackage.ENUM:
         return createEnumFromString(eDataType, initialValue);
+      case ModelPackage.DEVICE_OPTIONS:
+        return createDeviceOptionsFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -327,6 +330,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
         return convertMTinkerBrickletLCD20x4ToString(eDataType, instanceValue);
       case ModelPackage.ENUM:
         return convertEnumToString(eDataType, instanceValue);
+      case ModelPackage.DEVICE_OPTIONS:
+        return convertDeviceOptionsToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -1282,6 +1287,26 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
    * @generated
    */
   public String convertEnumToString(EDataType eDataType, Object instanceValue)
+  {
+    return super.convertToString(eDataType, instanceValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DeviceOptions createDeviceOptionsFromString(EDataType eDataType, String initialValue)
+  {
+    return (DeviceOptions)super.createFromString(eDataType, initialValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertDeviceOptionsToString(EDataType eDataType, Object instanceValue)
   {
     return super.convertToString(eDataType, instanceValue);
   }

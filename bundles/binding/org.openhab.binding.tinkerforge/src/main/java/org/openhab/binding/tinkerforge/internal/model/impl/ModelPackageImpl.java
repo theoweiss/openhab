@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.openhab.binding.tinkerforge.internal.DeviceOptions;
 import org.openhab.binding.tinkerforge.internal.model.BarometerSubIDs;
 import org.openhab.binding.tinkerforge.internal.model.CallbackListener;
 import org.openhab.binding.tinkerforge.internal.model.DCDriveMode;
@@ -55,19 +56,16 @@ import org.openhab.binding.tinkerforge.internal.model.MBrickletTemperature;
 import org.openhab.binding.tinkerforge.internal.model.MDevice;
 import org.openhab.binding.tinkerforge.internal.model.MDualRelay;
 import org.openhab.binding.tinkerforge.internal.model.MDualRelayBricklet;
-import org.openhab.binding.tinkerforge.internal.model.MInSwitchActor;
 import org.openhab.binding.tinkerforge.internal.model.MIndustrialDigitalIn;
 import org.openhab.binding.tinkerforge.internal.model.MIndustrialQuadRelay;
 import org.openhab.binding.tinkerforge.internal.model.MIndustrialQuadRelayBricklet;
 import org.openhab.binding.tinkerforge.internal.model.MLCD20x4Backlight;
 import org.openhab.binding.tinkerforge.internal.model.MLCD20x4Button;
 import org.openhab.binding.tinkerforge.internal.model.MLCDSubDevice;
-import org.openhab.binding.tinkerforge.internal.model.MOutSwitchActor;
 import org.openhab.binding.tinkerforge.internal.model.MSensor;
 import org.openhab.binding.tinkerforge.internal.model.MServo;
 import org.openhab.binding.tinkerforge.internal.model.MSubDevice;
 import org.openhab.binding.tinkerforge.internal.model.MSubDeviceHolder;
-import org.openhab.binding.tinkerforge.internal.model.MSwitchActor;
 import org.openhab.binding.tinkerforge.internal.model.MTFConfigConsumer;
 import org.openhab.binding.tinkerforge.internal.model.MTextActor;
 import org.openhab.binding.tinkerforge.internal.model.ModelFactory;
@@ -76,6 +74,9 @@ import org.openhab.binding.tinkerforge.internal.model.NoSubIds;
 import org.openhab.binding.tinkerforge.internal.model.OHConfig;
 import org.openhab.binding.tinkerforge.internal.model.OHTFDevice;
 import org.openhab.binding.tinkerforge.internal.model.ServoSubIDs;
+import org.openhab.binding.tinkerforge.internal.model.SwitchActor;
+import org.openhab.binding.tinkerforge.internal.model.SwitchActorSimple;
+import org.openhab.binding.tinkerforge.internal.model.SwitchActorWc;
 import org.openhab.binding.tinkerforge.internal.model.TFBaseConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.TFBrickDCConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.TFConfig;
@@ -244,21 +245,21 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass mSwitchActorEClass = null;
+  private EClass switchActorEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass mOutSwitchActorEClass = null;
+  private EClass switchActorSimpleEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass mInSwitchActorEClass = null;
+  private EClass switchActorWcEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -637,6 +638,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * @generated
    */
   private EDataType enumEDataType = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EDataType deviceOptionsEDataType = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1561,9 +1569,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getMSwitchActor()
+  public EClass getSwitchActor()
   {
-    return mSwitchActorEClass;
+    return switchActorEClass;
   }
 
   /**
@@ -1571,9 +1579,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMSwitchActor_SwitchState()
+  public EAttribute getSwitchActor_SwitchState()
   {
-    return (EAttribute)mSwitchActorEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)switchActorEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1581,9 +1589,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EOperation getMSwitchActor__TurnSwitch__OnOffValue()
+  public EClass getSwitchActorSimple()
   {
-    return mSwitchActorEClass.getEOperations().get(0);
+    return switchActorSimpleEClass;
   }
 
   /**
@@ -1591,9 +1599,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EOperation getMSwitchActor__FetchSwitchState()
+  public EOperation getSwitchActorSimple__TurnSwitch__OnOffValue()
   {
-    return mSwitchActorEClass.getEOperations().get(1);
+    return switchActorSimpleEClass.getEOperations().get(0);
   }
 
   /**
@@ -1601,9 +1609,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getMOutSwitchActor()
+  public EOperation getSwitchActorSimple__FetchSwitchState()
   {
-    return mOutSwitchActorEClass;
+    return switchActorSimpleEClass.getEOperations().get(1);
   }
 
   /**
@@ -1611,9 +1619,29 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getMInSwitchActor()
+  public EClass getSwitchActorWc()
   {
-    return mInSwitchActorEClass;
+    return switchActorWcEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EOperation getSwitchActorWc__TurnSwitch__OnOffValue_DeviceOptions()
+  {
+    return switchActorWcEClass.getEOperations().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EOperation getSwitchActorWc__FetchSwitchState__DeviceOptions()
+  {
+    return switchActorWcEClass.getEOperations().get(1);
   }
 
   /**
@@ -2951,6 +2979,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EDataType getDeviceOptions()
+  {
+    return deviceOptionsEDataType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EDataType getMTinkerBrickletDualRelay()
   {
     return mTinkerBrickletDualRelayEDataType;
@@ -3055,14 +3093,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
 
     mActorEClass = createEClass(MACTOR);
 
-    mSwitchActorEClass = createEClass(MSWITCH_ACTOR);
-    createEAttribute(mSwitchActorEClass, MSWITCH_ACTOR__SWITCH_STATE);
-    createEOperation(mSwitchActorEClass, MSWITCH_ACTOR___TURN_SWITCH__ONOFFVALUE);
-    createEOperation(mSwitchActorEClass, MSWITCH_ACTOR___FETCH_SWITCH_STATE);
+    switchActorEClass = createEClass(SWITCH_ACTOR);
+    createEAttribute(switchActorEClass, SWITCH_ACTOR__SWITCH_STATE);
 
-    mOutSwitchActorEClass = createEClass(MOUT_SWITCH_ACTOR);
+    switchActorSimpleEClass = createEClass(SWITCH_ACTOR_SIMPLE);
+    createEOperation(switchActorSimpleEClass, SWITCH_ACTOR_SIMPLE___TURN_SWITCH__ONOFFVALUE);
+    createEOperation(switchActorSimpleEClass, SWITCH_ACTOR_SIMPLE___FETCH_SWITCH_STATE);
 
-    mInSwitchActorEClass = createEClass(MIN_SWITCH_ACTOR);
+    switchActorWcEClass = createEClass(SWITCH_ACTOR_WC);
+    createEOperation(switchActorWcEClass, SWITCH_ACTOR_WC___TURN_SWITCH__ONOFFVALUE_DEVICEOPTIONS);
+    createEOperation(switchActorWcEClass, SWITCH_ACTOR_WC___FETCH_SWITCH_STATE__DEVICEOPTIONS);
 
     genericDeviceEClass = createEClass(GENERIC_DEVICE);
     createEAttribute(genericDeviceEClass, GENERIC_DEVICE__GENERIC_DEVICE_ID);
@@ -3281,6 +3321,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     mTinkerBrickletAmbientLightEDataType = createEDataType(MTINKER_BRICKLET_AMBIENT_LIGHT);
     mTinkerBrickletLCD20x4EDataType = createEDataType(MTINKER_BRICKLET_LCD2_0X4);
     enumEDataType = createEDataType(ENUM);
+    deviceOptionsEDataType = createEDataType(DEVICE_OPTIONS);
   }
 
   /**
@@ -3339,8 +3380,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
 
     // Add supertypes to classes
     mDeviceEClass.getESuperTypes().add(this.getMBaseDevice());
-    mOutSwitchActorEClass.getESuperTypes().add(this.getMSwitchActor());
-    mInSwitchActorEClass.getESuperTypes().add(this.getMSwitchActor());
+    switchActorSimpleEClass.getESuperTypes().add(this.getSwitchActor());
+    switchActorWcEClass.getESuperTypes().add(this.getSwitchActor());
     g1 = createEGenericType(this.getMSubDevice());
     g2 = createEGenericType(this.getMBrickletIO16());
     g1.getETypeArguments().add(g2);
@@ -3360,7 +3401,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     g2 = createEGenericType(this.getMServo());
     g1.getETypeArguments().add(g2);
     mBrickServoEClass.getEGenericSuperTypes().add(g1);
-    g1 = createEGenericType(this.getMInSwitchActor());
+    g1 = createEGenericType(this.getSwitchActorSimple());
     mServoEClass.getEGenericSuperTypes().add(g1);
     g1 = createEGenericType(this.getMSubDevice());
     g2 = createEGenericType(this.getMBrickServo());
@@ -3370,7 +3411,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     g2 = createEGenericType(this.getTFServoConfiguration());
     g1.getETypeArguments().add(g2);
     mServoEClass.getEGenericSuperTypes().add(g1);
-    g1 = createEGenericType(this.getMInSwitchActor());
+    g1 = createEGenericType(this.getSwitchActorSimple());
     mBrickDCEClass.getEGenericSuperTypes().add(g1);
     g1 = createEGenericType(this.getMDevice());
     g2 = createEGenericType(this.getMTinkerBrickDC());
@@ -3396,7 +3437,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     g2 = createEGenericType(this.getMIndustrialQuadRelay());
     g1.getETypeArguments().add(g2);
     mIndustrialQuadRelayBrickletEClass.getEGenericSuperTypes().add(g1);
-    g1 = createEGenericType(this.getMInSwitchActor());
+    g1 = createEGenericType(this.getSwitchActorSimple());
     mIndustrialQuadRelayEClass.getEGenericSuperTypes().add(g1);
     g1 = createEGenericType(this.getMSubDevice());
     g2 = createEGenericType(this.getMIndustrialQuadRelayBricklet());
@@ -3454,7 +3495,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     g2 = createEGenericType(this.getTFIOSensorConfiguration());
     g1.getETypeArguments().add(g2);
     digitalSensorEClass.getEGenericSuperTypes().add(g1);
-    g1 = createEGenericType(this.getMInSwitchActor());
+    g1 = createEGenericType(this.getSwitchActorSimple());
     mDualRelayEClass.getEGenericSuperTypes().add(g1);
     g1 = createEGenericType(this.getMSubDevice());
     g2 = createEGenericType(this.getMDualRelayBricklet());
@@ -3552,10 +3593,14 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     g2 = createEGenericType(this.getMLCDSubDevice());
     g1.getETypeArguments().add(g2);
     mBrickletLCD20x4EClass.getEGenericSuperTypes().add(g1);
-    mlcd20x4BacklightEClass.getESuperTypes().add(this.getMInSwitchActor());
+    mlcd20x4BacklightEClass.getESuperTypes().add(this.getSwitchActorSimple());
     mlcd20x4BacklightEClass.getESuperTypes().add(this.getMLCDSubDevice());
-    mlcd20x4ButtonEClass.getESuperTypes().add(this.getMOutSwitchActor());
-    mlcd20x4ButtonEClass.getESuperTypes().add(this.getMLCDSubDevice());
+    g1 = createEGenericType(this.getMSensor());
+    g2 = createEGenericType(this.getDigitalValue());
+    g1.getETypeArguments().add(g2);
+    mlcd20x4ButtonEClass.getEGenericSuperTypes().add(g1);
+    g1 = createEGenericType(this.getMLCDSubDevice());
+    mlcd20x4ButtonEClass.getEGenericSuperTypes().add(g1);
     tfNullConfigurationEClass.getESuperTypes().add(this.getTFConfig());
     tfBaseConfigurationEClass.getESuperTypes().add(this.getTFConfig());
     tfBrickDCConfigurationEClass.getESuperTypes().add(this.getTFConfig());
@@ -3643,17 +3688,24 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
 
     initEClass(mActorEClass, MActor.class, "MActor", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(mSwitchActorEClass, MSwitchActor.class, "MSwitchActor", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMSwitchActor_SwitchState(), this.getSwitchState(), "switchState", null, 0, 1, MSwitchActor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(switchActorEClass, SwitchActor.class, "SwitchActor", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSwitchActor_SwitchState(), this.getSwitchState(), "switchState", null, 0, 1, SwitchActor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    op = initEOperation(getMSwitchActor__TurnSwitch__OnOffValue(), null, "turnSwitch", 0, 1, !IS_UNIQUE, IS_ORDERED);
+    initEClass(switchActorSimpleEClass, SwitchActorSimple.class, "SwitchActorSimple", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    op = initEOperation(getSwitchActorSimple__TurnSwitch__OnOffValue(), null, "turnSwitch", 0, 1, !IS_UNIQUE, IS_ORDERED);
     addEParameter(op, this.getSwitchState(), "state", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-    initEOperation(getMSwitchActor__FetchSwitchState(), this.getSwitchState(), "fetchSwitchState", 0, 1, !IS_UNIQUE, IS_ORDERED);
+    initEOperation(getSwitchActorSimple__FetchSwitchState(), this.getSwitchState(), "fetchSwitchState", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-    initEClass(mOutSwitchActorEClass, MOutSwitchActor.class, "MOutSwitchActor", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(switchActorWcEClass, SwitchActorWc.class, "SwitchActorWc", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(mInSwitchActorEClass, MInSwitchActor.class, "MInSwitchActor", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    op = initEOperation(getSwitchActorWc__TurnSwitch__OnOffValue_DeviceOptions(), null, "turnSwitch", 0, 1, !IS_UNIQUE, IS_ORDERED);
+    addEParameter(op, this.getSwitchState(), "state", 0, 1, !IS_UNIQUE, IS_ORDERED);
+    addEParameter(op, this.getDeviceOptions(), "opts", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+    op = initEOperation(getSwitchActorWc__FetchSwitchState__DeviceOptions(), this.getSwitchState(), "fetchSwitchState", 0, 1, !IS_UNIQUE, IS_ORDERED);
+    addEParameter(op, this.getDeviceOptions(), "opts", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
     initEClass(genericDeviceEClass, GenericDevice.class, "GenericDevice", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getGenericDevice_GenericDeviceId(), theEcorePackage.getEString(), "genericDeviceId", null, 0, 1, GenericDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3982,6 +4034,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     initEDataType(mTinkerBrickletAmbientLightEDataType, BrickletAmbientLight.class, "MTinkerBrickletAmbientLight", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
     initEDataType(mTinkerBrickletLCD20x4EDataType, BrickletLCD20x4.class, "MTinkerBrickletLCD20x4", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
     initEDataType(enumEDataType, Enum.class, "Enum", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+    initEDataType(deviceOptionsEDataType, DeviceOptions.class, "DeviceOptions", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
     // Create resource
     createResource(eNS_URI);

@@ -34,7 +34,7 @@ package org.openhab.binding.tinkerforge.internal.model;
  * @model
  * @generated
  */
-public interface MServo extends MInSwitchActor, MSubDevice<MBrickServo>, MTFConfigConsumer<TFServoConfiguration>
+public interface MServo extends SwitchActorSimple, MSubDevice<MBrickServo>, MTFConfigConsumer<TFServoConfiguration>
 {
   /**
    * Returns the value of the '<em><b>Device Type</b></em>' attribute.

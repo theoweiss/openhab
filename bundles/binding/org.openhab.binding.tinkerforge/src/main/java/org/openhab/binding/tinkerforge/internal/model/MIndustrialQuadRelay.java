@@ -25,7 +25,7 @@ package org.openhab.binding.tinkerforge.internal.model;
  * @model
  * @generated
  */
-public interface MIndustrialQuadRelay extends MInSwitchActor, MSubDevice<MIndustrialQuadRelayBricklet>
+public interface MIndustrialQuadRelay extends SwitchActorSimple, MSubDevice<MIndustrialQuadRelayBricklet>
 {
   /**
    * Returns the value of the '<em><b>Device Type</b></em>' attribute.

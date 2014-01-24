@@ -73,6 +73,7 @@ public class TinkerforgeGenericBindingProvider extends
 			logger.error("got bindingConfig null for item: {}", item.getName());
 		} else {
 			TinkerforgeBindingConfig config = new TinkerforgeBindingConfig();
+			DeviceOptions deviceOptions = new DeviceOptions();
 			String[] tokens = bindingConfig.trim().split(",");
 			for (String token : tokens) {
 				token = token.trim();
@@ -92,11 +93,11 @@ public class TinkerforgeGenericBindingProvider extends
 					} else if (key.equals(ConfigKey.name.name())) {
 						config.setName(value);
 					} else {
-						throw new BindingConfigParseException(
-								"unknown configuration key: " + key);
+					    deviceOptions.put(key, value);
 					}
 				}
 			}
+			config.setDeviceOptions(deviceOptions);
 			config.setItem(item);
 			addBindingConfig(item, config);
 		}
@@ -146,6 +147,15 @@ public class TinkerforgeGenericBindingProvider extends
 		TinkerforgeBindingConfig config = (TinkerforgeBindingConfig) bindingConfigs.get(itemName);
 		return config != null ? config.getName() : null;
 	}
+	
+    /**
+     * {@inheritDoc}
+     */
+	  @Override
+	  public DeviceOptions getDeviceOptions(String itemName) {
+        TinkerforgeBindingConfig config = (TinkerforgeBindingConfig) bindingConfigs.get(itemName);
+        return config != null ? config.getDeviceOptions() : null;
+	  }
 
 	/**
 	 * This class represents the configuration of an Item that is binded to a
@@ -165,10 +175,11 @@ public class TinkerforgeGenericBindingProvider extends
 	 * @since 1.3.0
 	 */
 	class TinkerforgeBindingConfig implements BindingConfig {
-		private String uid;
+	    private String uid;
 		private String subId;
 		private String name;
 		private Item item;
+        private DeviceOptions deviceOptions;
 
 		public Class<? extends Item> getItemType() {
 			return item.getClass();
@@ -205,5 +216,14 @@ public class TinkerforgeGenericBindingProvider extends
 		public void setName(String name) {
 			this.name = name;
 		}
+		
+	    public DeviceOptions getDeviceOptions(){
+          return this.deviceOptions;
+	    }
+
+	    public void setDeviceOptions (DeviceOptions deviceOptions){
+	      this.deviceOptions = deviceOptions;
+	    }
 	}
+
 }

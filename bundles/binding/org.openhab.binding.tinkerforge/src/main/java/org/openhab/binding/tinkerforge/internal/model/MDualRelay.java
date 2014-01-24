@@ -25,7 +25,7 @@ package org.openhab.binding.tinkerforge.internal.model;
  * @model
  * @generated
  */
-public interface MDualRelay extends MInSwitchActor, MSubDevice<MDualRelayBricklet>
+public interface MDualRelay extends SwitchActorSimple, MSubDevice<MDualRelayBricklet>
 {
   /**
    * Returns the value of the '<em><b>Device Type</b></em>' attribute.
