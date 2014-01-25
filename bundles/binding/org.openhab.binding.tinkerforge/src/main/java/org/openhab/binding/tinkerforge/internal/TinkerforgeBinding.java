@@ -760,8 +760,8 @@ public class TinkerforgeBinding extends
 							deviceUid, deviceSubId);
 					if (mDevice != null && mDevice.getEnabledA().get()) {
 						if (command instanceof OnOffType) {
-							logger.trace("{} found onoff command",
-									LoggerConstants.COMMAND);
+							logger.trace("{} found onoff command for {}",
+									LoggerConstants.COMMAND, mDevice);
 							if (mDevice instanceof SwitchActor) {
 								OnOffType cmd = (OnOffType) command;
 								OnOffValue state = cmd == OnOffType.OFF ? OnOffValue.OFF

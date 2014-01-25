@@ -328,6 +328,11 @@ public class ModelAdapterFactory extends AdapterFactoryImpl
         return createMLCD20x4ButtonAdapter();
       }
       @Override
+      public Adapter caseMBrickletRemoteSwitch(MBrickletRemoteSwitch object)
+      {
+        return createMBrickletRemoteSwitchAdapter();
+      }
+      @Override
       public Adapter caseTFConfig(TFConfig object)
       {
         return createTFConfigAdapter();
@@ -1130,6 +1135,21 @@ public class ModelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMLCD20x4ButtonAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.openhab.binding.tinkerforge.internal.model.MBrickletRemoteSwitch <em>MBricklet Remote Switch</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.openhab.binding.tinkerforge.internal.model.MBrickletRemoteSwitch
+   * @generated
+   */
+  public Adapter createMBrickletRemoteSwitchAdapter()
   {
     return null;
   }

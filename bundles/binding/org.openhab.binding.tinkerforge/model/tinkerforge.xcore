@@ -29,6 +29,7 @@ import org.openhab.binding.tinkerforge.internal.types.OnOffValue
 import org.openhab.binding.tinkerforge.internal.types.HighLowValue
 import com.tinkerforge.BrickletIO16
 import org.openhab.binding.tinkerforge.internal.DeviceOptions
+import com.tinkerforge.BrickletRemoteSwitch
 
 /**
  * @author Theo Weiss
@@ -56,6 +57,7 @@ type MTinkerBrickletTemperature wraps BrickletTemperature
 type MTinkerBrickletBarometer wraps BrickletBarometer
 type MTinkerBrickletAmbientLight wraps BrickletAmbientLight
 type MTinkerBrickletLCD20x4 wraps BrickletLCD20x4
+type MTinkerBrickletRemoteSwitch wraps BrickletRemoteSwitch
 type Enum wraps Enum
 type DeviceOptions wraps org.openhab.binding.tinkerforge.internal.DeviceOptions
 
@@ -322,6 +324,10 @@ class MLCD20x4Button extends MSensor<DigitalValue>, MLCDSubDevice{
 	readonly String deviceType = "lcd_button"
 	short buttonNum
 	int callbackPeriod
+}
+
+class MBrickletRemoteSwitch extends MDevice<MTinkerBrickletRemoteSwitch>, SwitchActorWc{
+	readonly String deviceType = "bricklet_remote_switch"
 }
 
 // configuration model

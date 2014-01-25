@@ -3,7 +3,6 @@
 package org.openhab.binding.tinkerforge.internal.model;
 
 import org.openhab.binding.tinkerforge.internal.DeviceOptions;
-
 import org.openhab.binding.tinkerforge.internal.types.OnOffValue;
 
 /**

@@ -506,6 +506,17 @@ public class ModelSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ModelPackage.MBRICKLET_REMOTE_SWITCH:
+      {
+        MBrickletRemoteSwitch mBrickletRemoteSwitch = (MBrickletRemoteSwitch)theEObject;
+        T result = caseMBrickletRemoteSwitch(mBrickletRemoteSwitch);
+        if (result == null) result = caseMDevice(mBrickletRemoteSwitch);
+        if (result == null) result = caseSwitchActorWc(mBrickletRemoteSwitch);
+        if (result == null) result = caseMBaseDevice(mBrickletRemoteSwitch);
+        if (result == null) result = caseSwitchActor(mBrickletRemoteSwitch);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ModelPackage.TF_CONFIG:
       {
         TFConfig tfConfig = (TFConfig)theEObject;
@@ -1369,6 +1380,22 @@ public class ModelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseMLCD20x4Button(MLCD20x4Button object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>MBricklet Remote Switch</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>MBricklet Remote Switch</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMBrickletRemoteSwitch(MBrickletRemoteSwitch object)
   {
     return null;
   }

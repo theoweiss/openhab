@@ -42,6 +42,7 @@ import org.openhab.binding.tinkerforge.internal.model.MBrickletHumidity;
 import org.openhab.binding.tinkerforge.internal.model.MBrickletIO16;
 import org.openhab.binding.tinkerforge.internal.model.MBrickletIndustrialDigitalIn4;
 import org.openhab.binding.tinkerforge.internal.model.MBrickletLCD20x4;
+import org.openhab.binding.tinkerforge.internal.model.MBrickletRemoteSwitch;
 import org.openhab.binding.tinkerforge.internal.model.MBrickletTemperature;
 import org.openhab.binding.tinkerforge.internal.model.MDualRelay;
 import org.openhab.binding.tinkerforge.internal.model.MDualRelayBricklet;
@@ -82,6 +83,7 @@ import com.tinkerforge.BrickletIO16;
 import com.tinkerforge.BrickletIndustrialDigitalIn4;
 import com.tinkerforge.BrickletIndustrialQuadRelay;
 import com.tinkerforge.BrickletLCD20x4;
+import com.tinkerforge.BrickletRemoteSwitch;
 import com.tinkerforge.BrickletTemperature;
 import com.tinkerforge.Device;
 import com.tinkerforge.IPConnection;
@@ -161,6 +163,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
       case ModelPackage.MBRICKLET_LCD2_0X4: return createMBrickletLCD20x4();
       case ModelPackage.MLCD2_0X4_BACKLIGHT: return createMLCD20x4Backlight();
       case ModelPackage.MLCD2_0X4_BUTTON: return createMLCD20x4Button();
+      case ModelPackage.MBRICKLET_REMOTE_SWITCH: return createMBrickletRemoteSwitch();
       case ModelPackage.OHTF_DEVICE: return createOHTFDevice();
       case ModelPackage.OH_CONFIG: return createOHConfig();
       case ModelPackage.TF_NULL_CONFIGURATION: return createTFNullConfiguration();
@@ -247,6 +250,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
         return createMTinkerBrickletAmbientLightFromString(eDataType, initialValue);
       case ModelPackage.MTINKER_BRICKLET_LCD2_0X4:
         return createMTinkerBrickletLCD20x4FromString(eDataType, initialValue);
+      case ModelPackage.MTINKER_BRICKLET_REMOTE_SWITCH:
+        return createMTinkerBrickletRemoteSwitchFromString(eDataType, initialValue);
       case ModelPackage.ENUM:
         return createEnumFromString(eDataType, initialValue);
       case ModelPackage.DEVICE_OPTIONS:
@@ -328,6 +333,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
         return convertMTinkerBrickletAmbientLightToString(eDataType, instanceValue);
       case ModelPackage.MTINKER_BRICKLET_LCD2_0X4:
         return convertMTinkerBrickletLCD20x4ToString(eDataType, instanceValue);
+      case ModelPackage.MTINKER_BRICKLET_REMOTE_SWITCH:
+        return convertMTinkerBrickletRemoteSwitchToString(eDataType, instanceValue);
       case ModelPackage.ENUM:
         return convertEnumToString(eDataType, instanceValue);
       case ModelPackage.DEVICE_OPTIONS:
@@ -688,6 +695,17 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
   {
     MLCD20x4ButtonImpl mlcd20x4Button = new MLCD20x4ButtonImpl();
     return mlcd20x4Button;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MBrickletRemoteSwitch createMBrickletRemoteSwitch()
+  {
+    MBrickletRemoteSwitchImpl mBrickletRemoteSwitch = new MBrickletRemoteSwitchImpl();
+    return mBrickletRemoteSwitch;
   }
 
   /**
@@ -1266,6 +1284,26 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
    * @generated
    */
   public String convertMTinkerBrickletLCD20x4ToString(EDataType eDataType, Object instanceValue)
+  {
+    return super.convertToString(eDataType, instanceValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BrickletRemoteSwitch createMTinkerBrickletRemoteSwitchFromString(EDataType eDataType, String initialValue)
+  {
+    return (BrickletRemoteSwitch)super.createFromString(eDataType, initialValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertMTinkerBrickletRemoteSwitchToString(EDataType eDataType, Object instanceValue)
   {
     return super.convertToString(eDataType, instanceValue);
   }
