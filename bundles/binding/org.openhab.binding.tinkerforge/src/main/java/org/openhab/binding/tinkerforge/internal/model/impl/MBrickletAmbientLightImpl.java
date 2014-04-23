@@ -357,7 +357,7 @@ public class MBrickletAmbientLightImpl extends MinimalEObjectImpl.Container impl
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.MBRICKLET_AMBIENT_LIGHT;
+    return ModelPackage.eINSTANCE.getMBrickletAmbientLight();
   }
 
   /**

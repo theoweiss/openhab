@@ -383,7 +383,7 @@ public class MServoImpl extends MinimalEObjectImpl.Container implements MServo
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.MSERVO;
+    return ModelPackage.eINSTANCE.getMServo();
   }
 
   /**

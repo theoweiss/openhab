@@ -102,7 +102,7 @@ public class RemoteSwitchBConfigurationImpl extends MinimalEObjectImpl.Container
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.REMOTE_SWITCH_BCONFIGURATION;
+    return ModelPackage.eINSTANCE.getRemoteSwitchBConfiguration();
   }
 
   /**

@@ -85,7 +85,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFConfig()
    * @generated
    */
-  int TF_CONFIG = 50;
+  int TF_CONFIG = 54;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.OHTFDeviceImpl <em>OHTF Device</em>}' class.
@@ -95,7 +95,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getOHTFDevice()
    * @generated
    */
-  int OHTF_DEVICE = 51;
+  int OHTF_DEVICE = 55;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.OHConfigImpl <em>OH Config</em>}' class.
@@ -105,7 +105,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getOHConfig()
    * @generated
    */
-  int OH_CONFIG = 53;
+  int OH_CONFIG = 57;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.EcosystemImpl <em>Ecosystem</em>}' class.
@@ -185,7 +185,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFBrickDCConfiguration()
    * @generated
    */
-  int TF_BRICK_DC_CONFIGURATION = 56;
+  int TF_BRICK_DC_CONFIGURATION = 61;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MDualRelayBrickletImpl <em>MDual Relay Bricklet</em>}' class.
@@ -305,7 +305,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFIOActorConfiguration()
    * @generated
    */
-  int TFIO_ACTOR_CONFIGURATION = 57;
+  int TFIO_ACTOR_CONFIGURATION = 62;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.DigitalActorImpl <em>Digital Actor</em>}' class.
@@ -355,7 +355,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFInterruptListenerConfiguration()
    * @generated
    */
-  int TF_INTERRUPT_LISTENER_CONFIGURATION = 58;
+  int TF_INTERRUPT_LISTENER_CONFIGURATION = 63;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.TFIOSensorConfigurationImpl <em>TFIO Sensor Configuration</em>}' class.
@@ -365,7 +365,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFIOSensorConfiguration()
    * @generated
    */
-  int TFIO_SENSOR_CONFIGURATION = 59;
+  int TFIO_SENSOR_CONFIGURATION = 64;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MDualRelayImpl <em>MDual Relay</em>}' class.
@@ -385,7 +385,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFNullConfiguration()
    * @generated
    */
-  int TF_NULL_CONFIGURATION = 54;
+  int TF_NULL_CONFIGURATION = 58;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.TFServoConfigurationImpl <em>TF Servo Configuration</em>}' class.
@@ -395,7 +395,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFServoConfiguration()
    * @generated
    */
-  int TF_SERVO_CONFIGURATION = 60;
+  int TF_SERVO_CONFIGURATION = 65;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MServoImpl <em>MServo</em>}' class.
@@ -475,7 +475,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFBaseConfiguration()
    * @generated
    */
-  int TF_BASE_CONFIGURATION = 55;
+  int TF_BASE_CONFIGURATION = 59;
 
   /**
    * The feature id for the '<em><b>Logger</b></em>' attribute.
@@ -1477,7 +1477,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletBarometer()
    * @generated
    */
-  int MBRICKLET_BAROMETER = 44;
+  int MBRICKLET_BAROMETER = 48;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBarometerTemperatureImpl <em>MBarometer Temperature</em>}' class.
@@ -1487,7 +1487,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBarometerTemperature()
    * @generated
    */
-  int MBAROMETER_TEMPERATURE = 45;
+  int MBAROMETER_TEMPERATURE = 49;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletAmbientLightImpl <em>MBricklet Ambient Light</em>}' class.
@@ -1497,7 +1497,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletAmbientLight()
    * @generated
    */
-  int MBRICKLET_AMBIENT_LIGHT = 46;
+  int MBRICKLET_AMBIENT_LIGHT = 50;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletLCD20x4Impl <em>MBricklet LCD2 0x4</em>}' class.
@@ -1507,7 +1507,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletLCD20x4()
    * @generated
    */
-  int MBRICKLET_LCD2_0X4 = 47;
+  int MBRICKLET_LCD2_0X4 = 51;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.MTextActor <em>MText Actor</em>}' class.
@@ -5905,6 +5905,658 @@ public interface ModelPackage extends EPackage
   int MBRICKLET_TEMPERATURE_OPERATION_COUNT = MDEVICE_OPERATION_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureIRImpl <em>MBricklet Temperature IR</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureIRImpl
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletTemperatureIR()
+   * @generated
+   */
+  int MBRICKLET_TEMPERATURE_IR = 44;
+
+  /**
+   * The feature id for the '<em><b>Logger</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR__LOGGER = MDEVICE__LOGGER;
+
+  /**
+   * The feature id for the '<em><b>Uid</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR__UID = MDEVICE__UID;
+
+  /**
+   * The feature id for the '<em><b>Enabled A</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR__ENABLED_A = MDEVICE__ENABLED_A;
+
+  /**
+   * The feature id for the '<em><b>Tinkerforge Device</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR__TINKERFORGE_DEVICE = MDEVICE__TINKERFORGE_DEVICE;
+
+  /**
+   * The feature id for the '<em><b>Ip Connection</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR__IP_CONNECTION = MDEVICE__IP_CONNECTION;
+
+  /**
+   * The feature id for the '<em><b>Connected Uid</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR__CONNECTED_UID = MDEVICE__CONNECTED_UID;
+
+  /**
+   * The feature id for the '<em><b>Position</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR__POSITION = MDEVICE__POSITION;
+
+  /**
+   * The feature id for the '<em><b>Device Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR__DEVICE_IDENTIFIER = MDEVICE__DEVICE_IDENTIFIER;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR__NAME = MDEVICE__NAME;
+
+  /**
+   * The feature id for the '<em><b>Brickd</b></em>' container reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR__BRICKD = MDEVICE__BRICKD;
+
+  /**
+   * The feature id for the '<em><b>Msubdevices</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR__MSUBDEVICES = MDEVICE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Device Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR__DEVICE_TYPE = MDEVICE_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>MBricklet Temperature IR</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR_FEATURE_COUNT = MDEVICE_FEATURE_COUNT + 2;
+
+  /**
+   * The operation id for the '<em>Init</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR___INIT = MDEVICE___INIT;
+
+  /**
+   * The operation id for the '<em>Enable</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR___ENABLE = MDEVICE___ENABLE;
+
+  /**
+   * The operation id for the '<em>Disable</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR___DISABLE = MDEVICE___DISABLE;
+
+  /**
+   * The operation id for the '<em>Init Sub Devices</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR___INIT_SUB_DEVICES = MDEVICE_OPERATION_COUNT + 0;
+
+  /**
+   * The number of operations of the '<em>MBricklet Temperature IR</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MBRICKLET_TEMPERATURE_IR_OPERATION_COUNT = MDEVICE_OPERATION_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MTemperatureIRDeviceImpl <em>MTemperature IR Device</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.MTemperatureIRDeviceImpl
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTemperatureIRDevice()
+   * @generated
+   */
+  int MTEMPERATURE_IR_DEVICE = 45;
+
+  /**
+   * The feature id for the '<em><b>Sensor Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE__SENSOR_VALUE = MSENSOR__SENSOR_VALUE;
+
+  /**
+   * The feature id for the '<em><b>Logger</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE__LOGGER = MSENSOR_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Uid</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE__UID = MSENSOR_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Enabled A</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE__ENABLED_A = MSENSOR_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Sub Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE__SUB_ID = MSENSOR_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Mbrick</b></em>' container reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE__MBRICK = MSENSOR_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Callback Period</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE__CALLBACK_PERIOD = MSENSOR_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Temperature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE__TEMPERATURE = MSENSOR_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>Threshold</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE__THRESHOLD = MSENSOR_FEATURE_COUNT + 7;
+
+  /**
+   * The number of structural features of the '<em>MTemperature IR Device</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE_FEATURE_COUNT = MSENSOR_FEATURE_COUNT + 8;
+
+  /**
+   * The operation id for the '<em>Fetch Sensor Value</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE___FETCH_SENSOR_VALUE = MSENSOR___FETCH_SENSOR_VALUE;
+
+  /**
+   * The operation id for the '<em>Enable</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE___ENABLE = MSENSOR_OPERATION_COUNT + 1;
+
+  /**
+   * The operation id for the '<em>Disable</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE___DISABLE = MSENSOR_OPERATION_COUNT + 2;
+
+  /**
+   * The operation id for the '<em>Init</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE___INIT = MSENSOR_OPERATION_COUNT + 3;
+
+  /**
+   * The number of operations of the '<em>MTemperature IR Device</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MTEMPERATURE_IR_DEVICE_OPERATION_COUNT = MSENSOR_OPERATION_COUNT + 4;
+
+  /**
+   * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.ObjectTemperatureImpl <em>Object Temperature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.ObjectTemperatureImpl
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getObjectTemperature()
+   * @generated
+   */
+  int OBJECT_TEMPERATURE = 46;
+
+  /**
+   * The feature id for the '<em><b>Sensor Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE__SENSOR_VALUE = MTEMPERATURE_IR_DEVICE__SENSOR_VALUE;
+
+  /**
+   * The feature id for the '<em><b>Logger</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE__LOGGER = MTEMPERATURE_IR_DEVICE__LOGGER;
+
+  /**
+   * The feature id for the '<em><b>Uid</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE__UID = MTEMPERATURE_IR_DEVICE__UID;
+
+  /**
+   * The feature id for the '<em><b>Enabled A</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE__ENABLED_A = MTEMPERATURE_IR_DEVICE__ENABLED_A;
+
+  /**
+   * The feature id for the '<em><b>Sub Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE__SUB_ID = MTEMPERATURE_IR_DEVICE__SUB_ID;
+
+  /**
+   * The feature id for the '<em><b>Mbrick</b></em>' container reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE__MBRICK = MTEMPERATURE_IR_DEVICE__MBRICK;
+
+  /**
+   * The feature id for the '<em><b>Callback Period</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE__CALLBACK_PERIOD = MTEMPERATURE_IR_DEVICE__CALLBACK_PERIOD;
+
+  /**
+   * The feature id for the '<em><b>Temperature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE__TEMPERATURE = MTEMPERATURE_IR_DEVICE__TEMPERATURE;
+
+  /**
+   * The feature id for the '<em><b>Threshold</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE__THRESHOLD = MTEMPERATURE_IR_DEVICE__THRESHOLD;
+
+  /**
+   * The feature id for the '<em><b>Tf Config</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE__TF_CONFIG = MTEMPERATURE_IR_DEVICE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Device Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE__DEVICE_TYPE = MTEMPERATURE_IR_DEVICE_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Emissivity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE__EMISSIVITY = MTEMPERATURE_IR_DEVICE_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Object Temperature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE_FEATURE_COUNT = MTEMPERATURE_IR_DEVICE_FEATURE_COUNT + 3;
+
+  /**
+   * The operation id for the '<em>Fetch Sensor Value</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE___FETCH_SENSOR_VALUE = MTEMPERATURE_IR_DEVICE___FETCH_SENSOR_VALUE;
+
+  /**
+   * The operation id for the '<em>Enable</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE___ENABLE = MTEMPERATURE_IR_DEVICE___ENABLE;
+
+  /**
+   * The operation id for the '<em>Disable</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE___DISABLE = MTEMPERATURE_IR_DEVICE___DISABLE;
+
+  /**
+   * The operation id for the '<em>Init</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE___INIT = MTEMPERATURE_IR_DEVICE___INIT;
+
+  /**
+   * The number of operations of the '<em>Object Temperature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OBJECT_TEMPERATURE_OPERATION_COUNT = MTEMPERATURE_IR_DEVICE_OPERATION_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.AmbientTemperatureImpl <em>Ambient Temperature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.AmbientTemperatureImpl
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getAmbientTemperature()
+   * @generated
+   */
+  int AMBIENT_TEMPERATURE = 47;
+
+  /**
+   * The feature id for the '<em><b>Sensor Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE__SENSOR_VALUE = MTEMPERATURE_IR_DEVICE__SENSOR_VALUE;
+
+  /**
+   * The feature id for the '<em><b>Logger</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE__LOGGER = MTEMPERATURE_IR_DEVICE__LOGGER;
+
+  /**
+   * The feature id for the '<em><b>Uid</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE__UID = MTEMPERATURE_IR_DEVICE__UID;
+
+  /**
+   * The feature id for the '<em><b>Enabled A</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE__ENABLED_A = MTEMPERATURE_IR_DEVICE__ENABLED_A;
+
+  /**
+   * The feature id for the '<em><b>Sub Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE__SUB_ID = MTEMPERATURE_IR_DEVICE__SUB_ID;
+
+  /**
+   * The feature id for the '<em><b>Mbrick</b></em>' container reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE__MBRICK = MTEMPERATURE_IR_DEVICE__MBRICK;
+
+  /**
+   * The feature id for the '<em><b>Callback Period</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE__CALLBACK_PERIOD = MTEMPERATURE_IR_DEVICE__CALLBACK_PERIOD;
+
+  /**
+   * The feature id for the '<em><b>Temperature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE__TEMPERATURE = MTEMPERATURE_IR_DEVICE__TEMPERATURE;
+
+  /**
+   * The feature id for the '<em><b>Threshold</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE__THRESHOLD = MTEMPERATURE_IR_DEVICE__THRESHOLD;
+
+  /**
+   * The feature id for the '<em><b>Tf Config</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE__TF_CONFIG = MTEMPERATURE_IR_DEVICE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Device Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE__DEVICE_TYPE = MTEMPERATURE_IR_DEVICE_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Ambient Temperature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE_FEATURE_COUNT = MTEMPERATURE_IR_DEVICE_FEATURE_COUNT + 2;
+
+  /**
+   * The operation id for the '<em>Fetch Sensor Value</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE___FETCH_SENSOR_VALUE = MTEMPERATURE_IR_DEVICE___FETCH_SENSOR_VALUE;
+
+  /**
+   * The operation id for the '<em>Enable</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE___ENABLE = MTEMPERATURE_IR_DEVICE___ENABLE;
+
+  /**
+   * The operation id for the '<em>Disable</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE___DISABLE = MTEMPERATURE_IR_DEVICE___DISABLE;
+
+  /**
+   * The operation id for the '<em>Init</em>' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE___INIT = MTEMPERATURE_IR_DEVICE___INIT;
+
+  /**
+   * The number of operations of the '<em>Ambient Temperature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AMBIENT_TEMPERATURE_OPERATION_COUNT = MTEMPERATURE_IR_DEVICE_OPERATION_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Logger</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -6659,7 +7311,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMLCD20x4Backlight()
    * @generated
    */
-  int MLCD2_0X4_BACKLIGHT = 48;
+  int MLCD2_0X4_BACKLIGHT = 52;
 
   /**
    * The feature id for the '<em><b>Switch State</b></em>' attribute.
@@ -6795,7 +7447,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMLCD20x4Button()
    * @generated
    */
-  int MLCD2_0X4_BUTTON = 49;
+  int MLCD2_0X4_BUTTON = 53;
 
   /**
    * The feature id for the '<em><b>Switch State</b></em>' attribute.
@@ -7048,7 +7700,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getOHTFSubDeviceAdminDevice()
    * @generated
    */
-  int OHTF_SUB_DEVICE_ADMIN_DEVICE = 52;
+  int OHTF_SUB_DEVICE_ADMIN_DEVICE = 56;
 
   /**
    * The feature id for the '<em><b>Uid</b></em>' attribute.
@@ -7229,6 +7881,43 @@ public interface ModelPackage extends EPackage
    * @ordered
    */
   int TF_BASE_CONFIGURATION_OPERATION_COUNT = TF_CONFIG_OPERATION_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.TFObjectTemperatureConfigurationImpl <em>TF Object Temperature Configuration</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.TFObjectTemperatureConfigurationImpl
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFObjectTemperatureConfiguration()
+   * @generated
+   */
+  int TF_OBJECT_TEMPERATURE_CONFIGURATION = 60;
+
+  /**
+   * The feature id for the '<em><b>Emissivity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TF_OBJECT_TEMPERATURE_CONFIGURATION__EMISSIVITY = TF_CONFIG_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>TF Object Temperature Configuration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TF_OBJECT_TEMPERATURE_CONFIGURATION_FEATURE_COUNT = TF_CONFIG_FEATURE_COUNT + 1;
+
+  /**
+   * The number of operations of the '<em>TF Object Temperature Configuration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TF_OBJECT_TEMPERATURE_CONFIGURATION_OPERATION_COUNT = TF_CONFIG_OPERATION_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Velocity</b></em>' attribute.
@@ -7472,7 +8161,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getBrickletRemoteSwitchConfiguration()
    * @generated
    */
-  int BRICKLET_REMOTE_SWITCH_CONFIGURATION = 61;
+  int BRICKLET_REMOTE_SWITCH_CONFIGURATION = 66;
 
   /**
    * The feature id for the '<em><b>Type ADevices</b></em>' attribute.
@@ -7527,7 +8216,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getRemoteSwitchAConfiguration()
    * @generated
    */
-  int REMOTE_SWITCH_ACONFIGURATION = 62;
+  int REMOTE_SWITCH_ACONFIGURATION = 67;
 
   /**
    * The feature id for the '<em><b>House Code</b></em>' attribute.
@@ -7582,7 +8271,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getRemoteSwitchBConfiguration()
    * @generated
    */
-  int REMOTE_SWITCH_BCONFIGURATION = 63;
+  int REMOTE_SWITCH_BCONFIGURATION = 68;
 
   /**
    * The feature id for the '<em><b>Address</b></em>' attribute.
@@ -7637,7 +8326,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getRemoteSwitchCConfiguration()
    * @generated
    */
-  int REMOTE_SWITCH_CCONFIGURATION = 64;
+  int REMOTE_SWITCH_CCONFIGURATION = 69;
 
   /**
    * The feature id for the '<em><b>System Code</b></em>' attribute.
@@ -7692,7 +8381,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMultiTouchDeviceConfiguration()
    * @generated
    */
-  int MULTI_TOUCH_DEVICE_CONFIGURATION = 65;
+  int MULTI_TOUCH_DEVICE_CONFIGURATION = 70;
 
   /**
    * The feature id for the '<em><b>Disable Electrode</b></em>' attribute.
@@ -7729,7 +8418,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getBrickletMultiTouchConfiguration()
    * @generated
    */
-  int BRICKLET_MULTI_TOUCH_CONFIGURATION = 66;
+  int BRICKLET_MULTI_TOUCH_CONFIGURATION = 71;
 
   /**
    * The feature id for the '<em><b>Recalibrate</b></em>' attribute.
@@ -7775,7 +8464,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getSwitchState()
    * @generated
    */
-  int SWITCH_STATE = 87;
+  int SWITCH_STATE = 93;
 
   /**
    * The meta object id for the '<em>Digital Value</em>' data type.
@@ -7785,7 +8474,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getDigitalValue()
    * @generated
    */
-  int DIGITAL_VALUE = 88;
+  int DIGITAL_VALUE = 94;
 
   /**
    * The meta object id for the '<em>Tinker Bricklet IO16</em>' data type.
@@ -7795,7 +8484,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTinkerBrickletIO16()
    * @generated
    */
-  int TINKER_BRICKLET_IO16 = 89;
+  int TINKER_BRICKLET_IO16 = 95;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.DCDriveMode <em>DC Drive Mode</em>}' enum.
@@ -7805,7 +8494,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getDCDriveMode()
    * @generated
    */
-  int DC_DRIVE_MODE = 67;
+  int DC_DRIVE_MODE = 72;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.NoSubIds <em>No Sub Ids</em>}' enum.
@@ -7815,7 +8504,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getNoSubIds()
    * @generated
    */
-  int NO_SUB_IDS = 68;
+  int NO_SUB_IDS = 73;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.IndustrialDigitalInSubIDs <em>Industrial Digital In Sub IDs</em>}' enum.
@@ -7825,7 +8514,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getIndustrialDigitalInSubIDs()
    * @generated
    */
-  int INDUSTRIAL_DIGITAL_IN_SUB_IDS = 69;
+  int INDUSTRIAL_DIGITAL_IN_SUB_IDS = 74;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.IndustrialQuadRelayIDs <em>Industrial Quad Relay IDs</em>}' enum.
@@ -7835,7 +8524,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getIndustrialQuadRelayIDs()
    * @generated
    */
-  int INDUSTRIAL_QUAD_RELAY_IDS = 70;
+  int INDUSTRIAL_QUAD_RELAY_IDS = 75;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.ServoSubIDs <em>Servo Sub IDs</em>}' enum.
@@ -7845,7 +8534,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getServoSubIDs()
    * @generated
    */
-  int SERVO_SUB_IDS = 71;
+  int SERVO_SUB_IDS = 76;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.BarometerSubIDs <em>Barometer Sub IDs</em>}' enum.
@@ -7855,7 +8544,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getBarometerSubIDs()
    * @generated
    */
-  int BAROMETER_SUB_IDS = 72;
+  int BAROMETER_SUB_IDS = 77;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.IO16SubIds <em>IO16 Sub Ids</em>}' enum.
@@ -7865,7 +8554,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getIO16SubIds()
    * @generated
    */
-  int IO16_SUB_IDS = 73;
+  int IO16_SUB_IDS = 78;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.DualRelaySubIds <em>Dual Relay Sub Ids</em>}' enum.
@@ -7875,7 +8564,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getDualRelaySubIds()
    * @generated
    */
-  int DUAL_RELAY_SUB_IDS = 74;
+  int DUAL_RELAY_SUB_IDS = 79;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.LCDButtonSubIds <em>LCD Button Sub Ids</em>}' enum.
@@ -7885,7 +8574,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getLCDButtonSubIds()
    * @generated
    */
-  int LCD_BUTTON_SUB_IDS = 75;
+  int LCD_BUTTON_SUB_IDS = 80;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.LCDBacklightSubIds <em>LCD Backlight Sub Ids</em>}' enum.
@@ -7895,7 +8584,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getLCDBacklightSubIds()
    * @generated
    */
-  int LCD_BACKLIGHT_SUB_IDS = 76;
+  int LCD_BACKLIGHT_SUB_IDS = 81;
 
   /**
    * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.MultiTouchSubIds <em>Multi Touch Sub Ids</em>}' enum.
@@ -7905,7 +8594,17 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMultiTouchSubIds()
    * @generated
    */
-  int MULTI_TOUCH_SUB_IDS = 77;
+  int MULTI_TOUCH_SUB_IDS = 82;
+
+  /**
+   * The meta object id for the '{@link org.openhab.binding.tinkerforge.internal.model.TemperatureIRSubIds <em>Temperature IR Sub Ids</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.openhab.binding.tinkerforge.internal.model.TemperatureIRSubIds
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTemperatureIRSubIds()
+   * @generated
+   */
+  int TEMPERATURE_IR_SUB_IDS = 83;
 
   /**
    * The meta object id for the '<em>MIP Connection</em>' data type.
@@ -7915,7 +8614,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMIPConnection()
    * @generated
    */
-  int MIP_CONNECTION = 78;
+  int MIP_CONNECTION = 84;
 
   /**
    * The meta object id for the '<em>MTinker Device</em>' data type.
@@ -7925,7 +8624,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerDevice()
    * @generated
    */
-  int MTINKER_DEVICE = 79;
+  int MTINKER_DEVICE = 85;
 
   /**
    * The meta object id for the '<em>MLogger</em>' data type.
@@ -7935,7 +8634,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMLogger()
    * @generated
    */
-  int MLOGGER = 80;
+  int MLOGGER = 86;
 
 
   /**
@@ -7946,7 +8645,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMAtomicBoolean()
    * @generated
    */
-  int MATOMIC_BOOLEAN = 81;
+  int MATOMIC_BOOLEAN = 87;
 
   /**
    * The meta object id for the '<em>MTinkerforge Device</em>' data type.
@@ -7956,7 +8655,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerforgeDevice()
    * @generated
    */
-  int MTINKERFORGE_DEVICE = 82;
+  int MTINKERFORGE_DEVICE = 88;
 
   /**
    * The meta object id for the '<em>MTinker Brick DC</em>' data type.
@@ -7966,7 +8665,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickDC()
    * @generated
    */
-  int MTINKER_BRICK_DC = 83;
+  int MTINKER_BRICK_DC = 89;
 
   /**
    * The meta object id for the '<em>MTinker Brick Servo</em>' data type.
@@ -7976,7 +8675,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickServo()
    * @generated
    */
-  int MTINKER_BRICK_SERVO = 90;
+  int MTINKER_BRICK_SERVO = 96;
 
 
   /**
@@ -7987,7 +8686,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerforgeValue()
    * @generated
    */
-  int MTINKERFORGE_VALUE = 91;
+  int MTINKERFORGE_VALUE = 97;
 
   /**
    * The meta object id for the '<em>MDecimal Value</em>' data type.
@@ -7997,7 +8696,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMDecimalValue()
    * @generated
    */
-  int MDECIMAL_VALUE = 92;
+  int MDECIMAL_VALUE = 98;
 
   /**
    * The meta object id for the '<em>MTinker Bricklet Humidity</em>' data type.
@@ -8007,7 +8706,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletHumidity()
    * @generated
    */
-  int MTINKER_BRICKLET_HUMIDITY = 93;
+  int MTINKER_BRICKLET_HUMIDITY = 99;
 
   /**
    * The meta object id for the '<em>MTinker Bricklet Distance IR</em>' data type.
@@ -8017,7 +8716,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletDistanceIR()
    * @generated
    */
-  int MTINKER_BRICKLET_DISTANCE_IR = 94;
+  int MTINKER_BRICKLET_DISTANCE_IR = 100;
 
   /**
    * The meta object id for the '<em>MTinker Bricklet Temperature</em>' data type.
@@ -8027,7 +8726,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletTemperature()
    * @generated
    */
-  int MTINKER_BRICKLET_TEMPERATURE = 95;
+  int MTINKER_BRICKLET_TEMPERATURE = 101;
 
   /**
    * The meta object id for the '<em>MTinker Bricklet Barometer</em>' data type.
@@ -8037,7 +8736,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletBarometer()
    * @generated
    */
-  int MTINKER_BRICKLET_BAROMETER = 96;
+  int MTINKER_BRICKLET_BAROMETER = 102;
 
   /**
    * The meta object id for the '<em>MTinker Bricklet Ambient Light</em>' data type.
@@ -8047,7 +8746,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletAmbientLight()
    * @generated
    */
-  int MTINKER_BRICKLET_AMBIENT_LIGHT = 97;
+  int MTINKER_BRICKLET_AMBIENT_LIGHT = 103;
 
   /**
    * The meta object id for the '<em>MTinker Bricklet LCD2 0x4</em>' data type.
@@ -8057,7 +8756,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletLCD20x4()
    * @generated
    */
-  int MTINKER_BRICKLET_LCD2_0X4 = 98;
+  int MTINKER_BRICKLET_LCD2_0X4 = 104;
 
   /**
    * The meta object id for the '<em>Tinker Bricklet Remote Switch</em>' data type.
@@ -8067,7 +8766,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTinkerBrickletRemoteSwitch()
    * @generated
    */
-  int TINKER_BRICKLET_REMOTE_SWITCH = 99;
+  int TINKER_BRICKLET_REMOTE_SWITCH = 105;
 
   /**
    * The meta object id for the '<em>Tinker Bricklet Motion Detector</em>' data type.
@@ -8077,7 +8776,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTinkerBrickletMotionDetector()
    * @generated
    */
-  int TINKER_BRICKLET_MOTION_DETECTOR = 100;
+  int TINKER_BRICKLET_MOTION_DETECTOR = 106;
 
   /**
    * The meta object id for the '<em>Tinker Bricklet Multi Touch</em>' data type.
@@ -8087,7 +8786,17 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTinkerBrickletMultiTouch()
    * @generated
    */
-  int TINKER_BRICKLET_MULTI_TOUCH = 101;
+  int TINKER_BRICKLET_MULTI_TOUCH = 107;
+
+  /**
+   * The meta object id for the '<em>Tinker Bricklet Temperature IR</em>' data type.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.tinkerforge.BrickletTemperatureIR
+   * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTinkerBrickletTemperatureIR()
+   * @generated
+   */
+  int TINKER_BRICKLET_TEMPERATURE_IR = 108;
 
   /**
    * The meta object id for the '<em>Enum</em>' data type.
@@ -8097,7 +8806,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getEnum()
    * @generated
    */
-  int ENUM = 102;
+  int ENUM = 109;
 
   /**
    * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.TFConfig <em>TF Config</em>}'.
@@ -8264,7 +8973,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletDualRelay()
    * @generated
    */
-  int MTINKER_BRICKLET_DUAL_RELAY = 84;
+  int MTINKER_BRICKLET_DUAL_RELAY = 90;
 
 
   /**
@@ -8275,7 +8984,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletIndustrialQuadRelay()
    * @generated
    */
-  int MTINKER_BRICKLET_INDUSTRIAL_QUAD_RELAY = 85;
+  int MTINKER_BRICKLET_INDUSTRIAL_QUAD_RELAY = 91;
 
   /**
    * The meta object id for the '<em>MTinker Bricklet Industrial Digital In4</em>' data type.
@@ -8285,7 +8994,7 @@ public interface ModelPackage extends EPackage
    * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletIndustrialDigitalIn4()
    * @generated
    */
-  int MTINKER_BRICKLET_INDUSTRIAL_DIGITAL_IN4 = 86;
+  int MTINKER_BRICKLET_INDUSTRIAL_DIGITAL_IN4 = 92;
 
   /**
    * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.Ecosystem <em>Ecosystem</em>}'.
@@ -10475,6 +11184,122 @@ public interface ModelPackage extends EPackage
   EOperation getMBrickletTemperature__Init();
 
   /**
+   * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.MBrickletTemperatureIR <em>MBricklet Temperature IR</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>MBricklet Temperature IR</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.MBrickletTemperatureIR
+   * @generated
+   */
+  EClass getMBrickletTemperatureIR();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.openhab.binding.tinkerforge.internal.model.MBrickletTemperatureIR#getDeviceType <em>Device Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Device Type</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.MBrickletTemperatureIR#getDeviceType()
+   * @see #getMBrickletTemperatureIR()
+   * @generated
+   */
+  EAttribute getMBrickletTemperatureIR_DeviceType();
+
+  /**
+   * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice <em>MTemperature IR Device</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>MTemperature IR Device</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice
+   * @generated
+   */
+  EClass getMTemperatureIRDevice();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice#getTemperature <em>Temperature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Temperature</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice#getTemperature()
+   * @see #getMTemperatureIRDevice()
+   * @generated
+   */
+  EAttribute getMTemperatureIRDevice_Temperature();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice#getThreshold <em>Threshold</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Threshold</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice#getThreshold()
+   * @see #getMTemperatureIRDevice()
+   * @generated
+   */
+  EAttribute getMTemperatureIRDevice_Threshold();
+
+  /**
+   * Returns the meta object for the '{@link org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice#init() <em>Init</em>}' operation.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the '<em>Init</em>' operation.
+   * @see org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice#init()
+   * @generated
+   */
+  EOperation getMTemperatureIRDevice__Init();
+
+  /**
+   * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.ObjectTemperature <em>Object Temperature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Object Temperature</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.ObjectTemperature
+   * @generated
+   */
+  EClass getObjectTemperature();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.openhab.binding.tinkerforge.internal.model.ObjectTemperature#getDeviceType <em>Device Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Device Type</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.ObjectTemperature#getDeviceType()
+   * @see #getObjectTemperature()
+   * @generated
+   */
+  EAttribute getObjectTemperature_DeviceType();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.openhab.binding.tinkerforge.internal.model.ObjectTemperature#getEmissivity <em>Emissivity</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Emissivity</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.ObjectTemperature#getEmissivity()
+   * @see #getObjectTemperature()
+   * @generated
+   */
+  EAttribute getObjectTemperature_Emissivity();
+
+  /**
+   * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.AmbientTemperature <em>Ambient Temperature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ambient Temperature</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.AmbientTemperature
+   * @generated
+   */
+  EClass getAmbientTemperature();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.openhab.binding.tinkerforge.internal.model.AmbientTemperature#getDeviceType <em>Device Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Device Type</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.AmbientTemperature#getDeviceType()
+   * @see #getAmbientTemperature()
+   * @generated
+   */
+  EAttribute getAmbientTemperature_DeviceType();
+
+  /**
    * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.TFBaseConfiguration <em>TF Base Configuration</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -10505,6 +11330,27 @@ public interface ModelPackage extends EPackage
    * @generated
    */
   EAttribute getTFBaseConfiguration_CallbackPeriod();
+
+  /**
+   * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.TFObjectTemperatureConfiguration <em>TF Object Temperature Configuration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>TF Object Temperature Configuration</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.TFObjectTemperatureConfiguration
+   * @generated
+   */
+  EClass getTFObjectTemperatureConfiguration();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.openhab.binding.tinkerforge.internal.model.TFObjectTemperatureConfiguration#getEmissivity <em>Emissivity</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Emissivity</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.TFObjectTemperatureConfiguration#getEmissivity()
+   * @see #getTFObjectTemperatureConfiguration()
+   * @generated
+   */
+  EAttribute getTFObjectTemperatureConfiguration_Emissivity();
 
   /**
    * Returns the meta object for class '{@link org.openhab.binding.tinkerforge.internal.model.MBrickletBarometer <em>MBricklet Barometer</em>}'.
@@ -10968,6 +11814,16 @@ public interface ModelPackage extends EPackage
   EEnum getMultiTouchSubIds();
 
   /**
+   * Returns the meta object for enum '{@link org.openhab.binding.tinkerforge.internal.model.TemperatureIRSubIds <em>Temperature IR Sub Ids</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Temperature IR Sub Ids</em>'.
+   * @see org.openhab.binding.tinkerforge.internal.model.TemperatureIRSubIds
+   * @generated
+   */
+  EEnum getTemperatureIRSubIds();
+
+  /**
    * Returns the meta object for data type '{@link com.tinkerforge.IPConnection <em>MIP Connection</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -11166,6 +12022,17 @@ public interface ModelPackage extends EPackage
   EDataType getTinkerBrickletMultiTouch();
 
   /**
+   * Returns the meta object for data type '{@link com.tinkerforge.BrickletTemperatureIR <em>Tinker Bricklet Temperature IR</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for data type '<em>Tinker Bricklet Temperature IR</em>'.
+   * @see com.tinkerforge.BrickletTemperatureIR
+   * @model instanceClass="com.tinkerforge.BrickletTemperatureIR"
+   * @generated
+   */
+  EDataType getTinkerBrickletTemperatureIR();
+
+  /**
    * Returns the meta object for data type '{@link java.lang.Enum <em>Enum</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -11217,2548 +12084,5 @@ public interface ModelPackage extends EPackage
    * @generated
    */
   ModelFactory getModelFactory();
-
-  /**
-   * <!-- begin-user-doc -->
-   * Defines literals for the meta objects that represent
-   * <ul>
-   *   <li>each class,</li>
-   *   <li>each feature of each class,</li>
-   *   <li>each operation of each class,</li>
-   *   <li>each enum,</li>
-   *   <li>and each data type</li>
-   * </ul>
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  interface Literals
-  {
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.TFConfig <em>TF Config</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.TFConfig
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFConfig()
-     * @generated
-     */
-    EClass TF_CONFIG = eINSTANCE.getTFConfig();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.OHTFDeviceImpl <em>OHTF Device</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.OHTFDeviceImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getOHTFDevice()
-     * @generated
-     */
-    EClass OHTF_DEVICE = eINSTANCE.getOHTFDevice();
-
-    /**
-     * The meta object literal for the '<em><b>Uid</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute OHTF_DEVICE__UID = eINSTANCE.getOHTFDevice_Uid();
-
-    /**
-     * The meta object literal for the '<em><b>Subid</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute OHTF_DEVICE__SUBID = eINSTANCE.getOHTFDevice_Subid();
-
-    /**
-     * The meta object literal for the '<em><b>Ohid</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute OHTF_DEVICE__OHID = eINSTANCE.getOHTFDevice_Ohid();
-
-    /**
-     * The meta object literal for the '<em><b>Sub Device Ids</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute OHTF_DEVICE__SUB_DEVICE_IDS = eINSTANCE.getOHTFDevice_SubDeviceIds();
-
-    /**
-     * The meta object literal for the '<em><b>Tf Config</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference OHTF_DEVICE__TF_CONFIG = eINSTANCE.getOHTFDevice_TfConfig();
-
-    /**
-     * The meta object literal for the '<em><b>Oh Config</b></em>' container reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference OHTF_DEVICE__OH_CONFIG = eINSTANCE.getOHTFDevice_OhConfig();
-
-    /**
-     * The meta object literal for the '<em><b>Is Valid Sub Id</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation OHTF_DEVICE___IS_VALID_SUB_ID__STRING = eINSTANCE.getOHTFDevice__IsValidSubId__String();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.OHTFSubDeviceAdminDeviceImpl <em>OHTF Sub Device Admin Device</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.OHTFSubDeviceAdminDeviceImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getOHTFSubDeviceAdminDevice()
-     * @generated
-     */
-    EClass OHTF_SUB_DEVICE_ADMIN_DEVICE = eINSTANCE.getOHTFSubDeviceAdminDevice();
-
-    /**
-     * The meta object literal for the '<em><b>Is Valid Sub Id</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation OHTF_SUB_DEVICE_ADMIN_DEVICE___IS_VALID_SUB_ID__STRING = eINSTANCE.getOHTFSubDeviceAdminDevice__IsValidSubId__String();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.OHConfigImpl <em>OH Config</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.OHConfigImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getOHConfig()
-     * @generated
-     */
-    EClass OH_CONFIG = eINSTANCE.getOHConfig();
-
-    /**
-     * The meta object literal for the '<em><b>Oh Tf Devices</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference OH_CONFIG__OH_TF_DEVICES = eINSTANCE.getOHConfig_OhTfDevices();
-
-    /**
-     * The meta object literal for the '<em><b>Get Config By TF Id</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation OH_CONFIG___GET_CONFIG_BY_TF_ID__STRING_STRING = eINSTANCE.getOHConfig__GetConfigByTFId__String_String();
-
-    /**
-     * The meta object literal for the '<em><b>Get Config By OH Id</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation OH_CONFIG___GET_CONFIG_BY_OH_ID__STRING = eINSTANCE.getOHConfig__GetConfigByOHId__String();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.EcosystemImpl <em>Ecosystem</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.EcosystemImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getEcosystem()
-     * @generated
-     */
-    EClass ECOSYSTEM = eINSTANCE.getEcosystem();
-
-    /**
-     * The meta object literal for the '<em><b>Logger</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ECOSYSTEM__LOGGER = eINSTANCE.getEcosystem_Logger();
-
-    /**
-     * The meta object literal for the '<em><b>Mbrickds</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ECOSYSTEM__MBRICKDS = eINSTANCE.getEcosystem_Mbrickds();
-
-    /**
-     * The meta object literal for the '<em><b>Get Brickd</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation ECOSYSTEM___GET_BRICKD__STRING_INT = eINSTANCE.getEcosystem__GetBrickd__String_int();
-
-    /**
-     * The meta object literal for the '<em><b>Get Device</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation ECOSYSTEM___GET_DEVICE__STRING_STRING = eINSTANCE.getEcosystem__GetDevice__String_String();
-
-    /**
-     * The meta object literal for the '<em><b>Get Devices4 Generic Id</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation ECOSYSTEM___GET_DEVICES4_GENERIC_ID__STRING_STRING = eINSTANCE.getEcosystem__GetDevices4GenericId__String_String();
-
-    /**
-     * The meta object literal for the '<em><b>Disconnect</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation ECOSYSTEM___DISCONNECT = eINSTANCE.getEcosystem__Disconnect();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl <em>MBrickd</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickd()
-     * @generated
-     */
-    EClass MBRICKD = eINSTANCE.getMBrickd();
-
-    /**
-     * The meta object literal for the '<em><b>Logger</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKD__LOGGER = eINSTANCE.getMBrickd_Logger();
-
-    /**
-     * The meta object literal for the '<em><b>Ip Connection</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKD__IP_CONNECTION = eINSTANCE.getMBrickd_IpConnection();
-
-    /**
-     * The meta object literal for the '<em><b>Host</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKD__HOST = eINSTANCE.getMBrickd_Host();
-
-    /**
-     * The meta object literal for the '<em><b>Port</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKD__PORT = eINSTANCE.getMBrickd_Port();
-
-    /**
-     * The meta object literal for the '<em><b>Is Connected</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKD__IS_CONNECTED = eINSTANCE.getMBrickd_IsConnected();
-
-    /**
-     * The meta object literal for the '<em><b>Auto Reconnect</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKD__AUTO_RECONNECT = eINSTANCE.getMBrickd_AutoReconnect();
-
-    /**
-     * The meta object literal for the '<em><b>Reconnected</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKD__RECONNECTED = eINSTANCE.getMBrickd_Reconnected();
-
-    /**
-     * The meta object literal for the '<em><b>Timeout</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKD__TIMEOUT = eINSTANCE.getMBrickd_Timeout();
-
-    /**
-     * The meta object literal for the '<em><b>Mdevices</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MBRICKD__MDEVICES = eINSTANCE.getMBrickd_Mdevices();
-
-    /**
-     * The meta object literal for the '<em><b>Ecosystem</b></em>' container reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MBRICKD__ECOSYSTEM = eINSTANCE.getMBrickd_Ecosystem();
-
-    /**
-     * The meta object literal for the '<em><b>Connect</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBRICKD___CONNECT = eINSTANCE.getMBrickd__Connect();
-
-    /**
-     * The meta object literal for the '<em><b>Disconnect</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBRICKD___DISCONNECT = eINSTANCE.getMBrickd__Disconnect();
-
-    /**
-     * The meta object literal for the '<em><b>Init</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBRICKD___INIT = eINSTANCE.getMBrickd__Init();
-
-    /**
-     * The meta object literal for the '<em><b>Get Device</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBRICKD___GET_DEVICE__STRING = eINSTANCE.getMBrickd__GetDevice__String();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.SubDeviceAdmin <em>Sub Device Admin</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.SubDeviceAdmin
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getSubDeviceAdmin()
-     * @generated
-     */
-    EClass SUB_DEVICE_ADMIN = eINSTANCE.getSubDeviceAdmin();
-
-    /**
-     * The meta object literal for the '<em><b>Add Sub Device</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation SUB_DEVICE_ADMIN___ADD_SUB_DEVICE__STRING_STRING = eINSTANCE.getSubDeviceAdmin__AddSubDevice__String_String();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MTFConfigConsumer <em>MTF Config Consumer</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MTFConfigConsumer
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTFConfigConsumer()
-     * @generated
-     */
-    EClass MTF_CONFIG_CONSUMER = eINSTANCE.getMTFConfigConsumer();
-
-    /**
-     * The meta object literal for the '<em><b>Tf Config</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MTF_CONFIG_CONSUMER__TF_CONFIG = eINSTANCE.getMTFConfigConsumer_TfConfig();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MBaseDevice <em>MBase Device</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MBaseDevice
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBaseDevice()
-     * @generated
-     */
-    EClass MBASE_DEVICE = eINSTANCE.getMBaseDevice();
-
-    /**
-     * The meta object literal for the '<em><b>Logger</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBASE_DEVICE__LOGGER = eINSTANCE.getMBaseDevice_Logger();
-
-    /**
-     * The meta object literal for the '<em><b>Uid</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBASE_DEVICE__UID = eINSTANCE.getMBaseDevice_Uid();
-
-    /**
-     * The meta object literal for the '<em><b>Enabled A</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBASE_DEVICE__ENABLED_A = eINSTANCE.getMBaseDevice_EnabledA();
-
-    /**
-     * The meta object literal for the '<em><b>Init</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBASE_DEVICE___INIT = eINSTANCE.getMBaseDevice__Init();
-
-    /**
-     * The meta object literal for the '<em><b>Enable</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBASE_DEVICE___ENABLE = eINSTANCE.getMBaseDevice__Enable();
-
-    /**
-     * The meta object literal for the '<em><b>Disable</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBASE_DEVICE___DISABLE = eINSTANCE.getMBaseDevice__Disable();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MDevice <em>MDevice</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MDevice
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMDevice()
-     * @generated
-     */
-    EClass MDEVICE = eINSTANCE.getMDevice();
-
-    /**
-     * The meta object literal for the '<em><b>Tinkerforge Device</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MDEVICE__TINKERFORGE_DEVICE = eINSTANCE.getMDevice_TinkerforgeDevice();
-
-    /**
-     * The meta object literal for the '<em><b>Ip Connection</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MDEVICE__IP_CONNECTION = eINSTANCE.getMDevice_IpConnection();
-
-    /**
-     * The meta object literal for the '<em><b>Connected Uid</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MDEVICE__CONNECTED_UID = eINSTANCE.getMDevice_ConnectedUid();
-
-    /**
-     * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MDEVICE__POSITION = eINSTANCE.getMDevice_Position();
-
-    /**
-     * The meta object literal for the '<em><b>Device Identifier</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MDEVICE__DEVICE_IDENTIFIER = eINSTANCE.getMDevice_DeviceIdentifier();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MDEVICE__NAME = eINSTANCE.getMDevice_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Brickd</b></em>' container reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MDEVICE__BRICKD = eINSTANCE.getMDevice_Brickd();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MSubDeviceHolder <em>MSub Device Holder</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MSubDeviceHolder
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMSubDeviceHolder()
-     * @generated
-     */
-    EClass MSUB_DEVICE_HOLDER = eINSTANCE.getMSubDeviceHolder();
-
-    /**
-     * The meta object literal for the '<em><b>Msubdevices</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MSUB_DEVICE_HOLDER__MSUBDEVICES = eINSTANCE.getMSubDeviceHolder_Msubdevices();
-
-    /**
-     * The meta object literal for the '<em><b>Init Sub Devices</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MSUB_DEVICE_HOLDER___INIT_SUB_DEVICES = eINSTANCE.getMSubDeviceHolder__InitSubDevices();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickServoImpl <em>MBrick Servo</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickServoImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickServo()
-     * @generated
-     */
-    EClass MBRICK_SERVO = eINSTANCE.getMBrickServo();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICK_SERVO__DEVICE_TYPE = eINSTANCE.getMBrickServo_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Init</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBRICK_SERVO___INIT = eINSTANCE.getMBrickServo__Init();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.TFBrickDCConfigurationImpl <em>TF Brick DC Configuration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.TFBrickDCConfigurationImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFBrickDCConfiguration()
-     * @generated
-     */
-    EClass TF_BRICK_DC_CONFIGURATION = eINSTANCE.getTFBrickDCConfiguration();
-
-    /**
-     * The meta object literal for the '<em><b>Velocity</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_BRICK_DC_CONFIGURATION__VELOCITY = eINSTANCE.getTFBrickDCConfiguration_Velocity();
-
-    /**
-     * The meta object literal for the '<em><b>Acceleration</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_BRICK_DC_CONFIGURATION__ACCELERATION = eINSTANCE.getTFBrickDCConfiguration_Acceleration();
-
-    /**
-     * The meta object literal for the '<em><b>Pwm Frequency</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_BRICK_DC_CONFIGURATION__PWM_FREQUENCY = eINSTANCE.getTFBrickDCConfiguration_PwmFrequency();
-
-    /**
-     * The meta object literal for the '<em><b>Drive Mode</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_BRICK_DC_CONFIGURATION__DRIVE_MODE = eINSTANCE.getTFBrickDCConfiguration_DriveMode();
-
-    /**
-     * The meta object literal for the '<em><b>Switch On Velocity</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_BRICK_DC_CONFIGURATION__SWITCH_ON_VELOCITY = eINSTANCE.getTFBrickDCConfiguration_SwitchOnVelocity();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickDCImpl <em>MBrick DC</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickDCImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickDC()
-     * @generated
-     */
-    EClass MBRICK_DC = eINSTANCE.getMBrickDC();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICK_DC__DEVICE_TYPE = eINSTANCE.getMBrickDC_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Velocity</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICK_DC__VELOCITY = eINSTANCE.getMBrickDC_Velocity();
-
-    /**
-     * The meta object literal for the '<em><b>Current Velocity</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICK_DC__CURRENT_VELOCITY = eINSTANCE.getMBrickDC_CurrentVelocity();
-
-    /**
-     * The meta object literal for the '<em><b>Acceleration</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICK_DC__ACCELERATION = eINSTANCE.getMBrickDC_Acceleration();
-
-    /**
-     * The meta object literal for the '<em><b>Pwm Frequency</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICK_DC__PWM_FREQUENCY = eINSTANCE.getMBrickDC_PwmFrequency();
-
-    /**
-     * The meta object literal for the '<em><b>Drive Mode</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICK_DC__DRIVE_MODE = eINSTANCE.getMBrickDC_DriveMode();
-
-    /**
-     * The meta object literal for the '<em><b>Switch On Velocity</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICK_DC__SWITCH_ON_VELOCITY = eINSTANCE.getMBrickDC_SwitchOnVelocity();
-
-    /**
-     * The meta object literal for the '<em><b>Init</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBRICK_DC___INIT = eINSTANCE.getMBrickDC__Init();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MDualRelayBrickletImpl <em>MDual Relay Bricklet</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MDualRelayBrickletImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMDualRelayBricklet()
-     * @generated
-     */
-    EClass MDUAL_RELAY_BRICKLET = eINSTANCE.getMDualRelayBricklet();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MDUAL_RELAY_BRICKLET__DEVICE_TYPE = eINSTANCE.getMDualRelayBricklet_DeviceType();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayBrickletImpl <em>MIndustrial Quad Relay Bricklet</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayBrickletImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMIndustrialQuadRelayBricklet()
-     * @generated
-     */
-    EClass MINDUSTRIAL_QUAD_RELAY_BRICKLET = eINSTANCE.getMIndustrialQuadRelayBricklet();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayImpl <em>MIndustrial Quad Relay</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMIndustrialQuadRelay()
-     * @generated
-     */
-    EClass MINDUSTRIAL_QUAD_RELAY = eINSTANCE.getMIndustrialQuadRelay();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MINDUSTRIAL_QUAD_RELAY__DEVICE_TYPE = eINSTANCE.getMIndustrialQuadRelay_DeviceType();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletIndustrialDigitalIn4Impl <em>MBricklet Industrial Digital In4</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickletIndustrialDigitalIn4Impl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletIndustrialDigitalIn4()
-     * @generated
-     */
-    EClass MBRICKLET_INDUSTRIAL_DIGITAL_IN4 = eINSTANCE.getMBrickletIndustrialDigitalIn4();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_INDUSTRIAL_DIGITAL_IN4__DEVICE_TYPE = eINSTANCE.getMBrickletIndustrialDigitalIn4_DeviceType();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialDigitalInImpl <em>MIndustrial Digital In</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialDigitalInImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMIndustrialDigitalIn()
-     * @generated
-     */
-    EClass MINDUSTRIAL_DIGITAL_IN = eINSTANCE.getMIndustrialDigitalIn();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MActor <em>MActor</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MActor
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMActor()
-     * @generated
-     */
-    EClass MACTOR = eINSTANCE.getMActor();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MSwitchActor <em>MSwitch Actor</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MSwitchActor
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMSwitchActor()
-     * @generated
-     */
-    EClass MSWITCH_ACTOR = eINSTANCE.getMSwitchActor();
-
-    /**
-     * The meta object literal for the '<em><b>Switch State</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MSWITCH_ACTOR__SWITCH_STATE = eINSTANCE.getMSwitchActor_SwitchState();
-
-    /**
-     * The meta object literal for the '<em><b>Turn Switch</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MSWITCH_ACTOR___TURN_SWITCH__ONOFFVALUE = eINSTANCE.getMSwitchActor__TurnSwitch__OnOffValue();
-
-    /**
-     * The meta object literal for the '<em><b>Fetch Switch State</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MSWITCH_ACTOR___FETCH_SWITCH_STATE = eINSTANCE.getMSwitchActor__FetchSwitchState();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MOutSwitchActor <em>MOut Switch Actor</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MOutSwitchActor
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMOutSwitchActor()
-     * @generated
-     */
-    EClass MOUT_SWITCH_ACTOR = eINSTANCE.getMOutSwitchActor();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MInSwitchActor <em>MIn Switch Actor</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MInSwitchActor
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMInSwitchActor()
-     * @generated
-     */
-    EClass MIN_SWITCH_ACTOR = eINSTANCE.getMInSwitchActor();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.GenericDevice <em>Generic Device</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.GenericDevice
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getGenericDevice()
-     * @generated
-     */
-    EClass GENERIC_DEVICE = eINSTANCE.getGenericDevice();
-
-    /**
-     * The meta object literal for the '<em><b>Generic Device Id</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GENERIC_DEVICE__GENERIC_DEVICE_ID = eINSTANCE.getGenericDevice_GenericDeviceId();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.TFIOActorConfigurationImpl <em>TFIO Actor Configuration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.TFIOActorConfigurationImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFIOActorConfiguration()
-     * @generated
-     */
-    EClass TFIO_ACTOR_CONFIGURATION = eINSTANCE.getTFIOActorConfiguration();
-
-    /**
-     * The meta object literal for the '<em><b>Default State</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TFIO_ACTOR_CONFIGURATION__DEFAULT_STATE = eINSTANCE.getTFIOActorConfiguration_DefaultState();
-
-    /**
-     * The meta object literal for the '<em><b>Keep On Reconnect</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TFIO_ACTOR_CONFIGURATION__KEEP_ON_RECONNECT = eINSTANCE.getTFIOActorConfiguration_KeepOnReconnect();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.DigitalActorImpl <em>Digital Actor</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.DigitalActorImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getDigitalActor()
-     * @generated
-     */
-    EClass DIGITAL_ACTOR = eINSTANCE.getDigitalActor();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DIGITAL_ACTOR__DEVICE_TYPE = eINSTANCE.getDigitalActor_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Digital State</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DIGITAL_ACTOR__DIGITAL_STATE = eINSTANCE.getDigitalActor_DigitalState();
-
-    /**
-     * The meta object literal for the '<em><b>Port</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DIGITAL_ACTOR__PORT = eINSTANCE.getDigitalActor_Port();
-
-    /**
-     * The meta object literal for the '<em><b>Pin</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DIGITAL_ACTOR__PIN = eINSTANCE.getDigitalActor_Pin();
-
-    /**
-     * The meta object literal for the '<em><b>Default State</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DIGITAL_ACTOR__DEFAULT_STATE = eINSTANCE.getDigitalActor_DefaultState();
-
-    /**
-     * The meta object literal for the '<em><b>Keep On Reconnect</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DIGITAL_ACTOR__KEEP_ON_RECONNECT = eINSTANCE.getDigitalActor_KeepOnReconnect();
-
-    /**
-     * The meta object literal for the '<em><b>Turn Digital</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation DIGITAL_ACTOR___TURN_DIGITAL__HIGHLOWVALUE = eINSTANCE.getDigitalActor__TurnDigital__HighLowValue();
-
-    /**
-     * The meta object literal for the '<em><b>Fetch Digital Value</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation DIGITAL_ACTOR___FETCH_DIGITAL_VALUE = eINSTANCE.getDigitalActor__FetchDigitalValue();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.TFInterruptListenerConfigurationImpl <em>TF Interrupt Listener Configuration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.TFInterruptListenerConfigurationImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFInterruptListenerConfiguration()
-     * @generated
-     */
-    EClass TF_INTERRUPT_LISTENER_CONFIGURATION = eINSTANCE.getTFInterruptListenerConfiguration();
-
-    /**
-     * The meta object literal for the '<em><b>Debounce Period</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_INTERRUPT_LISTENER_CONFIGURATION__DEBOUNCE_PERIOD = eINSTANCE.getTFInterruptListenerConfiguration_DebouncePeriod();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletIO16Impl <em>MBricklet IO16</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickletIO16Impl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletIO16()
-     * @generated
-     */
-    EClass MBRICKLET_IO16 = eINSTANCE.getMBrickletIO16();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_IO16__DEVICE_TYPE = eINSTANCE.getMBrickletIO16_DeviceType();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.IODevice <em>IO Device</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.IODevice
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getIODevice()
-     * @generated
-     */
-    EClass IO_DEVICE = eINSTANCE.getIODevice();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.TFIOSensorConfigurationImpl <em>TFIO Sensor Configuration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.TFIOSensorConfigurationImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFIOSensorConfiguration()
-     * @generated
-     */
-    EClass TFIO_SENSOR_CONFIGURATION = eINSTANCE.getTFIOSensorConfiguration();
-
-    /**
-     * The meta object literal for the '<em><b>Pull Up Resistor Enabled</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TFIO_SENSOR_CONFIGURATION__PULL_UP_RESISTOR_ENABLED = eINSTANCE.getTFIOSensorConfiguration_PullUpResistorEnabled();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.DigitalSensorImpl <em>Digital Sensor</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.DigitalSensorImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getDigitalSensor()
-     * @generated
-     */
-    EClass DIGITAL_SENSOR = eINSTANCE.getDigitalSensor();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DIGITAL_SENSOR__DEVICE_TYPE = eINSTANCE.getDigitalSensor_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Pull Up Resistor Enabled</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DIGITAL_SENSOR__PULL_UP_RESISTOR_ENABLED = eINSTANCE.getDigitalSensor_PullUpResistorEnabled();
-
-    /**
-     * The meta object literal for the '<em><b>Port</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DIGITAL_SENSOR__PORT = eINSTANCE.getDigitalSensor_Port();
-
-    /**
-     * The meta object literal for the '<em><b>Pin</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DIGITAL_SENSOR__PIN = eINSTANCE.getDigitalSensor_Pin();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletMultiTouchImpl <em>MBricklet Multi Touch</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickletMultiTouchImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletMultiTouch()
-     * @generated
-     */
-    EClass MBRICKLET_MULTI_TOUCH = eINSTANCE.getMBrickletMultiTouch();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_MULTI_TOUCH__DEVICE_TYPE = eINSTANCE.getMBrickletMultiTouch_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Recalibrate</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_MULTI_TOUCH__RECALIBRATE = eINSTANCE.getMBrickletMultiTouch_Recalibrate();
-
-    /**
-     * The meta object literal for the '<em><b>Sensitivity</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_MULTI_TOUCH__SENSITIVITY = eINSTANCE.getMBrickletMultiTouch_Sensitivity();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MultiTouchDeviceImpl <em>Multi Touch Device</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MultiTouchDeviceImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMultiTouchDevice()
-     * @generated
-     */
-    EClass MULTI_TOUCH_DEVICE = eINSTANCE.getMultiTouchDevice();
-
-    /**
-     * The meta object literal for the '<em><b>Pin</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MULTI_TOUCH_DEVICE__PIN = eINSTANCE.getMultiTouchDevice_Pin();
-
-    /**
-     * The meta object literal for the '<em><b>Disable Electrode</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MULTI_TOUCH_DEVICE__DISABLE_ELECTRODE = eINSTANCE.getMultiTouchDevice_DisableElectrode();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.ElectrodeImpl <em>Electrode</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ElectrodeImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getElectrode()
-     * @generated
-     */
-    EClass ELECTRODE = eINSTANCE.getElectrode();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ELECTRODE__DEVICE_TYPE = eINSTANCE.getElectrode_DeviceType();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.ProximityImpl <em>Proximity</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ProximityImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getProximity()
-     * @generated
-     */
-    EClass PROXIMITY = eINSTANCE.getProximity();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PROXIMITY__DEVICE_TYPE = eINSTANCE.getProximity_DeviceType();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletMotionDetectorImpl <em>MBricklet Motion Detector</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickletMotionDetectorImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletMotionDetector()
-     * @generated
-     */
-    EClass MBRICKLET_MOTION_DETECTOR = eINSTANCE.getMBrickletMotionDetector();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_MOTION_DETECTOR__DEVICE_TYPE = eINSTANCE.getMBrickletMotionDetector_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Init</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBRICKLET_MOTION_DETECTOR___INIT = eINSTANCE.getMBrickletMotionDetector__Init();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MSubDevice <em>MSub Device</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MSubDevice
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMSubDevice()
-     * @generated
-     */
-    EClass MSUB_DEVICE = eINSTANCE.getMSubDevice();
-
-    /**
-     * The meta object literal for the '<em><b>Sub Id</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MSUB_DEVICE__SUB_ID = eINSTANCE.getMSubDevice_SubId();
-
-    /**
-     * The meta object literal for the '<em><b>Mbrick</b></em>' container reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MSUB_DEVICE__MBRICK = eINSTANCE.getMSubDevice_Mbrick();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MDualRelayImpl <em>MDual Relay</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MDualRelayImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMDualRelay()
-     * @generated
-     */
-    EClass MDUAL_RELAY = eINSTANCE.getMDualRelay();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MDUAL_RELAY__DEVICE_TYPE = eINSTANCE.getMDualRelay_DeviceType();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletRemoteSwitchImpl <em>MBricklet Remote Switch</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickletRemoteSwitchImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletRemoteSwitch()
-     * @generated
-     */
-    EClass MBRICKLET_REMOTE_SWITCH = eINSTANCE.getMBrickletRemoteSwitch();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_REMOTE_SWITCH__DEVICE_TYPE = eINSTANCE.getMBrickletRemoteSwitch_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Type ADevices</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_REMOTE_SWITCH__TYPE_ADEVICES = eINSTANCE.getMBrickletRemoteSwitch_TypeADevices();
-
-    /**
-     * The meta object literal for the '<em><b>Type BDevices</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_REMOTE_SWITCH__TYPE_BDEVICES = eINSTANCE.getMBrickletRemoteSwitch_TypeBDevices();
-
-    /**
-     * The meta object literal for the '<em><b>Type CDevices</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_REMOTE_SWITCH__TYPE_CDEVICES = eINSTANCE.getMBrickletRemoteSwitch_TypeCDevices();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.RemoteSwitch <em>Remote Switch</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.RemoteSwitch
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getRemoteSwitch()
-     * @generated
-     */
-    EClass REMOTE_SWITCH = eINSTANCE.getRemoteSwitch();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.RemoteSwitchAImpl <em>Remote Switch A</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.RemoteSwitchAImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getRemoteSwitchA()
-     * @generated
-     */
-    EClass REMOTE_SWITCH_A = eINSTANCE.getRemoteSwitchA();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_A__DEVICE_TYPE = eINSTANCE.getRemoteSwitchA_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>House Code</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_A__HOUSE_CODE = eINSTANCE.getRemoteSwitchA_HouseCode();
-
-    /**
-     * The meta object literal for the '<em><b>Receiver Code</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_A__RECEIVER_CODE = eINSTANCE.getRemoteSwitchA_ReceiverCode();
-
-    /**
-     * The meta object literal for the '<em><b>Repeats</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_A__REPEATS = eINSTANCE.getRemoteSwitchA_Repeats();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.RemoteSwitchBImpl <em>Remote Switch B</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.RemoteSwitchBImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getRemoteSwitchB()
-     * @generated
-     */
-    EClass REMOTE_SWITCH_B = eINSTANCE.getRemoteSwitchB();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_B__DEVICE_TYPE = eINSTANCE.getRemoteSwitchB_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Address</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_B__ADDRESS = eINSTANCE.getRemoteSwitchB_Address();
-
-    /**
-     * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_B__UNIT = eINSTANCE.getRemoteSwitchB_Unit();
-
-    /**
-     * The meta object literal for the '<em><b>Repeats</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_B__REPEATS = eINSTANCE.getRemoteSwitchB_Repeats();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.RemoteSwitchCImpl <em>Remote Switch C</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.RemoteSwitchCImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getRemoteSwitchC()
-     * @generated
-     */
-    EClass REMOTE_SWITCH_C = eINSTANCE.getRemoteSwitchC();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_C__DEVICE_TYPE = eINSTANCE.getRemoteSwitchC_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>System Code</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_C__SYSTEM_CODE = eINSTANCE.getRemoteSwitchC_SystemCode();
-
-    /**
-     * The meta object literal for the '<em><b>Device Code</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_C__DEVICE_CODE = eINSTANCE.getRemoteSwitchC_DeviceCode();
-
-    /**
-     * The meta object literal for the '<em><b>Repeats</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_C__REPEATS = eINSTANCE.getRemoteSwitchC_Repeats();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.TFNullConfigurationImpl <em>TF Null Configuration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.TFNullConfigurationImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFNullConfiguration()
-     * @generated
-     */
-    EClass TF_NULL_CONFIGURATION = eINSTANCE.getTFNullConfiguration();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.TFServoConfigurationImpl <em>TF Servo Configuration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.TFServoConfigurationImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFServoConfiguration()
-     * @generated
-     */
-    EClass TF_SERVO_CONFIGURATION = eINSTANCE.getTFServoConfiguration();
-
-    /**
-     * The meta object literal for the '<em><b>Velocity</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_SERVO_CONFIGURATION__VELOCITY = eINSTANCE.getTFServoConfiguration_Velocity();
-
-    /**
-     * The meta object literal for the '<em><b>Acceleration</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_SERVO_CONFIGURATION__ACCELERATION = eINSTANCE.getTFServoConfiguration_Acceleration();
-
-    /**
-     * The meta object literal for the '<em><b>Servo Voltage</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_SERVO_CONFIGURATION__SERVO_VOLTAGE = eINSTANCE.getTFServoConfiguration_ServoVoltage();
-
-    /**
-     * The meta object literal for the '<em><b>Pulse Width Min</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_SERVO_CONFIGURATION__PULSE_WIDTH_MIN = eINSTANCE.getTFServoConfiguration_PulseWidthMin();
-
-    /**
-     * The meta object literal for the '<em><b>Pulse Width Max</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_SERVO_CONFIGURATION__PULSE_WIDTH_MAX = eINSTANCE.getTFServoConfiguration_PulseWidthMax();
-
-    /**
-     * The meta object literal for the '<em><b>Period</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_SERVO_CONFIGURATION__PERIOD = eINSTANCE.getTFServoConfiguration_Period();
-
-    /**
-     * The meta object literal for the '<em><b>Output Voltage</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_SERVO_CONFIGURATION__OUTPUT_VOLTAGE = eINSTANCE.getTFServoConfiguration_OutputVoltage();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.BrickletRemoteSwitchConfigurationImpl <em>Bricklet Remote Switch Configuration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.BrickletRemoteSwitchConfigurationImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getBrickletRemoteSwitchConfiguration()
-     * @generated
-     */
-    EClass BRICKLET_REMOTE_SWITCH_CONFIGURATION = eINSTANCE.getBrickletRemoteSwitchConfiguration();
-
-    /**
-     * The meta object literal for the '<em><b>Type ADevices</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BRICKLET_REMOTE_SWITCH_CONFIGURATION__TYPE_ADEVICES = eINSTANCE.getBrickletRemoteSwitchConfiguration_TypeADevices();
-
-    /**
-     * The meta object literal for the '<em><b>Type BDevices</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BRICKLET_REMOTE_SWITCH_CONFIGURATION__TYPE_BDEVICES = eINSTANCE.getBrickletRemoteSwitchConfiguration_TypeBDevices();
-
-    /**
-     * The meta object literal for the '<em><b>Type CDevices</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BRICKLET_REMOTE_SWITCH_CONFIGURATION__TYPE_CDEVICES = eINSTANCE.getBrickletRemoteSwitchConfiguration_TypeCDevices();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.RemoteSwitchAConfigurationImpl <em>Remote Switch AConfiguration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.RemoteSwitchAConfigurationImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getRemoteSwitchAConfiguration()
-     * @generated
-     */
-    EClass REMOTE_SWITCH_ACONFIGURATION = eINSTANCE.getRemoteSwitchAConfiguration();
-
-    /**
-     * The meta object literal for the '<em><b>House Code</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_ACONFIGURATION__HOUSE_CODE = eINSTANCE.getRemoteSwitchAConfiguration_HouseCode();
-
-    /**
-     * The meta object literal for the '<em><b>Receiver Code</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_ACONFIGURATION__RECEIVER_CODE = eINSTANCE.getRemoteSwitchAConfiguration_ReceiverCode();
-
-    /**
-     * The meta object literal for the '<em><b>Repeats</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_ACONFIGURATION__REPEATS = eINSTANCE.getRemoteSwitchAConfiguration_Repeats();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.RemoteSwitchBConfigurationImpl <em>Remote Switch BConfiguration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.RemoteSwitchBConfigurationImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getRemoteSwitchBConfiguration()
-     * @generated
-     */
-    EClass REMOTE_SWITCH_BCONFIGURATION = eINSTANCE.getRemoteSwitchBConfiguration();
-
-    /**
-     * The meta object literal for the '<em><b>Address</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_BCONFIGURATION__ADDRESS = eINSTANCE.getRemoteSwitchBConfiguration_Address();
-
-    /**
-     * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_BCONFIGURATION__UNIT = eINSTANCE.getRemoteSwitchBConfiguration_Unit();
-
-    /**
-     * The meta object literal for the '<em><b>Repeats</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_BCONFIGURATION__REPEATS = eINSTANCE.getRemoteSwitchBConfiguration_Repeats();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.RemoteSwitchCConfigurationImpl <em>Remote Switch CConfiguration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.RemoteSwitchCConfigurationImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getRemoteSwitchCConfiguration()
-     * @generated
-     */
-    EClass REMOTE_SWITCH_CCONFIGURATION = eINSTANCE.getRemoteSwitchCConfiguration();
-
-    /**
-     * The meta object literal for the '<em><b>System Code</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_CCONFIGURATION__SYSTEM_CODE = eINSTANCE.getRemoteSwitchCConfiguration_SystemCode();
-
-    /**
-     * The meta object literal for the '<em><b>Device Code</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_CCONFIGURATION__DEVICE_CODE = eINSTANCE.getRemoteSwitchCConfiguration_DeviceCode();
-
-    /**
-     * The meta object literal for the '<em><b>Repeats</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute REMOTE_SWITCH_CCONFIGURATION__REPEATS = eINSTANCE.getRemoteSwitchCConfiguration_Repeats();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MultiTouchDeviceConfigurationImpl <em>Multi Touch Device Configuration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MultiTouchDeviceConfigurationImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMultiTouchDeviceConfiguration()
-     * @generated
-     */
-    EClass MULTI_TOUCH_DEVICE_CONFIGURATION = eINSTANCE.getMultiTouchDeviceConfiguration();
-
-    /**
-     * The meta object literal for the '<em><b>Disable Electrode</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MULTI_TOUCH_DEVICE_CONFIGURATION__DISABLE_ELECTRODE = eINSTANCE.getMultiTouchDeviceConfiguration_DisableElectrode();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.BrickletMultiTouchConfigurationImpl <em>Bricklet Multi Touch Configuration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.BrickletMultiTouchConfigurationImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getBrickletMultiTouchConfiguration()
-     * @generated
-     */
-    EClass BRICKLET_MULTI_TOUCH_CONFIGURATION = eINSTANCE.getBrickletMultiTouchConfiguration();
-
-    /**
-     * The meta object literal for the '<em><b>Recalibrate</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BRICKLET_MULTI_TOUCH_CONFIGURATION__RECALIBRATE = eINSTANCE.getBrickletMultiTouchConfiguration_Recalibrate();
-
-    /**
-     * The meta object literal for the '<em><b>Sensitivity</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BRICKLET_MULTI_TOUCH_CONFIGURATION__SENSITIVITY = eINSTANCE.getBrickletMultiTouchConfiguration_Sensitivity();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MServoImpl <em>MServo</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MServoImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMServo()
-     * @generated
-     */
-    EClass MSERVO = eINSTANCE.getMServo();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MSERVO__DEVICE_TYPE = eINSTANCE.getMServo_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Velocity</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MSERVO__VELOCITY = eINSTANCE.getMServo_Velocity();
-
-    /**
-     * The meta object literal for the '<em><b>Acceleration</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MSERVO__ACCELERATION = eINSTANCE.getMServo_Acceleration();
-
-    /**
-     * The meta object literal for the '<em><b>Pulse Width Min</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MSERVO__PULSE_WIDTH_MIN = eINSTANCE.getMServo_PulseWidthMin();
-
-    /**
-     * The meta object literal for the '<em><b>Pulse Width Max</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MSERVO__PULSE_WIDTH_MAX = eINSTANCE.getMServo_PulseWidthMax();
-
-    /**
-     * The meta object literal for the '<em><b>Period</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MSERVO__PERIOD = eINSTANCE.getMServo_Period();
-
-    /**
-     * The meta object literal for the '<em><b>Output Voltage</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MSERVO__OUTPUT_VOLTAGE = eINSTANCE.getMServo_OutputVoltage();
-
-    /**
-     * The meta object literal for the '<em><b>Servo Current Position</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MSERVO__SERVO_CURRENT_POSITION = eINSTANCE.getMServo_ServoCurrentPosition();
-
-    /**
-     * The meta object literal for the '<em><b>Servo Destination Position</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MSERVO__SERVO_DESTINATION_POSITION = eINSTANCE.getMServo_ServoDestinationPosition();
-
-    /**
-     * The meta object literal for the '<em><b>Init</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MSERVO___INIT = eINSTANCE.getMServo__Init();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.CallbackListener <em>Callback Listener</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.CallbackListener
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getCallbackListener()
-     * @generated
-     */
-    EClass CALLBACK_LISTENER = eINSTANCE.getCallbackListener();
-
-    /**
-     * The meta object literal for the '<em><b>Callback Period</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CALLBACK_LISTENER__CALLBACK_PERIOD = eINSTANCE.getCallbackListener_CallbackPeriod();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.InterruptListener <em>Interrupt Listener</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.InterruptListener
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getInterruptListener()
-     * @generated
-     */
-    EClass INTERRUPT_LISTENER = eINSTANCE.getInterruptListener();
-
-    /**
-     * The meta object literal for the '<em><b>Debounce Period</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute INTERRUPT_LISTENER__DEBOUNCE_PERIOD = eINSTANCE.getInterruptListener_DebouncePeriod();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MSensor <em>MSensor</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MSensor
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMSensor()
-     * @generated
-     */
-    EClass MSENSOR = eINSTANCE.getMSensor();
-
-    /**
-     * The meta object literal for the '<em><b>Sensor Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MSENSOR__SENSOR_VALUE = eINSTANCE.getMSensor_SensorValue();
-
-    /**
-     * The meta object literal for the '<em><b>Fetch Sensor Value</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MSENSOR___FETCH_SENSOR_VALUE = eINSTANCE.getMSensor__FetchSensorValue();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletHumidityImpl <em>MBricklet Humidity</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickletHumidityImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletHumidity()
-     * @generated
-     */
-    EClass MBRICKLET_HUMIDITY = eINSTANCE.getMBrickletHumidity();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_HUMIDITY__DEVICE_TYPE = eINSTANCE.getMBrickletHumidity_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Humiditiy</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_HUMIDITY__HUMIDITIY = eINSTANCE.getMBrickletHumidity_Humiditiy();
-
-    /**
-     * The meta object literal for the '<em><b>Threshold</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_HUMIDITY__THRESHOLD = eINSTANCE.getMBrickletHumidity_Threshold();
-
-    /**
-     * The meta object literal for the '<em><b>Init</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBRICKLET_HUMIDITY___INIT = eINSTANCE.getMBrickletHumidity__Init();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletDistanceIRImpl <em>MBricklet Distance IR</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickletDistanceIRImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletDistanceIR()
-     * @generated
-     */
-    EClass MBRICKLET_DISTANCE_IR = eINSTANCE.getMBrickletDistanceIR();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_DISTANCE_IR__DEVICE_TYPE = eINSTANCE.getMBrickletDistanceIR_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Distance</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_DISTANCE_IR__DISTANCE = eINSTANCE.getMBrickletDistanceIR_Distance();
-
-    /**
-     * The meta object literal for the '<em><b>Threshold</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_DISTANCE_IR__THRESHOLD = eINSTANCE.getMBrickletDistanceIR_Threshold();
-
-    /**
-     * The meta object literal for the '<em><b>Init</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBRICKLET_DISTANCE_IR___INIT = eINSTANCE.getMBrickletDistanceIR__Init();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureImpl <em>MBricklet Temperature</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletTemperature()
-     * @generated
-     */
-    EClass MBRICKLET_TEMPERATURE = eINSTANCE.getMBrickletTemperature();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_TEMPERATURE__DEVICE_TYPE = eINSTANCE.getMBrickletTemperature_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Temperature</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_TEMPERATURE__TEMPERATURE = eINSTANCE.getMBrickletTemperature_Temperature();
-
-    /**
-     * The meta object literal for the '<em><b>Threshold</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_TEMPERATURE__THRESHOLD = eINSTANCE.getMBrickletTemperature_Threshold();
-
-    /**
-     * The meta object literal for the '<em><b>Init</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBRICKLET_TEMPERATURE___INIT = eINSTANCE.getMBrickletTemperature__Init();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.TFBaseConfigurationImpl <em>TF Base Configuration</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.TFBaseConfigurationImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTFBaseConfiguration()
-     * @generated
-     */
-    EClass TF_BASE_CONFIGURATION = eINSTANCE.getTFBaseConfiguration();
-
-    /**
-     * The meta object literal for the '<em><b>Threshold</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_BASE_CONFIGURATION__THRESHOLD = eINSTANCE.getTFBaseConfiguration_Threshold();
-
-    /**
-     * The meta object literal for the '<em><b>Callback Period</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TF_BASE_CONFIGURATION__CALLBACK_PERIOD = eINSTANCE.getTFBaseConfiguration_CallbackPeriod();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletBarometerImpl <em>MBricklet Barometer</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickletBarometerImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletBarometer()
-     * @generated
-     */
-    EClass MBRICKLET_BAROMETER = eINSTANCE.getMBrickletBarometer();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_BAROMETER__DEVICE_TYPE = eINSTANCE.getMBrickletBarometer_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Air Pressure</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_BAROMETER__AIR_PRESSURE = eINSTANCE.getMBrickletBarometer_AirPressure();
-
-    /**
-     * The meta object literal for the '<em><b>Threshold</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_BAROMETER__THRESHOLD = eINSTANCE.getMBrickletBarometer_Threshold();
-
-    /**
-     * The meta object literal for the '<em><b>Init</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBRICKLET_BAROMETER___INIT = eINSTANCE.getMBrickletBarometer__Init();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBarometerTemperatureImpl <em>MBarometer Temperature</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBarometerTemperatureImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBarometerTemperature()
-     * @generated
-     */
-    EClass MBAROMETER_TEMPERATURE = eINSTANCE.getMBarometerTemperature();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBAROMETER_TEMPERATURE__DEVICE_TYPE = eINSTANCE.getMBarometerTemperature_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Temperature</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBAROMETER_TEMPERATURE__TEMPERATURE = eINSTANCE.getMBarometerTemperature_Temperature();
-
-    /**
-     * The meta object literal for the '<em><b>Init</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBAROMETER_TEMPERATURE___INIT = eINSTANCE.getMBarometerTemperature__Init();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletAmbientLightImpl <em>MBricklet Ambient Light</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickletAmbientLightImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletAmbientLight()
-     * @generated
-     */
-    EClass MBRICKLET_AMBIENT_LIGHT = eINSTANCE.getMBrickletAmbientLight();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_AMBIENT_LIGHT__DEVICE_TYPE = eINSTANCE.getMBrickletAmbientLight_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Illuminance</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_AMBIENT_LIGHT__ILLUMINANCE = eINSTANCE.getMBrickletAmbientLight_Illuminance();
-
-    /**
-     * The meta object literal for the '<em><b>Threshold</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_AMBIENT_LIGHT__THRESHOLD = eINSTANCE.getMBrickletAmbientLight_Threshold();
-
-    /**
-     * The meta object literal for the '<em><b>Init</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBRICKLET_AMBIENT_LIGHT___INIT = eINSTANCE.getMBrickletAmbientLight__Init();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletLCD20x4Impl <em>MBricklet LCD2 0x4</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MBrickletLCD20x4Impl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMBrickletLCD20x4()
-     * @generated
-     */
-    EClass MBRICKLET_LCD2_0X4 = eINSTANCE.getMBrickletLCD20x4();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_LCD2_0X4__DEVICE_TYPE = eINSTANCE.getMBrickletLCD20x4_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Position Prefix</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_LCD2_0X4__POSITION_PREFIX = eINSTANCE.getMBrickletLCD20x4_PositionPrefix();
-
-    /**
-     * The meta object literal for the '<em><b>Positon Suffix</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_LCD2_0X4__POSITON_SUFFIX = eINSTANCE.getMBrickletLCD20x4_PositonSuffix();
-
-    /**
-     * The meta object literal for the '<em><b>Display Errors</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_LCD2_0X4__DISPLAY_ERRORS = eINSTANCE.getMBrickletLCD20x4_DisplayErrors();
-
-    /**
-     * The meta object literal for the '<em><b>Error Prefix</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MBRICKLET_LCD2_0X4__ERROR_PREFIX = eINSTANCE.getMBrickletLCD20x4_ErrorPrefix();
-
-    /**
-     * The meta object literal for the '<em><b>Init</b></em>' operation.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EOperation MBRICKLET_LCD2_0X4___INIT = eINSTANCE.getMBrickletLCD20x4__Init();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MTextActor <em>MText Actor</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MTextActor
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTextActor()
-     * @generated
-     */
-    EClass MTEXT_ACTOR = eINSTANCE.getMTextActor();
-
-    /**
-     * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MTEXT_ACTOR__TEXT = eINSTANCE.getMTextActor_Text();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MLCDSubDevice <em>MLCD Sub Device</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MLCDSubDevice
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMLCDSubDevice()
-     * @generated
-     */
-    EClass MLCD_SUB_DEVICE = eINSTANCE.getMLCDSubDevice();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4BacklightImpl <em>MLCD2 0x4 Backlight</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4BacklightImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMLCD20x4Backlight()
-     * @generated
-     */
-    EClass MLCD2_0X4_BACKLIGHT = eINSTANCE.getMLCD20x4Backlight();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MLCD2_0X4_BACKLIGHT__DEVICE_TYPE = eINSTANCE.getMLCD20x4Backlight_DeviceType();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl <em>MLCD2 0x4 Button</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMLCD20x4Button()
-     * @generated
-     */
-    EClass MLCD2_0X4_BUTTON = eINSTANCE.getMLCD20x4Button();
-
-    /**
-     * The meta object literal for the '<em><b>Device Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MLCD2_0X4_BUTTON__DEVICE_TYPE = eINSTANCE.getMLCD20x4Button_DeviceType();
-
-    /**
-     * The meta object literal for the '<em><b>Button Num</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MLCD2_0X4_BUTTON__BUTTON_NUM = eINSTANCE.getMLCD20x4Button_ButtonNum();
-
-    /**
-     * The meta object literal for the '<em><b>Callback Period</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MLCD2_0X4_BUTTON__CALLBACK_PERIOD = eINSTANCE.getMLCD20x4Button_CallbackPeriod();
-
-    /**
-     * The meta object literal for the '<em>Switch State</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.types.OnOffValue
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getSwitchState()
-     * @generated
-     */
-    EDataType SWITCH_STATE = eINSTANCE.getSwitchState();
-
-    /**
-     * The meta object literal for the '<em>Digital Value</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.types.HighLowValue
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getDigitalValue()
-     * @generated
-     */
-    EDataType DIGITAL_VALUE = eINSTANCE.getDigitalValue();
-
-    /**
-     * The meta object literal for the '<em>Tinker Bricklet IO16</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickletIO16
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTinkerBrickletIO16()
-     * @generated
-     */
-    EDataType TINKER_BRICKLET_IO16 = eINSTANCE.getTinkerBrickletIO16();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.DCDriveMode <em>DC Drive Mode</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.DCDriveMode
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getDCDriveMode()
-     * @generated
-     */
-    EEnum DC_DRIVE_MODE = eINSTANCE.getDCDriveMode();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.NoSubIds <em>No Sub Ids</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.NoSubIds
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getNoSubIds()
-     * @generated
-     */
-    EEnum NO_SUB_IDS = eINSTANCE.getNoSubIds();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.IndustrialDigitalInSubIDs <em>Industrial Digital In Sub IDs</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.IndustrialDigitalInSubIDs
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getIndustrialDigitalInSubIDs()
-     * @generated
-     */
-    EEnum INDUSTRIAL_DIGITAL_IN_SUB_IDS = eINSTANCE.getIndustrialDigitalInSubIDs();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.IndustrialQuadRelayIDs <em>Industrial Quad Relay IDs</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.IndustrialQuadRelayIDs
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getIndustrialQuadRelayIDs()
-     * @generated
-     */
-    EEnum INDUSTRIAL_QUAD_RELAY_IDS = eINSTANCE.getIndustrialQuadRelayIDs();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.ServoSubIDs <em>Servo Sub IDs</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.ServoSubIDs
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getServoSubIDs()
-     * @generated
-     */
-    EEnum SERVO_SUB_IDS = eINSTANCE.getServoSubIDs();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.BarometerSubIDs <em>Barometer Sub IDs</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.BarometerSubIDs
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getBarometerSubIDs()
-     * @generated
-     */
-    EEnum BAROMETER_SUB_IDS = eINSTANCE.getBarometerSubIDs();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.IO16SubIds <em>IO16 Sub Ids</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.IO16SubIds
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getIO16SubIds()
-     * @generated
-     */
-    EEnum IO16_SUB_IDS = eINSTANCE.getIO16SubIds();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.DualRelaySubIds <em>Dual Relay Sub Ids</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.DualRelaySubIds
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getDualRelaySubIds()
-     * @generated
-     */
-    EEnum DUAL_RELAY_SUB_IDS = eINSTANCE.getDualRelaySubIds();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.LCDButtonSubIds <em>LCD Button Sub Ids</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.LCDButtonSubIds
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getLCDButtonSubIds()
-     * @generated
-     */
-    EEnum LCD_BUTTON_SUB_IDS = eINSTANCE.getLCDButtonSubIds();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.LCDBacklightSubIds <em>LCD Backlight Sub Ids</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.LCDBacklightSubIds
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getLCDBacklightSubIds()
-     * @generated
-     */
-    EEnum LCD_BACKLIGHT_SUB_IDS = eINSTANCE.getLCDBacklightSubIds();
-
-    /**
-     * The meta object literal for the '{@link org.openhab.binding.tinkerforge.internal.model.MultiTouchSubIds <em>Multi Touch Sub Ids</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.model.MultiTouchSubIds
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMultiTouchSubIds()
-     * @generated
-     */
-    EEnum MULTI_TOUCH_SUB_IDS = eINSTANCE.getMultiTouchSubIds();
-
-    /**
-     * The meta object literal for the '<em>MIP Connection</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.IPConnection
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMIPConnection()
-     * @generated
-     */
-    EDataType MIP_CONNECTION = eINSTANCE.getMIPConnection();
-
-    /**
-     * The meta object literal for the '<em>MTinker Device</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.Device
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerDevice()
-     * @generated
-     */
-    EDataType MTINKER_DEVICE = eINSTANCE.getMTinkerDevice();
-
-    /**
-     * The meta object literal for the '<em>MLogger</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.slf4j.Logger
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMLogger()
-     * @generated
-     */
-    EDataType MLOGGER = eINSTANCE.getMLogger();
-
-    /**
-     * The meta object literal for the '<em>MAtomic Boolean</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see java.util.concurrent.atomic.AtomicBoolean
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMAtomicBoolean()
-     * @generated
-     */
-    EDataType MATOMIC_BOOLEAN = eINSTANCE.getMAtomicBoolean();
-
-    /**
-     * The meta object literal for the '<em>MTinkerforge Device</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.Device
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerforgeDevice()
-     * @generated
-     */
-    EDataType MTINKERFORGE_DEVICE = eINSTANCE.getMTinkerforgeDevice();
-
-    /**
-     * The meta object literal for the '<em>MTinker Brick DC</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickDC
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickDC()
-     * @generated
-     */
-    EDataType MTINKER_BRICK_DC = eINSTANCE.getMTinkerBrickDC();
-
-    /**
-     * The meta object literal for the '<em>MTinker Brick Servo</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickServo
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickServo()
-     * @generated
-     */
-    EDataType MTINKER_BRICK_SERVO = eINSTANCE.getMTinkerBrickServo();
-
-    /**
-     * The meta object literal for the '<em>MTinkerforge Value</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.types.TinkerforgeValue
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerforgeValue()
-     * @generated
-     */
-    EDataType MTINKERFORGE_VALUE = eINSTANCE.getMTinkerforgeValue();
-
-    /**
-     * The meta object literal for the '<em>MDecimal Value</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.openhab.binding.tinkerforge.internal.types.DecimalValue
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMDecimalValue()
-     * @generated
-     */
-    EDataType MDECIMAL_VALUE = eINSTANCE.getMDecimalValue();
-
-    /**
-     * The meta object literal for the '<em>MTinker Bricklet Humidity</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickletHumidity
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletHumidity()
-     * @generated
-     */
-    EDataType MTINKER_BRICKLET_HUMIDITY = eINSTANCE.getMTinkerBrickletHumidity();
-
-    /**
-     * The meta object literal for the '<em>MTinker Bricklet Distance IR</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickletDistanceIR
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletDistanceIR()
-     * @generated
-     */
-    EDataType MTINKER_BRICKLET_DISTANCE_IR = eINSTANCE.getMTinkerBrickletDistanceIR();
-
-    /**
-     * The meta object literal for the '<em>MTinker Bricklet Temperature</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickletTemperature
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletTemperature()
-     * @generated
-     */
-    EDataType MTINKER_BRICKLET_TEMPERATURE = eINSTANCE.getMTinkerBrickletTemperature();
-
-    /**
-     * The meta object literal for the '<em>MTinker Bricklet Barometer</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickletBarometer
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletBarometer()
-     * @generated
-     */
-    EDataType MTINKER_BRICKLET_BAROMETER = eINSTANCE.getMTinkerBrickletBarometer();
-
-    /**
-     * The meta object literal for the '<em>MTinker Bricklet Ambient Light</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickletAmbientLight
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletAmbientLight()
-     * @generated
-     */
-    EDataType MTINKER_BRICKLET_AMBIENT_LIGHT = eINSTANCE.getMTinkerBrickletAmbientLight();
-
-    /**
-     * The meta object literal for the '<em>MTinker Bricklet LCD2 0x4</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickletLCD20x4
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletLCD20x4()
-     * @generated
-     */
-    EDataType MTINKER_BRICKLET_LCD2_0X4 = eINSTANCE.getMTinkerBrickletLCD20x4();
-
-    /**
-     * The meta object literal for the '<em>Tinker Bricklet Remote Switch</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickletRemoteSwitch
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTinkerBrickletRemoteSwitch()
-     * @generated
-     */
-    EDataType TINKER_BRICKLET_REMOTE_SWITCH = eINSTANCE.getTinkerBrickletRemoteSwitch();
-
-    /**
-     * The meta object literal for the '<em>Tinker Bricklet Motion Detector</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickletMotionDetector
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTinkerBrickletMotionDetector()
-     * @generated
-     */
-    EDataType TINKER_BRICKLET_MOTION_DETECTOR = eINSTANCE.getTinkerBrickletMotionDetector();
-
-    /**
-     * The meta object literal for the '<em>Tinker Bricklet Multi Touch</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickletMultiTouch
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getTinkerBrickletMultiTouch()
-     * @generated
-     */
-    EDataType TINKER_BRICKLET_MULTI_TOUCH = eINSTANCE.getTinkerBrickletMultiTouch();
-
-    /**
-     * The meta object literal for the '<em>Enum</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see java.lang.Enum
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getEnum()
-     * @generated
-     */
-    EDataType ENUM = eINSTANCE.getEnum();
-
-    /**
-     * The meta object literal for the '<em>MTinker Bricklet Dual Relay</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickletDualRelay
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletDualRelay()
-     * @generated
-     */
-    EDataType MTINKER_BRICKLET_DUAL_RELAY = eINSTANCE.getMTinkerBrickletDualRelay();
-
-    /**
-     * The meta object literal for the '<em>MTinker Bricklet Industrial Quad Relay</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickletIndustrialQuadRelay
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletIndustrialQuadRelay()
-     * @generated
-     */
-    EDataType MTINKER_BRICKLET_INDUSTRIAL_QUAD_RELAY = eINSTANCE.getMTinkerBrickletIndustrialQuadRelay();
-
-    /**
-     * The meta object literal for the '<em>MTinker Bricklet Industrial Digital In4</em>' data type.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.tinkerforge.BrickletIndustrialDigitalIn4
-     * @see org.openhab.binding.tinkerforge.internal.model.impl.ModelPackageImpl#getMTinkerBrickletIndustrialDigitalIn4()
-     * @generated
-     */
-    EDataType MTINKER_BRICKLET_INDUSTRIAL_DIGITAL_IN4 = eINSTANCE.getMTinkerBrickletIndustrialDigitalIn4();
-
-  }
 
 } //ModelPackage

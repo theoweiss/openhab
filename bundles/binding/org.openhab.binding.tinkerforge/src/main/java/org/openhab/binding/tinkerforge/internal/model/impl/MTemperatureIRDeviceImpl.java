@@ -1,83 +1,68 @@
 /**
- * Copyright (c) 2010-2014, openHAB.org and others.
- *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
  */
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.openhab.binding.tinkerforge.internal.LoggerConstants;
+
+import org.openhab.binding.tinkerforge.internal.model.CallbackListener;
 import org.openhab.binding.tinkerforge.internal.model.MBaseDevice;
-import org.openhab.binding.tinkerforge.internal.model.MBrickletLCD20x4;
-import org.openhab.binding.tinkerforge.internal.model.MLCD20x4Button;
-import org.openhab.binding.tinkerforge.internal.model.MLCDSubDevice;
+import org.openhab.binding.tinkerforge.internal.model.MBrickletTemperatureIR;
 import org.openhab.binding.tinkerforge.internal.model.MSubDevice;
 import org.openhab.binding.tinkerforge.internal.model.MSubDeviceHolder;
+import org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
-import org.openhab.binding.tinkerforge.internal.types.OnOffValue;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import com.tinkerforge.BrickletLCD20x4;
+import org.openhab.binding.tinkerforge.internal.types.DecimalValue;
+
+import org.slf4j.Logger;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>MLCD2 0x4 Button</b></em>'.
- * 
- * @author Theo Weiss
- * @since 1.3.0
+ * An implementation of the model object '<em><b>MTemperature IR Device</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl#getSwitchState <em>Switch State</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl#getLogger <em>Logger</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl#getUid <em>Uid</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl#getEnabledA <em>Enabled A</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl#getSubId <em>Sub Id</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl#getMbrick <em>Mbrick</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl#getDeviceType <em>Device Type</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl#getButtonNum <em>Button Num</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MLCD20x4ButtonImpl#getCallbackPeriod <em>Callback Period</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MTemperatureIRDeviceImpl#getSensorValue <em>Sensor Value</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MTemperatureIRDeviceImpl#getLogger <em>Logger</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MTemperatureIRDeviceImpl#getUid <em>Uid</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MTemperatureIRDeviceImpl#getEnabledA <em>Enabled A</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MTemperatureIRDeviceImpl#getSubId <em>Sub Id</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MTemperatureIRDeviceImpl#getMbrick <em>Mbrick</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MTemperatureIRDeviceImpl#getCallbackPeriod <em>Callback Period</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MTemperatureIRDeviceImpl#getTemperature <em>Temperature</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MTemperatureIRDeviceImpl#getThreshold <em>Threshold</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class MLCD20x4ButtonImpl extends MinimalEObjectImpl.Container implements MLCD20x4Button
+public class MTemperatureIRDeviceImpl extends MinimalEObjectImpl.Container implements MTemperatureIRDevice
 {
   /**
-   * The default value of the '{@link #getSwitchState() <em>Switch State</em>}' attribute.
+   * The cached value of the '{@link #getSensorValue() <em>Sensor Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSwitchState()
+   * @see #getSensorValue()
    * @generated
    * @ordered
    */
-  protected static final OnOffValue SWITCH_STATE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getSwitchState() <em>Switch State</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSwitchState()
-   * @generated
-   * @ordered
-   */
-  protected OnOffValue switchState = SWITCH_STATE_EDEFAULT;
+  protected DecimalValue sensorValue;
 
   /**
    * The default value of the '{@link #getLogger() <em>Logger</em>}' attribute.
@@ -160,46 +145,6 @@ public class MLCD20x4ButtonImpl extends MinimalEObjectImpl.Container implements 
   protected String subId = SUB_ID_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getDeviceType() <em>Device Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDeviceType()
-   * @generated
-   * @ordered
-   */
-  protected static final String DEVICE_TYPE_EDEFAULT = "lcd_button";
-
-  /**
-   * The cached value of the '{@link #getDeviceType() <em>Device Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDeviceType()
-   * @generated
-   * @ordered
-   */
-  protected String deviceType = DEVICE_TYPE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getButtonNum() <em>Button Num</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getButtonNum()
-   * @generated
-   * @ordered
-   */
-  protected static final short BUTTON_NUM_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getButtonNum() <em>Button Num</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getButtonNum()
-   * @generated
-   * @ordered
-   */
-  protected short buttonNum = BUTTON_NUM_EDEFAULT;
-
-  /**
    * The default value of the '{@link #getCallbackPeriod() <em>Callback Period</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -207,7 +152,7 @@ public class MLCD20x4ButtonImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected static final int CALLBACK_PERIOD_EDEFAULT = 0;
+  protected static final long CALLBACK_PERIOD_EDEFAULT = 1000L;
 
   /**
    * The cached value of the '{@link #getCallbackPeriod() <em>Callback Period</em>}' attribute.
@@ -217,18 +162,54 @@ public class MLCD20x4ButtonImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected int callbackPeriod = CALLBACK_PERIOD_EDEFAULT;
+  protected long callbackPeriod = CALLBACK_PERIOD_EDEFAULT;
 
-private ButtonPressedListener buttonPressedListener;
+  /**
+   * The default value of the '{@link #getTemperature() <em>Temperature</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTemperature()
+   * @generated
+   * @ordered
+   */
+  protected static final short TEMPERATURE_EDEFAULT = 0;
 
-private ButtonReleasedListener buttonReleasedListener;
+  /**
+   * The cached value of the '{@link #getTemperature() <em>Temperature</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTemperature()
+   * @generated
+   * @ordered
+   */
+  protected short temperature = TEMPERATURE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getThreshold() <em>Threshold</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getThreshold()
+   * @generated
+   * @ordered
+   */
+  protected static final int THRESHOLD_EDEFAULT = 10;
+
+  /**
+   * The cached value of the '{@link #getThreshold() <em>Threshold</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getThreshold()
+   * @generated
+   * @ordered
+   */
+  protected int threshold = THRESHOLD_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected MLCD20x4ButtonImpl()
+  protected MTemperatureIRDeviceImpl()
   {
     super();
   }
@@ -241,7 +222,7 @@ private ButtonReleasedListener buttonReleasedListener;
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMLCD20x4Button();
+    return ModelPackage.eINSTANCE.getMTemperatureIRDevice();
   }
 
   /**
@@ -249,9 +230,9 @@ private ButtonReleasedListener buttonReleasedListener;
    * <!-- end-user-doc -->
    * @generated
    */
-  public OnOffValue getSwitchState()
+  public DecimalValue getSensorValue()
   {
-    return switchState;
+    return sensorValue;
   }
 
   /**
@@ -259,12 +240,12 @@ private ButtonReleasedListener buttonReleasedListener;
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSwitchState(OnOffValue newSwitchState)
+  public void setSensorValue(DecimalValue newSensorValue)
   {
-    OnOffValue oldSwitchState = switchState;
-    switchState = newSwitchState;
+    DecimalValue oldSensorValue = sensorValue;
+    sensorValue = newSensorValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MLCD2_0X4_BUTTON__SWITCH_STATE, oldSwitchState, switchState));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MTEMPERATURE_IR_DEVICE__SENSOR_VALUE, oldSensorValue, sensorValue));
   }
 
   /**
@@ -287,7 +268,7 @@ private ButtonReleasedListener buttonReleasedListener;
     Logger oldLogger = logger;
     logger = newLogger;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MLCD2_0X4_BUTTON__LOGGER, oldLogger, logger));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MTEMPERATURE_IR_DEVICE__LOGGER, oldLogger, logger));
   }
 
   /**
@@ -310,7 +291,7 @@ private ButtonReleasedListener buttonReleasedListener;
     String oldUid = uid;
     uid = newUid;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MLCD2_0X4_BUTTON__UID, oldUid, uid));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MTEMPERATURE_IR_DEVICE__UID, oldUid, uid));
   }
 
   /**
@@ -333,7 +314,7 @@ private ButtonReleasedListener buttonReleasedListener;
     AtomicBoolean oldEnabledA = enabledA;
     enabledA = newEnabledA;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MLCD2_0X4_BUTTON__ENABLED_A, oldEnabledA, enabledA));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MTEMPERATURE_IR_DEVICE__ENABLED_A, oldEnabledA, enabledA));
   }
 
   /**
@@ -356,7 +337,7 @@ private ButtonReleasedListener buttonReleasedListener;
     String oldSubId = subId;
     subId = newSubId;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MLCD2_0X4_BUTTON__SUB_ID, oldSubId, subId));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MTEMPERATURE_IR_DEVICE__SUB_ID, oldSubId, subId));
   }
 
   /**
@@ -364,10 +345,10 @@ private ButtonReleasedListener buttonReleasedListener;
    * <!-- end-user-doc -->
    * @generated
    */
-  public MBrickletLCD20x4 getMbrick()
+  public MBrickletTemperatureIR getMbrick()
   {
-    if (eContainerFeatureID() != ModelPackage.MLCD2_0X4_BUTTON__MBRICK) return null;
-    return (MBrickletLCD20x4)eContainer();
+    if (eContainerFeatureID() != ModelPackage.MTEMPERATURE_IR_DEVICE__MBRICK) return null;
+    return (MBrickletTemperatureIR)eContainer();
   }
 
   /**
@@ -375,9 +356,9 @@ private ButtonReleasedListener buttonReleasedListener;
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetMbrick(MBrickletLCD20x4 newMbrick, NotificationChain msgs)
+  public NotificationChain basicSetMbrick(MBrickletTemperatureIR newMbrick, NotificationChain msgs)
   {
-    msgs = eBasicSetContainer((InternalEObject)newMbrick, ModelPackage.MLCD2_0X4_BUTTON__MBRICK, msgs);
+    msgs = eBasicSetContainer((InternalEObject)newMbrick, ModelPackage.MTEMPERATURE_IR_DEVICE__MBRICK, msgs);
     return msgs;
   }
 
@@ -386,9 +367,9 @@ private ButtonReleasedListener buttonReleasedListener;
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setMbrick(MBrickletLCD20x4 newMbrick)
+  public void setMbrick(MBrickletTemperatureIR newMbrick)
   {
-    if (newMbrick != eInternalContainer() || (eContainerFeatureID() != ModelPackage.MLCD2_0X4_BUTTON__MBRICK && newMbrick != null))
+    if (newMbrick != eInternalContainer() || (eContainerFeatureID() != ModelPackage.MTEMPERATURE_IR_DEVICE__MBRICK && newMbrick != null))
     {
       if (EcoreUtil.isAncestor(this, newMbrick))
         throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -401,7 +382,7 @@ private ButtonReleasedListener buttonReleasedListener;
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MLCD2_0X4_BUTTON__MBRICK, newMbrick, newMbrick));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MTEMPERATURE_IR_DEVICE__MBRICK, newMbrick, newMbrick));
   }
 
   /**
@@ -409,40 +390,7 @@ private ButtonReleasedListener buttonReleasedListener;
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getDeviceType()
-  {
-    return deviceType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public short getButtonNum()
-  {
-    return buttonNum;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setButtonNum(short newButtonNum)
-  {
-    short oldButtonNum = buttonNum;
-    buttonNum = newButtonNum;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MLCD2_0X4_BUTTON__BUTTON_NUM, oldButtonNum, buttonNum));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public int getCallbackPeriod()
+  public long getCallbackPeriod()
   {
     return callbackPeriod;
   }
@@ -452,107 +400,12 @@ private ButtonReleasedListener buttonReleasedListener;
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setCallbackPeriod(int newCallbackPeriod)
+  public void setCallbackPeriod(long newCallbackPeriod)
   {
-    int oldCallbackPeriod = callbackPeriod;
+    long oldCallbackPeriod = callbackPeriod;
     callbackPeriod = newCallbackPeriod;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MLCD2_0X4_BUTTON__CALLBACK_PERIOD, oldCallbackPeriod, callbackPeriod));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated NOT
-   */
-  public void init()
-  {
-	    setEnabledA(new AtomicBoolean());
-		logger = LoggerFactory.getLogger(MLCD20x4ButtonImpl.class);
-		buttonNum = Short.parseShort(String.valueOf(subId.charAt(subId.length() - 1)));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated NOT
-   */
-	public void enable() {
-		setSwitchState(OnOffValue.UNDEF);
-		MBrickletLCD20x4 masterBrick = getMbrick();
-		if (masterBrick == null) {
-			logger.error("{} No brick found for Button: {} ",
-					LoggerConstants.TFINIT, subId);
-		} else {
-			BrickletLCD20x4 brickletLCD20x4 = masterBrick
-					.getTinkerforgeDevice();
-			buttonPressedListener = new ButtonPressedListener();
-			brickletLCD20x4.addButtonPressedListener(buttonPressedListener);
-			// buttonReleasedListener = new ButtonReleasedListener();
-			// brickletLCD20x4.addButtonReleasedListener(buttonReleasedListener);
-		}
-	}
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated NOT
-   */
-  private class ButtonPressedListener implements BrickletLCD20x4.ButtonPressedListener{
-
-	@Override
-	public void buttonPressed(short buttonChangedButtonNum) {
-		if (buttonChangedButtonNum == buttonNum){
-			if (switchState == OnOffValue.OFF){
-				setSwitchState(OnOffValue.ON);
-				logger.debug("set switch state on");
-			}
-			else if (switchState == OnOffValue.ON){
-				setSwitchState(OnOffValue.OFF);
-				logger.debug("set switch state on");
-			}
-			else {
-				setSwitchState(OnOffValue.ON);
-				logger.debug("set switch state on");				
-			}
-		}
-	}
-	  
-  }
-  
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated NOT
-   */
-   private class ButtonReleasedListener implements  BrickletLCD20x4.ButtonReleasedListener{
-
-	@Override
-	public void buttonReleased(short arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-	   
-   }
-   
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated NOT
-   */
-  public void disable()
-  {
-	    MBrickletLCD20x4 masterBrick = getMbrick();
-	    if (masterBrick == null){
-	    	logger.error("{} disable: no brick found for Button: {} ", LoggerConstants.TFINIT, subId);
-	    }
-	    else {
-	    	BrickletLCD20x4 brickletLCD20x4 = masterBrick.getTinkerforgeDevice();
-	    	if (buttonPressedListener != null)
-	    		brickletLCD20x4.removeButtonPressedListener(buttonPressedListener);
-	    	if (buttonReleasedListener != null)
-	    		brickletLCD20x4.removeButtonReleasedListener(buttonReleasedListener);
-	    }
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MTEMPERATURE_IR_DEVICE__CALLBACK_PERIOD, oldCallbackPeriod, callbackPeriod));
   }
 
   /**
@@ -560,7 +413,63 @@ private ButtonReleasedListener buttonReleasedListener;
    * <!-- end-user-doc -->
    * @generated
    */
-  public void turnSwitch(OnOffValue state)
+  public short getTemperature()
+  {
+    return temperature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTemperature(short newTemperature)
+  {
+    short oldTemperature = temperature;
+    temperature = newTemperature;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MTEMPERATURE_IR_DEVICE__TEMPERATURE, oldTemperature, temperature));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public int getThreshold()
+  {
+    return threshold;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setThreshold(int newThreshold)
+  {
+    int oldThreshold = threshold;
+    threshold = newThreshold;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MTEMPERATURE_IR_DEVICE__THRESHOLD, oldThreshold, threshold));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void init()
+  {
+    
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void enable()
   {
     // TODO: implement this method
     // Ensure that you remove @generated or mark it @generated NOT
@@ -572,7 +481,19 @@ private ButtonReleasedListener buttonReleasedListener;
    * <!-- end-user-doc -->
    * @generated
    */
-  public OnOffValue fetchSwitchState()
+  public void disable()
+  {
+    // TODO: implement this method
+    // Ensure that you remove @generated or mark it @generated NOT
+    throw new UnsupportedOperationException();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DecimalValue fetchSensorValue()
   {
     // TODO: implement this method
     // Ensure that you remove @generated or mark it @generated NOT
@@ -589,10 +510,10 @@ private ButtonReleasedListener buttonReleasedListener;
   {
     switch (featureID)
     {
-      case ModelPackage.MLCD2_0X4_BUTTON__MBRICK:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__MBRICK:
         if (eInternalContainer() != null)
           msgs = eBasicRemoveFromContainer(msgs);
-        return basicSetMbrick((MBrickletLCD20x4)otherEnd, msgs);
+        return basicSetMbrick((MBrickletTemperatureIR)otherEnd, msgs);
     }
     return super.eInverseAdd(otherEnd, featureID, msgs);
   }
@@ -607,7 +528,7 @@ private ButtonReleasedListener buttonReleasedListener;
   {
     switch (featureID)
     {
-      case ModelPackage.MLCD2_0X4_BUTTON__MBRICK:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__MBRICK:
         return basicSetMbrick(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -623,7 +544,7 @@ private ButtonReleasedListener buttonReleasedListener;
   {
     switch (eContainerFeatureID())
     {
-      case ModelPackage.MLCD2_0X4_BUTTON__MBRICK:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__MBRICK:
         return eInternalContainer().eInverseRemove(this, ModelPackage.MSUB_DEVICE_HOLDER__MSUBDEVICES, MSubDeviceHolder.class, msgs);
     }
     return super.eBasicRemoveFromContainerFeature(msgs);
@@ -639,24 +560,24 @@ private ButtonReleasedListener buttonReleasedListener;
   {
     switch (featureID)
     {
-      case ModelPackage.MLCD2_0X4_BUTTON__SWITCH_STATE:
-        return getSwitchState();
-      case ModelPackage.MLCD2_0X4_BUTTON__LOGGER:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__SENSOR_VALUE:
+        return getSensorValue();
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__LOGGER:
         return getLogger();
-      case ModelPackage.MLCD2_0X4_BUTTON__UID:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__UID:
         return getUid();
-      case ModelPackage.MLCD2_0X4_BUTTON__ENABLED_A:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__ENABLED_A:
         return getEnabledA();
-      case ModelPackage.MLCD2_0X4_BUTTON__SUB_ID:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__SUB_ID:
         return getSubId();
-      case ModelPackage.MLCD2_0X4_BUTTON__MBRICK:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__MBRICK:
         return getMbrick();
-      case ModelPackage.MLCD2_0X4_BUTTON__DEVICE_TYPE:
-        return getDeviceType();
-      case ModelPackage.MLCD2_0X4_BUTTON__BUTTON_NUM:
-        return getButtonNum();
-      case ModelPackage.MLCD2_0X4_BUTTON__CALLBACK_PERIOD:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__CALLBACK_PERIOD:
         return getCallbackPeriod();
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__TEMPERATURE:
+        return getTemperature();
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__THRESHOLD:
+        return getThreshold();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -671,29 +592,32 @@ private ButtonReleasedListener buttonReleasedListener;
   {
     switch (featureID)
     {
-      case ModelPackage.MLCD2_0X4_BUTTON__SWITCH_STATE:
-        setSwitchState((OnOffValue)newValue);
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__SENSOR_VALUE:
+        setSensorValue((DecimalValue)newValue);
         return;
-      case ModelPackage.MLCD2_0X4_BUTTON__LOGGER:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__LOGGER:
         setLogger((Logger)newValue);
         return;
-      case ModelPackage.MLCD2_0X4_BUTTON__UID:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__UID:
         setUid((String)newValue);
         return;
-      case ModelPackage.MLCD2_0X4_BUTTON__ENABLED_A:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__ENABLED_A:
         setEnabledA((AtomicBoolean)newValue);
         return;
-      case ModelPackage.MLCD2_0X4_BUTTON__SUB_ID:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__SUB_ID:
         setSubId((String)newValue);
         return;
-      case ModelPackage.MLCD2_0X4_BUTTON__MBRICK:
-        setMbrick((MBrickletLCD20x4)newValue);
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__MBRICK:
+        setMbrick((MBrickletTemperatureIR)newValue);
         return;
-      case ModelPackage.MLCD2_0X4_BUTTON__BUTTON_NUM:
-        setButtonNum((Short)newValue);
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__CALLBACK_PERIOD:
+        setCallbackPeriod((Long)newValue);
         return;
-      case ModelPackage.MLCD2_0X4_BUTTON__CALLBACK_PERIOD:
-        setCallbackPeriod((Integer)newValue);
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__TEMPERATURE:
+        setTemperature((Short)newValue);
+        return;
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__THRESHOLD:
+        setThreshold((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -709,29 +633,32 @@ private ButtonReleasedListener buttonReleasedListener;
   {
     switch (featureID)
     {
-      case ModelPackage.MLCD2_0X4_BUTTON__SWITCH_STATE:
-        setSwitchState(SWITCH_STATE_EDEFAULT);
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__SENSOR_VALUE:
+        setSensorValue((DecimalValue)null);
         return;
-      case ModelPackage.MLCD2_0X4_BUTTON__LOGGER:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__LOGGER:
         setLogger(LOGGER_EDEFAULT);
         return;
-      case ModelPackage.MLCD2_0X4_BUTTON__UID:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__UID:
         setUid(UID_EDEFAULT);
         return;
-      case ModelPackage.MLCD2_0X4_BUTTON__ENABLED_A:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__ENABLED_A:
         setEnabledA(ENABLED_A_EDEFAULT);
         return;
-      case ModelPackage.MLCD2_0X4_BUTTON__SUB_ID:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__SUB_ID:
         setSubId(SUB_ID_EDEFAULT);
         return;
-      case ModelPackage.MLCD2_0X4_BUTTON__MBRICK:
-        setMbrick((MBrickletLCD20x4)null);
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__MBRICK:
+        setMbrick((MBrickletTemperatureIR)null);
         return;
-      case ModelPackage.MLCD2_0X4_BUTTON__BUTTON_NUM:
-        setButtonNum(BUTTON_NUM_EDEFAULT);
-        return;
-      case ModelPackage.MLCD2_0X4_BUTTON__CALLBACK_PERIOD:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__CALLBACK_PERIOD:
         setCallbackPeriod(CALLBACK_PERIOD_EDEFAULT);
+        return;
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__TEMPERATURE:
+        setTemperature(TEMPERATURE_EDEFAULT);
+        return;
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__THRESHOLD:
+        setThreshold(THRESHOLD_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -747,24 +674,24 @@ private ButtonReleasedListener buttonReleasedListener;
   {
     switch (featureID)
     {
-      case ModelPackage.MLCD2_0X4_BUTTON__SWITCH_STATE:
-        return SWITCH_STATE_EDEFAULT == null ? switchState != null : !SWITCH_STATE_EDEFAULT.equals(switchState);
-      case ModelPackage.MLCD2_0X4_BUTTON__LOGGER:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__SENSOR_VALUE:
+        return sensorValue != null;
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__LOGGER:
         return LOGGER_EDEFAULT == null ? logger != null : !LOGGER_EDEFAULT.equals(logger);
-      case ModelPackage.MLCD2_0X4_BUTTON__UID:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__UID:
         return UID_EDEFAULT == null ? uid != null : !UID_EDEFAULT.equals(uid);
-      case ModelPackage.MLCD2_0X4_BUTTON__ENABLED_A:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__ENABLED_A:
         return ENABLED_A_EDEFAULT == null ? enabledA != null : !ENABLED_A_EDEFAULT.equals(enabledA);
-      case ModelPackage.MLCD2_0X4_BUTTON__SUB_ID:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__SUB_ID:
         return SUB_ID_EDEFAULT == null ? subId != null : !SUB_ID_EDEFAULT.equals(subId);
-      case ModelPackage.MLCD2_0X4_BUTTON__MBRICK:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__MBRICK:
         return getMbrick() != null;
-      case ModelPackage.MLCD2_0X4_BUTTON__DEVICE_TYPE:
-        return DEVICE_TYPE_EDEFAULT == null ? deviceType != null : !DEVICE_TYPE_EDEFAULT.equals(deviceType);
-      case ModelPackage.MLCD2_0X4_BUTTON__BUTTON_NUM:
-        return buttonNum != BUTTON_NUM_EDEFAULT;
-      case ModelPackage.MLCD2_0X4_BUTTON__CALLBACK_PERIOD:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__CALLBACK_PERIOD:
         return callbackPeriod != CALLBACK_PERIOD_EDEFAULT;
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__TEMPERATURE:
+        return temperature != TEMPERATURE_EDEFAULT;
+      case ModelPackage.MTEMPERATURE_IR_DEVICE__THRESHOLD:
+        return threshold != THRESHOLD_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -781,9 +708,9 @@ private ButtonReleasedListener buttonReleasedListener;
     {
       switch (derivedFeatureID)
       {
-        case ModelPackage.MLCD2_0X4_BUTTON__LOGGER: return ModelPackage.MBASE_DEVICE__LOGGER;
-        case ModelPackage.MLCD2_0X4_BUTTON__UID: return ModelPackage.MBASE_DEVICE__UID;
-        case ModelPackage.MLCD2_0X4_BUTTON__ENABLED_A: return ModelPackage.MBASE_DEVICE__ENABLED_A;
+        case ModelPackage.MTEMPERATURE_IR_DEVICE__LOGGER: return ModelPackage.MBASE_DEVICE__LOGGER;
+        case ModelPackage.MTEMPERATURE_IR_DEVICE__UID: return ModelPackage.MBASE_DEVICE__UID;
+        case ModelPackage.MTEMPERATURE_IR_DEVICE__ENABLED_A: return ModelPackage.MBASE_DEVICE__ENABLED_A;
         default: return -1;
       }
     }
@@ -791,15 +718,16 @@ private ButtonReleasedListener buttonReleasedListener;
     {
       switch (derivedFeatureID)
       {
-        case ModelPackage.MLCD2_0X4_BUTTON__SUB_ID: return ModelPackage.MSUB_DEVICE__SUB_ID;
-        case ModelPackage.MLCD2_0X4_BUTTON__MBRICK: return ModelPackage.MSUB_DEVICE__MBRICK;
+        case ModelPackage.MTEMPERATURE_IR_DEVICE__SUB_ID: return ModelPackage.MSUB_DEVICE__SUB_ID;
+        case ModelPackage.MTEMPERATURE_IR_DEVICE__MBRICK: return ModelPackage.MSUB_DEVICE__MBRICK;
         default: return -1;
       }
     }
-    if (baseClass == MLCDSubDevice.class)
+    if (baseClass == CallbackListener.class)
     {
       switch (derivedFeatureID)
       {
+        case ModelPackage.MTEMPERATURE_IR_DEVICE__CALLBACK_PERIOD: return ModelPackage.CALLBACK_LISTENER__CALLBACK_PERIOD;
         default: return -1;
       }
     }
@@ -818,9 +746,9 @@ private ButtonReleasedListener buttonReleasedListener;
     {
       switch (baseFeatureID)
       {
-        case ModelPackage.MBASE_DEVICE__LOGGER: return ModelPackage.MLCD2_0X4_BUTTON__LOGGER;
-        case ModelPackage.MBASE_DEVICE__UID: return ModelPackage.MLCD2_0X4_BUTTON__UID;
-        case ModelPackage.MBASE_DEVICE__ENABLED_A: return ModelPackage.MLCD2_0X4_BUTTON__ENABLED_A;
+        case ModelPackage.MBASE_DEVICE__LOGGER: return ModelPackage.MTEMPERATURE_IR_DEVICE__LOGGER;
+        case ModelPackage.MBASE_DEVICE__UID: return ModelPackage.MTEMPERATURE_IR_DEVICE__UID;
+        case ModelPackage.MBASE_DEVICE__ENABLED_A: return ModelPackage.MTEMPERATURE_IR_DEVICE__ENABLED_A;
         default: return -1;
       }
     }
@@ -828,15 +756,16 @@ private ButtonReleasedListener buttonReleasedListener;
     {
       switch (baseFeatureID)
       {
-        case ModelPackage.MSUB_DEVICE__SUB_ID: return ModelPackage.MLCD2_0X4_BUTTON__SUB_ID;
-        case ModelPackage.MSUB_DEVICE__MBRICK: return ModelPackage.MLCD2_0X4_BUTTON__MBRICK;
+        case ModelPackage.MSUB_DEVICE__SUB_ID: return ModelPackage.MTEMPERATURE_IR_DEVICE__SUB_ID;
+        case ModelPackage.MSUB_DEVICE__MBRICK: return ModelPackage.MTEMPERATURE_IR_DEVICE__MBRICK;
         default: return -1;
       }
     }
-    if (baseClass == MLCDSubDevice.class)
+    if (baseClass == CallbackListener.class)
     {
       switch (baseFeatureID)
       {
+        case ModelPackage.CALLBACK_LISTENER__CALLBACK_PERIOD: return ModelPackage.MTEMPERATURE_IR_DEVICE__CALLBACK_PERIOD;
         default: return -1;
       }
     }
@@ -855,9 +784,9 @@ private ButtonReleasedListener buttonReleasedListener;
     {
       switch (baseOperationID)
       {
-        case ModelPackage.MBASE_DEVICE___INIT: return ModelPackage.MLCD2_0X4_BUTTON___INIT;
-        case ModelPackage.MBASE_DEVICE___ENABLE: return ModelPackage.MLCD2_0X4_BUTTON___ENABLE;
-        case ModelPackage.MBASE_DEVICE___DISABLE: return ModelPackage.MLCD2_0X4_BUTTON___DISABLE;
+        case ModelPackage.MBASE_DEVICE___INIT: return ModelPackage.MTEMPERATURE_IR_DEVICE___INIT;
+        case ModelPackage.MBASE_DEVICE___ENABLE: return ModelPackage.MTEMPERATURE_IR_DEVICE___ENABLE;
+        case ModelPackage.MBASE_DEVICE___DISABLE: return ModelPackage.MTEMPERATURE_IR_DEVICE___DISABLE;
         default: return -1;
       }
     }
@@ -868,7 +797,7 @@ private ButtonReleasedListener buttonReleasedListener;
         default: return -1;
       }
     }
-    if (baseClass == MLCDSubDevice.class)
+    if (baseClass == CallbackListener.class)
     {
       switch (baseOperationID)
       {
@@ -888,20 +817,17 @@ private ButtonReleasedListener buttonReleasedListener;
   {
     switch (operationID)
     {
-      case ModelPackage.MLCD2_0X4_BUTTON___INIT:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE___INIT:
         init();
         return null;
-      case ModelPackage.MLCD2_0X4_BUTTON___ENABLE:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE___ENABLE:
         enable();
         return null;
-      case ModelPackage.MLCD2_0X4_BUTTON___DISABLE:
+      case ModelPackage.MTEMPERATURE_IR_DEVICE___DISABLE:
         disable();
         return null;
-      case ModelPackage.MLCD2_0X4_BUTTON___TURN_SWITCH__ONOFFVALUE:
-        turnSwitch((OnOffValue)arguments.get(0));
-        return null;
-      case ModelPackage.MLCD2_0X4_BUTTON___FETCH_SWITCH_STATE:
-        return fetchSwitchState();
+      case ModelPackage.MTEMPERATURE_IR_DEVICE___FETCH_SENSOR_VALUE:
+        return fetchSensorValue();
     }
     return super.eInvoke(operationID, arguments);
   }
@@ -917,8 +843,8 @@ private ButtonReleasedListener buttonReleasedListener;
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (switchState: ");
-    result.append(switchState);
+    result.append(" (sensorValue: ");
+    result.append(sensorValue);
     result.append(", logger: ");
     result.append(logger);
     result.append(", uid: ");
@@ -927,14 +853,14 @@ private ButtonReleasedListener buttonReleasedListener;
     result.append(enabledA);
     result.append(", subId: ");
     result.append(subId);
-    result.append(", deviceType: ");
-    result.append(deviceType);
-    result.append(", buttonNum: ");
-    result.append(buttonNum);
     result.append(", callbackPeriod: ");
     result.append(callbackPeriod);
+    result.append(", temperature: ");
+    result.append(temperature);
+    result.append(", threshold: ");
+    result.append(threshold);
     result.append(')');
     return result.toString();
   }
 
-} //MLCD20x4ButtonImpl
+} //MTemperatureIRDeviceImpl

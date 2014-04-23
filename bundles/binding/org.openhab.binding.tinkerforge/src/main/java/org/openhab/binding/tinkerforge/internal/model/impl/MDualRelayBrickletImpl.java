@@ -280,7 +280,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.MDUAL_RELAY_BRICKLET;
+    return ModelPackage.eINSTANCE.getMDualRelayBricklet();
   }
 
   /**

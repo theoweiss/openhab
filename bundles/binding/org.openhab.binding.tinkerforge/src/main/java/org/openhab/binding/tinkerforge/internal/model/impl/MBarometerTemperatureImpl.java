@@ -206,7 +206,7 @@ public class MBarometerTemperatureImpl extends MinimalEObjectImpl.Container impl
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.MBAROMETER_TEMPERATURE;
+    return ModelPackage.eINSTANCE.getMBarometerTemperature();
   }
 
   /**

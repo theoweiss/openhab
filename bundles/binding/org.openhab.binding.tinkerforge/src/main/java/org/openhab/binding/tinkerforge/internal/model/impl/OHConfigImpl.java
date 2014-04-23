@@ -68,7 +68,7 @@ public class OHConfigImpl extends MinimalEObjectImpl.Container implements OHConf
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.OH_CONFIG;
+    return ModelPackage.eINSTANCE.getOHConfig();
   }
 
   /**

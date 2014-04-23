@@ -375,7 +375,7 @@ public class MBrickletBarometerImpl extends MinimalEObjectImpl.Container impleme
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.MBRICKLET_BAROMETER;
+    return ModelPackage.eINSTANCE.getMBrickletBarometer();
   }
 
   /**

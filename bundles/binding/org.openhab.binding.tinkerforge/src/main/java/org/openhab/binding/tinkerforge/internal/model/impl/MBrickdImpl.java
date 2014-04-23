@@ -278,7 +278,7 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.MBRICKD;
+    return ModelPackage.eINSTANCE.getMBrickd();
   }
 
   /**

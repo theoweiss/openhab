@@ -432,7 +432,7 @@ public class MBrickDCImpl extends MinimalEObjectImpl.Container implements MBrick
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.MBRICK_DC;
+    return ModelPackage.eINSTANCE.getMBrickDC();
   }
 
   /**

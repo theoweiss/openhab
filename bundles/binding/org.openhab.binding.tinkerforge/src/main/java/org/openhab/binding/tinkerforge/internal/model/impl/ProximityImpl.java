@@ -60,7 +60,7 @@ public class ProximityImpl extends MultiTouchDeviceImpl implements Proximity
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.PROXIMITY;
+    return ModelPackage.eINSTANCE.getProximity();
   }
 
   /**

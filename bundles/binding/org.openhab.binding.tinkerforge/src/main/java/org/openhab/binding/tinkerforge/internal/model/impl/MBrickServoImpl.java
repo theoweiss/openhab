@@ -282,7 +282,7 @@ public class MBrickServoImpl extends MinimalEObjectImpl.Container implements MBr
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.MBRICK_SERVO;
+    return ModelPackage.eINSTANCE.getMBrickServo();
   }
 
   /**

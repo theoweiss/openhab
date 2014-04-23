@@ -199,7 +199,7 @@ private short relayNum;
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.MDUAL_RELAY;
+    return ModelPackage.eINSTANCE.getMDualRelay();
   }
 
   /**

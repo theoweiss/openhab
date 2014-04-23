@@ -322,7 +322,7 @@ public class MBrickletIndustrialDigitalIn4Impl extends MinimalEObjectImpl.Contai
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.MBRICKLET_INDUSTRIAL_DIGITAL_IN4;
+    return ModelPackage.eINSTANCE.getMBrickletIndustrialDigitalIn4();
   }
 
   /**

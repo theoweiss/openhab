@@ -104,7 +104,7 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.BRICKLET_REMOTE_SWITCH_CONFIGURATION;
+    return ModelPackage.eINSTANCE.getBrickletRemoteSwitchConfiguration();
   }
 
   /**

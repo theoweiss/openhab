@@ -200,7 +200,7 @@ public class TFServoConfigurationImpl extends MinimalEObjectImpl.Container imple
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.TF_SERVO_CONFIGURATION;
+    return ModelPackage.eINSTANCE.getTFServoConfiguration();
   }
 
   /**

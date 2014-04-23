@@ -74,7 +74,7 @@ public class TFIOSensorConfigurationImpl extends MinimalEObjectImpl.Container im
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.TFIO_SENSOR_CONFIGURATION;
+    return ModelPackage.eINSTANCE.getTFIOSensorConfiguration();
   }
 
   /**

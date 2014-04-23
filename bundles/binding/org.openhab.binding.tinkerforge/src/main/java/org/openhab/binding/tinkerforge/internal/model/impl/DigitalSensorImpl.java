@@ -288,7 +288,7 @@ private InterruptListener interruptListener;
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.DIGITAL_SENSOR;
+    return ModelPackage.eINSTANCE.getDigitalSensor();
   }
 
   /**

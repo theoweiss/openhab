@@ -1,14 +1,8 @@
 /**
- * Copyright (c) 2010-2014, openHAB.org and others.
- *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
  */
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
-import com.tinkerforge.BrickletIndustrialQuadRelay;
+import com.tinkerforge.BrickletTemperatureIR;
 import com.tinkerforge.IPConnection;
 
 import java.lang.reflect.InvocationTargetException;
@@ -33,43 +27,39 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.openhab.binding.tinkerforge.internal.model.MBrickd;
-import org.openhab.binding.tinkerforge.internal.model.MIndustrialQuadRelay;
-import org.openhab.binding.tinkerforge.internal.model.MIndustrialQuadRelayBricklet;
+import org.openhab.binding.tinkerforge.internal.model.MBrickletTemperatureIR;
 import org.openhab.binding.tinkerforge.internal.model.MSubDevice;
 import org.openhab.binding.tinkerforge.internal.model.MSubDeviceHolder;
-import org.openhab.binding.tinkerforge.internal.model.ModelFactory;
+import org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>MIndustrial Quad Relay Bricklet</b></em>'.
- * 
- * @author Theo Weiss
- * @since 1.4.0
+ * An implementation of the model object '<em><b>MBricklet Temperature IR</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayBrickletImpl#getLogger <em>Logger</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayBrickletImpl#getUid <em>Uid</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayBrickletImpl#getEnabledA <em>Enabled A</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayBrickletImpl#getTinkerforgeDevice <em>Tinkerforge Device</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayBrickletImpl#getIpConnection <em>Ip Connection</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayBrickletImpl#getConnectedUid <em>Connected Uid</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayBrickletImpl#getPosition <em>Position</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayBrickletImpl#getDeviceIdentifier <em>Device Identifier</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayBrickletImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayBrickletImpl#getBrickd <em>Brickd</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MIndustrialQuadRelayBrickletImpl#getMsubdevices <em>Msubdevices</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureIRImpl#getLogger <em>Logger</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureIRImpl#getUid <em>Uid</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureIRImpl#getEnabledA <em>Enabled A</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureIRImpl#getTinkerforgeDevice <em>Tinkerforge Device</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureIRImpl#getIpConnection <em>Ip Connection</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureIRImpl#getConnectedUid <em>Connected Uid</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureIRImpl#getPosition <em>Position</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureIRImpl#getDeviceIdentifier <em>Device Identifier</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureIRImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureIRImpl#getBrickd <em>Brickd</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureIRImpl#getMsubdevices <em>Msubdevices</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickletTemperatureIRImpl#getDeviceType <em>Device Type</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Container implements MIndustrialQuadRelayBricklet
+public class MBrickletTemperatureIRImpl extends MinimalEObjectImpl.Container implements MBrickletTemperatureIR
 {
   /**
    * The default value of the '{@link #getLogger() <em>Logger</em>}' attribute.
@@ -139,7 +129,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
    * @generated
    * @ordered
    */
-  protected BrickletIndustrialQuadRelay tinkerforgeDevice;
+  protected BrickletTemperatureIR tinkerforgeDevice;
 
   /**
    * The default value of the '{@link #getIpConnection() <em>Ip Connection</em>}' attribute.
@@ -249,14 +239,34 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
    * @generated
    * @ordered
    */
-  protected EList<MIndustrialQuadRelay> msubdevices;
+  protected EList<MTemperatureIRDevice> msubdevices;
+
+  /**
+   * The default value of the '{@link #getDeviceType() <em>Device Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDeviceType()
+   * @generated
+   * @ordered
+   */
+  protected static final String DEVICE_TYPE_EDEFAULT = "bricklet_temperatureIR";
+
+  /**
+   * The cached value of the '{@link #getDeviceType() <em>Device Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDeviceType()
+   * @generated
+   * @ordered
+   */
+  protected String deviceType = DEVICE_TYPE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected MIndustrialQuadRelayBrickletImpl()
+  protected MBrickletTemperatureIRImpl()
   {
     super();
   }
@@ -269,7 +279,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMIndustrialQuadRelayBricklet();
+    return ModelPackage.eINSTANCE.getMBrickletTemperatureIR();
   }
 
   /**
@@ -292,7 +302,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
     Logger oldLogger = logger;
     logger = newLogger;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__LOGGER, oldLogger, logger));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_TEMPERATURE_IR__LOGGER, oldLogger, logger));
   }
 
   /**
@@ -315,7 +325,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
     String oldUid = uid;
     uid = newUid;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__UID, oldUid, uid));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_TEMPERATURE_IR__UID, oldUid, uid));
   }
 
   /**
@@ -338,7 +348,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
     AtomicBoolean oldEnabledA = enabledA;
     enabledA = newEnabledA;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__ENABLED_A, oldEnabledA, enabledA));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_TEMPERATURE_IR__ENABLED_A, oldEnabledA, enabledA));
   }
 
   /**
@@ -346,7 +356,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
    * <!-- end-user-doc -->
    * @generated
    */
-  public BrickletIndustrialQuadRelay getTinkerforgeDevice()
+  public BrickletTemperatureIR getTinkerforgeDevice()
   {
     return tinkerforgeDevice;
   }
@@ -356,12 +366,12 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTinkerforgeDevice(BrickletIndustrialQuadRelay newTinkerforgeDevice)
+  public void setTinkerforgeDevice(BrickletTemperatureIR newTinkerforgeDevice)
   {
-    BrickletIndustrialQuadRelay oldTinkerforgeDevice = tinkerforgeDevice;
+    BrickletTemperatureIR oldTinkerforgeDevice = tinkerforgeDevice;
     tinkerforgeDevice = newTinkerforgeDevice;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__TINKERFORGE_DEVICE, oldTinkerforgeDevice, tinkerforgeDevice));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_TEMPERATURE_IR__TINKERFORGE_DEVICE, oldTinkerforgeDevice, tinkerforgeDevice));
   }
 
   /**
@@ -384,7 +394,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
     IPConnection oldIpConnection = ipConnection;
     ipConnection = newIpConnection;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__IP_CONNECTION, oldIpConnection, ipConnection));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_TEMPERATURE_IR__IP_CONNECTION, oldIpConnection, ipConnection));
   }
 
   /**
@@ -407,7 +417,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
     String oldConnectedUid = connectedUid;
     connectedUid = newConnectedUid;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__CONNECTED_UID, oldConnectedUid, connectedUid));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_TEMPERATURE_IR__CONNECTED_UID, oldConnectedUid, connectedUid));
   }
 
   /**
@@ -430,7 +440,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
     char oldPosition = position;
     position = newPosition;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__POSITION, oldPosition, position));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_TEMPERATURE_IR__POSITION, oldPosition, position));
   }
 
   /**
@@ -453,7 +463,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
     int oldDeviceIdentifier = deviceIdentifier;
     deviceIdentifier = newDeviceIdentifier;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__DEVICE_IDENTIFIER, oldDeviceIdentifier, deviceIdentifier));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_TEMPERATURE_IR__DEVICE_IDENTIFIER, oldDeviceIdentifier, deviceIdentifier));
   }
 
   /**
@@ -476,7 +486,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_TEMPERATURE_IR__NAME, oldName, name));
   }
 
   /**
@@ -486,7 +496,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
    */
   public MBrickd getBrickd()
   {
-    if (eContainerFeatureID() != ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__BRICKD) return null;
+    if (eContainerFeatureID() != ModelPackage.MBRICKLET_TEMPERATURE_IR__BRICKD) return null;
     return (MBrickd)eContainer();
   }
 
@@ -497,7 +507,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
    */
   public NotificationChain basicSetBrickd(MBrickd newBrickd, NotificationChain msgs)
   {
-    msgs = eBasicSetContainer((InternalEObject)newBrickd, ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__BRICKD, msgs);
+    msgs = eBasicSetContainer((InternalEObject)newBrickd, ModelPackage.MBRICKLET_TEMPERATURE_IR__BRICKD, msgs);
     return msgs;
   }
 
@@ -508,7 +518,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
    */
   public void setBrickd(MBrickd newBrickd)
   {
-    if (newBrickd != eInternalContainer() || (eContainerFeatureID() != ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__BRICKD && newBrickd != null))
+    if (newBrickd != eInternalContainer() || (eContainerFeatureID() != ModelPackage.MBRICKLET_TEMPERATURE_IR__BRICKD && newBrickd != null))
     {
       if (EcoreUtil.isAncestor(this, newBrickd))
         throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -521,7 +531,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__BRICKD, newBrickd, newBrickd));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_TEMPERATURE_IR__BRICKD, newBrickd, newBrickd));
   }
 
   /**
@@ -529,11 +539,11 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<MIndustrialQuadRelay> getMsubdevices()
+  public EList<MTemperatureIRDevice> getMsubdevices()
   {
     if (msubdevices == null)
     {
-      msubdevices = new EObjectContainmentWithInverseEList<MIndustrialQuadRelay>(MSubDevice.class, this, ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__MSUBDEVICES, ModelPackage.MSUB_DEVICE__MBRICK);
+      msubdevices = new EObjectContainmentWithInverseEList<MTemperatureIRDevice>(MSubDevice.class, this, ModelPackage.MBRICKLET_TEMPERATURE_IR__MSUBDEVICES, ModelPackage.MSUB_DEVICE__MBRICK);
     }
     return msubdevices;
   }
@@ -541,53 +551,59 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated NOT
+   * @generated
+   */
+  public String getDeviceType()
+  {
+    return deviceType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
    */
   public void initSubDevices()
   {
-		ModelFactory factory = ModelFactory.eINSTANCE;
-		for (int i = 0; i < 4; i++) {
-			MIndustrialQuadRelay relay = factory.createMIndustrialQuadRelay();
-			relay.setUid(uid);
-			String subId = "relay" + String.valueOf(i);
-			logger.debug("addSubDevice " + subId);
-			relay.setSubId(subId);
-			relay.init();
-			relay.setMbrick(this);
-			getMsubdevices().add(relay);
-		}
+    // TODO: implement this method
+    // Ensure that you remove @generated or mark it @generated NOT
+    throw new UnsupportedOperationException();
   }
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated NOT
+   * @generated
    */
   public void init()
   {
-		setEnabledA(new AtomicBoolean());
-	    logger = LoggerFactory.getLogger(MIndustrialQuadRelayBricklet.class);
+    // TODO: implement this method
+    // Ensure that you remove @generated or mark it @generated NOT
+    throw new UnsupportedOperationException();
   }
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated NOT
+   * @generated
    */
   public void enable()
   {
-	  logger.debug("enable called on MDualRelayBricklet");
-	  tinkerforgeDevice = new BrickletIndustrialQuadRelay(getUid(), getIpConnection());
+    // TODO: implement this method
+    // Ensure that you remove @generated or mark it @generated NOT
+    throw new UnsupportedOperationException();
   }
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated NOT
+   * @generated
    */
   public void disable()
   {
-	tinkerforgeDevice = null;
+    // TODO: implement this method
+    // Ensure that you remove @generated or mark it @generated NOT
+    throw new UnsupportedOperationException();
   }
 
   /**
@@ -601,11 +617,11 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
   {
     switch (featureID)
     {
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__BRICKD:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__BRICKD:
         if (eInternalContainer() != null)
           msgs = eBasicRemoveFromContainer(msgs);
         return basicSetBrickd((MBrickd)otherEnd, msgs);
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__MSUBDEVICES:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__MSUBDEVICES:
         return ((InternalEList<InternalEObject>)(InternalEList<?>)getMsubdevices()).basicAdd(otherEnd, msgs);
     }
     return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -621,9 +637,9 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
   {
     switch (featureID)
     {
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__BRICKD:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__BRICKD:
         return basicSetBrickd(null, msgs);
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__MSUBDEVICES:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__MSUBDEVICES:
         return ((InternalEList<?>)getMsubdevices()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -639,7 +655,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
   {
     switch (eContainerFeatureID())
     {
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__BRICKD:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__BRICKD:
         return eInternalContainer().eInverseRemove(this, ModelPackage.MBRICKD__MDEVICES, MBrickd.class, msgs);
     }
     return super.eBasicRemoveFromContainerFeature(msgs);
@@ -655,28 +671,30 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
   {
     switch (featureID)
     {
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__LOGGER:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__LOGGER:
         return getLogger();
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__UID:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__UID:
         return getUid();
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__ENABLED_A:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__ENABLED_A:
         return getEnabledA();
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__TINKERFORGE_DEVICE:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__TINKERFORGE_DEVICE:
         return getTinkerforgeDevice();
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__IP_CONNECTION:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__IP_CONNECTION:
         return getIpConnection();
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__CONNECTED_UID:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__CONNECTED_UID:
         return getConnectedUid();
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__POSITION:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__POSITION:
         return getPosition();
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__DEVICE_IDENTIFIER:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__DEVICE_IDENTIFIER:
         return getDeviceIdentifier();
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__NAME:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__NAME:
         return getName();
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__BRICKD:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__BRICKD:
         return getBrickd();
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__MSUBDEVICES:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__MSUBDEVICES:
         return getMsubdevices();
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__DEVICE_TYPE:
+        return getDeviceType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -692,39 +710,39 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
   {
     switch (featureID)
     {
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__LOGGER:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__LOGGER:
         setLogger((Logger)newValue);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__UID:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__UID:
         setUid((String)newValue);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__ENABLED_A:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__ENABLED_A:
         setEnabledA((AtomicBoolean)newValue);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__TINKERFORGE_DEVICE:
-        setTinkerforgeDevice((BrickletIndustrialQuadRelay)newValue);
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__TINKERFORGE_DEVICE:
+        setTinkerforgeDevice((BrickletTemperatureIR)newValue);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__IP_CONNECTION:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__IP_CONNECTION:
         setIpConnection((IPConnection)newValue);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__CONNECTED_UID:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__CONNECTED_UID:
         setConnectedUid((String)newValue);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__POSITION:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__POSITION:
         setPosition((Character)newValue);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__DEVICE_IDENTIFIER:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__DEVICE_IDENTIFIER:
         setDeviceIdentifier((Integer)newValue);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__NAME:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__NAME:
         setName((String)newValue);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__BRICKD:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__BRICKD:
         setBrickd((MBrickd)newValue);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__MSUBDEVICES:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__MSUBDEVICES:
         getMsubdevices().clear();
-        getMsubdevices().addAll((Collection<? extends MIndustrialQuadRelay>)newValue);
+        getMsubdevices().addAll((Collection<? extends MTemperatureIRDevice>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -740,37 +758,37 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
   {
     switch (featureID)
     {
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__LOGGER:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__LOGGER:
         setLogger(LOGGER_EDEFAULT);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__UID:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__UID:
         setUid(UID_EDEFAULT);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__ENABLED_A:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__ENABLED_A:
         setEnabledA(ENABLED_A_EDEFAULT);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__TINKERFORGE_DEVICE:
-        setTinkerforgeDevice((BrickletIndustrialQuadRelay)null);
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__TINKERFORGE_DEVICE:
+        setTinkerforgeDevice((BrickletTemperatureIR)null);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__IP_CONNECTION:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__IP_CONNECTION:
         setIpConnection(IP_CONNECTION_EDEFAULT);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__CONNECTED_UID:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__CONNECTED_UID:
         setConnectedUid(CONNECTED_UID_EDEFAULT);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__POSITION:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__POSITION:
         setPosition(POSITION_EDEFAULT);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__DEVICE_IDENTIFIER:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__DEVICE_IDENTIFIER:
         setDeviceIdentifier(DEVICE_IDENTIFIER_EDEFAULT);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__NAME:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__BRICKD:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__BRICKD:
         setBrickd((MBrickd)null);
         return;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__MSUBDEVICES:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__MSUBDEVICES:
         getMsubdevices().clear();
         return;
     }
@@ -787,28 +805,30 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
   {
     switch (featureID)
     {
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__LOGGER:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__LOGGER:
         return LOGGER_EDEFAULT == null ? logger != null : !LOGGER_EDEFAULT.equals(logger);
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__UID:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__UID:
         return UID_EDEFAULT == null ? uid != null : !UID_EDEFAULT.equals(uid);
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__ENABLED_A:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__ENABLED_A:
         return ENABLED_A_EDEFAULT == null ? enabledA != null : !ENABLED_A_EDEFAULT.equals(enabledA);
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__TINKERFORGE_DEVICE:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__TINKERFORGE_DEVICE:
         return tinkerforgeDevice != null;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__IP_CONNECTION:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__IP_CONNECTION:
         return IP_CONNECTION_EDEFAULT == null ? ipConnection != null : !IP_CONNECTION_EDEFAULT.equals(ipConnection);
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__CONNECTED_UID:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__CONNECTED_UID:
         return CONNECTED_UID_EDEFAULT == null ? connectedUid != null : !CONNECTED_UID_EDEFAULT.equals(connectedUid);
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__POSITION:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__POSITION:
         return position != POSITION_EDEFAULT;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__DEVICE_IDENTIFIER:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__DEVICE_IDENTIFIER:
         return deviceIdentifier != DEVICE_IDENTIFIER_EDEFAULT;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__NAME:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__BRICKD:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__BRICKD:
         return getBrickd() != null;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__MSUBDEVICES:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__MSUBDEVICES:
         return msubdevices != null && !msubdevices.isEmpty();
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR__DEVICE_TYPE:
+        return DEVICE_TYPE_EDEFAULT == null ? deviceType != null : !DEVICE_TYPE_EDEFAULT.equals(deviceType);
     }
     return super.eIsSet(featureID);
   }
@@ -825,7 +845,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
     {
       switch (derivedFeatureID)
       {
-        case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__MSUBDEVICES: return ModelPackage.MSUB_DEVICE_HOLDER__MSUBDEVICES;
+        case ModelPackage.MBRICKLET_TEMPERATURE_IR__MSUBDEVICES: return ModelPackage.MSUB_DEVICE_HOLDER__MSUBDEVICES;
         default: return -1;
       }
     }
@@ -844,7 +864,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
     {
       switch (baseFeatureID)
       {
-        case ModelPackage.MSUB_DEVICE_HOLDER__MSUBDEVICES: return ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET__MSUBDEVICES;
+        case ModelPackage.MSUB_DEVICE_HOLDER__MSUBDEVICES: return ModelPackage.MBRICKLET_TEMPERATURE_IR__MSUBDEVICES;
         default: return -1;
       }
     }
@@ -863,7 +883,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
     {
       switch (baseOperationID)
       {
-        case ModelPackage.MSUB_DEVICE_HOLDER___INIT_SUB_DEVICES: return ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET___INIT_SUB_DEVICES;
+        case ModelPackage.MSUB_DEVICE_HOLDER___INIT_SUB_DEVICES: return ModelPackage.MBRICKLET_TEMPERATURE_IR___INIT_SUB_DEVICES;
         default: return -1;
       }
     }
@@ -880,16 +900,16 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
   {
     switch (operationID)
     {
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET___INIT_SUB_DEVICES:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR___INIT_SUB_DEVICES:
         initSubDevices();
         return null;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET___INIT:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR___INIT:
         init();
         return null;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET___ENABLE:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR___ENABLE:
         enable();
         return null;
-      case ModelPackage.MINDUSTRIAL_QUAD_RELAY_BRICKLET___DISABLE:
+      case ModelPackage.MBRICKLET_TEMPERATURE_IR___DISABLE:
         disable();
         return null;
     }
@@ -925,8 +945,10 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
     result.append(deviceIdentifier);
     result.append(", name: ");
     result.append(name);
+    result.append(", deviceType: ");
+    result.append(deviceType);
     result.append(')');
     return result.toString();
   }
 
-} //MIndustrialQuadRelayBrickletImpl
+} //MBrickletTemperatureIRImpl

@@ -204,7 +204,7 @@ private int mask;
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.MINDUSTRIAL_QUAD_RELAY;
+    return ModelPackage.eINSTANCE.getMIndustrialQuadRelay();
   }
 
   /**

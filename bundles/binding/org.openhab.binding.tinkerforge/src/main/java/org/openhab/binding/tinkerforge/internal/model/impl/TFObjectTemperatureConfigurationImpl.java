@@ -1,65 +1,58 @@
 /**
- * Copyright (c) 2010-2014, openHAB.org and others.
- *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
  */
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
-import org.openhab.binding.tinkerforge.internal.model.TFInterruptListenerConfiguration;
+import org.openhab.binding.tinkerforge.internal.model.TFObjectTemperatureConfiguration;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>TF Interrupt Listener Configuration</b></em>'.
- * 
- * @author Theo Weiss
- * @since 1.4.0
+ * An implementation of the model object '<em><b>TF Object Temperature Configuration</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.TFInterruptListenerConfigurationImpl#getDebouncePeriod <em>Debounce Period</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.TFObjectTemperatureConfigurationImpl#getEmissivity <em>Emissivity</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class TFInterruptListenerConfigurationImpl extends MinimalEObjectImpl.Container implements TFInterruptListenerConfiguration
+public class TFObjectTemperatureConfigurationImpl extends MinimalEObjectImpl.Container implements TFObjectTemperatureConfiguration
 {
   /**
-   * The default value of the '{@link #getDebouncePeriod() <em>Debounce Period</em>}' attribute.
+   * The default value of the '{@link #getEmissivity() <em>Emissivity</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDebouncePeriod()
+   * @see #getEmissivity()
    * @generated
    * @ordered
    */
-  protected static final long DEBOUNCE_PERIOD_EDEFAULT = 0L;
+  protected static final int EMISSIVITY_EDEFAULT = 0;
+
   /**
-   * The cached value of the '{@link #getDebouncePeriod() <em>Debounce Period</em>}' attribute.
+   * The cached value of the '{@link #getEmissivity() <em>Emissivity</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDebouncePeriod()
+   * @see #getEmissivity()
    * @generated
    * @ordered
    */
-  protected long debouncePeriod = DEBOUNCE_PERIOD_EDEFAULT;
+  protected int emissivity = EMISSIVITY_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TFInterruptListenerConfigurationImpl()
+  protected TFObjectTemperatureConfigurationImpl()
   {
     super();
   }
@@ -72,7 +65,7 @@ public class TFInterruptListenerConfigurationImpl extends MinimalEObjectImpl.Con
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getTFInterruptListenerConfiguration();
+    return ModelPackage.eINSTANCE.getTFObjectTemperatureConfiguration();
   }
 
   /**
@@ -80,9 +73,9 @@ public class TFInterruptListenerConfigurationImpl extends MinimalEObjectImpl.Con
    * <!-- end-user-doc -->
    * @generated
    */
-  public long getDebouncePeriod()
+  public int getEmissivity()
   {
-    return debouncePeriod;
+    return emissivity;
   }
 
   /**
@@ -90,12 +83,12 @@ public class TFInterruptListenerConfigurationImpl extends MinimalEObjectImpl.Con
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDebouncePeriod(long newDebouncePeriod)
+  public void setEmissivity(int newEmissivity)
   {
-    long oldDebouncePeriod = debouncePeriod;
-    debouncePeriod = newDebouncePeriod;
+    int oldEmissivity = emissivity;
+    emissivity = newEmissivity;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_INTERRUPT_LISTENER_CONFIGURATION__DEBOUNCE_PERIOD, oldDebouncePeriod, debouncePeriod));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_OBJECT_TEMPERATURE_CONFIGURATION__EMISSIVITY, oldEmissivity, emissivity));
   }
 
   /**
@@ -108,8 +101,8 @@ public class TFInterruptListenerConfigurationImpl extends MinimalEObjectImpl.Con
   {
     switch (featureID)
     {
-      case ModelPackage.TF_INTERRUPT_LISTENER_CONFIGURATION__DEBOUNCE_PERIOD:
-        return getDebouncePeriod();
+      case ModelPackage.TF_OBJECT_TEMPERATURE_CONFIGURATION__EMISSIVITY:
+        return getEmissivity();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -124,8 +117,8 @@ public class TFInterruptListenerConfigurationImpl extends MinimalEObjectImpl.Con
   {
     switch (featureID)
     {
-      case ModelPackage.TF_INTERRUPT_LISTENER_CONFIGURATION__DEBOUNCE_PERIOD:
-        setDebouncePeriod((Long)newValue);
+      case ModelPackage.TF_OBJECT_TEMPERATURE_CONFIGURATION__EMISSIVITY:
+        setEmissivity((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -141,8 +134,8 @@ public class TFInterruptListenerConfigurationImpl extends MinimalEObjectImpl.Con
   {
     switch (featureID)
     {
-      case ModelPackage.TF_INTERRUPT_LISTENER_CONFIGURATION__DEBOUNCE_PERIOD:
-        setDebouncePeriod(DEBOUNCE_PERIOD_EDEFAULT);
+      case ModelPackage.TF_OBJECT_TEMPERATURE_CONFIGURATION__EMISSIVITY:
+        setEmissivity(EMISSIVITY_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -158,8 +151,8 @@ public class TFInterruptListenerConfigurationImpl extends MinimalEObjectImpl.Con
   {
     switch (featureID)
     {
-      case ModelPackage.TF_INTERRUPT_LISTENER_CONFIGURATION__DEBOUNCE_PERIOD:
-        return debouncePeriod != DEBOUNCE_PERIOD_EDEFAULT;
+      case ModelPackage.TF_OBJECT_TEMPERATURE_CONFIGURATION__EMISSIVITY:
+        return emissivity != EMISSIVITY_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -175,10 +168,10 @@ public class TFInterruptListenerConfigurationImpl extends MinimalEObjectImpl.Con
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (debouncePeriod: ");
-    result.append(debouncePeriod);
+    result.append(" (emissivity: ");
+    result.append(emissivity);
     result.append(')');
     return result.toString();
   }
 
-} //TFInterruptListenerConfigurationImpl
+} //TFObjectTemperatureConfigurationImpl

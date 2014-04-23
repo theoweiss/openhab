@@ -222,7 +222,7 @@ public class MultiTouchDeviceImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.MULTI_TOUCH_DEVICE;
+    return ModelPackage.eINSTANCE.getMultiTouchDevice();
   }
 
   /**

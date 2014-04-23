@@ -283,7 +283,7 @@ public class MBrickletMotionDetectorImpl extends MinimalEObjectImpl.Container im
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.MBRICKLET_MOTION_DETECTOR;
+    return ModelPackage.eINSTANCE.getMBrickletMotionDetector();
   }
 
   /**

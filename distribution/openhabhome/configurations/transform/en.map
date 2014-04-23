@@ -1,4 +1,6 @@
 CLOSED=closed
+MOTIONCLOSED=no motion
+MOTIONOPEN=montion detected
 OPEN=open
 undefined=unknown
  

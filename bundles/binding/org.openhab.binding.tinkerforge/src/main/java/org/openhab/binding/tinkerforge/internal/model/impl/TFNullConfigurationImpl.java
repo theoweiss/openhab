@@ -47,7 +47,7 @@ public class TFNullConfigurationImpl extends MinimalEObjectImpl.Container implem
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.TF_NULL_CONFIGURATION;
+    return ModelPackage.eINSTANCE.getTFNullConfiguration();
   }
 
 } //TFNullConfigurationImpl

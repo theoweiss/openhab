@@ -315,7 +315,7 @@ private int mask;
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.DIGITAL_ACTOR;
+    return ModelPackage.eINSTANCE.getDigitalActor();
   }
 
   /**

@@ -65,7 +65,7 @@ public class MultiTouchDeviceConfigurationImpl extends MinimalEObjectImpl.Contai
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.MULTI_TOUCH_DEVICE_CONFIGURATION;
+    return ModelPackage.eINSTANCE.getMultiTouchDeviceConfiguration();
   }
 
   /**

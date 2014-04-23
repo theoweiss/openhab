@@ -155,7 +155,7 @@ public class TFBrickDCConfigurationImpl extends MinimalEObjectImpl.Container imp
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.Literals.TF_BRICK_DC_CONFIGURATION;
+    return ModelPackage.eINSTANCE.getTFBrickDCConfiguration();
   }
 
   /**
