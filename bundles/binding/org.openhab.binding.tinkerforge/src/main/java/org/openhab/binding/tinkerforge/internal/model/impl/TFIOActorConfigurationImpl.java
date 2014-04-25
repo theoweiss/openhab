@@ -92,7 +92,7 @@ public class TFIOActorConfigurationImpl extends MinimalEObjectImpl.Container imp
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getTFIOActorConfiguration();
+    return ModelPackage.Literals.TFIO_ACTOR_CONFIGURATION;
   }
 
   /**

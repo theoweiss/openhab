@@ -168,7 +168,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
       case ModelPackage.MBRICKLET_DISTANCE_IR: return createMBrickletDistanceIR();
       case ModelPackage.MBRICKLET_TEMPERATURE: return createMBrickletTemperature();
       case ModelPackage.MBRICKLET_TEMPERATURE_IR: return createMBrickletTemperatureIR();
-      case ModelPackage.MTEMPERATURE_IR_DEVICE: return createMTemperatureIRDevice();
       case ModelPackage.OBJECT_TEMPERATURE: return createObjectTemperature();
       case ModelPackage.AMBIENT_TEMPERATURE: return createAmbientTemperature();
       case ModelPackage.MBRICKLET_BAROMETER: return createMBrickletBarometer();
@@ -842,17 +841,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
   {
     MBrickletTemperatureIRImpl mBrickletTemperatureIR = new MBrickletTemperatureIRImpl();
     return mBrickletTemperatureIR;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public MTemperatureIRDevice createMTemperatureIRDevice()
-  {
-    MTemperatureIRDeviceImpl mTemperatureIRDevice = new MTemperatureIRDeviceImpl();
-    return mTemperatureIRDevice;
   }
 
   /**

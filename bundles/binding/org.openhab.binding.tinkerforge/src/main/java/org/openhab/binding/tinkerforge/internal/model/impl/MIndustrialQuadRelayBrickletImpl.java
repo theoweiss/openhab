@@ -269,7 +269,7 @@ public class MIndustrialQuadRelayBrickletImpl extends MinimalEObjectImpl.Contain
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMIndustrialQuadRelayBricklet();
+    return ModelPackage.Literals.MINDUSTRIAL_QUAD_RELAY_BRICKLET;
   }
 
   /**

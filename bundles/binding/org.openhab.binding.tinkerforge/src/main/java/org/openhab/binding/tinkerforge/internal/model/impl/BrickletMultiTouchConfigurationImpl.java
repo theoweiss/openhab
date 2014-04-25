@@ -81,7 +81,7 @@ public class BrickletMultiTouchConfigurationImpl extends MinimalEObjectImpl.Cont
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getBrickletMultiTouchConfiguration();
+    return ModelPackage.Literals.BRICKLET_MULTI_TOUCH_CONFIGURATION;
   }
 
   /**

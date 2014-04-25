@@ -375,7 +375,7 @@ public class MBrickletBarometerImpl extends MinimalEObjectImpl.Container impleme
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMBrickletBarometer();
+    return ModelPackage.Literals.MBRICKLET_BAROMETER;
   }
 
   /**
@@ -831,6 +831,7 @@ public class MBrickletBarometerImpl extends MinimalEObjectImpl.Container impleme
 	public DecimalValue fetchSensorValue() {
 		try {
 			// TODO do not return anything update model instead: thread safe?
+		  //TODO update setAirPressure(newAirPressure);
 			return new DecimalValue(tinkerforgeDevice.getAirPressure() / 1000);
 		} catch (TimeoutException e) {
 			TinkerforgeErrorHandler.handleError(this,
@@ -881,6 +882,7 @@ public class MBrickletBarometerImpl extends MinimalEObjectImpl.Container impleme
 								|| newAirPressure < (airPressure - threshold)) {
 							setSensorValue(new DecimalValue(
 									newAirPressure / 1000));
+							//TODO are values send twice to the eventbus?
 							setAirPressure(newAirPressure);
 						} else {
 							// TODO fix loggers for all devices

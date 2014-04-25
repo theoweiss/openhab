@@ -359,7 +359,7 @@ public class MBrickletDistanceIRImpl extends MinimalEObjectImpl.Container implem
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMBrickletDistanceIR();
+    return ModelPackage.Literals.MBRICKLET_DISTANCE_IR;
   }
 
   /**

@@ -25,7 +25,7 @@ import org.openhab.binding.tinkerforge.internal.model.TFObjectTemperatureConfigu
  *
  * @generated
  */
-public class TFObjectTemperatureConfigurationImpl extends MinimalEObjectImpl.Container implements TFObjectTemperatureConfiguration
+public class TFObjectTemperatureConfigurationImpl extends TFBaseConfigurationImpl implements TFObjectTemperatureConfiguration
 {
   /**
    * The default value of the '{@link #getEmissivity() <em>Emissivity</em>}' attribute.
@@ -65,7 +65,7 @@ public class TFObjectTemperatureConfigurationImpl extends MinimalEObjectImpl.Con
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getTFObjectTemperatureConfiguration();
+    return ModelPackage.Literals.TF_OBJECT_TEMPERATURE_CONFIGURATION;
   }
 
   /**

@@ -72,7 +72,7 @@ public class TFInterruptListenerConfigurationImpl extends MinimalEObjectImpl.Con
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getTFInterruptListenerConfiguration();
+    return ModelPackage.Literals.TF_INTERRUPT_LISTENER_CONFIGURATION;
   }
 
   /**

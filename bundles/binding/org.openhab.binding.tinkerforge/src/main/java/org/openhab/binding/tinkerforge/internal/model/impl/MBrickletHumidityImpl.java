@@ -360,7 +360,7 @@ public class MBrickletHumidityImpl extends MinimalEObjectImpl.Container implemen
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMBrickletHumidity();
+    return ModelPackage.Literals.MBRICKLET_HUMIDITY;
   }
 
   /**

@@ -206,7 +206,7 @@ public class MBarometerTemperatureImpl extends MinimalEObjectImpl.Container impl
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMBarometerTemperature();
+    return ModelPackage.Literals.MBAROMETER_TEMPERATURE;
   }
 
   /**
@@ -420,10 +420,10 @@ public class MBarometerTemperatureImpl extends MinimalEObjectImpl.Container impl
    */
   public void enable()
   {
-		short chipTemperature = 0;
+		DecimalValue value = null;
 		try {
-			chipTemperature = getMbrick().getTinkerforgeDevice()
-					.getChipTemperature();
+			value = DecimalValue.valueOf(getMbrick().getTinkerforgeDevice()
+					.getChipTemperature());
 		} catch (TimeoutException e) {
 			TinkerforgeErrorHandler.handleError(this,
 					TinkerforgeErrorHandler.TF_TIMEOUT_EXCEPTION, e);
@@ -431,7 +431,7 @@ public class MBarometerTemperatureImpl extends MinimalEObjectImpl.Container impl
 			TinkerforgeErrorHandler.handleError(this,
 					TinkerforgeErrorHandler.TF_NOT_CONNECTION_EXCEPTION, e);
 		}
-		setTemperature(chipTemperature);
+		setSensorValue(value);
   }
 
   /**

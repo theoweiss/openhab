@@ -359,7 +359,7 @@ public class MBrickletTemperatureImpl extends MinimalEObjectImpl.Container imple
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMBrickletTemperature();
+    return ModelPackage.Literals.MBRICKLET_TEMPERATURE;
   }
 
   /**

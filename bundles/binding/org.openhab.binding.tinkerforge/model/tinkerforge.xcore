@@ -6,7 +6,9 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
+@GenModel(literalsInterface="true", loadInitialization="false")
 package org.openhab.binding.tinkerforge.internal.model
+
 
 import com.tinkerforge.Device
 import com.tinkerforge.IPConnection
@@ -354,17 +356,16 @@ class MBrickletTemperatureIR extends MDevice<TinkerBrickletTemperatureIR>,
     readonly String deviceType = "bricklet_temperatureIR"
 }
 
-class MTemperatureIRDevice extends MSensor<MDecimalValue>, 
+interface MTemperatureIRDevice extends MSensor<MDecimalValue>, 
         MSubDevice<MBrickletTemperatureIR>, CallbackListener {
     short temperature
-    int threshold = "10"
-    op void init(){}
+    int threshold = "0"
 }
 
 class ObjectTemperature extends MTemperatureIRDevice, 
         MTFConfigConsumer<TFObjectTemperatureConfiguration> {
     readonly String deviceType = "object_temperature"
-    int emissivity
+    int emissivity = "65535"
 }
 
 class AmbientTemperature extends MTemperatureIRDevice, 
@@ -458,7 +459,7 @@ class TFBaseConfiguration extends TFConfig {
     int callbackPeriod
 }
 
-class TFObjectTemperatureConfiguration extends TFConfig {
+class TFObjectTemperatureConfiguration extends TFBaseConfiguration {
     int emissivity
 }
 

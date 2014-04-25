@@ -26,14 +26,19 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.openhab.binding.tinkerforge.internal.LoggerConstants;
+import org.openhab.binding.tinkerforge.internal.model.AmbientTemperature;
 import org.openhab.binding.tinkerforge.internal.model.MBrickd;
 import org.openhab.binding.tinkerforge.internal.model.MBrickletTemperatureIR;
 import org.openhab.binding.tinkerforge.internal.model.MSubDevice;
 import org.openhab.binding.tinkerforge.internal.model.MSubDeviceHolder;
 import org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice;
+import org.openhab.binding.tinkerforge.internal.model.ModelFactory;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
+import org.openhab.binding.tinkerforge.internal.model.ObjectTemperature;
 
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -279,7 +284,7 @@ public class MBrickletTemperatureIRImpl extends MinimalEObjectImpl.Container imp
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMBrickletTemperatureIR();
+    return ModelPackage.Literals.MBRICKLET_TEMPERATURE_IR;
   }
 
   /**
@@ -561,49 +566,56 @@ public class MBrickletTemperatureIRImpl extends MinimalEObjectImpl.Container imp
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
+   * @generated NOT
    */
   public void initSubDevices()
   {
-    // TODO: implement this method
-    // Ensure that you remove @generated or mark it @generated NOT
-    throw new UnsupportedOperationException();
+    ObjectTemperature objectTemperature = ModelFactory.eINSTANCE.createObjectTemperature();
+    objectTemperature.setUid(getUid());
+    String subId = "object_temperature";
+    objectTemperature.setSubId(subId);
+    logger.debug("{} addSubDevice {}", LoggerConstants.TFINIT, subId);
+    objectTemperature.init();
+    objectTemperature.setMbrick(this);
+    
+    AmbientTemperature ambientTemperature = ModelFactory.eINSTANCE.createAmbientTemperature();
+    ambientTemperature.setUid(getUid());
+    String subIda = "ambient_temperature";
+    ambientTemperature.setSubId(subIda);
+    logger.debug("{} addSubDevice {}", LoggerConstants.TFINIT, subIda);
+    ambientTemperature.init();
+    ambientTemperature.setMbrick(this);
   }
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
+   * @generated NOT
    */
   public void init()
   {
-    // TODO: implement this method
-    // Ensure that you remove @generated or mark it @generated NOT
-    throw new UnsupportedOperationException();
+    setEnabledA(new AtomicBoolean());
+    logger = LoggerFactory.getLogger(MBrickletTemperatureIRImpl.class);
   }
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
+   * @generated NOT
    */
   public void enable()
   {
-    // TODO: implement this method
-    // Ensure that you remove @generated or mark it @generated NOT
-    throw new UnsupportedOperationException();
+    tinkerforgeDevice = new BrickletTemperatureIR(getUid(), getIpConnection());
   }
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
+   * @generated NOT
    */
   public void disable()
   {
-    // TODO: implement this method
-    // Ensure that you remove @generated or mark it @generated NOT
-    throw new UnsupportedOperationException();
+    tinkerforgeDevice = null;
   }
 
   /**

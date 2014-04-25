@@ -18,6 +18,8 @@ import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.print.attribute.standard.MediaSize.Other;
+
 import org.apache.commons.lang.StringUtils;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -64,6 +66,7 @@ import org.openhab.binding.tinkerforge.internal.model.TFConfig;
 import org.openhab.binding.tinkerforge.internal.model.TFIOActorConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.TFIOSensorConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.TFInterruptListenerConfiguration;
+import org.openhab.binding.tinkerforge.internal.model.TFObjectTemperatureConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.TFServoConfiguration;
 import org.openhab.binding.tinkerforge.internal.types.DecimalValue;
 import org.openhab.binding.tinkerforge.internal.types.HighLowValue;
@@ -178,7 +181,7 @@ public class TinkerforgeBinding extends
 		bricklet_temperature, bricklet_barometer, bricklet_ambient_light,
 		io_actuator, iosensor, bricklet_io16, bricklet_industrial_digital_4in,
 		remote_switch_a, remote_switch_b, remote_switch_c, bricklet_remote_switch,
-		bricklet_multitouch, electrode, proximity
+		bricklet_multitouch, electrode, proximity, object_temperature, ambient_temperature
 	}
 	
 	public TinkerforgeBinding() {
@@ -946,7 +949,8 @@ public class TinkerforgeBinding extends
 				|| deviceType.equals(TypeKey.bricklet_humidity.name())
 				|| deviceType.equals(TypeKey.bricklet_temperature.name())
 				|| deviceType.equals(TypeKey.bricklet_barometer.name())
-				|| deviceType.equals(TypeKey.bricklet_ambient_light.name())) {
+				|| deviceType.equals(TypeKey.bricklet_ambient_light.name())
+				|| deviceType.equals(TypeKey.ambient_temperature.name())) {
 			logger.debug("{} setting base config",
 					LoggerConstants.CONFIG);
 			TFBaseConfiguration tfBaseConfiguration = modelFactory
@@ -1056,10 +1060,18 @@ public class TinkerforgeBinding extends
           fillupConfig(ohtfDevice, deviceConfig);
         } else if (deviceType.equals(TypeKey.electrode.name()) || deviceType.equals(TypeKey.proximity.name())) {
             logger.debug("{} setting MultiTouchDeviceConfiguration device_type {}",
-          LoggerConstants.CONFIG, deviceType);
+              LoggerConstants.CONFIG, deviceType);
             MultiTouchDeviceConfiguration configuration = modelFactory.createMultiTouchDeviceConfiguration();
             OHTFDevice<MultiTouchDeviceConfiguration, MultiTouchSubIds> ohtfDevice = modelFactory.createOHTFDevice();
             ohtfDevice.getSubDeviceIds().addAll(Arrays.asList(MultiTouchSubIds.values()));
+            ohtfDevice.setTfConfig(configuration);
+            fillupConfig(ohtfDevice, deviceConfig);
+        } else if (deviceType.equals(TypeKey.object_temperature.name())){
+            logger.debug("{} setting TFObjectTemperatureConfiguration device_type {}",
+              LoggerConstants.CONFIG, deviceType);
+            TFObjectTemperatureConfiguration configuration = modelFactory.createTFObjectTemperatureConfiguration();
+            OHTFDevice<TFObjectTemperatureConfiguration,NoSubIds> ohtfDevice = modelFactory.createOHTFDevice();
+            ohtfDevice.getSubDeviceIds().addAll(Arrays.asList(NoSubIds.values()));
             ohtfDevice.setTfConfig(configuration);
             fillupConfig(ohtfDevice, deviceConfig);
         } else {

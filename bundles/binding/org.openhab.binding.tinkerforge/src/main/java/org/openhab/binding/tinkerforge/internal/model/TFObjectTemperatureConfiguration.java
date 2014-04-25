@@ -19,7 +19,7 @@ package org.openhab.binding.tinkerforge.internal.model;
  * @model
  * @generated
  */
-public interface TFObjectTemperatureConfiguration extends TFConfig
+public interface TFObjectTemperatureConfiguration extends TFBaseConfiguration
 {
   /**
    * Returns the value of the '<em><b>Emissivity</b></em>' attribute.

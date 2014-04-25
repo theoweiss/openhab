@@ -42,7 +42,7 @@ public class OHTFSubDeviceAdminDeviceImpl<TFC extends TFConfig, IDS extends Enum
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getOHTFSubDeviceAdminDevice();
+    return ModelPackage.Literals.OHTF_SUB_DEVICE_ADMIN_DEVICE;
   }
 
   /**

@@ -354,7 +354,7 @@ public class MBrickletRemoteSwitchImpl extends MinimalEObjectImpl.Container impl
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMBrickletRemoteSwitch();
+    return ModelPackage.Literals.MBRICKLET_REMOTE_SWITCH;
   }
 
   /**

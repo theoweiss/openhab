@@ -727,6 +727,7 @@ public class ModelSwitch<T> extends Switch<T>
       {
         TFObjectTemperatureConfiguration tfObjectTemperatureConfiguration = (TFObjectTemperatureConfiguration)theEObject;
         T result = caseTFObjectTemperatureConfiguration(tfObjectTemperatureConfiguration);
+        if (result == null) result = caseTFBaseConfiguration(tfObjectTemperatureConfiguration);
         if (result == null) result = caseTFConfig(tfObjectTemperatureConfiguration);
         if (result == null) result = defaultCase(theEObject);
         return result;

@@ -171,7 +171,7 @@ private int mask;
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMIndustrialDigitalIn();
+    return ModelPackage.Literals.MINDUSTRIAL_DIGITAL_IN;
   }
 
   /**

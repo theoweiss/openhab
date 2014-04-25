@@ -40,6 +40,7 @@ public interface ObjectTemperature extends MTemperatureIRDevice, MTFConfigConsum
 
   /**
    * Returns the value of the '<em><b>Emissivity</b></em>' attribute.
+   * The default value is <code>"65535"</code>.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Emissivity</em>' attribute isn't clear,
@@ -49,7 +50,7 @@ public interface ObjectTemperature extends MTemperatureIRDevice, MTFConfigConsum
    * @return the value of the '<em>Emissivity</em>' attribute.
    * @see #setEmissivity(int)
    * @see org.openhab.binding.tinkerforge.internal.model.ModelPackage#getObjectTemperature_Emissivity()
-   * @model unique="false"
+   * @model default="65535" unique="false"
    * @generated
    */
   int getEmissivity();

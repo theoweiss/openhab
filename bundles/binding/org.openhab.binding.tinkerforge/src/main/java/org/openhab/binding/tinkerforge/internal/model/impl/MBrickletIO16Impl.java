@@ -324,7 +324,7 @@ public class MBrickletIO16Impl extends MinimalEObjectImpl.Container implements M
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMBrickletIO16();
+    return ModelPackage.Literals.MBRICKLET_IO16;
   }
 
   /**

@@ -378,7 +378,7 @@ public class MBrickletLCD20x4Impl extends MinimalEObjectImpl.Container
    */
 	@Override
 	protected EClass eStaticClass() {
-    return ModelPackage.eINSTANCE.getMBrickletLCD20x4();
+    return ModelPackage.Literals.MBRICKLET_LCD2_0X4;
   }
 
 	/**

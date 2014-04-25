@@ -60,7 +60,7 @@ public class ElectrodeImpl extends MultiTouchDeviceImpl implements Electrode
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getElectrode();
+    return ModelPackage.Literals.ELECTRODE;
   }
 
   /**

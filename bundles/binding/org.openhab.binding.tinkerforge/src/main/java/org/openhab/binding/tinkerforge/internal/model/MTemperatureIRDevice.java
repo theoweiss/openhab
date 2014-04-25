@@ -18,7 +18,7 @@ import org.openhab.binding.tinkerforge.internal.types.DecimalValue;
  * </p>
  *
  * @see org.openhab.binding.tinkerforge.internal.model.ModelPackage#getMTemperatureIRDevice()
- * @model superTypes="org.openhab.binding.tinkerforge.internal.model.MSensor<org.openhab.binding.tinkerforge.internal.model.MDecimalValue> org.openhab.binding.tinkerforge.internal.model.MSubDevice<org.openhab.binding.tinkerforge.internal.model.MBrickletTemperatureIR> org.openhab.binding.tinkerforge.internal.model.CallbackListener"
+ * @model interface="true" abstract="true" superTypes="org.openhab.binding.tinkerforge.internal.model.MSensor<org.openhab.binding.tinkerforge.internal.model.MDecimalValue> org.openhab.binding.tinkerforge.internal.model.MSubDevice<org.openhab.binding.tinkerforge.internal.model.MBrickletTemperatureIR> org.openhab.binding.tinkerforge.internal.model.CallbackListener"
  * @generated
  */
 public interface MTemperatureIRDevice extends MSensor<DecimalValue>, MSubDevice<MBrickletTemperatureIR>, CallbackListener
@@ -51,7 +51,7 @@ public interface MTemperatureIRDevice extends MSensor<DecimalValue>, MSubDevice<
 
   /**
    * Returns the value of the '<em><b>Threshold</b></em>' attribute.
-   * The default value is <code>"10"</code>.
+   * The default value is <code>"0"</code>.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Threshold</em>' attribute isn't clear,
@@ -61,7 +61,7 @@ public interface MTemperatureIRDevice extends MSensor<DecimalValue>, MSubDevice<
    * @return the value of the '<em>Threshold</em>' attribute.
    * @see #setThreshold(int)
    * @see org.openhab.binding.tinkerforge.internal.model.ModelPackage#getMTemperatureIRDevice_Threshold()
-   * @model default="10" unique="false"
+   * @model default="0" unique="false"
    * @generated
    */
   int getThreshold();
@@ -75,13 +75,5 @@ public interface MTemperatureIRDevice extends MSensor<DecimalValue>, MSubDevice<
    * @generated
    */
   void setThreshold(int value);
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @model annotation="http://www.eclipse.org/emf/2002/GenModel body=''"
-   * @generated
-   */
-  void init();
 
 } // MTemperatureIRDevice

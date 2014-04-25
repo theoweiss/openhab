@@ -342,7 +342,7 @@ public class MBrickletMultiTouchImpl extends MinimalEObjectImpl.Container implem
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMBrickletMultiTouch();
+    return ModelPackage.Literals.MBRICKLET_MULTI_TOUCH;
   }
 
   /**

@@ -97,7 +97,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getEcosystem();
+    return ModelPackage.Literals.ECOSYSTEM;
   }
 
   /**

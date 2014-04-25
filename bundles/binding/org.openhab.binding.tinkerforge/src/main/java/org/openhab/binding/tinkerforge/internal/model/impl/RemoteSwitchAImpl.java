@@ -264,7 +264,7 @@ public class RemoteSwitchAImpl extends MinimalEObjectImpl.Container implements R
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getRemoteSwitchA();
+    return ModelPackage.Literals.REMOTE_SWITCH_A;
   }
 
   /**

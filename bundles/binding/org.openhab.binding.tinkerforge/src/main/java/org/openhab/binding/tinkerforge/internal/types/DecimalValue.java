@@ -33,9 +33,13 @@ public class DecimalValue extends Number implements TinkerforgeValue, Comparable
 		this.value = value;
 	}
 
-	public DecimalValue(long value) {
-		this.value = new BigDecimal(value);
-	}
+    public DecimalValue(long value) {
+      this.value = new BigDecimal(value);
+  }
+
+    public DecimalValue(short value) {
+      this.value = new BigDecimal(value);
+  }
 
 	public DecimalValue(double value) {
 		this.value = new BigDecimal(value);
@@ -49,9 +53,21 @@ public class DecimalValue extends Number implements TinkerforgeValue, Comparable
 		return value.toPlainString();
 	}
 
-	public static DecimalValue valueOf(String value) {
-		return new DecimalValue(value);
-	}
+    public static DecimalValue valueOf(BigDecimal value) {
+      return new DecimalValue(value);
+  }
+
+    public static DecimalValue valueOf(long value) {
+      return new DecimalValue(value);
+  }
+
+    public static DecimalValue valueOf(short value) {
+      return new DecimalValue(value);
+  }
+
+    public static DecimalValue valueOf(double value) {
+      return new DecimalValue(value);
+  }
 
 	@Override
 	public int intValue() {

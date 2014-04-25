@@ -241,7 +241,7 @@ private ButtonReleasedListener buttonReleasedListener;
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMLCD20x4Button();
+    return ModelPackage.Literals.MLCD2_0X4_BUTTON;
   }
 
   /**

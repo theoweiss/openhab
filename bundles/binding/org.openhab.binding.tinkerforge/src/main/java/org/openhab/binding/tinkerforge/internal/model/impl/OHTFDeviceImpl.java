@@ -149,7 +149,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum>
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getOHTFDevice();
+    return ModelPackage.Literals.OHTF_DEVICE;
   }
 
   /**

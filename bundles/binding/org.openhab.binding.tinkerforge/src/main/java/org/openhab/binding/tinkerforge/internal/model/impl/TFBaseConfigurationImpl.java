@@ -95,7 +95,7 @@ public class TFBaseConfigurationImpl extends MinimalEObjectImpl.Container implem
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getTFBaseConfiguration();
+    return ModelPackage.Literals.TF_BASE_CONFIGURATION;
   }
 
   /**

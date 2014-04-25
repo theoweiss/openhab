@@ -200,7 +200,7 @@ private BrickletLCD20x4 brickletLCD20x4;
   @Override
   protected EClass eStaticClass()
   {
-    return ModelPackage.eINSTANCE.getMLCD20x4Backlight();
+    return ModelPackage.Literals.MLCD2_0X4_BACKLIGHT;
   }
 
   /**

@@ -410,15 +410,6 @@ public interface ModelFactory extends EFactory
   MBrickletTemperatureIR createMBrickletTemperatureIR();
 
   /**
-   * Returns a new object of class '<em>MTemperature IR Device</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>MTemperature IR Device</em>'.
-   * @generated
-   */
-  MTemperatureIRDevice createMTemperatureIRDevice();
-
-  /**
    * Returns a new object of class '<em>Object Temperature</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
