@@ -6150,22 +6150,13 @@ public interface ModelPackage extends EPackage
   int MTEMPERATURE_IR_DEVICE__CALLBACK_PERIOD = MSENSOR_FEATURE_COUNT + 5;
 
   /**
-   * The feature id for the '<em><b>Temperature</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MTEMPERATURE_IR_DEVICE__TEMPERATURE = MSENSOR_FEATURE_COUNT + 6;
-
-  /**
    * The feature id for the '<em><b>Threshold</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MTEMPERATURE_IR_DEVICE__THRESHOLD = MSENSOR_FEATURE_COUNT + 7;
+  int MTEMPERATURE_IR_DEVICE__THRESHOLD = MSENSOR_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>MTemperature IR Device</em>' class.
@@ -6174,7 +6165,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MTEMPERATURE_IR_DEVICE_FEATURE_COUNT = MSENSOR_FEATURE_COUNT + 8;
+  int MTEMPERATURE_IR_DEVICE_FEATURE_COUNT = MSENSOR_FEATURE_COUNT + 7;
 
   /**
    * The operation id for the '<em>Fetch Sensor Value</em>' operation.
@@ -6293,15 +6284,6 @@ public interface ModelPackage extends EPackage
    * @ordered
    */
   int OBJECT_TEMPERATURE__CALLBACK_PERIOD = MTEMPERATURE_IR_DEVICE__CALLBACK_PERIOD;
-
-  /**
-   * The feature id for the '<em><b>Temperature</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OBJECT_TEMPERATURE__TEMPERATURE = MTEMPERATURE_IR_DEVICE__TEMPERATURE;
 
   /**
    * The feature id for the '<em><b>Threshold</b></em>' attribute.
@@ -6465,15 +6447,6 @@ public interface ModelPackage extends EPackage
    * @ordered
    */
   int AMBIENT_TEMPERATURE__CALLBACK_PERIOD = MTEMPERATURE_IR_DEVICE__CALLBACK_PERIOD;
-
-  /**
-   * The feature id for the '<em><b>Temperature</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AMBIENT_TEMPERATURE__TEMPERATURE = MTEMPERATURE_IR_DEVICE__TEMPERATURE;
 
   /**
    * The feature id for the '<em><b>Threshold</b></em>' attribute.
@@ -11233,17 +11206,6 @@ public interface ModelPackage extends EPackage
   EClass getMTemperatureIRDevice();
 
   /**
-   * Returns the meta object for the attribute '{@link org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice#getTemperature <em>Temperature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Temperature</em>'.
-   * @see org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice#getTemperature()
-   * @see #getMTemperatureIRDevice()
-   * @generated
-   */
-  EAttribute getMTemperatureIRDevice_Temperature();
-
-  /**
    * Returns the meta object for the attribute '{@link org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice#getThreshold <em>Threshold</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -13551,14 +13513,6 @@ public interface ModelPackage extends EPackage
      * @generated
      */
     EClass MTEMPERATURE_IR_DEVICE = eINSTANCE.getMTemperatureIRDevice();
-
-    /**
-     * The meta object literal for the '<em><b>Temperature</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MTEMPERATURE_IR_DEVICE__TEMPERATURE = eINSTANCE.getMTemperatureIRDevice_Temperature();
 
     /**
      * The meta object literal for the '<em><b>Threshold</b></em>' attribute feature.

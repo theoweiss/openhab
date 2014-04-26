@@ -3,6 +3,7 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.math.BigDecimal;
 import java.util.concurrent.atomic.AtomicBoolean;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -24,6 +25,7 @@ import org.openhab.binding.tinkerforge.internal.model.MBrickletTemperatureIR;
 import org.openhab.binding.tinkerforge.internal.model.MSubDevice;
 import org.openhab.binding.tinkerforge.internal.model.MSubDeviceHolder;
 import org.openhab.binding.tinkerforge.internal.model.MTFConfigConsumer;
+import org.openhab.binding.tinkerforge.internal.model.ModelFactory;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.TFBaseConfiguration;
 import org.openhab.binding.tinkerforge.internal.types.DecimalValue;
@@ -48,7 +50,6 @@ import com.tinkerforge.TimeoutException;
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.AmbientTemperatureImpl#getSubId <em>Sub Id</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.AmbientTemperatureImpl#getMbrick <em>Mbrick</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.AmbientTemperatureImpl#getCallbackPeriod <em>Callback Period</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.AmbientTemperatureImpl#getTemperature <em>Temperature</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.AmbientTemperatureImpl#getThreshold <em>Threshold</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.AmbientTemperatureImpl#getTfConfig <em>Tf Config</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.AmbientTemperatureImpl#getDeviceType <em>Device Type</em>}</li>
@@ -170,26 +171,6 @@ public class AmbientTemperatureImpl extends MinimalEObjectImpl.Container impleme
   protected long callbackPeriod = CALLBACK_PERIOD_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getTemperature() <em>Temperature</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTemperature()
-   * @generated
-   * @ordered
-   */
-  protected static final short TEMPERATURE_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getTemperature() <em>Temperature</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTemperature()
-   * @generated
-   * @ordered
-   */
-  protected short temperature = TEMPERATURE_EDEFAULT;
-
-  /**
    * The default value of the '{@link #getThreshold() <em>Threshold</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -197,7 +178,7 @@ public class AmbientTemperatureImpl extends MinimalEObjectImpl.Container impleme
    * @generated
    * @ordered
    */
-  protected static final int THRESHOLD_EDEFAULT = 0;
+  protected static final int THRESHOLD_EDEFAULT = 1;
 
   /**
    * The cached value of the '{@link #getThreshold() <em>Threshold</em>}' attribute.
@@ -240,6 +221,8 @@ public class AmbientTemperatureImpl extends MinimalEObjectImpl.Container impleme
   protected String deviceType = DEVICE_TYPE_EDEFAULT;
 
   private AmbientTemperatureListener temperatureListener;
+
+  private BigDecimal thresholdBigDecimal;
 
   /**
    * <!-- begin-user-doc -->
@@ -450,29 +433,6 @@ public class AmbientTemperatureImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public short getTemperature()
-  {
-    return temperature;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTemperature(short newTemperature)
-  {
-    short oldTemperature = temperature;
-    temperature = newTemperature;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.AMBIENT_TEMPERATURE__TEMPERATURE, oldTemperature, temperature));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public int getThreshold()
   {
     return threshold;
@@ -574,6 +534,7 @@ public class AmbientTemperatureImpl extends MinimalEObjectImpl.Container impleme
         setCallbackPeriod(tfConfig.getCallbackPeriod());
       }
     }
+    thresholdBigDecimal = new BigDecimal(String.valueOf(getThreshold()));
     BrickletTemperatureIR tinkerforgeDevice = getMbrick().getTinkerforgeDevice();
     tinkerforgeDevice.setResponseExpected(
         BrickletTemperatureIR.FUNCTION_SET_AMBIENT_TEMPERATURE_CALLBACK_PERIOD, false);
@@ -601,15 +562,27 @@ public class AmbientTemperatureImpl extends MinimalEObjectImpl.Container impleme
 
     @Override
     public void ambientTemperature(short newTemperature) {
-      if (newTemperature > (getTemperature() + getThreshold())
-          || newTemperature < (getTemperature() - getThreshold())) {
-        logger.trace("{} setting new temperature {}", LoggerConstants.TFMODELUPDATE, newTemperature);
-        setSensorValue(DecimalValue.valueOf(newTemperature));
-        setTemperature(newTemperature);
+      DecimalValue newValue = calculateTemperature(newTemperature);
+      logger.trace("{} got new temperature {}", LoggerConstants.TFMODELUPDATE, newValue);
+      if (newValue.compareTo(getSensorValue(), thresholdBigDecimal) != 0 ) {
+        logger.trace("{} setting new temperature {}", LoggerConstants.TFMODELUPDATE, newValue);
+        setSensorValue(newValue);
       } else {
-        logger.trace("{} omitting new temperature {}", LoggerConstants.TFMODELUPDATE, newTemperature);
+        logger.trace("{} omitting new temperature {}", LoggerConstants.TFMODELUPDATE, newValue);
       }
     }
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated NOT
+   */
+  private DecimalValue calculateTemperature(short temperature) {
+    BigDecimal bigdecimal_temperature =
+        new BigDecimal(String.valueOf(temperature)).divide(BigDecimal.TEN);
+    DecimalValue value = new DecimalValue(bigdecimal_temperature);
+    return value;
   }
 
   /**
@@ -632,8 +605,9 @@ public class AmbientTemperatureImpl extends MinimalEObjectImpl.Container impleme
   public DecimalValue fetchSensorValue() {
     try {
       short temperature = getMbrick().getTinkerforgeDevice().getAmbientTemperature();
-      setTemperature(temperature);
-      return DecimalValue.valueOf(temperature);
+      DecimalValue value = calculateTemperature(temperature);
+      setSensorValue(value);
+      return value;
     } catch (TimeoutException e) {
       TinkerforgeErrorHandler.handleError(this, TinkerforgeErrorHandler.TF_TIMEOUT_EXCEPTION, e);
     } catch (NotConnectedException e) {
@@ -719,8 +693,6 @@ public class AmbientTemperatureImpl extends MinimalEObjectImpl.Container impleme
         return getMbrick();
       case ModelPackage.AMBIENT_TEMPERATURE__CALLBACK_PERIOD:
         return getCallbackPeriod();
-      case ModelPackage.AMBIENT_TEMPERATURE__TEMPERATURE:
-        return getTemperature();
       case ModelPackage.AMBIENT_TEMPERATURE__THRESHOLD:
         return getThreshold();
       case ModelPackage.AMBIENT_TEMPERATURE__TF_CONFIG:
@@ -761,9 +733,6 @@ public class AmbientTemperatureImpl extends MinimalEObjectImpl.Container impleme
         return;
       case ModelPackage.AMBIENT_TEMPERATURE__CALLBACK_PERIOD:
         setCallbackPeriod((Long)newValue);
-        return;
-      case ModelPackage.AMBIENT_TEMPERATURE__TEMPERATURE:
-        setTemperature((Short)newValue);
         return;
       case ModelPackage.AMBIENT_TEMPERATURE__THRESHOLD:
         setThreshold((Integer)newValue);
@@ -806,9 +775,6 @@ public class AmbientTemperatureImpl extends MinimalEObjectImpl.Container impleme
       case ModelPackage.AMBIENT_TEMPERATURE__CALLBACK_PERIOD:
         setCallbackPeriod(CALLBACK_PERIOD_EDEFAULT);
         return;
-      case ModelPackage.AMBIENT_TEMPERATURE__TEMPERATURE:
-        setTemperature(TEMPERATURE_EDEFAULT);
-        return;
       case ModelPackage.AMBIENT_TEMPERATURE__THRESHOLD:
         setThreshold(THRESHOLD_EDEFAULT);
         return;
@@ -843,8 +809,6 @@ public class AmbientTemperatureImpl extends MinimalEObjectImpl.Container impleme
         return getMbrick() != null;
       case ModelPackage.AMBIENT_TEMPERATURE__CALLBACK_PERIOD:
         return callbackPeriod != CALLBACK_PERIOD_EDEFAULT;
-      case ModelPackage.AMBIENT_TEMPERATURE__TEMPERATURE:
-        return temperature != TEMPERATURE_EDEFAULT;
       case ModelPackage.AMBIENT_TEMPERATURE__THRESHOLD:
         return threshold != THRESHOLD_EDEFAULT;
       case ModelPackage.AMBIENT_TEMPERATURE__TF_CONFIG:
@@ -1037,8 +1001,6 @@ public class AmbientTemperatureImpl extends MinimalEObjectImpl.Container impleme
     result.append(subId);
     result.append(", callbackPeriod: ");
     result.append(callbackPeriod);
-    result.append(", temperature: ");
-    result.append(temperature);
     result.append(", threshold: ");
     result.append(threshold);
     result.append(", deviceType: ");

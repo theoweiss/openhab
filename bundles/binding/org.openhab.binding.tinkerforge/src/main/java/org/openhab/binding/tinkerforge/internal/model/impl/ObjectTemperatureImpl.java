@@ -3,6 +3,7 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.math.BigDecimal;
 import java.util.concurrent.atomic.AtomicBoolean;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -23,6 +24,7 @@ import org.openhab.binding.tinkerforge.internal.model.MBrickletTemperatureIR;
 import org.openhab.binding.tinkerforge.internal.model.MSubDevice;
 import org.openhab.binding.tinkerforge.internal.model.MSubDeviceHolder;
 import org.openhab.binding.tinkerforge.internal.model.MTFConfigConsumer;
+import org.openhab.binding.tinkerforge.internal.model.ModelFactory;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.ObjectTemperature;
 import org.openhab.binding.tinkerforge.internal.model.TFObjectTemperatureConfiguration;
@@ -48,7 +50,6 @@ import com.tinkerforge.TimeoutException;
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.ObjectTemperatureImpl#getSubId <em>Sub Id</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.ObjectTemperatureImpl#getMbrick <em>Mbrick</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.ObjectTemperatureImpl#getCallbackPeriod <em>Callback Period</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.ObjectTemperatureImpl#getTemperature <em>Temperature</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.ObjectTemperatureImpl#getThreshold <em>Threshold</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.ObjectTemperatureImpl#getTfConfig <em>Tf Config</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.ObjectTemperatureImpl#getDeviceType <em>Device Type</em>}</li>
@@ -171,26 +172,6 @@ public class ObjectTemperatureImpl extends MinimalEObjectImpl.Container implemen
   protected long callbackPeriod = CALLBACK_PERIOD_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getTemperature() <em>Temperature</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTemperature()
-   * @generated
-   * @ordered
-   */
-  protected static final short TEMPERATURE_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getTemperature() <em>Temperature</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTemperature()
-   * @generated
-   * @ordered
-   */
-  protected short temperature = TEMPERATURE_EDEFAULT;
-
-  /**
    * The default value of the '{@link #getThreshold() <em>Threshold</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -261,6 +242,8 @@ public class ObjectTemperatureImpl extends MinimalEObjectImpl.Container implemen
   protected int emissivity = EMISSIVITY_EDEFAULT;
 
   private ObjectTemperatureListener temperatureListener;
+
+  private BigDecimal thresholdBigDecimal;
 
   /**
    * <!-- begin-user-doc -->
@@ -471,29 +454,6 @@ public class ObjectTemperatureImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public short getTemperature()
-  {
-    return temperature;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTemperature(short newTemperature)
-  {
-    short oldTemperature = temperature;
-    temperature = newTemperature;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OBJECT_TEMPERATURE__TEMPERATURE, oldTemperature, temperature));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public int getThreshold()
   {
     return threshold;
@@ -621,6 +581,7 @@ public class ObjectTemperatureImpl extends MinimalEObjectImpl.Container implemen
         setEmissivity(tfConfig.getEmissivity());
       }
     }
+    thresholdBigDecimal = new BigDecimal(String.valueOf(getThreshold()));
     BrickletTemperatureIR tinkerforgeDevice = getMbrick().getTinkerforgeDevice();
     tinkerforgeDevice.setResponseExpected(
         BrickletTemperatureIR.FUNCTION_SET_OBJECT_TEMPERATURE_CALLBACK_PERIOD, false);
@@ -648,16 +609,26 @@ public class ObjectTemperatureImpl extends MinimalEObjectImpl.Container implemen
 
     @Override
     public void objectTemperature(short newTemperature) {
-      if (newTemperature > (getTemperature() + getThreshold())
-          || newTemperature < (getTemperature() - getThreshold())) {
-        logger.trace("{} setting new temperature {}", LoggerConstants.TFMODELUPDATE, newTemperature);
-        setSensorValue(DecimalValue.valueOf(newTemperature));
-        setTemperature(newTemperature);
+      DecimalValue newValue = calculateTemperature(newTemperature);
+      logger.trace("{} got new temperature {}", LoggerConstants.TFMODELUPDATE, newValue);
+      if (newValue.compareTo(getSensorValue(), thresholdBigDecimal) != 0 ) {
+        logger.trace("{} setting new temperature {}", LoggerConstants.TFMODELUPDATE, newValue);
+        setSensorValue(newValue);
       } else {
-        logger.trace("{} omitting new temperature {}", LoggerConstants.TFMODELUPDATE, newTemperature);
+        logger.trace("{} omitting new temperature {}", LoggerConstants.TFMODELUPDATE, newValue);
       }
     }
+  }
 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated NOT
+   */
+  private DecimalValue calculateTemperature(short temperature){
+    BigDecimal bigdecimal_temperature = new BigDecimal(String.valueOf(temperature)).divide(BigDecimal.TEN);
+    DecimalValue value = new DecimalValue(bigdecimal_temperature);
+    return value;
   }
 
   /**
@@ -680,8 +651,9 @@ public class ObjectTemperatureImpl extends MinimalEObjectImpl.Container implemen
   public DecimalValue fetchSensorValue() {
     try {
       short temperature = getMbrick().getTinkerforgeDevice().getObjectTemperature();
-      setTemperature(temperature);
-      return DecimalValue.valueOf(temperature);
+      DecimalValue value = calculateTemperature(temperature);
+      setSensorValue(value);
+      return value;
     } catch (TimeoutException e) {
       TinkerforgeErrorHandler.handleError(this, TinkerforgeErrorHandler.TF_TIMEOUT_EXCEPTION, e);
     } catch (NotConnectedException e) {
@@ -767,8 +739,6 @@ public class ObjectTemperatureImpl extends MinimalEObjectImpl.Container implemen
         return getMbrick();
       case ModelPackage.OBJECT_TEMPERATURE__CALLBACK_PERIOD:
         return getCallbackPeriod();
-      case ModelPackage.OBJECT_TEMPERATURE__TEMPERATURE:
-        return getTemperature();
       case ModelPackage.OBJECT_TEMPERATURE__THRESHOLD:
         return getThreshold();
       case ModelPackage.OBJECT_TEMPERATURE__TF_CONFIG:
@@ -811,9 +781,6 @@ public class ObjectTemperatureImpl extends MinimalEObjectImpl.Container implemen
         return;
       case ModelPackage.OBJECT_TEMPERATURE__CALLBACK_PERIOD:
         setCallbackPeriod((Long)newValue);
-        return;
-      case ModelPackage.OBJECT_TEMPERATURE__TEMPERATURE:
-        setTemperature((Short)newValue);
         return;
       case ModelPackage.OBJECT_TEMPERATURE__THRESHOLD:
         setThreshold((Integer)newValue);
@@ -859,9 +826,6 @@ public class ObjectTemperatureImpl extends MinimalEObjectImpl.Container implemen
       case ModelPackage.OBJECT_TEMPERATURE__CALLBACK_PERIOD:
         setCallbackPeriod(CALLBACK_PERIOD_EDEFAULT);
         return;
-      case ModelPackage.OBJECT_TEMPERATURE__TEMPERATURE:
-        setTemperature(TEMPERATURE_EDEFAULT);
-        return;
       case ModelPackage.OBJECT_TEMPERATURE__THRESHOLD:
         setThreshold(THRESHOLD_EDEFAULT);
         return;
@@ -899,8 +863,6 @@ public class ObjectTemperatureImpl extends MinimalEObjectImpl.Container implemen
         return getMbrick() != null;
       case ModelPackage.OBJECT_TEMPERATURE__CALLBACK_PERIOD:
         return callbackPeriod != CALLBACK_PERIOD_EDEFAULT;
-      case ModelPackage.OBJECT_TEMPERATURE__TEMPERATURE:
-        return temperature != TEMPERATURE_EDEFAULT;
       case ModelPackage.OBJECT_TEMPERATURE__THRESHOLD:
         return threshold != THRESHOLD_EDEFAULT;
       case ModelPackage.OBJECT_TEMPERATURE__TF_CONFIG:
@@ -1095,8 +1057,6 @@ public class ObjectTemperatureImpl extends MinimalEObjectImpl.Container implemen
     result.append(subId);
     result.append(", callbackPeriod: ");
     result.append(callbackPeriod);
-    result.append(", temperature: ");
-    result.append(temperature);
     result.append(", threshold: ");
     result.append(threshold);
     result.append(", deviceType: ");

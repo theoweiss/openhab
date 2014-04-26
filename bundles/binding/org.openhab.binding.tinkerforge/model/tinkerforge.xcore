@@ -358,8 +358,7 @@ class MBrickletTemperatureIR extends MDevice<TinkerBrickletTemperatureIR>,
 
 interface MTemperatureIRDevice extends MSensor<MDecimalValue>, 
         MSubDevice<MBrickletTemperatureIR>, CallbackListener {
-    short temperature
-    int threshold = "0"
+    int threshold = "1"
 }
 
 class ObjectTemperature extends MTemperatureIRDevice, 

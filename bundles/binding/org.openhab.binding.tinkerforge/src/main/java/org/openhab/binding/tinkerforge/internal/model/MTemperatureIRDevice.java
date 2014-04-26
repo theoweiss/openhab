@@ -12,7 +12,6 @@ import org.openhab.binding.tinkerforge.internal.types.DecimalValue;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice#getTemperature <em>Temperature</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice#getThreshold <em>Threshold</em>}</li>
  * </ul>
  * </p>
@@ -24,34 +23,8 @@ import org.openhab.binding.tinkerforge.internal.types.DecimalValue;
 public interface MTemperatureIRDevice extends MSensor<DecimalValue>, MSubDevice<MBrickletTemperatureIR>, CallbackListener
 {
   /**
-   * Returns the value of the '<em><b>Temperature</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Temperature</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Temperature</em>' attribute.
-   * @see #setTemperature(short)
-   * @see org.openhab.binding.tinkerforge.internal.model.ModelPackage#getMTemperatureIRDevice_Temperature()
-   * @model unique="false"
-   * @generated
-   */
-  short getTemperature();
-
-  /**
-   * Sets the value of the '{@link org.openhab.binding.tinkerforge.internal.model.MTemperatureIRDevice#getTemperature <em>Temperature</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Temperature</em>' attribute.
-   * @see #getTemperature()
-   * @generated
-   */
-  void setTemperature(short value);
-
-  /**
    * Returns the value of the '<em><b>Threshold</b></em>' attribute.
-   * The default value is <code>"0"</code>.
+   * The default value is <code>"1"</code>.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Threshold</em>' attribute isn't clear,
@@ -61,7 +34,7 @@ public interface MTemperatureIRDevice extends MSensor<DecimalValue>, MSubDevice<
    * @return the value of the '<em>Threshold</em>' attribute.
    * @see #setThreshold(int)
    * @see org.openhab.binding.tinkerforge.internal.model.ModelPackage#getMTemperatureIRDevice_Threshold()
-   * @model default="0" unique="false"
+   * @model default="1" unique="false"
    * @generated
    */
   int getThreshold();

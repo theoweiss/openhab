@@ -2669,19 +2669,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMTemperatureIRDevice_Temperature()
-  {
-    return (EAttribute)mTemperatureIRDeviceEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getMTemperatureIRDevice_Threshold()
   {
-    return (EAttribute)mTemperatureIRDeviceEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)mTemperatureIRDeviceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -4258,7 +4248,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     createEAttribute(mBrickletTemperatureIREClass, MBRICKLET_TEMPERATURE_IR__DEVICE_TYPE);
 
     mTemperatureIRDeviceEClass = createEClass(MTEMPERATURE_IR_DEVICE);
-    createEAttribute(mTemperatureIRDeviceEClass, MTEMPERATURE_IR_DEVICE__TEMPERATURE);
     createEAttribute(mTemperatureIRDeviceEClass, MTEMPERATURE_IR_DEVICE__THRESHOLD);
 
     objectTemperatureEClass = createEClass(OBJECT_TEMPERATURE);
@@ -5092,8 +5081,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     initEAttribute(getMBrickletTemperatureIR_DeviceType(), theEcorePackage.getEString(), "deviceType", "bricklet_temperatureIR", 0, 1, MBrickletTemperatureIR.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mTemperatureIRDeviceEClass, MTemperatureIRDevice.class, "MTemperatureIRDevice", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMTemperatureIRDevice_Temperature(), theEcorePackage.getEShort(), "temperature", null, 0, 1, MTemperatureIRDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMTemperatureIRDevice_Threshold(), theEcorePackage.getEInt(), "threshold", "0", 0, 1, MTemperatureIRDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMTemperatureIRDevice_Threshold(), theEcorePackage.getEInt(), "threshold", "1", 0, 1, MTemperatureIRDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(objectTemperatureEClass, ObjectTemperature.class, "ObjectTemperature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getObjectTemperature_DeviceType(), theEcorePackage.getEString(), "deviceType", "object_temperature", 0, 1, ObjectTemperature.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
