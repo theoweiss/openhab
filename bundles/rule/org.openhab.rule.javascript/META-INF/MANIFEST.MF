@@ -8,6 +8,8 @@ Bundle-ActivationPolicy: lazy
 Import-Package: org.apache.commons.lang,
  org.apache.commons.logging,
  org.apache.log4j,
+ org.eclipse.jdt.core,
+ org.eclipse.jdt.core.compiler.batch,
  org.joda.time,
  org.joda.time.base,
  org.openhab.core.events,
