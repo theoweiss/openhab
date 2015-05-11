@@ -448,17 +448,6 @@ public class TinkerforgeBinding extends AbstractActiveBinding<TinkerforgeBinding
         processValue((MBaseDevice) actor, notification);
       }
     }
-    if (notification.getNotifier() instanceof MBrickd) {
-      MBrickd brickd = (MBrickd) notification.getNotifier();
-      int featureID = notification.getFeatureID(MBrickd.class);
-      if (featureID == ModelPackage.MBRICKD__CONNECTED_COUNTER) {
-        String subId = "connected_counter";
-        processValue(brickd, notification, subId);
-      } else if (featureID == ModelPackage.MBRICKD__IS_CONNECTED) {
-        String subId = "isconnected";
-        processValue(brickd, notification, subId);
-      }
-    }
     // TODO hier muss noch was fuer die dimmer und rollershutter rein
     else {
       logger.trace("{} ignored notifier {}", LoggerConstants.TFMODELUPDATE,
@@ -466,13 +455,6 @@ public class TinkerforgeBinding extends AbstractActiveBinding<TinkerforgeBinding
     }
   }
 
-  private void processValue(MBrickd brickd, Notification notification, String subId) {
-    TinkerforgeValue newValue = (TinkerforgeValue) notification.getNewValue();
-    String uid = brickd.getHost() + ":" + ((Integer) brickd.getPort()).toString();
-    logger.trace("{} Notifier found brickd value uid {} subid {}", LoggerConstants.TFMODELUPDATE,
-        uid, subId);
-    postUpdate(uid, subId, newValue);
-  }
   /**
    * Processes changed device values to post them to the openHAB event bus.
    * 

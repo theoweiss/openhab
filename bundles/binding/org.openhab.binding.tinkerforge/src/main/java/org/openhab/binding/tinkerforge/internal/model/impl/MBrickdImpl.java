@@ -16,6 +16,8 @@ import java.net.ConnectException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -31,6 +33,9 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.openhab.binding.tinkerforge.internal.LoggerConstants;
 import org.openhab.binding.tinkerforge.internal.TinkerforgeErrorHandler;
+import org.openhab.binding.tinkerforge.internal.model.BrickdConnected;
+import org.openhab.binding.tinkerforge.internal.model.BrickdConnectedCounter;
+import org.openhab.binding.tinkerforge.internal.model.BrickdSubDevice;
 import org.openhab.binding.tinkerforge.internal.model.Ecosystem;
 import org.openhab.binding.tinkerforge.internal.model.MBaseDevice;
 import org.openhab.binding.tinkerforge.internal.model.MBrickd;
@@ -39,8 +44,7 @@ import org.openhab.binding.tinkerforge.internal.model.MSubDevice;
 import org.openhab.binding.tinkerforge.internal.model.MSubDeviceHolder;
 import org.openhab.binding.tinkerforge.internal.model.ModelFactory;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
-import org.openhab.binding.tinkerforge.internal.types.DecimalValue;
-import org.openhab.binding.tinkerforge.internal.types.HighLowValue;
+import org.openhab.binding.tinkerforge.internal.tools.ChangedPropertyListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -92,17 +96,17 @@ import com.tinkerforge.TimeoutException;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl#getMsubdevices <em>Msubdevices</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl#getLogger <em>Logger</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl#getIpConnection <em>Ip Connection</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl#getHost <em>Host</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl#getPort <em>Port</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl#getAuthkey <em>Authkey</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl#getIsConnected <em>Is Connected</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl#isAutoReconnect <em>Auto Reconnect</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl#isReconnected <em>Reconnected</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl#getConnectedCounter <em>Connected Counter</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl#getTimeout <em>Timeout</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl#getMdevices <em>Mdevices</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl#getBrickdSubdevices <em>Brickd Subdevices</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.impl.MBrickdImpl#getEcosystem <em>Ecosystem</em>}</li>
  * </ul>
  * </p>
@@ -111,6 +115,21 @@ import com.tinkerforge.TimeoutException;
  */
 public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
 {
+  List<ChangedPropertyListener<Boolean>> connectedListener =
+      new CopyOnWriteArrayList<ChangedPropertyListener<Boolean>>();
+  List<ChangedPropertyListener<Short>> connectedCountListener =
+      new CopyOnWriteArrayList<ChangedPropertyListener<Short>>();
+
+  /**
+   * The cached value of the '{@link #getMsubdevices() <em>Msubdevices</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMsubdevices()
+   * @generated
+   * @ordered
+   */
+  protected EList<BrickdSubDevice> msubdevices;
+
   /**
    * The default value of the '{@link #getLogger() <em>Logger</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -212,26 +231,6 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
   protected String authkey = AUTHKEY_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getIsConnected() <em>Is Connected</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getIsConnected()
-   * @generated
-   * @ordered
-   */
-  protected static final HighLowValue IS_CONNECTED_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getIsConnected() <em>Is Connected</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getIsConnected()
-   * @generated
-   * @ordered
-   */
-  protected HighLowValue isConnected = IS_CONNECTED_EDEFAULT;
-
-  /**
    * The default value of the '{@link #isAutoReconnect() <em>Auto Reconnect</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -272,26 +271,6 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
   protected boolean reconnected = RECONNECTED_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getConnectedCounter() <em>Connected Counter</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getConnectedCounter()
-   * @generated
-   * @ordered
-   */
-  protected static final DecimalValue CONNECTED_COUNTER_EDEFAULT = (DecimalValue)ModelFactory.eINSTANCE.createFromString(ModelPackage.eINSTANCE.getMDecimalValue(), "0");
-
-  /**
-   * The cached value of the '{@link #getConnectedCounter() <em>Connected Counter</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getConnectedCounter()
-   * @generated
-   * @ordered
-   */
-  protected DecimalValue connectedCounter = CONNECTED_COUNTER_EDEFAULT;
-
-  /**
    * The default value of the '{@link #getTimeout() <em>Timeout</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -321,7 +300,18 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
    */
   protected EList<MDevice<?>> mdevices;
 
+  /**
+   * The cached value of the '{@link #getBrickdSubdevices() <em>Brickd Subdevices</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBrickdSubdevices()
+   * @generated
+   * @ordered
+   */
+  protected EList<BrickdSubDevice> brickdSubdevices;
+
   private Thread connectThread;
+  public Boolean connected;
 
   /**
    * <!-- begin-user-doc -->
@@ -342,6 +332,20 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
   protected EClass eStaticClass()
   {
     return ModelPackage.Literals.MBRICKD;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<BrickdSubDevice> getMsubdevices()
+  {
+    if (msubdevices == null)
+    {
+      msubdevices = new EObjectContainmentWithInverseEList<BrickdSubDevice>(MSubDevice.class, this, ModelPackage.MBRICKD__MSUBDEVICES, ModelPackage.MSUB_DEVICE__MBRICK);
+    }
+    return msubdevices;
   }
 
   /**
@@ -464,29 +468,6 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
    * <!-- end-user-doc -->
    * @generated
    */
-  public HighLowValue getIsConnected()
-  {
-    return isConnected;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setIsConnected(HighLowValue newIsConnected)
-  {
-    HighLowValue oldIsConnected = isConnected;
-    isConnected = newIsConnected;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKD__IS_CONNECTED, oldIsConnected, isConnected));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public boolean isAutoReconnect()
   {
     return autoReconnect;
@@ -533,29 +514,6 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
    * <!-- end-user-doc -->
    * @generated
    */
-  public DecimalValue getConnectedCounter()
-  {
-    return connectedCounter;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setConnectedCounter(DecimalValue newConnectedCounter)
-  {
-    DecimalValue oldConnectedCounter = connectedCounter;
-    connectedCounter = newConnectedCounter;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKD__CONNECTED_COUNTER, oldConnectedCounter, connectedCounter));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public int getTimeout()
   {
     return timeout;
@@ -586,6 +544,20 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
       mdevices = new EObjectContainmentWithInverseEList<MDevice<?>>(MDevice.class, this, ModelPackage.MBRICKD__MDEVICES, ModelPackage.MDEVICE__BRICKD);
     }
     return mdevices;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<BrickdSubDevice> getBrickdSubdevices()
+  {
+    if (brickdSubdevices == null)
+    {
+      brickdSubdevices = new EObjectContainmentWithInverseEList<BrickdSubDevice>(BrickdSubDevice.class, this, ModelPackage.MBRICKD__BRICKD_SUBDEVICES, ModelPackage.BRICKD_SUB_DEVICE__BRICKD);
+    }
+    return brickdSubdevices;
   }
 
   /**
@@ -640,6 +612,7 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
 	 */
 	public void connect() {
 		// Create connection to brickd
+	    initSubDevices();
 		final IPConnection ipcon = new IPConnection();
 		setIpConnection(ipcon);
 
@@ -737,6 +710,7 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
 	 */
   private class ConnectedListener implements IPConnection.ConnectedListener {
     IPConnection ipcon;
+    private Short connectedCounter = 0;
 
     public ConnectedListener(IPConnection ipcon) {
       super();
@@ -754,6 +728,22 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
           ipcon.authenticate(authkey);
         }
         ipcon.enumerate();
+        for (ChangedPropertyListener<Boolean> listener : connectedListener) {
+          listener.changed(connected, true);
+        }
+        boolean connectednew = true;
+        for (ChangedPropertyListener<Boolean> listener : connectedListener) {
+          listener.changed(connected, connectednew);
+        }
+        connected = connectednew;
+        Short counternew = (short) (connectedCounter + 1);
+        for (ChangedPropertyListener<Short> listener : connectedCountListener) {
+          listener.changed(connectedCounter, counternew);
+        }
+        connectedCounter = counternew;
+        if (connectedCounter > 1) {
+          setReconnected(true);
+        }
       } catch (TimeoutException e) {
         TinkerforgeErrorHandler.handleError(getLogger(),
             TinkerforgeErrorHandler.TF_TIMEOUT_EXCEPTION, e);
@@ -764,9 +754,6 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
         TinkerforgeErrorHandler.handleError(getLogger(),
             TinkerforgeErrorHandler.TF_NOT_CONNECTION_EXCEPTION, e);
       }
-      setIsConnected(HighLowValue.HIGH);
-      Integer counternew = connectedCounter.intValue() + 1;
-      setConnectedCounter(new DecimalValue(counternew));
     }
   }
 
@@ -791,7 +778,14 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
 		public void disconnected(short connectReason) {
 			modelLock.lock();
 			try {
-				setIsConnected(HighLowValue.LOW);
+			    for (ChangedPropertyListener<Boolean> listener: connectedListener){
+			      listener.changed(connected, false);
+			    }
+			    boolean connectednew = false;
+			    for (ChangedPropertyListener<Boolean> listener : connectedListener){
+			      listener.changed(connected, connectednew);
+			    }
+			    connected = connectednew;
 				ArrayList<String> deviceUidList = new ArrayList<String>();
 				for (MDevice<?> mDevice : mdevices) {
 					deviceUidList.add(mDevice.getUid());
@@ -1051,6 +1045,46 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated NOT
+   */
+  public void addConnectedListener(ChangedPropertyListener<Boolean> listener)
+  {
+    connectedListener.add(listener);
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated NOT
+   */
+  public void removeConnectedListener(ChangedPropertyListener<Boolean> listener)
+  {
+    connectedListener.remove(listener);
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated NOT
+   */
+  public void addConnectedCountListener(ChangedPropertyListener<Short> listener)
+  {
+    connectedCountListener.add(listener);
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated NOT
+   */
+  public void removeConnectedCountListener(ChangedPropertyListener<Short> listener)
+  {
+    connectedCountListener.remove(listener);
+  }
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated NOT
@@ -1070,6 +1104,34 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated NOT
+   */
+  public void initSubDevices()
+  {
+    String uid = getHost() + ":" + ((Integer) getPort()).toString();
+
+    BrickdConnected connected = ModelFactory.eINSTANCE.createBrickdConnected();
+    connected.setUid(uid);
+    String subidConnected = "connected";
+    connected.setSubId(subidConnected);
+    logger.debug("{} addSubDevice {}", LoggerConstants.TFINIT, subidConnected);
+    connected.init();
+    connected.setBrickd(this);
+    connected.enable();
+
+    BrickdConnectedCounter counter = ModelFactory.eINSTANCE.createBrickdConnectedCounter();
+    counter.setUid(uid);
+    String subidConnectedCounter = "connected_counter";
+    counter.setSubId(subidConnectedCounter);
+    logger.debug("{} addSubDevice {}", LoggerConstants.TFINIT, subidConnectedCounter);
+    counter.init();
+    counter.setBrickd(this);
+    counter.enable();
+  }
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1080,8 +1142,12 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
   {
     switch (featureID)
     {
+      case ModelPackage.MBRICKD__MSUBDEVICES:
+        return ((InternalEList<InternalEObject>)(InternalEList<?>)getMsubdevices()).basicAdd(otherEnd, msgs);
       case ModelPackage.MBRICKD__MDEVICES:
         return ((InternalEList<InternalEObject>)(InternalEList<?>)getMdevices()).basicAdd(otherEnd, msgs);
+      case ModelPackage.MBRICKD__BRICKD_SUBDEVICES:
+        return ((InternalEList<InternalEObject>)(InternalEList<?>)getBrickdSubdevices()).basicAdd(otherEnd, msgs);
       case ModelPackage.MBRICKD__ECOSYSTEM:
         if (eInternalContainer() != null)
           msgs = eBasicRemoveFromContainer(msgs);
@@ -1100,8 +1166,12 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
   {
     switch (featureID)
     {
+      case ModelPackage.MBRICKD__MSUBDEVICES:
+        return ((InternalEList<?>)getMsubdevices()).basicRemove(otherEnd, msgs);
       case ModelPackage.MBRICKD__MDEVICES:
         return ((InternalEList<?>)getMdevices()).basicRemove(otherEnd, msgs);
+      case ModelPackage.MBRICKD__BRICKD_SUBDEVICES:
+        return ((InternalEList<?>)getBrickdSubdevices()).basicRemove(otherEnd, msgs);
       case ModelPackage.MBRICKD__ECOSYSTEM:
         return basicSetEcosystem(null, msgs);
     }
@@ -1134,6 +1204,8 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
   {
     switch (featureID)
     {
+      case ModelPackage.MBRICKD__MSUBDEVICES:
+        return getMsubdevices();
       case ModelPackage.MBRICKD__LOGGER:
         return getLogger();
       case ModelPackage.MBRICKD__IP_CONNECTION:
@@ -1144,18 +1216,16 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
         return getPort();
       case ModelPackage.MBRICKD__AUTHKEY:
         return getAuthkey();
-      case ModelPackage.MBRICKD__IS_CONNECTED:
-        return getIsConnected();
       case ModelPackage.MBRICKD__AUTO_RECONNECT:
         return isAutoReconnect();
       case ModelPackage.MBRICKD__RECONNECTED:
         return isReconnected();
-      case ModelPackage.MBRICKD__CONNECTED_COUNTER:
-        return getConnectedCounter();
       case ModelPackage.MBRICKD__TIMEOUT:
         return getTimeout();
       case ModelPackage.MBRICKD__MDEVICES:
         return getMdevices();
+      case ModelPackage.MBRICKD__BRICKD_SUBDEVICES:
+        return getBrickdSubdevices();
       case ModelPackage.MBRICKD__ECOSYSTEM:
         return getEcosystem();
     }
@@ -1173,6 +1243,10 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
   {
     switch (featureID)
     {
+      case ModelPackage.MBRICKD__MSUBDEVICES:
+        getMsubdevices().clear();
+        getMsubdevices().addAll((Collection<? extends BrickdSubDevice>)newValue);
+        return;
       case ModelPackage.MBRICKD__LOGGER:
         setLogger((Logger)newValue);
         return;
@@ -1188,17 +1262,11 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
       case ModelPackage.MBRICKD__AUTHKEY:
         setAuthkey((String)newValue);
         return;
-      case ModelPackage.MBRICKD__IS_CONNECTED:
-        setIsConnected((HighLowValue)newValue);
-        return;
       case ModelPackage.MBRICKD__AUTO_RECONNECT:
         setAutoReconnect((Boolean)newValue);
         return;
       case ModelPackage.MBRICKD__RECONNECTED:
         setReconnected((Boolean)newValue);
-        return;
-      case ModelPackage.MBRICKD__CONNECTED_COUNTER:
-        setConnectedCounter((DecimalValue)newValue);
         return;
       case ModelPackage.MBRICKD__TIMEOUT:
         setTimeout((Integer)newValue);
@@ -1206,6 +1274,10 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
       case ModelPackage.MBRICKD__MDEVICES:
         getMdevices().clear();
         getMdevices().addAll((Collection<? extends MDevice<?>>)newValue);
+        return;
+      case ModelPackage.MBRICKD__BRICKD_SUBDEVICES:
+        getBrickdSubdevices().clear();
+        getBrickdSubdevices().addAll((Collection<? extends BrickdSubDevice>)newValue);
         return;
       case ModelPackage.MBRICKD__ECOSYSTEM:
         setEcosystem((Ecosystem)newValue);
@@ -1224,6 +1296,9 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
   {
     switch (featureID)
     {
+      case ModelPackage.MBRICKD__MSUBDEVICES:
+        getMsubdevices().clear();
+        return;
       case ModelPackage.MBRICKD__LOGGER:
         setLogger(LOGGER_EDEFAULT);
         return;
@@ -1239,23 +1314,20 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
       case ModelPackage.MBRICKD__AUTHKEY:
         setAuthkey(AUTHKEY_EDEFAULT);
         return;
-      case ModelPackage.MBRICKD__IS_CONNECTED:
-        setIsConnected(IS_CONNECTED_EDEFAULT);
-        return;
       case ModelPackage.MBRICKD__AUTO_RECONNECT:
         setAutoReconnect(AUTO_RECONNECT_EDEFAULT);
         return;
       case ModelPackage.MBRICKD__RECONNECTED:
         setReconnected(RECONNECTED_EDEFAULT);
         return;
-      case ModelPackage.MBRICKD__CONNECTED_COUNTER:
-        setConnectedCounter(CONNECTED_COUNTER_EDEFAULT);
-        return;
       case ModelPackage.MBRICKD__TIMEOUT:
         setTimeout(TIMEOUT_EDEFAULT);
         return;
       case ModelPackage.MBRICKD__MDEVICES:
         getMdevices().clear();
+        return;
+      case ModelPackage.MBRICKD__BRICKD_SUBDEVICES:
+        getBrickdSubdevices().clear();
         return;
       case ModelPackage.MBRICKD__ECOSYSTEM:
         setEcosystem((Ecosystem)null);
@@ -1274,6 +1346,8 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
   {
     switch (featureID)
     {
+      case ModelPackage.MBRICKD__MSUBDEVICES:
+        return msubdevices != null && !msubdevices.isEmpty();
       case ModelPackage.MBRICKD__LOGGER:
         return LOGGER_EDEFAULT == null ? logger != null : !LOGGER_EDEFAULT.equals(logger);
       case ModelPackage.MBRICKD__IP_CONNECTION:
@@ -1284,18 +1358,16 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
         return port != PORT_EDEFAULT;
       case ModelPackage.MBRICKD__AUTHKEY:
         return AUTHKEY_EDEFAULT == null ? authkey != null : !AUTHKEY_EDEFAULT.equals(authkey);
-      case ModelPackage.MBRICKD__IS_CONNECTED:
-        return IS_CONNECTED_EDEFAULT == null ? isConnected != null : !IS_CONNECTED_EDEFAULT.equals(isConnected);
       case ModelPackage.MBRICKD__AUTO_RECONNECT:
         return autoReconnect != AUTO_RECONNECT_EDEFAULT;
       case ModelPackage.MBRICKD__RECONNECTED:
         return reconnected != RECONNECTED_EDEFAULT;
-      case ModelPackage.MBRICKD__CONNECTED_COUNTER:
-        return CONNECTED_COUNTER_EDEFAULT == null ? connectedCounter != null : !CONNECTED_COUNTER_EDEFAULT.equals(connectedCounter);
       case ModelPackage.MBRICKD__TIMEOUT:
         return timeout != TIMEOUT_EDEFAULT;
       case ModelPackage.MBRICKD__MDEVICES:
         return mdevices != null && !mdevices.isEmpty();
+      case ModelPackage.MBRICKD__BRICKD_SUBDEVICES:
+        return brickdSubdevices != null && !brickdSubdevices.isEmpty();
       case ModelPackage.MBRICKD__ECOSYSTEM:
         return getEcosystem() != null;
     }
@@ -1308,6 +1380,7 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
    * @generated
    */
   @Override
+  @SuppressWarnings("unchecked")
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
     switch (operationID)
@@ -1321,8 +1394,23 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
       case ModelPackage.MBRICKD___INIT:
         init();
         return null;
+      case ModelPackage.MBRICKD___ADD_CONNECTED_LISTENER__CHANGEDPROPERTYLISTENER:
+        addConnectedListener((ChangedPropertyListener<Boolean>)arguments.get(0));
+        return null;
+      case ModelPackage.MBRICKD___REMOVE_CONNECTED_LISTENER__CHANGEDPROPERTYLISTENER:
+        removeConnectedListener((ChangedPropertyListener<Boolean>)arguments.get(0));
+        return null;
+      case ModelPackage.MBRICKD___ADD_CONNECTED_COUNT_LISTENER__CHANGEDPROPERTYLISTENER:
+        addConnectedCountListener((ChangedPropertyListener<Short>)arguments.get(0));
+        return null;
+      case ModelPackage.MBRICKD___REMOVE_CONNECTED_COUNT_LISTENER__CHANGEDPROPERTYLISTENER:
+        removeConnectedCountListener((ChangedPropertyListener<Short>)arguments.get(0));
+        return null;
       case ModelPackage.MBRICKD___GET_DEVICE__STRING:
         return getDevice((String)arguments.get(0));
+      case ModelPackage.MBRICKD___INIT_SUB_DEVICES:
+        initSubDevices();
+        return null;
     }
     return super.eInvoke(operationID, arguments);
   }
@@ -1348,14 +1436,10 @@ public class MBrickdImpl extends MinimalEObjectImpl.Container implements MBrickd
     result.append(port);
     result.append(", authkey: ");
     result.append(authkey);
-    result.append(", isConnected: ");
-    result.append(isConnected);
     result.append(", autoReconnect: ");
     result.append(autoReconnect);
     result.append(", reconnected: ");
     result.append(reconnected);
-    result.append(", connectedCounter: ");
-    result.append(connectedCounter);
     result.append(", timeout: ");
     result.append(timeout);
     result.append(')');

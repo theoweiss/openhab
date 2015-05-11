@@ -26,6 +26,9 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.openhab.binding.tinkerforge.internal.config.DeviceOptions;
 import org.openhab.binding.tinkerforge.internal.model.AmbientTemperature;
 import org.openhab.binding.tinkerforge.internal.model.BarometerSubIDs;
+import org.openhab.binding.tinkerforge.internal.model.BrickdConnected;
+import org.openhab.binding.tinkerforge.internal.model.BrickdConnectedCounter;
+import org.openhab.binding.tinkerforge.internal.model.BrickdSubDevice;
 import org.openhab.binding.tinkerforge.internal.model.BrickletMultiTouchConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.BrickletRemoteSwitchConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.ButtonConfiguration;
@@ -181,6 +184,7 @@ import org.openhab.binding.tinkerforge.internal.model.VCDevicePower;
 import org.openhab.binding.tinkerforge.internal.model.VCDeviceVoltage;
 import org.openhab.binding.tinkerforge.internal.model.VoltageCurrentDevice;
 import org.openhab.binding.tinkerforge.internal.model.VoltageCurrentSubIds;
+import org.openhab.binding.tinkerforge.internal.tools.ChangedPropertyListener;
 import org.openhab.binding.tinkerforge.internal.model.*;
 import org.openhab.binding.tinkerforge.internal.types.DecimalValue;
 import org.openhab.binding.tinkerforge.internal.types.DirectionValue;
@@ -279,6 +283,27 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * @generated
    */
   private EClass mBrickdEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass brickdSubDeviceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass brickdConnectedEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass brickdConnectedCounterEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1608,6 +1633,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EDataType changedPropertyListenerEDataType = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EDataType mTinkerBrickletDualRelayEDataType = null;
 
   /**
@@ -2010,7 +2042,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMBrickd_IsConnected()
+  public EAttribute getMBrickd_AutoReconnect()
   {
     return (EAttribute)mBrickdEClass.getEStructuralFeatures().get(5);
   }
@@ -2020,7 +2052,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMBrickd_AutoReconnect()
+  public EAttribute getMBrickd_Reconnected()
   {
     return (EAttribute)mBrickdEClass.getEStructuralFeatures().get(6);
   }
@@ -2030,7 +2062,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMBrickd_Reconnected()
+  public EAttribute getMBrickd_Timeout()
   {
     return (EAttribute)mBrickdEClass.getEStructuralFeatures().get(7);
   }
@@ -2040,29 +2072,19 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMBrickd_ConnectedCounter()
-  {
-    return (EAttribute)mBrickdEClass.getEStructuralFeatures().get(8);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getMBrickd_Timeout()
-  {
-    return (EAttribute)mBrickdEClass.getEStructuralFeatures().get(9);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getMBrickd_Mdevices()
   {
-    return (EReference)mBrickdEClass.getEStructuralFeatures().get(10);
+    return (EReference)mBrickdEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMBrickd_BrickdSubdevices()
+  {
+    return (EReference)mBrickdEClass.getEStructuralFeatures().get(9);
   }
 
   /**
@@ -2072,7 +2094,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    */
   public EReference getMBrickd_Ecosystem()
   {
-    return (EReference)mBrickdEClass.getEStructuralFeatures().get(11);
+    return (EReference)mBrickdEClass.getEStructuralFeatures().get(10);
   }
 
   /**
@@ -2110,9 +2132,109 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EOperation getMBrickd__GetDevice__String()
+  public EOperation getMBrickd__AddConnectedListener__ChangedPropertyListener()
   {
     return mBrickdEClass.getEOperations().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EOperation getMBrickd__RemoveConnectedListener__ChangedPropertyListener()
+  {
+    return mBrickdEClass.getEOperations().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EOperation getMBrickd__AddConnectedCountListener__ChangedPropertyListener()
+  {
+    return mBrickdEClass.getEOperations().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EOperation getMBrickd__RemoveConnectedCountListener__ChangedPropertyListener()
+  {
+    return mBrickdEClass.getEOperations().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EOperation getMBrickd__GetDevice__String()
+  {
+    return mBrickdEClass.getEOperations().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBrickdSubDevice()
+  {
+    return brickdSubDeviceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBrickdSubDevice_Brickd()
+  {
+    return (EReference)brickdSubDeviceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBrickdConnected()
+  {
+    return brickdConnectedEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBrickdConnected_DeviceType()
+  {
+    return (EAttribute)brickdConnectedEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBrickdConnectedCounter()
+  {
+    return brickdConnectedCounterEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBrickdConnectedCounter_DeviceType()
+  {
+    return (EAttribute)brickdConnectedCounterEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -6670,6 +6792,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EDataType getChangedPropertyListener()
+  {
+    return changedPropertyListenerEDataType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EDataType getMTinkerBrickletDualRelay()
   {
     return mTinkerBrickletDualRelayEDataType;
@@ -6749,17 +6881,29 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     createEAttribute(mBrickdEClass, MBRICKD__HOST);
     createEAttribute(mBrickdEClass, MBRICKD__PORT);
     createEAttribute(mBrickdEClass, MBRICKD__AUTHKEY);
-    createEAttribute(mBrickdEClass, MBRICKD__IS_CONNECTED);
     createEAttribute(mBrickdEClass, MBRICKD__AUTO_RECONNECT);
     createEAttribute(mBrickdEClass, MBRICKD__RECONNECTED);
-    createEAttribute(mBrickdEClass, MBRICKD__CONNECTED_COUNTER);
     createEAttribute(mBrickdEClass, MBRICKD__TIMEOUT);
     createEReference(mBrickdEClass, MBRICKD__MDEVICES);
+    createEReference(mBrickdEClass, MBRICKD__BRICKD_SUBDEVICES);
     createEReference(mBrickdEClass, MBRICKD__ECOSYSTEM);
     createEOperation(mBrickdEClass, MBRICKD___CONNECT);
     createEOperation(mBrickdEClass, MBRICKD___DISCONNECT);
     createEOperation(mBrickdEClass, MBRICKD___INIT);
+    createEOperation(mBrickdEClass, MBRICKD___ADD_CONNECTED_LISTENER__CHANGEDPROPERTYLISTENER);
+    createEOperation(mBrickdEClass, MBRICKD___REMOVE_CONNECTED_LISTENER__CHANGEDPROPERTYLISTENER);
+    createEOperation(mBrickdEClass, MBRICKD___ADD_CONNECTED_COUNT_LISTENER__CHANGEDPROPERTYLISTENER);
+    createEOperation(mBrickdEClass, MBRICKD___REMOVE_CONNECTED_COUNT_LISTENER__CHANGEDPROPERTYLISTENER);
     createEOperation(mBrickdEClass, MBRICKD___GET_DEVICE__STRING);
+
+    brickdSubDeviceEClass = createEClass(BRICKD_SUB_DEVICE);
+    createEReference(brickdSubDeviceEClass, BRICKD_SUB_DEVICE__BRICKD);
+
+    brickdConnectedEClass = createEClass(BRICKD_CONNECTED);
+    createEAttribute(brickdConnectedEClass, BRICKD_CONNECTED__DEVICE_TYPE);
+
+    brickdConnectedCounterEClass = createEClass(BRICKD_CONNECTED_COUNTER);
+    createEAttribute(brickdConnectedCounterEClass, BRICKD_CONNECTED_COUNTER__DEVICE_TYPE);
 
     subDeviceAdminEClass = createEClass(SUB_DEVICE_ADMIN);
     createEOperation(subDeviceAdminEClass, SUB_DEVICE_ADMIN___ADD_SUB_DEVICE__STRING_STRING);
@@ -7364,6 +7508,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     increaseDecreaseTypeEDataType = createEDataType(INCREASE_DECREASE_TYPE);
     directionValueEDataType = createEDataType(DIRECTION_VALUE);
     enumEDataType = createEDataType(ENUM);
+    changedPropertyListenerEDataType = createEDataType(CHANGED_PROPERTY_LISTENER);
   }
 
   /**
@@ -7405,6 +7550,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     ETypeParameter ohtfDeviceEClass_IDS = addETypeParameter(ohtfDeviceEClass, "IDS");
     ETypeParameter ohtfSubDeviceAdminDeviceEClass_TFC = addETypeParameter(ohtfSubDeviceAdminDeviceEClass, "TFC");
     ETypeParameter ohtfSubDeviceAdminDeviceEClass_IDS = addETypeParameter(ohtfSubDeviceAdminDeviceEClass, "IDS");
+    addETypeParameter(changedPropertyListenerEDataType, "T");
 
     // Set bounds for type parameters
     EGenericType g1 = createEGenericType(this.getMTinkerforgeDevice());
@@ -7433,6 +7579,26 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     ohtfSubDeviceAdminDeviceEClass_IDS.getEBounds().add(g1);
 
     // Add supertypes to classes
+    g1 = createEGenericType(this.getMSubDeviceHolder());
+    g2 = createEGenericType(this.getBrickdSubDevice());
+    g1.getETypeArguments().add(g2);
+    mBrickdEClass.getEGenericSuperTypes().add(g1);
+    g1 = createEGenericType(this.getMSubDevice());
+    g2 = createEGenericType(this.getMBrickd());
+    g1.getETypeArguments().add(g2);
+    brickdSubDeviceEClass.getEGenericSuperTypes().add(g1);
+    g1 = createEGenericType(this.getMSensor());
+    g2 = createEGenericType(this.getDigitalValue());
+    g1.getETypeArguments().add(g2);
+    brickdConnectedEClass.getEGenericSuperTypes().add(g1);
+    g1 = createEGenericType(this.getBrickdSubDevice());
+    brickdConnectedEClass.getEGenericSuperTypes().add(g1);
+    g1 = createEGenericType(this.getMSensor());
+    g2 = createEGenericType(this.getMDecimalValue());
+    g1.getETypeArguments().add(g2);
+    brickdConnectedCounterEClass.getEGenericSuperTypes().add(g1);
+    g1 = createEGenericType(this.getBrickdSubDevice());
+    brickdConnectedCounterEClass.getEGenericSuperTypes().add(g1);
     mDeviceEClass.getESuperTypes().add(this.getMBaseDevice());
     mSwitchActorEClass.getESuperTypes().add(this.getSwitchSensor());
     programmableSwitchActorEClass.getESuperTypes().add(this.getSwitchSensor());
@@ -8192,15 +8358,14 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     initEAttribute(getMBrickd_Host(), theEcorePackage.getEString(), "host", "localhost", 0, 1, MBrickd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMBrickd_Port(), theEcorePackage.getEInt(), "port", "4223", 0, 1, MBrickd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMBrickd_Authkey(), theEcorePackage.getEString(), "authkey", null, 0, 1, MBrickd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMBrickd_IsConnected(), this.getDigitalValue(), "isConnected", null, 0, 1, MBrickd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMBrickd_AutoReconnect(), theEcorePackage.getEBoolean(), "autoReconnect", "true", 0, 1, MBrickd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMBrickd_Reconnected(), theEcorePackage.getEBoolean(), "reconnected", "false", 0, 1, MBrickd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMBrickd_ConnectedCounter(), this.getMDecimalValue(), "connectedCounter", "0", 0, 1, MBrickd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMBrickd_Timeout(), theEcorePackage.getEInt(), "timeout", "2500", 0, 1, MBrickd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     g1 = createEGenericType(this.getMDevice());
     g2 = createEGenericType();
     g1.getETypeArguments().add(g2);
     initEReference(getMBrickd_Mdevices(), g1, this.getMDevice_Brickd(), "mdevices", null, 0, -1, MBrickd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMBrickd_BrickdSubdevices(), this.getBrickdSubDevice(), this.getBrickdSubDevice_Brickd(), "brickdSubdevices", null, 0, -1, MBrickd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMBrickd_Ecosystem(), this.getEcosystem(), this.getEcosystem_Mbrickds(), "ecosystem", null, 0, 1, MBrickd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEOperation(getMBrickd__Connect(), null, "connect", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -8209,8 +8374,41 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
 
     initEOperation(getMBrickd__Init(), null, "init", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+    op = initEOperation(getMBrickd__AddConnectedListener__ChangedPropertyListener(), null, "addConnectedListener", 0, 1, !IS_UNIQUE, IS_ORDERED);
+    g1 = createEGenericType(this.getChangedPropertyListener());
+    g2 = createEGenericType(theEcorePackage.getEBooleanObject());
+    g1.getETypeArguments().add(g2);
+    addEParameter(op, g1, "listener", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+    op = initEOperation(getMBrickd__RemoveConnectedListener__ChangedPropertyListener(), null, "removeConnectedListener", 0, 1, !IS_UNIQUE, IS_ORDERED);
+    g1 = createEGenericType(this.getChangedPropertyListener());
+    g2 = createEGenericType(theEcorePackage.getEBooleanObject());
+    g1.getETypeArguments().add(g2);
+    addEParameter(op, g1, "listener", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+    op = initEOperation(getMBrickd__AddConnectedCountListener__ChangedPropertyListener(), null, "addConnectedCountListener", 0, 1, !IS_UNIQUE, IS_ORDERED);
+    g1 = createEGenericType(this.getChangedPropertyListener());
+    g2 = createEGenericType(theEcorePackage.getEShortObject());
+    g1.getETypeArguments().add(g2);
+    addEParameter(op, g1, "listener", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+    op = initEOperation(getMBrickd__RemoveConnectedCountListener__ChangedPropertyListener(), null, "removeConnectedCountListener", 0, 1, !IS_UNIQUE, IS_ORDERED);
+    g1 = createEGenericType(this.getChangedPropertyListener());
+    g2 = createEGenericType(theEcorePackage.getEShortObject());
+    g1.getETypeArguments().add(g2);
+    addEParameter(op, g1, "listener", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
     op = initEOperation(getMBrickd__GetDevice__String(), this.getMBaseDevice(), "getDevice", 0, 1, !IS_UNIQUE, IS_ORDERED);
     addEParameter(op, theEcorePackage.getEString(), "uid", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+    initEClass(brickdSubDeviceEClass, BrickdSubDevice.class, "BrickdSubDevice", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getBrickdSubDevice_Brickd(), this.getMBrickd(), this.getMBrickd_BrickdSubdevices(), "brickd", null, 0, 1, BrickdSubDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(brickdConnectedEClass, BrickdConnected.class, "BrickdConnected", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBrickdConnected_DeviceType(), theEcorePackage.getEString(), "deviceType", "brickd_connected", 0, 1, BrickdConnected.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(brickdConnectedCounterEClass, BrickdConnectedCounter.class, "BrickdConnectedCounter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBrickdConnectedCounter_DeviceType(), theEcorePackage.getEString(), "deviceType", "brickd_connected_counter", 0, 1, BrickdConnectedCounter.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(subDeviceAdminEClass, SubDeviceAdmin.class, "SubDeviceAdmin", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -9060,6 +9258,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     initEDataType(increaseDecreaseTypeEDataType, IncreaseDecreaseType.class, "IncreaseDecreaseType", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
     initEDataType(directionValueEDataType, DirectionValue.class, "DirectionValue", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
     initEDataType(enumEDataType, Enum.class, "Enum", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+    initEDataType(changedPropertyListenerEDataType, ChangedPropertyListener.class, "ChangedPropertyListener", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
     // Create resource
     createResource(eNS_URI);

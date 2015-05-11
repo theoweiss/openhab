@@ -80,6 +80,24 @@ public interface ModelFactory extends EFactory
   MBrickd createMBrickd();
 
   /**
+   * Returns a new object of class '<em>Brickd Connected</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Brickd Connected</em>'.
+   * @generated
+   */
+  BrickdConnected createBrickdConnected();
+
+  /**
+   * Returns a new object of class '<em>Brickd Connected Counter</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Brickd Connected Counter</em>'.
+   * @generated
+   */
+  BrickdConnectedCounter createBrickdConnectedCounter();
+
+  /**
    * Returns a new object of class '<em>MBricklet Dual Button</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

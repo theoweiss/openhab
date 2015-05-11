@@ -14,6 +14,7 @@ import com.tinkerforge.IPConnection;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.openhab.binding.tinkerforge.internal.tools.ChangedPropertyListener;
 import org.eclipse.emf.ecore.EObject;
 
 import org.openhab.binding.tinkerforge.internal.types.DecimalValue;
@@ -37,12 +38,11 @@ import org.slf4j.Logger;
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.MBrickd#getHost <em>Host</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.MBrickd#getPort <em>Port</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.MBrickd#getAuthkey <em>Authkey</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.MBrickd#getIsConnected <em>Is Connected</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.MBrickd#isAutoReconnect <em>Auto Reconnect</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.MBrickd#isReconnected <em>Reconnected</em>}</li>
- *   <li>{@link org.openhab.binding.tinkerforge.internal.model.MBrickd#getConnectedCounter <em>Connected Counter</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.MBrickd#getTimeout <em>Timeout</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.MBrickd#getMdevices <em>Mdevices</em>}</li>
+ *   <li>{@link org.openhab.binding.tinkerforge.internal.model.MBrickd#getBrickdSubdevices <em>Brickd Subdevices</em>}</li>
  *   <li>{@link org.openhab.binding.tinkerforge.internal.model.MBrickd#getEcosystem <em>Ecosystem</em>}</li>
  * </ul>
  * </p>
@@ -51,7 +51,7 @@ import org.slf4j.Logger;
  * @model
  * @generated
  */
-public interface MBrickd extends EObject
+public interface MBrickd extends MSubDeviceHolder<BrickdSubDevice>
 {
   /**
    * Returns the value of the '<em><b>Logger</b></em>' attribute.
@@ -186,32 +186,6 @@ public interface MBrickd extends EObject
   void setAuthkey(String value);
 
   /**
-   * Returns the value of the '<em><b>Is Connected</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Is Connected</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Is Connected</em>' attribute.
-   * @see #setIsConnected(HighLowValue)
-   * @see org.openhab.binding.tinkerforge.internal.model.ModelPackage#getMBrickd_IsConnected()
-   * @model unique="false" dataType="org.openhab.binding.tinkerforge.internal.model.DigitalValue"
-   * @generated
-   */
-  HighLowValue getIsConnected();
-
-  /**
-   * Sets the value of the '{@link org.openhab.binding.tinkerforge.internal.model.MBrickd#getIsConnected <em>Is Connected</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Is Connected</em>' attribute.
-   * @see #getIsConnected()
-   * @generated
-   */
-  void setIsConnected(HighLowValue value);
-
-  /**
    * Returns the value of the '<em><b>Auto Reconnect</b></em>' attribute.
    * The default value is <code>"true"</code>.
    * <!-- begin-user-doc -->
@@ -266,33 +240,6 @@ public interface MBrickd extends EObject
   void setReconnected(boolean value);
 
   /**
-   * Returns the value of the '<em><b>Connected Counter</b></em>' attribute.
-   * The default value is <code>"0"</code>.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Connected Counter</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Connected Counter</em>' attribute.
-   * @see #setConnectedCounter(DecimalValue)
-   * @see org.openhab.binding.tinkerforge.internal.model.ModelPackage#getMBrickd_ConnectedCounter()
-   * @model default="0" unique="false" dataType="org.openhab.binding.tinkerforge.internal.model.MDecimalValue"
-   * @generated
-   */
-  DecimalValue getConnectedCounter();
-
-  /**
-   * Sets the value of the '{@link org.openhab.binding.tinkerforge.internal.model.MBrickd#getConnectedCounter <em>Connected Counter</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Connected Counter</em>' attribute.
-   * @see #getConnectedCounter()
-   * @generated
-   */
-  void setConnectedCounter(DecimalValue value);
-
-  /**
    * Returns the value of the '<em><b>Timeout</b></em>' attribute.
    * The default value is <code>"2500"</code>.
    * <!-- begin-user-doc -->
@@ -336,6 +283,24 @@ public interface MBrickd extends EObject
    * @generated
    */
   EList<MDevice<?>> getMdevices();
+
+  /**
+   * Returns the value of the '<em><b>Brickd Subdevices</b></em>' containment reference list.
+   * The list contents are of type {@link org.openhab.binding.tinkerforge.internal.model.BrickdSubDevice}.
+   * It is bidirectional and its opposite is '{@link org.openhab.binding.tinkerforge.internal.model.BrickdSubDevice#getBrickd <em>Brickd</em>}'.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Brickd Subdevices</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Brickd Subdevices</em>' containment reference list.
+   * @see org.openhab.binding.tinkerforge.internal.model.ModelPackage#getMBrickd_BrickdSubdevices()
+   * @see org.openhab.binding.tinkerforge.internal.model.BrickdSubDevice#getBrickd
+   * @model opposite="brickd" containment="true"
+   * @generated
+   */
+  EList<BrickdSubDevice> getBrickdSubdevices();
 
   /**
    * Returns the value of the '<em><b>Ecosystem</b></em>' container reference.
@@ -388,6 +353,38 @@ public interface MBrickd extends EObject
    * @generated
    */
   void init();
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @model listenerDataType="org.openhab.binding.tinkerforge.internal.model.ChangedPropertyListener<org.eclipse.emf.ecore.EBooleanObject>" listenerUnique="false"
+   * @generated
+   */
+  void addConnectedListener(ChangedPropertyListener<Boolean> listener);
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @model listenerDataType="org.openhab.binding.tinkerforge.internal.model.ChangedPropertyListener<org.eclipse.emf.ecore.EBooleanObject>" listenerUnique="false"
+   * @generated
+   */
+  void removeConnectedListener(ChangedPropertyListener<Boolean> listener);
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @model listenerDataType="org.openhab.binding.tinkerforge.internal.model.ChangedPropertyListener<org.eclipse.emf.ecore.EShortObject>" listenerUnique="false"
+   * @generated
+   */
+  void addConnectedCountListener(ChangedPropertyListener<Short> listener);
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @model listenerDataType="org.openhab.binding.tinkerforge.internal.model.ChangedPropertyListener<org.eclipse.emf.ecore.EShortObject>" listenerUnique="false"
+   * @generated
+   */
+  void removeConnectedCountListener(ChangedPropertyListener<Short> listener);
 
   /**
    * <!-- begin-user-doc -->

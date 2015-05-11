@@ -58,6 +58,7 @@ import org.openhab.core.library.types.PercentType
 import org.openhab.core.library.types.IncreaseDecreaseType
 import java.math.BigDecimal
 import org.openhab.binding.tinkerforge.internal.config.DeviceOptions
+import org.openhab.binding.tinkerforge.internal.tools.ChangedPropertyListener
 
 /**
  * @author Theo Weiss
@@ -114,6 +115,7 @@ type PercentType wraps PercentType
 type IncreaseDecreaseType wraps IncreaseDecreaseType
 type DirectionValue wraps DirectionValue
 type Enum wraps Enum
+type ChangedPropertyListener<T> wraps ChangedPropertyListener
 
 class Ecosystem {
 	MLogger logger
@@ -124,24 +126,40 @@ class Ecosystem {
 	op void disconnect()
 }
 
-class MBrickd {
+class MBrickd extends MSubDeviceHolder<BrickdSubDevice>{
 	MLogger logger
 	MIPConnection ipConnection
 	String host = "localhost"
 	int port = "4223"
 	String authkey
-	DigitalValue isConnected
 	boolean autoReconnect = "true"
 	boolean reconnected = "false"
-	MDecimalValue connectedCounter = "0"
 	int timeout = "2500"
-	
+
 	op void connect() 
 	op void disconnect() 
 	op void init()
+	op void addConnectedListener(ChangedPropertyListener<Boolean> listener)
+	op void removeConnectedListener(ChangedPropertyListener<Boolean> listener)
+	op void addConnectedCountListener(ChangedPropertyListener<Short> listener)
+	op void removeConnectedCountListener(ChangedPropertyListener<Short> listener)
+	
 	contains MDevice<?>[] mdevices opposite brickd
+	contains BrickdSubDevice[] brickdSubdevices opposite brickd
 	op MBaseDevice getDevice(String uid)
 	container Ecosystem ecosystem opposite mbrickds
+}
+
+interface BrickdSubDevice extends MSubDevice<MBrickd>{
+	container MBrickd brickd opposite brickdSubdevices
+}
+
+class BrickdConnected extends MSensor<DigitalValue>, BrickdSubDevice {
+	readonly String deviceType = "brickd_connected"
+}
+
+class BrickdConnectedCounter extends MSensor<MDecimalValue>, BrickdSubDevice {
+	readonly String deviceType = "brickd_connected_counter"
 }
 
 interface SubDeviceAdmin {

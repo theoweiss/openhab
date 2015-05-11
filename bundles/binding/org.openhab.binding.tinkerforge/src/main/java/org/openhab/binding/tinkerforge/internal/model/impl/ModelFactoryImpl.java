@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.openhab.binding.tinkerforge.internal.config.DeviceOptions;
 import org.openhab.binding.tinkerforge.internal.model.*;
+import org.openhab.binding.tinkerforge.internal.tools.ChangedPropertyListener;
 import org.openhab.binding.tinkerforge.internal.types.DecimalValue;
 import org.openhab.binding.tinkerforge.internal.types.DirectionValue;
 import org.openhab.binding.tinkerforge.internal.types.HSBValue;
@@ -122,6 +123,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
     {
       case ModelPackage.ECOSYSTEM: return createEcosystem();
       case ModelPackage.MBRICKD: return createMBrickd();
+      case ModelPackage.BRICKD_CONNECTED: return createBrickdConnected();
+      case ModelPackage.BRICKD_CONNECTED_COUNTER: return createBrickdConnectedCounter();
       case ModelPackage.MBRICKLET_DUAL_BUTTON: return createMBrickletDualButton();
       case ModelPackage.DUAL_BUTTON_BUTTON: return createDualButtonButton();
       case ModelPackage.DUAL_BUTTON_LED: return createDualButtonLed();
@@ -379,6 +382,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
         return createDirectionValueFromString(eDataType, initialValue);
       case ModelPackage.ENUM:
         return createEnumFromString(eDataType, initialValue);
+      case ModelPackage.CHANGED_PROPERTY_LISTENER:
+        return createChangedPropertyListenerFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -544,6 +549,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
         return convertDirectionValueToString(eDataType, instanceValue);
       case ModelPackage.ENUM:
         return convertEnumToString(eDataType, instanceValue);
+      case ModelPackage.CHANGED_PROPERTY_LISTENER:
+        return convertChangedPropertyListenerToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -603,6 +610,28 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
   {
     MBrickdImpl mBrickd = new MBrickdImpl();
     return mBrickd;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BrickdConnected createBrickdConnected()
+  {
+    BrickdConnectedImpl brickdConnected = new BrickdConnectedImpl();
+    return brickdConnected;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BrickdConnectedCounter createBrickdConnectedCounter()
+  {
+    BrickdConnectedCounterImpl brickdConnectedCounter = new BrickdConnectedCounterImpl();
+    return brickdConnectedCounter;
   }
 
   /**
@@ -3053,6 +3082,26 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
   public String convertEnumToString(EDataType eDataType, Object instanceValue)
   {
     return super.convertToString(eDataType, instanceValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ChangedPropertyListener<?> createChangedPropertyListenerFromString(EDataType eDataType, String initialValue)
+  {
+    return (ChangedPropertyListener<?>)super.createFromString(initialValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertChangedPropertyListenerToString(EDataType eDataType, Object instanceValue)
+  {
+    return super.convertToString(instanceValue);
   }
 
   /**
