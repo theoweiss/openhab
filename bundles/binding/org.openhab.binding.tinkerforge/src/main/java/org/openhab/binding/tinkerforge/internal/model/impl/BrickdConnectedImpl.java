@@ -443,7 +443,7 @@ public class BrickdConnectedImpl extends MinimalEObjectImpl.Container implements
 
     @Override
     public void changed(Boolean oldValue, Boolean newValue) {
-      HighLowValue newSensorValue = newValue == true ? HighLowValue.HIGH : HighLowValue.LOW;
+      HighLowValue newSensorValue = newValue == true ? HighLowValue.LOW : HighLowValue.HIGH;
       logger.debug("updated to: " + newValue);
       setSensorValue(newSensorValue);
     }
