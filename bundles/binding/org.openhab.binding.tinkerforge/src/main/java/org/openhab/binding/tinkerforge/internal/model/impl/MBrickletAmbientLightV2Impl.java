@@ -19,7 +19,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -451,17 +450,6 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
      * @generated
      */
     @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.MBRICKLET_AMBIENT_LIGHT_V2;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
     public Logger getLogger() {
         return logger;
     }
@@ -476,10 +464,11 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setLogger(Logger newLogger) {
         Logger oldLogger = logger;
         logger = newLogger;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__LOGGER,
                     oldLogger, logger));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -502,10 +491,11 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setUid(String newUid) {
         String oldUid = uid;
         uid = newUid;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__UID, oldUid,
                     uid));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -528,10 +518,11 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setPoll(boolean newPoll) {
         boolean oldPoll = poll;
         poll = newPoll;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__POLL,
                     oldPoll, poll));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -554,10 +545,11 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setEnabledA(AtomicBoolean newEnabledA) {
         AtomicBoolean oldEnabledA = enabledA;
         enabledA = newEnabledA;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__ENABLED_A,
                     oldEnabledA, enabledA));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -580,11 +572,12 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setTinkerforgeDevice(BrickletAmbientLightV2 newTinkerforgeDevice) {
         BrickletAmbientLightV2 oldTinkerforgeDevice = tinkerforgeDevice;
         tinkerforgeDevice = newTinkerforgeDevice;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__TINKERFORGE_DEVICE, oldTinkerforgeDevice,
                     tinkerforgeDevice));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -607,10 +600,11 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setIpConnection(IPConnection newIpConnection) {
         IPConnection oldIpConnection = ipConnection;
         ipConnection = newIpConnection;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__IP_CONNECTION, oldIpConnection, ipConnection));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -633,10 +627,11 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setConnectedUid(String newConnectedUid) {
         String oldConnectedUid = connectedUid;
         connectedUid = newConnectedUid;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__CONNECTED_UID, oldConnectedUid, connectedUid));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -659,10 +654,11 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setPosition(char newPosition) {
         char oldPosition = position;
         position = newPosition;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__POSITION,
                     oldPosition, position));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -685,10 +681,11 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setDeviceIdentifier(int newDeviceIdentifier) {
         int oldDeviceIdentifier = deviceIdentifier;
         deviceIdentifier = newDeviceIdentifier;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__DEVICE_IDENTIFIER, oldDeviceIdentifier, deviceIdentifier));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -711,10 +708,11 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setName(String newName) {
         String oldName = name;
         name = newName;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__NAME,
                     oldName, name));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -724,8 +722,9 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
      */
     @Override
     public MBrickd getBrickd() {
-        if (eContainerFeatureID() != ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__BRICKD)
+        if (eContainerFeatureID() != ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__BRICKD) {
             return null;
+        }
         return (MBrickd) eContainer();
     }
 
@@ -736,8 +735,9 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
      * @generated
      */
     public MBrickd basicGetBrickd() {
-        if (eContainerFeatureID() != ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__BRICKD)
+        if (eContainerFeatureID() != ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__BRICKD) {
             return null;
+        }
         return (MBrickd) eInternalContainer();
     }
 
@@ -762,21 +762,26 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setBrickd(MBrickd newBrickd) {
         if (newBrickd != eInternalContainer()
                 || (eContainerFeatureID() != ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__BRICKD && newBrickd != null)) {
-            if (EcoreUtil.isAncestor(this, newBrickd))
+            if (EcoreUtil.isAncestor(this, newBrickd)) {
                 throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+            }
             NotificationChain msgs = null;
-            if (eInternalContainer() != null)
+            if (eInternalContainer() != null) {
                 msgs = eBasicRemoveFromContainer(msgs);
-            if (newBrickd != null)
+            }
+            if (newBrickd != null) {
                 msgs = ((InternalEObject) newBrickd).eInverseAdd(this, ModelPackage.MBRICKD__MDEVICES, MBrickd.class,
                         msgs);
+            }
             msgs = basicSetBrickd(newBrickd, msgs);
-            if (msgs != null)
+            if (msgs != null) {
                 msgs.dispatch();
-        } else if (eNotificationRequired())
+            }
+        } else if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__BRICKD,
                     newBrickd, newBrickd));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -799,10 +804,11 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setSensorValue(DecimalValue newSensorValue) {
         DecimalValue oldSensorValue = sensorValue;
         sensorValue = newSensorValue;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__SENSOR_VALUE,
                     oldSensorValue, sensorValue));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -827,11 +833,12 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__TF_CONFIG, oldTfConfig, newTfConfig);
-            if (msgs == null)
+            if (msgs == null) {
                 msgs = notification;
-            else
+            } else {
                 msgs.add(notification);
             }
+        }
         return msgs;
     }
 
@@ -845,19 +852,23 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setTfConfig(AmbientLightV2Configuration newTfConfig) {
         if (newTfConfig != tfConfig) {
             NotificationChain msgs = null;
-            if (tfConfig != null)
+            if (tfConfig != null) {
                 msgs = ((InternalEObject) tfConfig).eInverseRemove(this,
                         EOPPOSITE_FEATURE_BASE - ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__TF_CONFIG, null, msgs);
-            if (newTfConfig != null)
+            }
+            if (newTfConfig != null) {
                 msgs = ((InternalEObject) newTfConfig).eInverseAdd(this,
                         EOPPOSITE_FEATURE_BASE - ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__TF_CONFIG, null, msgs);
+            }
             msgs = basicSetTfConfig(newTfConfig, msgs);
-            if (msgs != null)
+            if (msgs != null) {
                 msgs.dispatch();
-        } else if (eNotificationRequired())
+            }
+        } else if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__TF_CONFIG,
                     newTfConfig, newTfConfig));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -880,10 +891,11 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setCallbackPeriod(long newCallbackPeriod) {
         long oldCallbackPeriod = callbackPeriod;
         callbackPeriod = newCallbackPeriod;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__CALLBACK_PERIOD, oldCallbackPeriod, callbackPeriod));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -917,10 +929,11 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setThreshold(BigDecimal newThreshold) {
         BigDecimal oldThreshold = threshold;
         threshold = newThreshold;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__THRESHOLD,
                     oldThreshold, threshold));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -943,10 +956,11 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setIlluminanceRange(short newIlluminanceRange) {
         short oldIlluminanceRange = illuminanceRange;
         illuminanceRange = newIlluminanceRange;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__ILLUMINANCE_RANGE, oldIlluminanceRange, illuminanceRange));
         }
+    }
 
     /**
      * <!-- begin-user-doc -->
@@ -969,10 +983,11 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public void setIntegrationTime(short newIntegrationTime) {
         short oldIntegrationTime = integrationTime;
         integrationTime = newIntegrationTime;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__INTEGRATION_TIME, oldIntegrationTime, integrationTime));
         }
+    }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1092,8 +1107,9 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
             case ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__BRICKD:
-                if (eInternalContainer() != null)
+                if (eInternalContainer() != null) {
                     msgs = eBasicRemoveFromContainer(msgs);
+                }
                 return basicSetBrickd((MBrickd) otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -1161,8 +1177,9 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
             case ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__NAME:
                 return getName();
             case ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__BRICKD:
-                if (resolve)
+                if (resolve) {
                     return getBrickd();
+                }
                 return basicGetBrickd();
             case ModelPackage.MBRICKLET_AMBIENT_LIGHT_V2__SENSOR_VALUE:
                 return getSensorValue();
@@ -1495,8 +1512,9 @@ public class MBrickletAmbientLightV2Impl extends MinimalEObjectImpl.Container im
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (logger: ");

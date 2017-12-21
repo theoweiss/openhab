@@ -9,7 +9,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.RemoteSwitchBConfiguration;
@@ -40,7 +39,7 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
      * The default value of the '{@link #getAddress() <em>Address</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getAddress()
      * @generated
      * @ordered
@@ -50,7 +49,7 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
      * The cached value of the '{@link #getAddress() <em>Address</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getAddress()
      * @generated
      * @ordered
@@ -60,7 +59,7 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
      * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getUnit()
      * @generated
      * @ordered
@@ -70,7 +69,7 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
      * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getUnit()
      * @generated
      * @ordered
@@ -81,7 +80,7 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
      * The default value of the '{@link #getRepeats() <em>Repeats</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getRepeats()
      * @generated
      * @ordered
@@ -91,7 +90,7 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
      * The cached value of the '{@link #getRepeats() <em>Repeats</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getRepeats()
      * @generated
      * @ordered
@@ -101,7 +100,7 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected RemoteSwitchBConfigurationImpl() {
@@ -111,18 +110,7 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.REMOTE_SWITCH_BCONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -133,22 +121,23 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setAddress(Long newAddress) {
         Long oldAddress = address;
         address = newAddress;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_BCONFIGURATION__ADDRESS,
                     oldAddress, address));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -159,22 +148,23 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setUnit(Short newUnit) {
         Short oldUnit = unit;
         unit = newUnit;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_BCONFIGURATION__UNIT,
                     oldUnit, unit));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -185,22 +175,23 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setRepeats(Short newRepeats) {
         Short oldRepeats = repeats;
         repeats = newRepeats;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_BCONFIGURATION__REPEATS,
                     oldRepeats, repeats));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -219,7 +210,7 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -241,7 +232,7 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -263,7 +254,7 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -282,13 +273,14 @@ public class RemoteSwitchBConfigurationImpl extends DimmableConfigurationImpl im
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (address: ");

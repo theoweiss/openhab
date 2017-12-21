@@ -3,11 +3,7 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.TFThermocoupleConfiguration;
 
@@ -34,7 +30,7 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
      * The default value of the '{@link #getAveraging() <em>Averaging</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getAveraging()
      * @generated
      * @ordered
@@ -45,7 +41,7 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
      * The cached value of the '{@link #getAveraging() <em>Averaging</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getAveraging()
      * @generated
      * @ordered
@@ -56,7 +52,7 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
      * The default value of the '{@link #getThermocoupleType() <em>Thermocouple Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getThermocoupleType()
      * @generated
      * @ordered
@@ -67,7 +63,7 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
      * The cached value of the '{@link #getThermocoupleType() <em>Thermocouple Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getThermocoupleType()
      * @generated
      * @ordered
@@ -78,7 +74,7 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
      * The default value of the '{@link #getFilter() <em>Filter</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getFilter()
      * @generated
      * @ordered
@@ -89,7 +85,7 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
      * The cached value of the '{@link #getFilter() <em>Filter</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getFilter()
      * @generated
      * @ordered
@@ -99,7 +95,7 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TFThermocoupleConfigurationImpl() {
@@ -109,20 +105,10 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.TF_THERMOCOUPLE_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
     public Short getAveraging() {
         return averaging;
     }
@@ -130,23 +116,26 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public void setAveraging(Short newAveraging) {
         Short oldAveraging = averaging;
         averaging = newAveraging;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_THERMOCOUPLE_CONFIGURATION__AVERAGING,
                     oldAveraging, averaging));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public String getThermocoupleType() {
         return thermocoupleType;
     }
@@ -154,24 +143,27 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public void setThermocoupleType(String newThermocoupleType) {
         String oldThermocoupleType = thermocoupleType;
         thermocoupleType = newThermocoupleType;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.TF_THERMOCOUPLE_CONFIGURATION__THERMOCOUPLE_TYPE, oldThermocoupleType,
                     thermocoupleType));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public String getFilter() {
         return filter;
     }
@@ -179,21 +171,23 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public void setFilter(String newFilter) {
         String oldFilter = filter;
         filter = newFilter;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_THERMOCOUPLE_CONFIGURATION__FILTER,
                     oldFilter, filter));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -212,7 +206,7 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -234,7 +228,7 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -256,7 +250,7 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -276,13 +270,14 @@ public class TFThermocoupleConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (averaging: ");

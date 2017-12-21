@@ -9,7 +9,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.DualButtonLEDConfiguration;
@@ -34,7 +33,7 @@ public class DualButtonLEDConfigurationImpl extends MinimalEObjectImpl.Container
      * The default value of the '{@link #isAutotoggle() <em>Autotoggle</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #isAutotoggle()
      * @generated
      * @ordered
@@ -45,7 +44,7 @@ public class DualButtonLEDConfigurationImpl extends MinimalEObjectImpl.Container
      * The cached value of the '{@link #isAutotoggle() <em>Autotoggle</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #isAutotoggle()
      * @generated
      * @ordered
@@ -55,7 +54,7 @@ public class DualButtonLEDConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected DualButtonLEDConfigurationImpl() {
@@ -65,18 +64,7 @@ public class DualButtonLEDConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.DUAL_BUTTON_LED_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -87,22 +75,23 @@ public class DualButtonLEDConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setAutotoggle(boolean newAutotoggle) {
         boolean oldAutotoggle = autotoggle;
         autotoggle = newAutotoggle;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.DUAL_BUTTON_LED_CONFIGURATION__AUTOTOGGLE, oldAutotoggle, autotoggle));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -117,7 +106,7 @@ public class DualButtonLEDConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -133,7 +122,7 @@ public class DualButtonLEDConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -149,7 +138,7 @@ public class DualButtonLEDConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -164,13 +153,14 @@ public class DualButtonLEDConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (autotoggle: ");

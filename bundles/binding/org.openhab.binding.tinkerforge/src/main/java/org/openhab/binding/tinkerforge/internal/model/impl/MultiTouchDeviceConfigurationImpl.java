@@ -9,7 +9,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
@@ -39,7 +38,7 @@ public class MultiTouchDeviceConfigurationImpl extends MinimalEObjectImpl.Contai
      * The default value of the '{@link #getDisableElectrode() <em>Disable Electrode</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDisableElectrode()
      * @generated
      * @ordered
@@ -50,7 +49,7 @@ public class MultiTouchDeviceConfigurationImpl extends MinimalEObjectImpl.Contai
      * The cached value of the '{@link #getDisableElectrode() <em>Disable Electrode</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDisableElectrode()
      * @generated
      * @ordered
@@ -60,7 +59,7 @@ public class MultiTouchDeviceConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MultiTouchDeviceConfigurationImpl() {
@@ -70,18 +69,7 @@ public class MultiTouchDeviceConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.MULTI_TOUCH_DEVICE_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -92,23 +80,24 @@ public class MultiTouchDeviceConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setDisableElectrode(Boolean newDisableElectrode) {
         Boolean oldDisableElectrode = disableElectrode;
         disableElectrode = newDisableElectrode;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.MULTI_TOUCH_DEVICE_CONFIGURATION__DISABLE_ELECTRODE, oldDisableElectrode,
                     disableElectrode));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -123,7 +112,7 @@ public class MultiTouchDeviceConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -139,7 +128,7 @@ public class MultiTouchDeviceConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -155,7 +144,7 @@ public class MultiTouchDeviceConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -171,13 +160,14 @@ public class MultiTouchDeviceConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (disableElectrode: ");

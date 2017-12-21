@@ -17,7 +17,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -55,7 +54,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
      * The default value of the '{@link #getLogger() <em>Logger</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getLogger()
      * @generated
      * @ordered
@@ -65,7 +64,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
      * The cached value of the '{@link #getLogger() <em>Logger</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getLogger()
      * @generated
      * @ordered
@@ -75,7 +74,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
      * The cached value of the '{@link #getMbrickds() <em>Mbrickds</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMbrickds()
      * @generated
      * @ordered
@@ -85,7 +84,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected EcosystemImpl() {
@@ -95,18 +94,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.ECOSYSTEM;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -117,21 +105,22 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setLogger(Logger newLogger) {
         Logger oldLogger = logger;
         logger = newLogger;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ECOSYSTEM__LOGGER, oldLogger, logger));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -146,7 +135,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override
@@ -163,7 +152,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override
@@ -202,7 +191,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override
@@ -236,7 +225,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override
@@ -250,7 +239,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -266,7 +255,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -281,7 +270,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -298,7 +287,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -319,7 +308,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -338,7 +327,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -355,7 +344,7 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -377,13 +366,14 @@ public class EcosystemImpl extends MinimalEObjectImpl.Container implements Ecosy
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (logger: ");

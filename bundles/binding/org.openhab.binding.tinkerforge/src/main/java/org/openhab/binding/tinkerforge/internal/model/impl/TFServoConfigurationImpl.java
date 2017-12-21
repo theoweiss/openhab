@@ -9,7 +9,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.TFServoConfiguration;
@@ -48,7 +47,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
      * The default value of the '{@link #getVelocity() <em>Velocity</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getVelocity()
      * @generated
      * @ordered
@@ -59,7 +58,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
      * The cached value of the '{@link #getVelocity() <em>Velocity</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getVelocity()
      * @generated
      * @ordered
@@ -70,7 +69,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
      * The default value of the '{@link #getAcceleration() <em>Acceleration</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getAcceleration()
      * @generated
      * @ordered
@@ -81,7 +80,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
      * The cached value of the '{@link #getAcceleration() <em>Acceleration</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getAcceleration()
      * @generated
      * @ordered
@@ -92,7 +91,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
      * The default value of the '{@link #getServoVoltage() <em>Servo Voltage</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getServoVoltage()
      * @generated
      * @ordered
@@ -103,7 +102,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
      * The cached value of the '{@link #getServoVoltage() <em>Servo Voltage</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getServoVoltage()
      * @generated
      * @ordered
@@ -114,7 +113,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
      * The default value of the '{@link #getPulseWidthMin() <em>Pulse Width Min</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getPulseWidthMin()
      * @generated
      * @ordered
@@ -125,7 +124,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
      * The cached value of the '{@link #getPulseWidthMin() <em>Pulse Width Min</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getPulseWidthMin()
      * @generated
      * @ordered
@@ -136,7 +135,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
      * The default value of the '{@link #getPulseWidthMax() <em>Pulse Width Max</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getPulseWidthMax()
      * @generated
      * @ordered
@@ -147,7 +146,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
      * The cached value of the '{@link #getPulseWidthMax() <em>Pulse Width Max</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getPulseWidthMax()
      * @generated
      * @ordered
@@ -158,7 +157,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
      * The default value of the '{@link #getPeriod() <em>Period</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getPeriod()
      * @generated
      * @ordered
@@ -169,7 +168,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
      * The cached value of the '{@link #getPeriod() <em>Period</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getPeriod()
      * @generated
      * @ordered
@@ -180,7 +179,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
      * The default value of the '{@link #getOutputVoltage() <em>Output Voltage</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getOutputVoltage()
      * @generated
      * @ordered
@@ -191,7 +190,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
      * The cached value of the '{@link #getOutputVoltage() <em>Output Voltage</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getOutputVoltage()
      * @generated
      * @ordered
@@ -201,7 +200,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TFServoConfigurationImpl() {
@@ -211,18 +210,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.TF_SERVO_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -233,22 +221,23 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setVelocity(int newVelocity) {
         int oldVelocity = velocity;
         velocity = newVelocity;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_SERVO_CONFIGURATION__VELOCITY,
                     oldVelocity, velocity));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -259,22 +248,23 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setAcceleration(int newAcceleration) {
         int oldAcceleration = acceleration;
         acceleration = newAcceleration;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_SERVO_CONFIGURATION__ACCELERATION,
                     oldAcceleration, acceleration));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -285,22 +275,23 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setServoVoltage(int newServoVoltage) {
         int oldServoVoltage = servoVoltage;
         servoVoltage = newServoVoltage;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_SERVO_CONFIGURATION__SERVO_VOLTAGE,
                     oldServoVoltage, servoVoltage));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -311,22 +302,23 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setPulseWidthMin(int newPulseWidthMin) {
         int oldPulseWidthMin = pulseWidthMin;
         pulseWidthMin = newPulseWidthMin;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_SERVO_CONFIGURATION__PULSE_WIDTH_MIN,
                     oldPulseWidthMin, pulseWidthMin));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -337,22 +329,23 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setPulseWidthMax(int newPulseWidthMax) {
         int oldPulseWidthMax = pulseWidthMax;
         pulseWidthMax = newPulseWidthMax;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_SERVO_CONFIGURATION__PULSE_WIDTH_MAX,
                     oldPulseWidthMax, pulseWidthMax));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -363,22 +356,23 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setPeriod(int newPeriod) {
         int oldPeriod = period;
         period = newPeriod;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_SERVO_CONFIGURATION__PERIOD,
                     oldPeriod, period));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -389,22 +383,23 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setOutputVoltage(int newOutputVoltage) {
         int oldOutputVoltage = outputVoltage;
         outputVoltage = newOutputVoltage;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_SERVO_CONFIGURATION__OUTPUT_VOLTAGE,
                     oldOutputVoltage, outputVoltage));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -431,7 +426,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -465,7 +460,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -499,7 +494,7 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -526,13 +521,14 @@ public class TFServoConfigurationImpl extends DimmableConfigurationImpl implemen
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (velocity: ");

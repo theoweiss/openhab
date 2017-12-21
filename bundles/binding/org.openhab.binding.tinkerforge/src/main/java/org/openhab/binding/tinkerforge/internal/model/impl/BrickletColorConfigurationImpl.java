@@ -11,7 +11,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.BrickletColorConfiguration;
@@ -38,7 +37,7 @@ public class BrickletColorConfigurationImpl extends MinimalEObjectImpl.Container
      * The default value of the '{@link #getGain() <em>Gain</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getGain()
      * @generated
      * @ordered
@@ -49,7 +48,7 @@ public class BrickletColorConfigurationImpl extends MinimalEObjectImpl.Container
      * The cached value of the '{@link #getGain() <em>Gain</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getGain()
      * @generated
      * @ordered
@@ -60,7 +59,7 @@ public class BrickletColorConfigurationImpl extends MinimalEObjectImpl.Container
      * The default value of the '{@link #getIntegrationTime() <em>Integration Time</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getIntegrationTime()
      * @generated
      * @ordered
@@ -71,7 +70,7 @@ public class BrickletColorConfigurationImpl extends MinimalEObjectImpl.Container
      * The cached value of the '{@link #getIntegrationTime() <em>Integration Time</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getIntegrationTime()
      * @generated
      * @ordered
@@ -81,7 +80,7 @@ public class BrickletColorConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected BrickletColorConfigurationImpl() {
@@ -91,18 +90,7 @@ public class BrickletColorConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.BRICKLET_COLOR_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -113,22 +101,23 @@ public class BrickletColorConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setGain(Short newGain) {
         Short oldGain = gain;
         gain = newGain;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.BRICKLET_COLOR_CONFIGURATION__GAIN,
                     oldGain, gain));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -139,22 +128,23 @@ public class BrickletColorConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setIntegrationTime(Short newIntegrationTime) {
         Short oldIntegrationTime = integrationTime;
         integrationTime = newIntegrationTime;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.BRICKLET_COLOR_CONFIGURATION__INTEGRATION_TIME, oldIntegrationTime, integrationTime));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -171,7 +161,7 @@ public class BrickletColorConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -190,7 +180,7 @@ public class BrickletColorConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -209,7 +199,7 @@ public class BrickletColorConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -227,13 +217,14 @@ public class BrickletColorConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (gain: ");

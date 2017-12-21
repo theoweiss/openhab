@@ -9,7 +9,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.BrickletOLEDConfiguration;
@@ -84,17 +83,6 @@ public class BrickletOLEDConfigurationImpl extends MinimalEObjectImpl.Container 
      */
     protected BrickletOLEDConfigurationImpl() {
         super();
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.BRICKLET_OLED_CONFIGURATION;
     }
 
     /**

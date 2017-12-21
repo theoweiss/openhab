@@ -3,11 +3,7 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.TFBrickStepperConfiguration;
 
@@ -44,7 +40,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The default value of the '{@link #getMaxVelocity() <em>Max Velocity</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMaxVelocity()
      * @generated
      * @ordered
@@ -55,7 +51,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The cached value of the '{@link #getMaxVelocity() <em>Max Velocity</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMaxVelocity()
      * @generated
      * @ordered
@@ -66,7 +62,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The default value of the '{@link #getAcceleration() <em>Acceleration</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getAcceleration()
      * @generated
      * @ordered
@@ -77,7 +73,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The cached value of the '{@link #getAcceleration() <em>Acceleration</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getAcceleration()
      * @generated
      * @ordered
@@ -88,7 +84,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The default value of the '{@link #getDeacceleration() <em>Deacceleration</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeacceleration()
      * @generated
      * @ordered
@@ -99,7 +95,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The cached value of the '{@link #getDeacceleration() <em>Deacceleration</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeacceleration()
      * @generated
      * @ordered
@@ -110,7 +106,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The default value of the '{@link #getMotorCurrent() <em>Motor Current</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMotorCurrent()
      * @generated
      * @ordered
@@ -121,7 +117,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The cached value of the '{@link #getMotorCurrent() <em>Motor Current</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMotorCurrent()
      * @generated
      * @ordered
@@ -132,7 +128,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The default value of the '{@link #getStepMode() <em>Step Mode</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getStepMode()
      * @generated
      * @ordered
@@ -143,7 +139,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The cached value of the '{@link #getStepMode() <em>Step Mode</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getStepMode()
      * @generated
      * @ordered
@@ -154,7 +150,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The default value of the '{@link #getDecay() <em>Decay</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDecay()
      * @generated
      * @ordered
@@ -165,7 +161,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The cached value of the '{@link #getDecay() <em>Decay</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDecay()
      * @generated
      * @ordered
@@ -176,7 +172,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The default value of the '{@link #isSyncRect() <em>Sync Rect</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #isSyncRect()
      * @generated
      * @ordered
@@ -187,7 +183,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The cached value of the '{@link #isSyncRect() <em>Sync Rect</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #isSyncRect()
      * @generated
      * @ordered
@@ -198,7 +194,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The default value of the '{@link #getTimeBase() <em>Time Base</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getTimeBase()
      * @generated
      * @ordered
@@ -209,7 +205,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
      * The cached value of the '{@link #getTimeBase() <em>Time Base</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getTimeBase()
      * @generated
      * @ordered
@@ -219,7 +215,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TFBrickStepperConfigurationImpl() {
@@ -229,20 +225,10 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.TF_BRICK_STEPPER_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
     public int getMaxVelocity() {
         return maxVelocity;
     }
@@ -250,23 +236,26 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public void setMaxVelocity(int newMaxVelocity) {
         int oldMaxVelocity = maxVelocity;
         maxVelocity = newMaxVelocity;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.TF_BRICK_STEPPER_CONFIGURATION__MAX_VELOCITY, oldMaxVelocity, maxVelocity));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public int getAcceleration() {
         return acceleration;
     }
@@ -274,23 +263,26 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public void setAcceleration(int newAcceleration) {
         int oldAcceleration = acceleration;
         acceleration = newAcceleration;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.TF_BRICK_STEPPER_CONFIGURATION__ACCELERATION, oldAcceleration, acceleration));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public int getDeacceleration() {
         return deacceleration;
     }
@@ -298,23 +290,26 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public void setDeacceleration(int newDeacceleration) {
         int oldDeacceleration = deacceleration;
         deacceleration = newDeacceleration;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.TF_BRICK_STEPPER_CONFIGURATION__DEACCELERATION, oldDeacceleration, deacceleration));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public int getMotorCurrent() {
         return motorCurrent;
     }
@@ -322,23 +317,26 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public void setMotorCurrent(int newMotorCurrent) {
         int oldMotorCurrent = motorCurrent;
         motorCurrent = newMotorCurrent;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.TF_BRICK_STEPPER_CONFIGURATION__MOTOR_CURRENT, oldMotorCurrent, motorCurrent));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public short getStepMode() {
         return stepMode;
     }
@@ -346,23 +344,26 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public void setStepMode(short newStepMode) {
         short oldStepMode = stepMode;
         stepMode = newStepMode;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.TF_BRICK_STEPPER_CONFIGURATION__STEP_MODE, oldStepMode, stepMode));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public int getDecay() {
         return decay;
     }
@@ -370,23 +371,26 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public void setDecay(int newDecay) {
         int oldDecay = decay;
         decay = newDecay;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_BRICK_STEPPER_CONFIGURATION__DECAY,
                     oldDecay, decay));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public boolean isSyncRect() {
         return syncRect;
     }
@@ -394,23 +398,26 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public void setSyncRect(boolean newSyncRect) {
         boolean oldSyncRect = syncRect;
         syncRect = newSyncRect;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.TF_BRICK_STEPPER_CONFIGURATION__SYNC_RECT, oldSyncRect, syncRect));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public long getTimeBase() {
         return timeBase;
     }
@@ -418,21 +425,23 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
+    @Override
     public void setTimeBase(long newTimeBase) {
         long oldTimeBase = timeBase;
         timeBase = newTimeBase;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.TF_BRICK_STEPPER_CONFIGURATION__TIME_BASE, oldTimeBase, timeBase));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -461,7 +470,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -498,7 +507,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -535,7 +544,7 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -564,13 +573,14 @@ public class TFBrickStepperConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (maxVelocity: ");

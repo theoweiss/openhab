@@ -11,7 +11,6 @@ package org.openhab.binding.tinkerforge.internal.model.impl;
 import java.math.BigDecimal;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.TFBaseConfiguration;
@@ -49,7 +48,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
      * The default value of the '{@link #getThreshold() <em>Threshold</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getThreshold()
      * @generated
      * @ordered
@@ -60,7 +59,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
      * The cached value of the '{@link #getThreshold() <em>Threshold</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getThreshold()
      * @generated
      * @ordered
@@ -71,7 +70,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
      * The default value of the '{@link #getCallbackPeriod() <em>Callback Period</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getCallbackPeriod()
      * @generated
      * @ordered
@@ -82,7 +81,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
      * The cached value of the '{@link #getCallbackPeriod() <em>Callback Period</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getCallbackPeriod()
      * @generated
      * @ordered
@@ -93,7 +92,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
      * The default value of the '{@link #getVelocity() <em>Velocity</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getVelocity()
      * @generated
      * @ordered
@@ -104,7 +103,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
      * The cached value of the '{@link #getVelocity() <em>Velocity</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getVelocity()
      * @generated
      * @ordered
@@ -115,7 +114,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
      * The default value of the '{@link #getAcceleration() <em>Acceleration</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getAcceleration()
      * @generated
      * @ordered
@@ -126,7 +125,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
      * The cached value of the '{@link #getAcceleration() <em>Acceleration</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getAcceleration()
      * @generated
      * @ordered
@@ -137,7 +136,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
      * The default value of the '{@link #getPwmFrequency() <em>Pwm Frequency</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getPwmFrequency()
      * @generated
      * @ordered
@@ -148,7 +147,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
      * The cached value of the '{@link #getPwmFrequency() <em>Pwm Frequency</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getPwmFrequency()
      * @generated
      * @ordered
@@ -159,7 +158,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
      * The default value of the '{@link #getDriveMode() <em>Drive Mode</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDriveMode()
      * @generated
      * @ordered
@@ -170,7 +169,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
      * The cached value of the '{@link #getDriveMode() <em>Drive Mode</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDriveMode()
      * @generated
      * @ordered
@@ -180,7 +179,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TFBrickDCConfigurationImpl() {
@@ -190,18 +189,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.TF_BRICK_DC_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -212,22 +200,23 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setThreshold(BigDecimal newThreshold) {
         BigDecimal oldThreshold = threshold;
         threshold = newThreshold;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_BRICK_DC_CONFIGURATION__THRESHOLD,
                     oldThreshold, threshold));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -238,22 +227,23 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setCallbackPeriod(int newCallbackPeriod) {
         int oldCallbackPeriod = callbackPeriod;
         callbackPeriod = newCallbackPeriod;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.TF_BRICK_DC_CONFIGURATION__CALLBACK_PERIOD, oldCallbackPeriod, callbackPeriod));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -264,22 +254,23 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setVelocity(short newVelocity) {
         short oldVelocity = velocity;
         velocity = newVelocity;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_BRICK_DC_CONFIGURATION__VELOCITY,
                     oldVelocity, velocity));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -290,22 +281,23 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setAcceleration(int newAcceleration) {
         int oldAcceleration = acceleration;
         acceleration = newAcceleration;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_BRICK_DC_CONFIGURATION__ACCELERATION,
                     oldAcceleration, acceleration));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -316,22 +308,23 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setPwmFrequency(int newPwmFrequency) {
         int oldPwmFrequency = pwmFrequency;
         pwmFrequency = newPwmFrequency;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_BRICK_DC_CONFIGURATION__PWM_FREQUENCY,
                     oldPwmFrequency, pwmFrequency));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -342,22 +335,23 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setDriveMode(String newDriveMode) {
         String oldDriveMode = driveMode;
         driveMode = newDriveMode;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_BRICK_DC_CONFIGURATION__DRIVE_MODE,
                     oldDriveMode, driveMode));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -382,7 +376,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -413,7 +407,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -444,7 +438,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -469,7 +463,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -490,7 +484,7 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -511,13 +505,14 @@ public class TFBrickDCConfigurationImpl extends DimmableConfigurationImpl implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (threshold: ");

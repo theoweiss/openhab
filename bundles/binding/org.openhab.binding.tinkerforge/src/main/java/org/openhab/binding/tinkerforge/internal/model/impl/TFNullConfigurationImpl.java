@@ -8,9 +8,7 @@
  */
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.TFNullConfiguration;
 
 /**
@@ -27,22 +25,11 @@ public class TFNullConfigurationImpl extends MinimalEObjectImpl.Container implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TFNullConfigurationImpl() {
         super();
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.TF_NULL_CONFIGURATION;
     }
 
 } // TFNullConfigurationImpl

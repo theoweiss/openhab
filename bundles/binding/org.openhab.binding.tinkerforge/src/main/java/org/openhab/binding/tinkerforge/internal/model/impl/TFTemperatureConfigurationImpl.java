@@ -11,7 +11,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.TFTemperatureConfiguration;
@@ -35,7 +34,7 @@ public class TFTemperatureConfigurationImpl extends TFBaseConfigurationImpl impl
      * The default value of the '{@link #isSlowI2C() <em>Slow I2C</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #isSlowI2C()
      * @generated
      * @ordered
@@ -46,7 +45,7 @@ public class TFTemperatureConfigurationImpl extends TFBaseConfigurationImpl impl
      * The cached value of the '{@link #isSlowI2C() <em>Slow I2C</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #isSlowI2C()
      * @generated
      * @ordered
@@ -56,7 +55,7 @@ public class TFTemperatureConfigurationImpl extends TFBaseConfigurationImpl impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TFTemperatureConfigurationImpl() {
@@ -66,18 +65,7 @@ public class TFTemperatureConfigurationImpl extends TFBaseConfigurationImpl impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.TF_TEMPERATURE_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -88,22 +76,23 @@ public class TFTemperatureConfigurationImpl extends TFBaseConfigurationImpl impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setSlowI2C(boolean newSlowI2C) {
         boolean oldSlowI2C = slowI2C;
         slowI2C = newSlowI2C;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_TEMPERATURE_CONFIGURATION__SLOW_I2C,
                     oldSlowI2C, slowI2C));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -118,7 +107,7 @@ public class TFTemperatureConfigurationImpl extends TFBaseConfigurationImpl impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -134,7 +123,7 @@ public class TFTemperatureConfigurationImpl extends TFBaseConfigurationImpl impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -150,7 +139,7 @@ public class TFTemperatureConfigurationImpl extends TFBaseConfigurationImpl impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -165,13 +154,14 @@ public class TFTemperatureConfigurationImpl extends TFBaseConfigurationImpl impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (slowI2C: ");

@@ -11,7 +11,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.openhab.binding.tinkerforge.internal.model.LoadCellConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
@@ -35,7 +34,7 @@ public class LoadCellConfigurationImpl extends TFBaseConfigurationImpl implement
      * The default value of the '{@link #getMovingAverage() <em>Moving Average</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMovingAverage()
      * @generated
      * @ordered
@@ -46,7 +45,7 @@ public class LoadCellConfigurationImpl extends TFBaseConfigurationImpl implement
      * The cached value of the '{@link #getMovingAverage() <em>Moving Average</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMovingAverage()
      * @generated
      * @ordered
@@ -56,7 +55,7 @@ public class LoadCellConfigurationImpl extends TFBaseConfigurationImpl implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected LoadCellConfigurationImpl() {
@@ -66,18 +65,7 @@ public class LoadCellConfigurationImpl extends TFBaseConfigurationImpl implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.LOAD_CELL_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -88,22 +76,23 @@ public class LoadCellConfigurationImpl extends TFBaseConfigurationImpl implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setMovingAverage(short newMovingAverage) {
         short oldMovingAverage = movingAverage;
         movingAverage = newMovingAverage;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.LOAD_CELL_CONFIGURATION__MOVING_AVERAGE,
                     oldMovingAverage, movingAverage));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -118,7 +107,7 @@ public class LoadCellConfigurationImpl extends TFBaseConfigurationImpl implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -134,7 +123,7 @@ public class LoadCellConfigurationImpl extends TFBaseConfigurationImpl implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -150,7 +139,7 @@ public class LoadCellConfigurationImpl extends TFBaseConfigurationImpl implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -165,13 +154,14 @@ public class LoadCellConfigurationImpl extends TFBaseConfigurationImpl implement
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (movingAverage: ");

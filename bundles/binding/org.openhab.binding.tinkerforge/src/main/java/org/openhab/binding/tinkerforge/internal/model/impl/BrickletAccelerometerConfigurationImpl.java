@@ -11,7 +11,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.BrickletAccelerometerConfiguration;
@@ -42,7 +41,7 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
      * The default value of the '{@link #getDataRate() <em>Data Rate</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDataRate()
      * @generated
      * @ordered
@@ -53,7 +52,7 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
      * The cached value of the '{@link #getDataRate() <em>Data Rate</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDataRate()
      * @generated
      * @ordered
@@ -64,7 +63,7 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
      * The default value of the '{@link #getFullScale() <em>Full Scale</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getFullScale()
      * @generated
      * @ordered
@@ -75,7 +74,7 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
      * The cached value of the '{@link #getFullScale() <em>Full Scale</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getFullScale()
      * @generated
      * @ordered
@@ -86,7 +85,7 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
      * The default value of the '{@link #getFilterBandwidth() <em>Filter Bandwidth</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getFilterBandwidth()
      * @generated
      * @ordered
@@ -97,7 +96,7 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
      * The cached value of the '{@link #getFilterBandwidth() <em>Filter Bandwidth</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getFilterBandwidth()
      * @generated
      * @ordered
@@ -107,7 +106,7 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected BrickletAccelerometerConfigurationImpl() {
@@ -117,18 +116,7 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.BRICKLET_ACCELEROMETER_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -139,22 +127,23 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setDataRate(Short newDataRate) {
         Short oldDataRate = dataRate;
         dataRate = newDataRate;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.BRICKLET_ACCELEROMETER_CONFIGURATION__DATA_RATE, oldDataRate, dataRate));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -165,22 +154,23 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setFullScale(Short newFullScale) {
         Short oldFullScale = fullScale;
         fullScale = newFullScale;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.BRICKLET_ACCELEROMETER_CONFIGURATION__FULL_SCALE, oldFullScale, fullScale));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -191,23 +181,24 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setFilterBandwidth(Short newFilterBandwidth) {
         Short oldFilterBandwidth = filterBandwidth;
         filterBandwidth = newFilterBandwidth;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.BRICKLET_ACCELEROMETER_CONFIGURATION__FILTER_BANDWIDTH, oldFilterBandwidth,
                     filterBandwidth));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -226,7 +217,7 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -248,7 +239,7 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -270,7 +261,7 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -290,13 +281,14 @@ public class BrickletAccelerometerConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (dataRate: ");

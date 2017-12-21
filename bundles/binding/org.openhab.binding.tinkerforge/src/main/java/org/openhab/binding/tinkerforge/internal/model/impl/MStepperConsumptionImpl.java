@@ -14,7 +14,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -213,17 +212,6 @@ public class MStepperConsumptionImpl extends MinimalEObjectImpl.Container implem
      * @generated
      */
     @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.MSTEPPER_CONSUMPTION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
     public Logger getLogger() {
         return logger;
     }
@@ -234,6 +222,7 @@ public class MStepperConsumptionImpl extends MinimalEObjectImpl.Container implem
      *
      * @generated
      */
+    @Override
     public void setLogger(Logger newLogger) {
         Logger oldLogger = logger;
         logger = newLogger;

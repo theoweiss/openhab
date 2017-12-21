@@ -14,7 +14,6 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -56,7 +55,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
      * The default value of the '{@link #getUid() <em>Uid</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getUid()
      * @generated
      * @ordered
@@ -67,7 +66,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
      * The cached value of the '{@link #getUid() <em>Uid</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getUid()
      * @generated
      * @ordered
@@ -78,7 +77,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
      * The default value of the '{@link #getSubid() <em>Subid</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSubid()
      * @generated
      * @ordered
@@ -89,7 +88,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
      * The cached value of the '{@link #getSubid() <em>Subid</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSubid()
      * @generated
      * @ordered
@@ -100,7 +99,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
      * The default value of the '{@link #getOhid() <em>Ohid</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getOhid()
      * @generated
      * @ordered
@@ -111,7 +110,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
      * The cached value of the '{@link #getOhid() <em>Ohid</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getOhid()
      * @generated
      * @ordered
@@ -122,7 +121,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
      * The cached value of the '{@link #getSubDeviceIds() <em>Sub Device Ids</em>}' attribute list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSubDeviceIds()
      * @generated
      * @ordered
@@ -133,7 +132,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
      * The cached value of the '{@link #getTfConfig() <em>Tf Config</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getTfConfig()
      * @generated
      * @ordered
@@ -143,7 +142,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected OHTFDeviceImpl() {
@@ -153,18 +152,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.OHTF_DEVICE;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -175,21 +163,22 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setUid(String newUid) {
         String oldUid = uid;
         uid = newUid;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OHTF_DEVICE__UID, oldUid, uid));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -200,21 +189,22 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setSubid(String newSubid) {
         String oldSubid = subid;
         subid = newSubid;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OHTF_DEVICE__SUBID, oldSubid, subid));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -225,21 +215,22 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setOhid(String newOhid) {
         String oldOhid = ohid;
         ohid = newOhid;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OHTF_DEVICE__OHID, oldOhid, ohid));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -253,7 +244,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -264,7 +255,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetTfConfig(TFC newTfConfig, NotificationChain msgs) {
@@ -273,10 +264,11 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     ModelPackage.OHTF_DEVICE__TF_CONFIG, oldTfConfig, newTfConfig);
-            if (msgs == null)
+            if (msgs == null) {
                 msgs = notification;
-            else
+            } else {
                 msgs.add(notification);
+            }
         }
         return msgs;
     }
@@ -284,56 +276,62 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setTfConfig(TFC newTfConfig) {
         if (newTfConfig != tfConfig) {
             NotificationChain msgs = null;
-            if (tfConfig != null)
+            if (tfConfig != null) {
                 msgs = ((InternalEObject) tfConfig).eInverseRemove(this,
                         EOPPOSITE_FEATURE_BASE - ModelPackage.OHTF_DEVICE__TF_CONFIG, null, msgs);
-            if (newTfConfig != null)
+            }
+            if (newTfConfig != null) {
                 msgs = ((InternalEObject) newTfConfig).eInverseAdd(this,
                         EOPPOSITE_FEATURE_BASE - ModelPackage.OHTF_DEVICE__TF_CONFIG, null, msgs);
+            }
             msgs = basicSetTfConfig(newTfConfig, msgs);
-            if (msgs != null)
+            if (msgs != null) {
                 msgs.dispatch();
-        } else if (eNotificationRequired())
+            }
+        } else if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OHTF_DEVICE__TF_CONFIG, newTfConfig,
                     newTfConfig));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public OHConfig getOhConfig() {
-        if (eContainerFeatureID() != ModelPackage.OHTF_DEVICE__OH_CONFIG)
+        if (eContainerFeatureID() != ModelPackage.OHTF_DEVICE__OH_CONFIG) {
             return null;
+        }
         return (OHConfig) eContainer();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public OHConfig basicGetOhConfig() {
-        if (eContainerFeatureID() != ModelPackage.OHTF_DEVICE__OH_CONFIG)
+        if (eContainerFeatureID() != ModelPackage.OHTF_DEVICE__OH_CONFIG) {
             return null;
+        }
         return (OHConfig) eInternalContainer();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetOhConfig(OHConfig newOhConfig, NotificationChain msgs) {
@@ -344,33 +342,38 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setOhConfig(OHConfig newOhConfig) {
         if (newOhConfig != eInternalContainer()
                 || (eContainerFeatureID() != ModelPackage.OHTF_DEVICE__OH_CONFIG && newOhConfig != null)) {
-            if (EcoreUtil.isAncestor(this, newOhConfig))
+            if (EcoreUtil.isAncestor(this, newOhConfig)) {
                 throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+            }
             NotificationChain msgs = null;
-            if (eInternalContainer() != null)
+            if (eInternalContainer() != null) {
                 msgs = eBasicRemoveFromContainer(msgs);
-            if (newOhConfig != null)
+            }
+            if (newOhConfig != null) {
                 msgs = ((InternalEObject) newOhConfig).eInverseAdd(this, ModelPackage.OH_CONFIG__OH_TF_DEVICES,
                         OHConfig.class, msgs);
+            }
             msgs = basicSetOhConfig(newOhConfig, msgs);
-            if (msgs != null)
+            if (msgs != null) {
                 msgs.dispatch();
-        } else if (eNotificationRequired())
+            }
+        } else if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.OHTF_DEVICE__OH_CONFIG, newOhConfig,
                     newOhConfig));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -389,15 +392,16 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
             case ModelPackage.OHTF_DEVICE__OH_CONFIG:
-                if (eInternalContainer() != null)
+                if (eInternalContainer() != null) {
                     msgs = eBasicRemoveFromContainer(msgs);
+                }
                 return basicSetOhConfig((OHConfig) otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -406,7 +410,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -423,7 +427,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -439,7 +443,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -456,8 +460,9 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
             case ModelPackage.OHTF_DEVICE__TF_CONFIG:
                 return getTfConfig();
             case ModelPackage.OHTF_DEVICE__OH_CONFIG:
-                if (resolve)
+                if (resolve) {
                     return getOhConfig();
+                }
                 return basicGetOhConfig();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -466,7 +471,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -499,7 +504,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -530,7 +535,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -555,7 +560,7 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -570,13 +575,14 @@ public class OHTFDeviceImpl<TFC extends TFConfig, IDS extends Enum> extends Mini
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (uid: ");

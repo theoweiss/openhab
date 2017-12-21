@@ -11,7 +11,6 @@ package org.openhab.binding.tinkerforge.internal.model.impl;
 import java.math.BigDecimal;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.DimmableConfiguration;
@@ -38,7 +37,7 @@ public class DimmableConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The default value of the '{@link #getMinValue() <em>Min Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMinValue()
      * @generated
      * @ordered
@@ -49,7 +48,7 @@ public class DimmableConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The cached value of the '{@link #getMinValue() <em>Min Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMinValue()
      * @generated
      * @ordered
@@ -60,7 +59,7 @@ public class DimmableConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The default value of the '{@link #getMaxValue() <em>Max Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMaxValue()
      * @generated
      * @ordered
@@ -71,7 +70,7 @@ public class DimmableConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The cached value of the '{@link #getMaxValue() <em>Max Value</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMaxValue()
      * @generated
      * @ordered
@@ -81,7 +80,7 @@ public class DimmableConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected DimmableConfigurationImpl() {
@@ -91,18 +90,7 @@ public class DimmableConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.DIMMABLE_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -113,22 +101,23 @@ public class DimmableConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setMinValue(BigDecimal newMinValue) {
         BigDecimal oldMinValue = minValue;
         minValue = newMinValue;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.DIMMABLE_CONFIGURATION__MIN_VALUE,
                     oldMinValue, minValue));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -139,22 +128,23 @@ public class DimmableConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setMaxValue(BigDecimal newMaxValue) {
         BigDecimal oldMaxValue = maxValue;
         maxValue = newMaxValue;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.DIMMABLE_CONFIGURATION__MAX_VALUE,
                     oldMaxValue, maxValue));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -171,7 +161,7 @@ public class DimmableConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -190,7 +180,7 @@ public class DimmableConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -209,7 +199,7 @@ public class DimmableConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -226,13 +216,14 @@ public class DimmableConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (minValue: ");

@@ -11,7 +11,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.openhab.binding.tinkerforge.internal.model.AmbientLightV2Configuration;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
@@ -37,7 +36,7 @@ public class AmbientLightV2ConfigurationImpl extends TFBaseConfigurationImpl imp
      * The default value of the '{@link #getIlluminanceRange() <em>Illuminance Range</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getIlluminanceRange()
      * @generated
      * @ordered
@@ -48,7 +47,7 @@ public class AmbientLightV2ConfigurationImpl extends TFBaseConfigurationImpl imp
      * The cached value of the '{@link #getIlluminanceRange() <em>Illuminance Range</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getIlluminanceRange()
      * @generated
      * @ordered
@@ -59,7 +58,7 @@ public class AmbientLightV2ConfigurationImpl extends TFBaseConfigurationImpl imp
      * The default value of the '{@link #getIntegrationTime() <em>Integration Time</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getIntegrationTime()
      * @generated
      * @ordered
@@ -70,7 +69,7 @@ public class AmbientLightV2ConfigurationImpl extends TFBaseConfigurationImpl imp
      * The cached value of the '{@link #getIntegrationTime() <em>Integration Time</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getIntegrationTime()
      * @generated
      * @ordered
@@ -80,7 +79,7 @@ public class AmbientLightV2ConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected AmbientLightV2ConfigurationImpl() {
@@ -90,18 +89,7 @@ public class AmbientLightV2ConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.AMBIENT_LIGHT_V2_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -112,23 +100,24 @@ public class AmbientLightV2ConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setIlluminanceRange(short newIlluminanceRange) {
         short oldIlluminanceRange = illuminanceRange;
         illuminanceRange = newIlluminanceRange;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.AMBIENT_LIGHT_V2_CONFIGURATION__ILLUMINANCE_RANGE, oldIlluminanceRange,
                     illuminanceRange));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -139,23 +128,24 @@ public class AmbientLightV2ConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setIntegrationTime(short newIntegrationTime) {
         short oldIntegrationTime = integrationTime;
         integrationTime = newIntegrationTime;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.AMBIENT_LIGHT_V2_CONFIGURATION__INTEGRATION_TIME, oldIntegrationTime,
                     integrationTime));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -172,7 +162,7 @@ public class AmbientLightV2ConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -191,7 +181,7 @@ public class AmbientLightV2ConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -210,7 +200,7 @@ public class AmbientLightV2ConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -227,13 +217,14 @@ public class AmbientLightV2ConfigurationImpl extends TFBaseConfigurationImpl imp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (illuminanceRange: ");

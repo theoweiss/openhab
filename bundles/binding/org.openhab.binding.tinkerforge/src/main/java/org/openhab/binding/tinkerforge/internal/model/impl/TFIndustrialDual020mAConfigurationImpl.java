@@ -9,7 +9,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
@@ -35,7 +34,7 @@ public class TFIndustrialDual020mAConfigurationImpl extends MinimalEObjectImpl.C
      * The default value of the '{@link #getSampleRate() <em>Sample Rate</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSampleRate()
      * @generated
      * @ordered
@@ -46,7 +45,7 @@ public class TFIndustrialDual020mAConfigurationImpl extends MinimalEObjectImpl.C
      * The cached value of the '{@link #getSampleRate() <em>Sample Rate</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSampleRate()
      * @generated
      * @ordered
@@ -56,7 +55,7 @@ public class TFIndustrialDual020mAConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TFIndustrialDual020mAConfigurationImpl() {
@@ -66,18 +65,7 @@ public class TFIndustrialDual020mAConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.TF_INDUSTRIAL_DUAL020M_ACONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -88,22 +76,23 @@ public class TFIndustrialDual020mAConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setSampleRate(Short newSampleRate) {
         Short oldSampleRate = sampleRate;
         sampleRate = newSampleRate;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.TF_INDUSTRIAL_DUAL020M_ACONFIGURATION__SAMPLE_RATE, oldSampleRate, sampleRate));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -118,7 +107,7 @@ public class TFIndustrialDual020mAConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -134,7 +123,7 @@ public class TFIndustrialDual020mAConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -150,7 +139,7 @@ public class TFIndustrialDual020mAConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -165,13 +154,14 @@ public class TFIndustrialDual020mAConfigurationImpl extends MinimalEObjectImpl.C
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (sampleRate: ");

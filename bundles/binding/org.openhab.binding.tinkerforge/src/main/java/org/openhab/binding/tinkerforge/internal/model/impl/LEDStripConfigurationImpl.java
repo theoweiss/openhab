@@ -9,7 +9,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.LEDStripConfiguration;
@@ -42,7 +41,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The default value of the '{@link #getChiptype() <em>Chiptype</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getChiptype()
      * @generated
      * @ordered
@@ -53,7 +52,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The cached value of the '{@link #getChiptype() <em>Chiptype</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getChiptype()
      * @generated
      * @ordered
@@ -64,7 +63,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The default value of the '{@link #getFrameduration() <em>Frameduration</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getFrameduration()
      * @generated
      * @ordered
@@ -75,7 +74,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The cached value of the '{@link #getFrameduration() <em>Frameduration</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getFrameduration()
      * @generated
      * @ordered
@@ -86,7 +85,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The default value of the '{@link #getClockfrequency() <em>Clockfrequency</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getClockfrequency()
      * @generated
      * @ordered
@@ -97,7 +96,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The cached value of the '{@link #getClockfrequency() <em>Clockfrequency</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getClockfrequency()
      * @generated
      * @ordered
@@ -108,7 +107,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The default value of the '{@link #getColorMapping() <em>Color Mapping</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getColorMapping()
      * @generated
      * @ordered
@@ -119,7 +118,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The cached value of the '{@link #getColorMapping() <em>Color Mapping</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getColorMapping()
      * @generated
      * @ordered
@@ -130,7 +129,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The default value of the '{@link #getSubDevices() <em>Sub Devices</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSubDevices()
      * @generated
      * @ordered
@@ -141,7 +140,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The cached value of the '{@link #getSubDevices() <em>Sub Devices</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSubDevices()
      * @generated
      * @ordered
@@ -151,7 +150,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected LEDStripConfigurationImpl() {
@@ -161,18 +160,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.LED_STRIP_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -183,22 +171,23 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setChiptype(String newChiptype) {
         String oldChiptype = chiptype;
         chiptype = newChiptype;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.LED_STRIP_CONFIGURATION__CHIPTYPE,
                     oldChiptype, chiptype));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -209,22 +198,23 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setFrameduration(Integer newFrameduration) {
         Integer oldFrameduration = frameduration;
         frameduration = newFrameduration;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.LED_STRIP_CONFIGURATION__FRAMEDURATION,
                     oldFrameduration, frameduration));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -235,22 +225,23 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setClockfrequency(Long newClockfrequency) {
         Long oldClockfrequency = clockfrequency;
         clockfrequency = newClockfrequency;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.LED_STRIP_CONFIGURATION__CLOCKFREQUENCY,
                     oldClockfrequency, clockfrequency));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -261,22 +252,23 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setColorMapping(String newColorMapping) {
         String oldColorMapping = colorMapping;
         colorMapping = newColorMapping;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.LED_STRIP_CONFIGURATION__COLOR_MAPPING,
                     oldColorMapping, colorMapping));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -287,22 +279,23 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setSubDevices(String newSubDevices) {
         String oldSubDevices = subDevices;
         subDevices = newSubDevices;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.LED_STRIP_CONFIGURATION__SUB_DEVICES,
                     oldSubDevices, subDevices));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -325,7 +318,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -353,7 +346,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -381,7 +374,7 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -407,13 +400,14 @@ public class LEDStripConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (chiptype: ");

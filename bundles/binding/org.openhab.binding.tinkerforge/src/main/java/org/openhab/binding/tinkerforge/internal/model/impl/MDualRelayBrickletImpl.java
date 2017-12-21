@@ -15,7 +15,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -81,7 +80,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The default value of the '{@link #getLogger() <em>Logger</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getLogger()
      * @generated
      * @ordered
@@ -92,7 +91,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The cached value of the '{@link #getLogger() <em>Logger</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getLogger()
      * @generated
      * @ordered
@@ -103,7 +102,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The default value of the '{@link #getUid() <em>Uid</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getUid()
      * @generated
      * @ordered
@@ -114,7 +113,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The cached value of the '{@link #getUid() <em>Uid</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getUid()
      * @generated
      * @ordered
@@ -125,7 +124,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The default value of the '{@link #isPoll() <em>Poll</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #isPoll()
      * @generated
      * @ordered
@@ -136,7 +135,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The cached value of the '{@link #isPoll() <em>Poll</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #isPoll()
      * @generated
      * @ordered
@@ -147,7 +146,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The default value of the '{@link #getEnabledA() <em>Enabled A</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getEnabledA()
      * @generated
      * @ordered
@@ -158,7 +157,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The cached value of the '{@link #getEnabledA() <em>Enabled A</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getEnabledA()
      * @generated
      * @ordered
@@ -169,7 +168,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The cached value of the '{@link #getTinkerforgeDevice() <em>Tinkerforge Device</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getTinkerforgeDevice()
      * @generated
      * @ordered
@@ -180,7 +179,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The default value of the '{@link #getIpConnection() <em>Ip Connection</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getIpConnection()
      * @generated
      * @ordered
@@ -191,7 +190,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The cached value of the '{@link #getIpConnection() <em>Ip Connection</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getIpConnection()
      * @generated
      * @ordered
@@ -202,7 +201,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The default value of the '{@link #getConnectedUid() <em>Connected Uid</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getConnectedUid()
      * @generated
      * @ordered
@@ -213,7 +212,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The cached value of the '{@link #getConnectedUid() <em>Connected Uid</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getConnectedUid()
      * @generated
      * @ordered
@@ -224,7 +223,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The default value of the '{@link #getPosition() <em>Position</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getPosition()
      * @generated
      * @ordered
@@ -235,7 +234,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The cached value of the '{@link #getPosition() <em>Position</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getPosition()
      * @generated
      * @ordered
@@ -246,7 +245,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The default value of the '{@link #getDeviceIdentifier() <em>Device Identifier</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeviceIdentifier()
      * @generated
      * @ordered
@@ -257,7 +256,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The cached value of the '{@link #getDeviceIdentifier() <em>Device Identifier</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeviceIdentifier()
      * @generated
      * @ordered
@@ -268,7 +267,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -279,7 +278,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getName()
      * @generated
      * @ordered
@@ -290,7 +289,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The cached value of the '{@link #getMsubdevices() <em>Msubdevices</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMsubdevices()
      * @generated
      * @ordered
@@ -300,7 +299,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The default value of the '{@link #getDeviceType() <em>Device Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeviceType()
      * @generated
      * @ordered
@@ -311,7 +310,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
      * The cached value of the '{@link #getDeviceType() <em>Device Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeviceType()
      * @generated
      * @ordered
@@ -321,7 +320,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected MDualRelayBrickletImpl() {
@@ -331,18 +330,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.MDUAL_RELAY_BRICKLET;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -353,22 +341,23 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setLogger(Logger newLogger) {
         Logger oldLogger = logger;
         logger = newLogger;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MDUAL_RELAY_BRICKLET__LOGGER, oldLogger,
                     logger));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -379,21 +368,22 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setUid(String newUid) {
         String oldUid = uid;
         uid = newUid;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MDUAL_RELAY_BRICKLET__UID, oldUid, uid));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -404,22 +394,23 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setPoll(boolean newPoll) {
         boolean oldPoll = poll;
         poll = newPoll;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MDUAL_RELAY_BRICKLET__POLL, oldPoll,
                     poll));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -430,22 +421,23 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setEnabledA(AtomicBoolean newEnabledA) {
         AtomicBoolean oldEnabledA = enabledA;
         enabledA = newEnabledA;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MDUAL_RELAY_BRICKLET__ENABLED_A,
                     oldEnabledA, enabledA));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -456,22 +448,23 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setTinkerforgeDevice(BrickletDualRelay newTinkerforgeDevice) {
         BrickletDualRelay oldTinkerforgeDevice = tinkerforgeDevice;
         tinkerforgeDevice = newTinkerforgeDevice;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MDUAL_RELAY_BRICKLET__TINKERFORGE_DEVICE,
                     oldTinkerforgeDevice, tinkerforgeDevice));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -482,22 +475,23 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setIpConnection(IPConnection newIpConnection) {
         IPConnection oldIpConnection = ipConnection;
         ipConnection = newIpConnection;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MDUAL_RELAY_BRICKLET__IP_CONNECTION,
                     oldIpConnection, ipConnection));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -508,22 +502,23 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setConnectedUid(String newConnectedUid) {
         String oldConnectedUid = connectedUid;
         connectedUid = newConnectedUid;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MDUAL_RELAY_BRICKLET__CONNECTED_UID,
                     oldConnectedUid, connectedUid));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -534,22 +529,23 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setPosition(char newPosition) {
         char oldPosition = position;
         position = newPosition;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MDUAL_RELAY_BRICKLET__POSITION,
                     oldPosition, position));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -560,22 +556,23 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setDeviceIdentifier(int newDeviceIdentifier) {
         int oldDeviceIdentifier = deviceIdentifier;
         deviceIdentifier = newDeviceIdentifier;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MDUAL_RELAY_BRICKLET__DEVICE_IDENTIFIER,
                     oldDeviceIdentifier, deviceIdentifier));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -586,47 +583,50 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MDUAL_RELAY_BRICKLET__NAME, oldName,
                     name));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public MBrickd getBrickd() {
-        if (eContainerFeatureID() != ModelPackage.MDUAL_RELAY_BRICKLET__BRICKD)
+        if (eContainerFeatureID() != ModelPackage.MDUAL_RELAY_BRICKLET__BRICKD) {
             return null;
+        }
         return (MBrickd) eContainer();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public MBrickd basicGetBrickd() {
-        if (eContainerFeatureID() != ModelPackage.MDUAL_RELAY_BRICKLET__BRICKD)
+        if (eContainerFeatureID() != ModelPackage.MDUAL_RELAY_BRICKLET__BRICKD) {
             return null;
+        }
         return (MBrickd) eInternalContainer();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetBrickd(MBrickd newBrickd, NotificationChain msgs) {
@@ -637,33 +637,38 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setBrickd(MBrickd newBrickd) {
         if (newBrickd != eInternalContainer()
                 || (eContainerFeatureID() != ModelPackage.MDUAL_RELAY_BRICKLET__BRICKD && newBrickd != null)) {
-            if (EcoreUtil.isAncestor(this, newBrickd))
+            if (EcoreUtil.isAncestor(this, newBrickd)) {
                 throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+            }
             NotificationChain msgs = null;
-            if (eInternalContainer() != null)
+            if (eInternalContainer() != null) {
                 msgs = eBasicRemoveFromContainer(msgs);
-            if (newBrickd != null)
+            }
+            if (newBrickd != null) {
                 msgs = ((InternalEObject) newBrickd).eInverseAdd(this, ModelPackage.MBRICKD__MDEVICES, MBrickd.class,
                         msgs);
+            }
             msgs = basicSetBrickd(newBrickd, msgs);
-            if (msgs != null)
+            if (msgs != null) {
                 msgs.dispatch();
-        } else if (eNotificationRequired())
+            }
+        } else if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MDUAL_RELAY_BRICKLET__BRICKD, newBrickd,
                     newBrickd));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -685,7 +690,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -696,7 +701,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override
@@ -717,7 +722,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -725,8 +730,9 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
             case ModelPackage.MDUAL_RELAY_BRICKLET__BRICKD:
-                if (eInternalContainer() != null)
+                if (eInternalContainer() != null) {
                     msgs = eBasicRemoveFromContainer(msgs);
+                }
                 return basicSetBrickd((MBrickd) otherEnd, msgs);
             case ModelPackage.MDUAL_RELAY_BRICKLET__MSUBDEVICES:
                 return ((InternalEList<InternalEObject>) (InternalEList<?>) getMsubdevices()).basicAdd(otherEnd, msgs);
@@ -737,7 +743,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -754,7 +760,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -769,7 +775,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -796,8 +802,9 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
             case ModelPackage.MDUAL_RELAY_BRICKLET__NAME:
                 return getName();
             case ModelPackage.MDUAL_RELAY_BRICKLET__BRICKD:
-                if (resolve)
+                if (resolve) {
                     return getBrickd();
+                }
                 return basicGetBrickd();
             case ModelPackage.MDUAL_RELAY_BRICKLET__MSUBDEVICES:
                 return getMsubdevices();
@@ -810,7 +817,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -861,7 +868,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -910,7 +917,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -951,7 +958,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -970,7 +977,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -989,7 +996,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -1008,7 +1015,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -1033,13 +1040,14 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (logger: ");
@@ -1071,7 +1079,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override
@@ -1083,7 +1091,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override
@@ -1095,7 +1103,7 @@ public class MDualRelayBrickletImpl extends MinimalEObjectImpl.Container impleme
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override

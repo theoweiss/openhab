@@ -8,7 +8,6 @@
  */
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
-import org.eclipse.emf.ecore.EClass;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.Proximity;
 
@@ -34,7 +33,7 @@ public class ProximityImpl extends MultiTouchDeviceImpl implements Proximity {
      * The default value of the '{@link #getDeviceType() <em>Device Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeviceType()
      * @generated
      * @ordered
@@ -45,7 +44,7 @@ public class ProximityImpl extends MultiTouchDeviceImpl implements Proximity {
      * The cached value of the '{@link #getDeviceType() <em>Device Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeviceType()
      * @generated
      * @ordered
@@ -55,7 +54,7 @@ public class ProximityImpl extends MultiTouchDeviceImpl implements Proximity {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ProximityImpl() {
@@ -65,18 +64,7 @@ public class ProximityImpl extends MultiTouchDeviceImpl implements Proximity {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.PROXIMITY;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -87,7 +75,7 @@ public class ProximityImpl extends MultiTouchDeviceImpl implements Proximity {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -102,7 +90,7 @@ public class ProximityImpl extends MultiTouchDeviceImpl implements Proximity {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -117,13 +105,14 @@ public class ProximityImpl extends MultiTouchDeviceImpl implements Proximity {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (deviceType: ");

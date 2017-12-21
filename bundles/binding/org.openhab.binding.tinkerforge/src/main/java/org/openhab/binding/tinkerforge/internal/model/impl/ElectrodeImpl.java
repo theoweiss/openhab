@@ -8,7 +8,6 @@
  */
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
-import org.eclipse.emf.ecore.EClass;
 import org.openhab.binding.tinkerforge.internal.model.Electrode;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 
@@ -34,7 +33,7 @@ public class ElectrodeImpl extends MultiTouchDeviceImpl implements Electrode {
      * The default value of the '{@link #getDeviceType() <em>Device Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeviceType()
      * @generated
      * @ordered
@@ -45,7 +44,7 @@ public class ElectrodeImpl extends MultiTouchDeviceImpl implements Electrode {
      * The cached value of the '{@link #getDeviceType() <em>Device Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeviceType()
      * @generated
      * @ordered
@@ -55,7 +54,7 @@ public class ElectrodeImpl extends MultiTouchDeviceImpl implements Electrode {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected ElectrodeImpl() {
@@ -65,18 +64,7 @@ public class ElectrodeImpl extends MultiTouchDeviceImpl implements Electrode {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.ELECTRODE;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -87,7 +75,7 @@ public class ElectrodeImpl extends MultiTouchDeviceImpl implements Electrode {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -102,7 +90,7 @@ public class ElectrodeImpl extends MultiTouchDeviceImpl implements Electrode {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -117,13 +105,14 @@ public class ElectrodeImpl extends MultiTouchDeviceImpl implements Electrode {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (deviceType: ");

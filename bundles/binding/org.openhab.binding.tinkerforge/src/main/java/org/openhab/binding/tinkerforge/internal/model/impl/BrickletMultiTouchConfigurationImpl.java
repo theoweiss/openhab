@@ -9,7 +9,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.BrickletMultiTouchConfiguration;
@@ -42,7 +41,7 @@ public class BrickletMultiTouchConfigurationImpl extends MinimalEObjectImpl.Cont
      * The default value of the '{@link #getRecalibrate() <em>Recalibrate</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getRecalibrate()
      * @generated
      * @ordered
@@ -52,7 +51,7 @@ public class BrickletMultiTouchConfigurationImpl extends MinimalEObjectImpl.Cont
      * The cached value of the '{@link #getRecalibrate() <em>Recalibrate</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getRecalibrate()
      * @generated
      * @ordered
@@ -63,7 +62,7 @@ public class BrickletMultiTouchConfigurationImpl extends MinimalEObjectImpl.Cont
      * The default value of the '{@link #getSensitivity() <em>Sensitivity</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSensitivity()
      * @generated
      * @ordered
@@ -73,7 +72,7 @@ public class BrickletMultiTouchConfigurationImpl extends MinimalEObjectImpl.Cont
      * The cached value of the '{@link #getSensitivity() <em>Sensitivity</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSensitivity()
      * @generated
      * @ordered
@@ -83,7 +82,7 @@ public class BrickletMultiTouchConfigurationImpl extends MinimalEObjectImpl.Cont
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected BrickletMultiTouchConfigurationImpl() {
@@ -93,18 +92,7 @@ public class BrickletMultiTouchConfigurationImpl extends MinimalEObjectImpl.Cont
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.BRICKLET_MULTI_TOUCH_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -115,22 +103,23 @@ public class BrickletMultiTouchConfigurationImpl extends MinimalEObjectImpl.Cont
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setRecalibrate(Boolean newRecalibrate) {
         Boolean oldRecalibrate = recalibrate;
         recalibrate = newRecalibrate;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.BRICKLET_MULTI_TOUCH_CONFIGURATION__RECALIBRATE, oldRecalibrate, recalibrate));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -141,22 +130,23 @@ public class BrickletMultiTouchConfigurationImpl extends MinimalEObjectImpl.Cont
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setSensitivity(Short newSensitivity) {
         Short oldSensitivity = sensitivity;
         sensitivity = newSensitivity;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.BRICKLET_MULTI_TOUCH_CONFIGURATION__SENSITIVITY, oldSensitivity, sensitivity));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -173,7 +163,7 @@ public class BrickletMultiTouchConfigurationImpl extends MinimalEObjectImpl.Cont
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -192,7 +182,7 @@ public class BrickletMultiTouchConfigurationImpl extends MinimalEObjectImpl.Cont
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -211,7 +201,7 @@ public class BrickletMultiTouchConfigurationImpl extends MinimalEObjectImpl.Cont
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -228,13 +218,14 @@ public class BrickletMultiTouchConfigurationImpl extends MinimalEObjectImpl.Cont
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (recalibrate: ");

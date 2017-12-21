@@ -11,7 +11,6 @@ package org.openhab.binding.tinkerforge.internal.model.impl;
 import java.math.BigDecimal;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
@@ -41,7 +40,7 @@ public class TFBaseConfigurationImpl extends MinimalEObjectImpl.Container implem
      * The default value of the '{@link #getThreshold() <em>Threshold</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getThreshold()
      * @generated
      * @ordered
@@ -52,7 +51,7 @@ public class TFBaseConfigurationImpl extends MinimalEObjectImpl.Container implem
      * The cached value of the '{@link #getThreshold() <em>Threshold</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getThreshold()
      * @generated
      * @ordered
@@ -63,7 +62,7 @@ public class TFBaseConfigurationImpl extends MinimalEObjectImpl.Container implem
      * The default value of the '{@link #getCallbackPeriod() <em>Callback Period</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getCallbackPeriod()
      * @generated
      * @ordered
@@ -74,7 +73,7 @@ public class TFBaseConfigurationImpl extends MinimalEObjectImpl.Container implem
      * The cached value of the '{@link #getCallbackPeriod() <em>Callback Period</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getCallbackPeriod()
      * @generated
      * @ordered
@@ -84,7 +83,7 @@ public class TFBaseConfigurationImpl extends MinimalEObjectImpl.Container implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TFBaseConfigurationImpl() {
@@ -94,18 +93,7 @@ public class TFBaseConfigurationImpl extends MinimalEObjectImpl.Container implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.TF_BASE_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -116,22 +104,23 @@ public class TFBaseConfigurationImpl extends MinimalEObjectImpl.Container implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setThreshold(BigDecimal newThreshold) {
         BigDecimal oldThreshold = threshold;
         threshold = newThreshold;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_BASE_CONFIGURATION__THRESHOLD,
                     oldThreshold, threshold));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -142,22 +131,23 @@ public class TFBaseConfigurationImpl extends MinimalEObjectImpl.Container implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setCallbackPeriod(int newCallbackPeriod) {
         int oldCallbackPeriod = callbackPeriod;
         callbackPeriod = newCallbackPeriod;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TF_BASE_CONFIGURATION__CALLBACK_PERIOD,
                     oldCallbackPeriod, callbackPeriod));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -174,7 +164,7 @@ public class TFBaseConfigurationImpl extends MinimalEObjectImpl.Container implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -193,7 +183,7 @@ public class TFBaseConfigurationImpl extends MinimalEObjectImpl.Container implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -212,7 +202,7 @@ public class TFBaseConfigurationImpl extends MinimalEObjectImpl.Container implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -229,13 +219,14 @@ public class TFBaseConfigurationImpl extends MinimalEObjectImpl.Container implem
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (threshold: ");

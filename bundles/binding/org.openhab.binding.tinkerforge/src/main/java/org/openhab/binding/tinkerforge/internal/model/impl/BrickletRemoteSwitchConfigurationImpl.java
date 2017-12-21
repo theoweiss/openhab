@@ -9,7 +9,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.BrickletRemoteSwitchConfiguration;
@@ -45,7 +44,7 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
      * The default value of the '{@link #getTypeADevices() <em>Type ADevices</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getTypeADevices()
      * @generated
      * @ordered
@@ -56,7 +55,7 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
      * The cached value of the '{@link #getTypeADevices() <em>Type ADevices</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getTypeADevices()
      * @generated
      * @ordered
@@ -67,7 +66,7 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
      * The default value of the '{@link #getTypeBDevices() <em>Type BDevices</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getTypeBDevices()
      * @generated
      * @ordered
@@ -78,7 +77,7 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
      * The cached value of the '{@link #getTypeBDevices() <em>Type BDevices</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getTypeBDevices()
      * @generated
      * @ordered
@@ -89,7 +88,7 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
      * The default value of the '{@link #getTypeCDevices() <em>Type CDevices</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getTypeCDevices()
      * @generated
      * @ordered
@@ -100,7 +99,7 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
      * The cached value of the '{@link #getTypeCDevices() <em>Type CDevices</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getTypeCDevices()
      * @generated
      * @ordered
@@ -110,7 +109,7 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected BrickletRemoteSwitchConfigurationImpl() {
@@ -120,18 +119,7 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.BRICKLET_REMOTE_SWITCH_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -142,22 +130,23 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setTypeADevices(String newTypeADevices) {
         String oldTypeADevices = typeADevices;
         typeADevices = newTypeADevices;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.BRICKLET_REMOTE_SWITCH_CONFIGURATION__TYPE_ADEVICES, oldTypeADevices, typeADevices));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -168,22 +157,23 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setTypeBDevices(String newTypeBDevices) {
         String oldTypeBDevices = typeBDevices;
         typeBDevices = newTypeBDevices;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.BRICKLET_REMOTE_SWITCH_CONFIGURATION__TYPE_BDEVICES, oldTypeBDevices, typeBDevices));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -194,22 +184,23 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setTypeCDevices(String newTypeCDevices) {
         String oldTypeCDevices = typeCDevices;
         typeCDevices = newTypeCDevices;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.BRICKLET_REMOTE_SWITCH_CONFIGURATION__TYPE_CDEVICES, oldTypeCDevices, typeCDevices));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -228,7 +219,7 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -250,7 +241,7 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -272,7 +263,7 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -294,13 +285,14 @@ public class BrickletRemoteSwitchConfigurationImpl extends MinimalEObjectImpl.Co
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (typeADevices: ");

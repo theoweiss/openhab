@@ -13,7 +13,6 @@ package org.openhab.binding.tinkerforge.internal.model.impl;
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.OHTFDevice;
 import org.openhab.binding.tinkerforge.internal.model.OHTFSubDeviceAdminDevice;
@@ -31,7 +30,7 @@ public class OHTFSubDeviceAdminDeviceImpl<TFC extends TFConfig, IDS extends Enum
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected OHTFSubDeviceAdminDeviceImpl() {
@@ -41,18 +40,7 @@ public class OHTFSubDeviceAdminDeviceImpl<TFC extends TFConfig, IDS extends Enum
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.OHTF_SUB_DEVICE_ADMIN_DEVICE;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -63,7 +51,7 @@ public class OHTFSubDeviceAdminDeviceImpl<TFC extends TFConfig, IDS extends Enum
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -82,7 +70,7 @@ public class OHTFSubDeviceAdminDeviceImpl<TFC extends TFConfig, IDS extends Enum
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

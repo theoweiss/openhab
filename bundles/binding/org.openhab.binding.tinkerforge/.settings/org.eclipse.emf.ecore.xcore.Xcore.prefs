@@ -1,11 +1,13 @@
 BuilderConfiguration.is_project_specific=true
 autobuilding=true
 eclipse.preferences.version=1
+generateGeneratedAnnotation=true
 is_project_specific=true
 org.eclipse.emf.ecore.xcore.Xcore.useProjectSettings=true
 outlet.DEFAULT_OUTPUT.cleanDirectory=false
 outlet.DEFAULT_OUTPUT.cleanupDerived=false
 outlet.DEFAULT_OUTPUT.createDirectory=true
-outlet.DEFAULT_OUTPUT.derived=false
+outlet.DEFAULT_OUTPUT.derived=true
 outlet.DEFAULT_OUTPUT.directory=./src/main/java
 outlet.DEFAULT_OUTPUT.override=false
+useJavaCompilerCompliance=true

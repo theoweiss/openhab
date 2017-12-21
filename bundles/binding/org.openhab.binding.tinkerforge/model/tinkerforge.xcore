@@ -8,7 +8,7 @@
  */
 
 
-@GenModel(literalsInterface="true", bundleManifest="false", loadInitialization="false", adapterFactory="false", updateClasspath="false", codeFormatting="false", commentFormatting="false", modelDirectory="/org.openhab.binding.tinkerforge/src/main/java")
+@GenModel(bundleManifest="false", loadInitialization="false", adapterFactory="false", updateClasspath="false", codeFormatting="false", commentFormatting="false", modelDirectory="/org.openhab.binding.tinkerforge/src/main/java")
 package org.openhab.binding.tinkerforge.internal.model
 
 import com.tinkerforge.Device
@@ -72,6 +72,7 @@ import com.tinkerforge.BrickletUVLight
 import com.tinkerforge.BrickletCO2
 import com.tinkerforge.BrickStepper
 import com.tinkerforge.BrickletAnalogOutV2
+import com.tinkerforge.BrickletHumidityV2
 import org.openhab.core.library.types.HSBType
 import org.openhab.core.library.types.UpDownType
 import org.openhab.core.library.types.PercentType
@@ -103,6 +104,7 @@ type MTinkerBrickServo wraps BrickServo
 type MTinkerforgeValue wraps TinkerforgeValue
 type MDecimalValue wraps DecimalValue
 type MTinkerBrickletHumidity wraps BrickletHumidity
+type MTinkerBrickletHumidityV2 wraps BrickletHumidityV2
 type MTinkerBrickletDistanceIR wraps BrickletDistanceIR
 type MTinkerBrickletTemperature wraps BrickletTemperature
 type MTinkerBrickletBarometer wraps BrickletBarometer
@@ -963,6 +965,26 @@ class VCDevicePower extends VoltageCurrentDevice {
     BigDecimal threshold = "50"
 }
 
+class MBrickletHumidityV2 extends MDevice<MBrickletHumidityV2>, MSubDeviceHolder<MHumidityV2Device>,
+    MTFConfigConsumer<HumidityV2Configuration> {
+    
+}
+
+interface MHumidityV2Device extends MSensor<MDecimalValue>, MSubDevice<MBrickletHumidityV2>,
+    CallbackListener {
+    
+}
+
+class MHumidityV2Temperature extends MHumidityV2Device {
+    readonly String deviceType = "humidityV2_temperature"
+    op void init(){}
+}
+
+class MHumidityV2Humidity extends MHumidityV2Device {
+    readonly String deviceType = "humidityV2_humidity"
+    op void init(){}
+}
+
 class MBrickletBarometer extends MDevice<MTinkerBrickletBarometer>, 
 		MSensor<MDecimalValue>, MTFConfigConsumer<TFBaseConfiguration>, 
 		MSubDeviceHolder<MBarometerTemperature>, CallbackListener {
@@ -1162,6 +1184,12 @@ class LaserRangeFinderConfiguration extends TFConfig {
 	short velocityAverageLength
 	short mode
 	Boolean enableLaserOnStartup
+}
+
+class HumidityV2Configuration extends TFBaseConfiguration {
+    int statusLEDConfig
+    int movingAverageLengthHumidity
+    int movingAverageLengthTemperature
 }
 
 class AmbientLightV2Configuration extends TFBaseConfiguration {

@@ -13,7 +13,6 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
@@ -44,7 +43,7 @@ public class OHConfigImpl extends MinimalEObjectImpl.Container implements OHConf
      * The cached value of the '{@link #getOhTfDevices() <em>Oh Tf Devices</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getOhTfDevices()
      * @generated
      * @ordered
@@ -54,7 +53,7 @@ public class OHConfigImpl extends MinimalEObjectImpl.Container implements OHConf
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected OHConfigImpl() {
@@ -64,18 +63,7 @@ public class OHConfigImpl extends MinimalEObjectImpl.Container implements OHConf
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.OH_CONFIG;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -90,7 +78,7 @@ public class OHConfigImpl extends MinimalEObjectImpl.Container implements OHConf
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override
@@ -115,7 +103,7 @@ public class OHConfigImpl extends MinimalEObjectImpl.Container implements OHConf
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override
@@ -133,7 +121,7 @@ public class OHConfigImpl extends MinimalEObjectImpl.Container implements OHConf
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -149,7 +137,7 @@ public class OHConfigImpl extends MinimalEObjectImpl.Container implements OHConf
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -164,7 +152,7 @@ public class OHConfigImpl extends MinimalEObjectImpl.Container implements OHConf
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -179,7 +167,7 @@ public class OHConfigImpl extends MinimalEObjectImpl.Container implements OHConf
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -197,7 +185,7 @@ public class OHConfigImpl extends MinimalEObjectImpl.Container implements OHConf
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -213,7 +201,7 @@ public class OHConfigImpl extends MinimalEObjectImpl.Container implements OHConf
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -228,7 +216,7 @@ public class OHConfigImpl extends MinimalEObjectImpl.Container implements OHConf
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override

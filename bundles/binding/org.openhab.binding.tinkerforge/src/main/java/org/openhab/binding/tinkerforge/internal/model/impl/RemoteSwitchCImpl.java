@@ -14,7 +14,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -79,7 +78,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The default value of the '{@link #getSwitchState() <em>Switch State</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSwitchState()
      * @generated
      * @ordered
@@ -90,7 +89,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The cached value of the '{@link #getSwitchState() <em>Switch State</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSwitchState()
      * @generated
      * @ordered
@@ -101,7 +100,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The default value of the '{@link #getLogger() <em>Logger</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getLogger()
      * @generated
      * @ordered
@@ -112,7 +111,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The cached value of the '{@link #getLogger() <em>Logger</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getLogger()
      * @generated
      * @ordered
@@ -123,7 +122,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The default value of the '{@link #getUid() <em>Uid</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getUid()
      * @generated
      * @ordered
@@ -134,7 +133,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The cached value of the '{@link #getUid() <em>Uid</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getUid()
      * @generated
      * @ordered
@@ -145,7 +144,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The default value of the '{@link #isPoll() <em>Poll</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #isPoll()
      * @generated
      * @ordered
@@ -156,7 +155,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The cached value of the '{@link #isPoll() <em>Poll</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #isPoll()
      * @generated
      * @ordered
@@ -167,7 +166,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The default value of the '{@link #getEnabledA() <em>Enabled A</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getEnabledA()
      * @generated
      * @ordered
@@ -178,7 +177,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The cached value of the '{@link #getEnabledA() <em>Enabled A</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getEnabledA()
      * @generated
      * @ordered
@@ -189,7 +188,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The default value of the '{@link #getSubId() <em>Sub Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSubId()
      * @generated
      * @ordered
@@ -200,7 +199,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The cached value of the '{@link #getSubId() <em>Sub Id</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSubId()
      * @generated
      * @ordered
@@ -211,7 +210,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The cached value of the '{@link #getTfConfig() <em>Tf Config</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getTfConfig()
      * @generated
      * @ordered
@@ -222,7 +221,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The default value of the '{@link #getDeviceType() <em>Device Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeviceType()
      * @generated
      * @ordered
@@ -233,7 +232,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The cached value of the '{@link #getDeviceType() <em>Device Type</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeviceType()
      * @generated
      * @ordered
@@ -244,7 +243,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The default value of the '{@link #getSystemCode() <em>System Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSystemCode()
      * @generated
      * @ordered
@@ -255,7 +254,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The cached value of the '{@link #getSystemCode() <em>System Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSystemCode()
      * @generated
      * @ordered
@@ -266,7 +265,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The default value of the '{@link #getDeviceCode() <em>Device Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeviceCode()
      * @generated
      * @ordered
@@ -277,7 +276,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The cached value of the '{@link #getDeviceCode() <em>Device Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeviceCode()
      * @generated
      * @ordered
@@ -288,7 +287,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The default value of the '{@link #getRepeats() <em>Repeats</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getRepeats()
      * @generated
      * @ordered
@@ -299,7 +298,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
      * The cached value of the '{@link #getRepeats() <em>Repeats</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getRepeats()
      * @generated
      * @ordered
@@ -311,7 +310,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected RemoteSwitchCImpl() {
@@ -321,18 +320,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.REMOTE_SWITCH_C;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -343,22 +331,23 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setSwitchState(OnOffValue newSwitchState) {
         OnOffValue oldSwitchState = switchState;
         switchState = newSwitchState;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_C__SWITCH_STATE,
                     oldSwitchState, switchState));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -369,22 +358,23 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setLogger(Logger newLogger) {
         Logger oldLogger = logger;
         logger = newLogger;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_C__LOGGER, oldLogger,
                     logger));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -395,21 +385,22 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setUid(String newUid) {
         String oldUid = uid;
         uid = newUid;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_C__UID, oldUid, uid));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -420,21 +411,22 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setPoll(boolean newPoll) {
         boolean oldPoll = poll;
         poll = newPoll;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_C__POLL, oldPoll, poll));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -445,22 +437,23 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setEnabledA(AtomicBoolean newEnabledA) {
         AtomicBoolean oldEnabledA = enabledA;
         enabledA = newEnabledA;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_C__ENABLED_A, oldEnabledA,
                     enabledA));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -471,47 +464,50 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setSubId(String newSubId) {
         String oldSubId = subId;
         subId = newSubId;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_C__SUB_ID, oldSubId,
                     subId));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public MBrickletRemoteSwitch getMbrick() {
-        if (eContainerFeatureID() != ModelPackage.REMOTE_SWITCH_C__MBRICK)
+        if (eContainerFeatureID() != ModelPackage.REMOTE_SWITCH_C__MBRICK) {
             return null;
+        }
         return (MBrickletRemoteSwitch) eContainer();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public MBrickletRemoteSwitch basicGetMbrick() {
-        if (eContainerFeatureID() != ModelPackage.REMOTE_SWITCH_C__MBRICK)
+        if (eContainerFeatureID() != ModelPackage.REMOTE_SWITCH_C__MBRICK) {
             return null;
+        }
         return (MBrickletRemoteSwitch) eInternalContainer();
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetMbrick(MBrickletRemoteSwitch newMbrick, NotificationChain msgs) {
@@ -522,33 +518,38 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setMbrick(MBrickletRemoteSwitch newMbrick) {
         if (newMbrick != eInternalContainer()
                 || (eContainerFeatureID() != ModelPackage.REMOTE_SWITCH_C__MBRICK && newMbrick != null)) {
-            if (EcoreUtil.isAncestor(this, newMbrick))
+            if (EcoreUtil.isAncestor(this, newMbrick)) {
                 throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+            }
             NotificationChain msgs = null;
-            if (eInternalContainer() != null)
+            if (eInternalContainer() != null) {
                 msgs = eBasicRemoveFromContainer(msgs);
-            if (newMbrick != null)
+            }
+            if (newMbrick != null) {
                 msgs = ((InternalEObject) newMbrick).eInverseAdd(this, ModelPackage.MSUB_DEVICE_HOLDER__MSUBDEVICES,
                         MSubDeviceHolder.class, msgs);
+            }
             msgs = basicSetMbrick(newMbrick, msgs);
-            if (msgs != null)
+            if (msgs != null) {
                 msgs.dispatch();
-        } else if (eNotificationRequired())
+            }
+        } else if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_C__MBRICK, newMbrick,
                     newMbrick));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -559,7 +560,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -570,22 +571,23 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setSystemCode(String newSystemCode) {
         String oldSystemCode = systemCode;
         systemCode = newSystemCode;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_C__SYSTEM_CODE,
                     oldSystemCode, systemCode));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -596,22 +598,23 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setDeviceCode(Short newDeviceCode) {
         Short oldDeviceCode = deviceCode;
         deviceCode = newDeviceCode;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_C__DEVICE_CODE,
                     oldDeviceCode, deviceCode));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -622,22 +625,23 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setRepeats(Short newRepeats) {
         Short oldRepeats = repeats;
         repeats = newRepeats;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_C__REPEATS, oldRepeats,
                     repeats));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -648,7 +652,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     public NotificationChain basicSetTfConfig(RemoteSwitchCConfiguration newTfConfig, NotificationChain msgs) {
@@ -657,10 +661,11 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
                     ModelPackage.REMOTE_SWITCH_C__TF_CONFIG, oldTfConfig, newTfConfig);
-            if (msgs == null)
+            if (msgs == null) {
                 msgs = notification;
-            else
+            } else {
                 msgs.add(notification);
+            }
         }
         return msgs;
     }
@@ -668,31 +673,35 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setTfConfig(RemoteSwitchCConfiguration newTfConfig) {
         if (newTfConfig != tfConfig) {
             NotificationChain msgs = null;
-            if (tfConfig != null)
+            if (tfConfig != null) {
                 msgs = ((InternalEObject) tfConfig).eInverseRemove(this,
                         EOPPOSITE_FEATURE_BASE - ModelPackage.REMOTE_SWITCH_C__TF_CONFIG, null, msgs);
-            if (newTfConfig != null)
+            }
+            if (newTfConfig != null) {
                 msgs = ((InternalEObject) newTfConfig).eInverseAdd(this,
                         EOPPOSITE_FEATURE_BASE - ModelPackage.REMOTE_SWITCH_C__TF_CONFIG, null, msgs);
+            }
             msgs = basicSetTfConfig(newTfConfig, msgs);
-            if (msgs != null)
+            if (msgs != null) {
                 msgs.dispatch();
-        } else if (eNotificationRequired())
+            }
+        } else if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_C__TF_CONFIG, newTfConfig,
                     newTfConfig));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override
@@ -704,7 +713,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override
@@ -739,7 +748,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override
@@ -749,7 +758,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override
@@ -796,7 +805,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     *
      * @generated NOT
      */
     @Override
@@ -807,15 +816,16 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
             case ModelPackage.REMOTE_SWITCH_C__MBRICK:
-                if (eInternalContainer() != null)
+                if (eInternalContainer() != null) {
                     msgs = eBasicRemoveFromContainer(msgs);
+                }
                 return basicSetMbrick((MBrickletRemoteSwitch) otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -824,7 +834,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -841,7 +851,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -857,7 +867,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -876,8 +886,9 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
             case ModelPackage.REMOTE_SWITCH_C__SUB_ID:
                 return getSubId();
             case ModelPackage.REMOTE_SWITCH_C__MBRICK:
-                if (resolve)
+                if (resolve) {
                     return getMbrick();
+                }
                 return basicGetMbrick();
             case ModelPackage.REMOTE_SWITCH_C__TF_CONFIG:
                 return getTfConfig();
@@ -896,7 +907,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -942,7 +953,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -988,7 +999,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -1025,7 +1036,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -1068,7 +1079,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -1111,7 +1122,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -1146,7 +1157,7 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -1174,13 +1185,14 @@ public class RemoteSwitchCImpl extends MinimalEObjectImpl.Container implements R
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (switchState: ");

@@ -9,7 +9,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
@@ -41,7 +40,7 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
      * The default value of the '{@link #getSystemCode() <em>System Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSystemCode()
      * @generated
      * @ordered
@@ -51,7 +50,7 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
      * The cached value of the '{@link #getSystemCode() <em>System Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSystemCode()
      * @generated
      * @ordered
@@ -61,7 +60,7 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
      * The default value of the '{@link #getDeviceCode() <em>Device Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeviceCode()
      * @generated
      * @ordered
@@ -71,7 +70,7 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
      * The cached value of the '{@link #getDeviceCode() <em>Device Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDeviceCode()
      * @generated
      * @ordered
@@ -82,7 +81,7 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
      * The default value of the '{@link #getRepeats() <em>Repeats</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getRepeats()
      * @generated
      * @ordered
@@ -92,7 +91,7 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
      * The cached value of the '{@link #getRepeats() <em>Repeats</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getRepeats()
      * @generated
      * @ordered
@@ -102,7 +101,7 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected RemoteSwitchCConfigurationImpl() {
@@ -112,18 +111,7 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.REMOTE_SWITCH_CCONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -134,22 +122,23 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setSystemCode(String newSystemCode) {
         String oldSystemCode = systemCode;
         systemCode = newSystemCode;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.REMOTE_SWITCH_CCONFIGURATION__SYSTEM_CODE, oldSystemCode, systemCode));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -160,22 +149,23 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setDeviceCode(Short newDeviceCode) {
         Short oldDeviceCode = deviceCode;
         deviceCode = newDeviceCode;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.REMOTE_SWITCH_CCONFIGURATION__DEVICE_CODE, oldDeviceCode, deviceCode));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -186,22 +176,23 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setRepeats(Short newRepeats) {
         Short oldRepeats = repeats;
         repeats = newRepeats;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_CCONFIGURATION__REPEATS,
                     oldRepeats, repeats));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -220,7 +211,7 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -242,7 +233,7 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -264,7 +255,7 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -283,13 +274,14 @@ public class RemoteSwitchCConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (systemCode: ");

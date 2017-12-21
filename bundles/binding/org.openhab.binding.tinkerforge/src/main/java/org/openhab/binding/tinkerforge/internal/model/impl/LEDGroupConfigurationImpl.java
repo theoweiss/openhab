@@ -9,7 +9,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.LEDGroupConfiguration;
@@ -33,7 +32,7 @@ public class LEDGroupConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The default value of the '{@link #getLeds() <em>Leds</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getLeds()
      * @generated
      * @ordered
@@ -43,7 +42,7 @@ public class LEDGroupConfigurationImpl extends MinimalEObjectImpl.Container impl
      * The cached value of the '{@link #getLeds() <em>Leds</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getLeds()
      * @generated
      * @ordered
@@ -53,7 +52,7 @@ public class LEDGroupConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected LEDGroupConfigurationImpl() {
@@ -63,18 +62,7 @@ public class LEDGroupConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.LED_GROUP_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -85,22 +73,23 @@ public class LEDGroupConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setLeds(String newLeds) {
         String oldLeds = leds;
         leds = newLeds;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.LED_GROUP_CONFIGURATION__LEDS, oldLeds,
                     leds));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -115,7 +104,7 @@ public class LEDGroupConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -131,7 +120,7 @@ public class LEDGroupConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -147,7 +136,7 @@ public class LEDGroupConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -162,13 +151,14 @@ public class LEDGroupConfigurationImpl extends MinimalEObjectImpl.Container impl
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (leds: ");

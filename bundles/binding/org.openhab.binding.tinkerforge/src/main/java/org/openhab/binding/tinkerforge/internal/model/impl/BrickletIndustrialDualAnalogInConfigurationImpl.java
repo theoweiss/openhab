@@ -11,7 +11,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.openhab.binding.tinkerforge.internal.model.BrickletIndustrialDualAnalogInConfiguration;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
@@ -37,7 +36,7 @@ public class BrickletIndustrialDualAnalogInConfigurationImpl extends TFBaseConfi
      * The default value of the '{@link #getSampleRate() <em>Sample Rate</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSampleRate()
      * @generated
      * @ordered
@@ -48,7 +47,7 @@ public class BrickletIndustrialDualAnalogInConfigurationImpl extends TFBaseConfi
      * The cached value of the '{@link #getSampleRate() <em>Sample Rate</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getSampleRate()
      * @generated
      * @ordered
@@ -58,7 +57,7 @@ public class BrickletIndustrialDualAnalogInConfigurationImpl extends TFBaseConfi
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected BrickletIndustrialDualAnalogInConfigurationImpl() {
@@ -68,18 +67,7 @@ public class BrickletIndustrialDualAnalogInConfigurationImpl extends TFBaseConfi
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.BRICKLET_INDUSTRIAL_DUAL_ANALOG_IN_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -90,23 +78,24 @@ public class BrickletIndustrialDualAnalogInConfigurationImpl extends TFBaseConfi
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setSampleRate(Short newSampleRate) {
         Short oldSampleRate = sampleRate;
         sampleRate = newSampleRate;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.BRICKLET_INDUSTRIAL_DUAL_ANALOG_IN_CONFIGURATION__SAMPLE_RATE, oldSampleRate,
                     sampleRate));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -121,7 +110,7 @@ public class BrickletIndustrialDualAnalogInConfigurationImpl extends TFBaseConfi
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -137,7 +126,7 @@ public class BrickletIndustrialDualAnalogInConfigurationImpl extends TFBaseConfi
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -153,7 +142,7 @@ public class BrickletIndustrialDualAnalogInConfigurationImpl extends TFBaseConfi
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -168,13 +157,14 @@ public class BrickletIndustrialDualAnalogInConfigurationImpl extends TFBaseConfi
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (sampleRate: ");

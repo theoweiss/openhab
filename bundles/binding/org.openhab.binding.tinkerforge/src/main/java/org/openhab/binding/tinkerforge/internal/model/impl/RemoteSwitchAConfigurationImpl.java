@@ -9,7 +9,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
@@ -41,7 +40,7 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
      * The default value of the '{@link #getHouseCode() <em>House Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getHouseCode()
      * @generated
      * @ordered
@@ -51,7 +50,7 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
      * The cached value of the '{@link #getHouseCode() <em>House Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getHouseCode()
      * @generated
      * @ordered
@@ -61,7 +60,7 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
      * The default value of the '{@link #getReceiverCode() <em>Receiver Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getReceiverCode()
      * @generated
      * @ordered
@@ -71,7 +70,7 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
      * The cached value of the '{@link #getReceiverCode() <em>Receiver Code</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getReceiverCode()
      * @generated
      * @ordered
@@ -82,7 +81,7 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
      * The default value of the '{@link #getRepeats() <em>Repeats</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getRepeats()
      * @generated
      * @ordered
@@ -92,7 +91,7 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
      * The cached value of the '{@link #getRepeats() <em>Repeats</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getRepeats()
      * @generated
      * @ordered
@@ -102,7 +101,7 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected RemoteSwitchAConfigurationImpl() {
@@ -112,18 +111,7 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.REMOTE_SWITCH_ACONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -134,22 +122,23 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setHouseCode(Short newHouseCode) {
         Short oldHouseCode = houseCode;
         houseCode = newHouseCode;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_ACONFIGURATION__HOUSE_CODE,
                     oldHouseCode, houseCode));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -160,22 +149,23 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setReceiverCode(Short newReceiverCode) {
         Short oldReceiverCode = receiverCode;
         receiverCode = newReceiverCode;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.REMOTE_SWITCH_ACONFIGURATION__RECEIVER_CODE, oldReceiverCode, receiverCode));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -186,22 +176,23 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setRepeats(Short newRepeats) {
         Short oldRepeats = repeats;
         repeats = newRepeats;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REMOTE_SWITCH_ACONFIGURATION__REPEATS,
                     oldRepeats, repeats));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -220,7 +211,7 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -242,7 +233,7 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -264,7 +255,7 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -284,13 +275,14 @@ public class RemoteSwitchAConfigurationImpl extends MinimalEObjectImpl.Container
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (houseCode: ");

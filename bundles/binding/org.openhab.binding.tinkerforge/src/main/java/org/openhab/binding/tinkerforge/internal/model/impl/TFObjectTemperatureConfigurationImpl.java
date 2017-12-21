@@ -9,7 +9,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
 import org.openhab.binding.tinkerforge.internal.model.TFObjectTemperatureConfiguration;
@@ -38,7 +37,7 @@ public class TFObjectTemperatureConfigurationImpl extends TFBaseConfigurationImp
      * The default value of the '{@link #getEmissivity() <em>Emissivity</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getEmissivity()
      * @generated
      * @ordered
@@ -49,7 +48,7 @@ public class TFObjectTemperatureConfigurationImpl extends TFBaseConfigurationImp
      * The cached value of the '{@link #getEmissivity() <em>Emissivity</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getEmissivity()
      * @generated
      * @ordered
@@ -59,7 +58,7 @@ public class TFObjectTemperatureConfigurationImpl extends TFBaseConfigurationImp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected TFObjectTemperatureConfigurationImpl() {
@@ -69,18 +68,7 @@ public class TFObjectTemperatureConfigurationImpl extends TFBaseConfigurationImp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.TF_OBJECT_TEMPERATURE_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -91,22 +79,23 @@ public class TFObjectTemperatureConfigurationImpl extends TFBaseConfigurationImp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setEmissivity(int newEmissivity) {
         int oldEmissivity = emissivity;
         emissivity = newEmissivity;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.TF_OBJECT_TEMPERATURE_CONFIGURATION__EMISSIVITY, oldEmissivity, emissivity));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -121,7 +110,7 @@ public class TFObjectTemperatureConfigurationImpl extends TFBaseConfigurationImp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -137,7 +126,7 @@ public class TFObjectTemperatureConfigurationImpl extends TFBaseConfigurationImp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -153,7 +142,7 @@ public class TFObjectTemperatureConfigurationImpl extends TFBaseConfigurationImp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -168,13 +157,14 @@ public class TFObjectTemperatureConfigurationImpl extends TFBaseConfigurationImp
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (emissivity: ");

@@ -11,7 +11,6 @@
 package org.openhab.binding.tinkerforge.internal.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.openhab.binding.tinkerforge.internal.model.LaserRangeFinderConfiguration;
@@ -46,7 +45,7 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
      * The default value of the '{@link #getDistanceAverageLength() <em>Distance Average Length</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDistanceAverageLength()
      * @generated
      * @ordered
@@ -57,7 +56,7 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
      * The cached value of the '{@link #getDistanceAverageLength() <em>Distance Average Length</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getDistanceAverageLength()
      * @generated
      * @ordered
@@ -68,7 +67,7 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
      * The default value of the '{@link #getVelocityAverageLength() <em>Velocity Average Length</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getVelocityAverageLength()
      * @generated
      * @ordered
@@ -79,7 +78,7 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
      * The cached value of the '{@link #getVelocityAverageLength() <em>Velocity Average Length</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getVelocityAverageLength()
      * @generated
      * @ordered
@@ -90,7 +89,7 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
      * The default value of the '{@link #getMode() <em>Mode</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMode()
      * @generated
      * @ordered
@@ -101,7 +100,7 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
      * The cached value of the '{@link #getMode() <em>Mode</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getMode()
      * @generated
      * @ordered
@@ -112,7 +111,7 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
      * The default value of the '{@link #getEnableLaserOnStartup() <em>Enable Laser On Startup</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getEnableLaserOnStartup()
      * @generated
      * @ordered
@@ -123,7 +122,7 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
      * The cached value of the '{@link #getEnableLaserOnStartup() <em>Enable Laser On Startup</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @see #getEnableLaserOnStartup()
      * @generated
      * @ordered
@@ -133,7 +132,7 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     protected LaserRangeFinderConfigurationImpl() {
@@ -143,18 +142,7 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ModelPackage.Literals.LASER_RANGE_FINDER_CONFIGURATION;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -165,23 +153,24 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setDistanceAverageLength(short newDistanceAverageLength) {
         short oldDistanceAverageLength = distanceAverageLength;
         distanceAverageLength = newDistanceAverageLength;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.LASER_RANGE_FINDER_CONFIGURATION__DISTANCE_AVERAGE_LENGTH, oldDistanceAverageLength,
                     distanceAverageLength));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -192,23 +181,24 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setVelocityAverageLength(short newVelocityAverageLength) {
         short oldVelocityAverageLength = velocityAverageLength;
         velocityAverageLength = newVelocityAverageLength;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.LASER_RANGE_FINDER_CONFIGURATION__VELOCITY_AVERAGE_LENGTH, oldVelocityAverageLength,
                     velocityAverageLength));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -219,22 +209,23 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setMode(short newMode) {
         short oldMode = mode;
         mode = newMode;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.LASER_RANGE_FINDER_CONFIGURATION__MODE,
                     oldMode, mode));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -245,23 +236,24 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public void setEnableLaserOnStartup(Boolean newEnableLaserOnStartup) {
         Boolean oldEnableLaserOnStartup = enableLaserOnStartup;
         enableLaserOnStartup = newEnableLaserOnStartup;
-        if (eNotificationRequired())
+        if (eNotificationRequired()) {
             eNotify(new ENotificationImpl(this, Notification.SET,
                     ModelPackage.LASER_RANGE_FINDER_CONFIGURATION__ENABLE_LASER_ON_STARTUP, oldEnableLaserOnStartup,
                     enableLaserOnStartup));
+        }
     }
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -282,7 +274,7 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -307,7 +299,7 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -332,7 +324,7 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
@@ -354,13 +346,14 @@ public class LaserRangeFinderConfigurationImpl extends MinimalEObjectImpl.Contai
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
+     *
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy())
+        if (eIsProxy()) {
             return super.toString();
+        }
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (distanceAverageLength: ");
