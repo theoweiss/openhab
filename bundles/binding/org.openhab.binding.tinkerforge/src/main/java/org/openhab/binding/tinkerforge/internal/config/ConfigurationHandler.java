@@ -204,7 +204,9 @@ public class ConfigurationHandler {
         bricklet_thermocouple,
         bricklet_uvlight,
         bricklet_co2,
-        bricklet_analog_out_v2
+        bricklet_analog_out_v2,
+        bricklet_humidityV2,
+        humidityV2_humidity
     }
 
     public ConfigurationHandler() {

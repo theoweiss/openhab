@@ -104,7 +104,7 @@ type MTinkerBrickServo wraps BrickServo
 type MTinkerforgeValue wraps TinkerforgeValue
 type MDecimalValue wraps DecimalValue
 type MTinkerBrickletHumidity wraps BrickletHumidity
-type MTinkerBrickletHumidityV2 wraps BrickletHumidityV2
+type TinkerBrickletHumidityV2 wraps BrickletHumidityV2
 type MTinkerBrickletDistanceIR wraps BrickletDistanceIR
 type MTinkerBrickletTemperature wraps BrickletTemperature
 type MTinkerBrickletBarometer wraps BrickletBarometer
@@ -965,22 +965,25 @@ class VCDevicePower extends VoltageCurrentDevice {
     BigDecimal threshold = "50"
 }
 
-class MBrickletHumidityV2 extends MDevice<MBrickletHumidityV2>, MSubDeviceHolder<MHumidityV2Device>,
+class MBrickletHumidityV2 extends MDevice<TinkerBrickletHumidityV2>, MSubDeviceHolder<MHumidityV2Device>,
     MTFConfigConsumer<HumidityV2Configuration> {
-    
+    readonly String deviceType = "bricklet_humidityV2"
+    int heaterConfiguration = "0"
+    int movingAverageLengthHumidity = "100"
+    int movingAverageLengthTemperature = "100"
 }
 
-interface MHumidityV2Device extends MSensor<MDecimalValue>, MSubDevice<MBrickletHumidityV2>,
+interface MHumidityV2Device extends MSubDevice<MBrickletHumidityV2>,
     CallbackListener {
-    
 }
 
-class MHumidityV2Temperature extends MHumidityV2Device {
+class MHumidityV2Temperature extends MHumidityV2Device, MSensor<MDecimalValue> {
     readonly String deviceType = "humidityV2_temperature"
     op void init(){}
 }
 
-class MHumidityV2Humidity extends MHumidityV2Device {
+class MHumidityV2Humidity extends MHumidityV2Device, MSensor<MDecimalValue>, MTFConfigConsumer<TFBaseConfiguration>,
+   CallbackListener {
     readonly String deviceType = "humidityV2_humidity"
     op void init(){}
 }
@@ -1186,8 +1189,8 @@ class LaserRangeFinderConfiguration extends TFConfig {
 	Boolean enableLaserOnStartup
 }
 
-class HumidityV2Configuration extends TFBaseConfiguration {
-    int statusLEDConfig
+class HumidityV2Configuration extends TFConfig {
+    int heaterConfiguration
     int movingAverageLengthHumidity
     int movingAverageLengthTemperature
 }
@@ -1476,4 +1479,8 @@ enum LaserRangeFinderSubIds {
 
 enum AccelerometerSubIds {
 	x, y, z, temperature, led
+}
+
+enum HumidityV2SubIds {
+    humidity, temperature
 }
