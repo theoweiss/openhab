@@ -10,6 +10,7 @@ package org.openhab.binding.tinkerforge.internal;
 
 import java.math.BigDecimal;
 import java.util.Dictionary;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -20,47 +21,49 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.m1theo.tinkerforge.config.ConfigurationHandler;
+import org.m1theo.tinkerforge.emf.model.ColorActor;
+import org.m1theo.tinkerforge.emf.model.DigitalActor;
+import org.m1theo.tinkerforge.emf.model.DimmableActor;
+import org.m1theo.tinkerforge.emf.model.Ecosystem;
+import org.m1theo.tinkerforge.emf.model.GenericDevice;
+import org.m1theo.tinkerforge.emf.model.IO4Device;
+import org.m1theo.tinkerforge.emf.model.IODevice;
+import org.m1theo.tinkerforge.emf.model.MBaseDevice;
+import org.m1theo.tinkerforge.emf.model.MBrickd;
+import org.m1theo.tinkerforge.emf.model.MDevice;
+import org.m1theo.tinkerforge.emf.model.MInSwitchActor;
+import org.m1theo.tinkerforge.emf.model.MSensor;
+import org.m1theo.tinkerforge.emf.model.MSubDevice;
+import org.m1theo.tinkerforge.emf.model.MSubDeviceHolder;
+import org.m1theo.tinkerforge.emf.model.MSwitchActor;
+import org.m1theo.tinkerforge.emf.model.MTFConfigConsumer;
+import org.m1theo.tinkerforge.emf.model.MTextActor;
+import org.m1theo.tinkerforge.emf.model.ModelFactory;
+import org.m1theo.tinkerforge.emf.model.ModelPackage;
+import org.m1theo.tinkerforge.emf.model.MoveActor;
+import org.m1theo.tinkerforge.emf.model.NumberActor;
+import org.m1theo.tinkerforge.emf.model.OHConfig;
+import org.m1theo.tinkerforge.emf.model.OHTFDevice;
+import org.m1theo.tinkerforge.emf.model.PercentTypeActor;
+import org.m1theo.tinkerforge.emf.model.ProgrammableColorActor;
+import org.m1theo.tinkerforge.emf.model.ProgrammableSwitchActor;
+import org.m1theo.tinkerforge.emf.model.SetPointActor;
+import org.m1theo.tinkerforge.emf.model.SimpleColorActor;
+import org.m1theo.tinkerforge.emf.model.SwitchSensor;
+import org.m1theo.tinkerforge.emf.model.TFConfig;
+import org.m1theo.tinkerforge.types.DecimalValue;
+import org.m1theo.tinkerforge.types.DirectionValue;
+import org.m1theo.tinkerforge.types.HSBValue;
+import org.m1theo.tinkerforge.types.HighLowValue;
+import org.m1theo.tinkerforge.types.IncreaseDecreaseValue;
+import org.m1theo.tinkerforge.types.OnOffValue;
+import org.m1theo.tinkerforge.types.PercentValue;
+import org.m1theo.tinkerforge.types.TinkerforgeValue;
+import org.m1theo.tinkerforge.types.UnDefValue;
+import org.m1theo.tinkerforge.types.UpDownValue;
 import org.openhab.binding.tinkerforge.TinkerforgeBindingProvider;
 import org.openhab.binding.tinkerforge.ecosystem.TinkerforgeContextImpl;
-import org.openhab.binding.tinkerforge.internal.config.ConfigurationHandler;
-import org.openhab.binding.tinkerforge.internal.model.ColorActor;
-import org.openhab.binding.tinkerforge.internal.model.DigitalActor;
-import org.openhab.binding.tinkerforge.internal.model.DimmableActor;
-import org.openhab.binding.tinkerforge.internal.model.Ecosystem;
-import org.openhab.binding.tinkerforge.internal.model.GenericDevice;
-import org.openhab.binding.tinkerforge.internal.model.IO4Device;
-import org.openhab.binding.tinkerforge.internal.model.IODevice;
-import org.openhab.binding.tinkerforge.internal.model.MBaseDevice;
-import org.openhab.binding.tinkerforge.internal.model.MBrickd;
-import org.openhab.binding.tinkerforge.internal.model.MDevice;
-import org.openhab.binding.tinkerforge.internal.model.MInSwitchActor;
-import org.openhab.binding.tinkerforge.internal.model.MSensor;
-import org.openhab.binding.tinkerforge.internal.model.MSubDevice;
-import org.openhab.binding.tinkerforge.internal.model.MSubDeviceHolder;
-import org.openhab.binding.tinkerforge.internal.model.MSwitchActor;
-import org.openhab.binding.tinkerforge.internal.model.MTFConfigConsumer;
-import org.openhab.binding.tinkerforge.internal.model.MTextActor;
-import org.openhab.binding.tinkerforge.internal.model.ModelFactory;
-import org.openhab.binding.tinkerforge.internal.model.ModelPackage;
-import org.openhab.binding.tinkerforge.internal.model.MoveActor;
-import org.openhab.binding.tinkerforge.internal.model.NumberActor;
-import org.openhab.binding.tinkerforge.internal.model.OHConfig;
-import org.openhab.binding.tinkerforge.internal.model.OHTFDevice;
-import org.openhab.binding.tinkerforge.internal.model.PercentTypeActor;
-import org.openhab.binding.tinkerforge.internal.model.ProgrammableColorActor;
-import org.openhab.binding.tinkerforge.internal.model.ProgrammableSwitchActor;
-import org.openhab.binding.tinkerforge.internal.model.SetPointActor;
-import org.openhab.binding.tinkerforge.internal.model.SimpleColorActor;
-import org.openhab.binding.tinkerforge.internal.model.SwitchSensor;
-import org.openhab.binding.tinkerforge.internal.model.TFConfig;
-import org.openhab.binding.tinkerforge.internal.types.DecimalValue;
-import org.openhab.binding.tinkerforge.internal.types.DirectionValue;
-import org.openhab.binding.tinkerforge.internal.types.HSBValue;
-import org.openhab.binding.tinkerforge.internal.types.HighLowValue;
-import org.openhab.binding.tinkerforge.internal.types.OnOffValue;
-import org.openhab.binding.tinkerforge.internal.types.PercentValue;
-import org.openhab.binding.tinkerforge.internal.types.TinkerforgeValue;
-import org.openhab.binding.tinkerforge.internal.types.UnDefValue;
 import org.openhab.core.binding.AbstractActiveBinding;
 import org.openhab.core.binding.BindingProvider;
 import org.openhab.core.items.Item;
@@ -687,16 +690,17 @@ public class TinkerforgeBinding extends AbstractActiveBinding<TinkerforgeBinding
                 }
             } else if (sensorValue instanceof PercentValue) {
                 if (itemType.isAssignableFrom(SwitchItem.class)) {
-                    value = ((PercentValue) sensorValue).toBigDecimal().compareTo(BigDecimal.ZERO) == 1 ? OnOffType.ON
+                    value = ((PercentValue) sensorValue).getValue().compareTo(BigDecimal.ZERO) == 1 ? OnOffType.ON
                             : OnOffType.OFF;
                     logger.debug("switch found {}", itemName);
                 } else if (itemType.isAssignableFrom(RollershutterItem.class)
                         || itemType.isAssignableFrom(DimmerItem.class)) {
-                    value = new PercentType(((PercentValue) sensorValue).toBigDecimal());
+                    value = new PercentType(((PercentValue) sensorValue).getValue());
                     logger.debug("Rollershutter or dimmer found {} {}", itemName);
                 } else if (itemType.isAssignableFrom(ContactItem.class)) {
-                    value = ((PercentValue) sensorValue).toBigDecimal().compareTo(BigDecimal.ZERO) == -1
-                            ? OpenClosedType.OPEN : OpenClosedType.CLOSED;
+                    value = ((PercentValue) sensorValue).getValue().compareTo(BigDecimal.ZERO) == -1
+                            ? OpenClosedType.OPEN
+                            : OpenClosedType.CLOSED;
                     logger.debug("contact found {}", itemName);
                 } else {
                     continue;
@@ -711,7 +715,7 @@ public class TinkerforgeBinding extends AbstractActiveBinding<TinkerforgeBinding
             } else if (sensorValue instanceof HSBValue) {
                 if (itemType.isAssignableFrom(ColorItem.class)) {
                     logger.trace("found item to update for HSBValue {}", itemName);
-                    value = ((HSBValue) sensorValue).getHsbValue();
+                    value = new HSBType(((HSBValue) sensorValue).getColor());
                 }
             } else if (sensorValue == UnDefValue.UNDEF || sensorValue == null) {
                 value = UnDefType.UNDEF;
@@ -792,19 +796,23 @@ public class TinkerforgeBinding extends AbstractActiveBinding<TinkerforgeBinding
                                 logger.debug("{} found HSBType command", LoggerConstants.COMMAND);
                                 if (mDevice instanceof ProgrammableColorActor) {
                                     logger.debug("{} found ProgrammableColorActor {}", itemName);
-                                    ((ProgrammableColorActor) mDevice).setSelectedColor((HSBType) command,
+                                    ((ProgrammableColorActor) mDevice).setSelectedColor(
+                                            new HSBValue(((HSBType) command).toColor()),
                                             provider.getDeviceOptions(itemName));
                                 } else if (mDevice instanceof SimpleColorActor) {
                                     logger.debug("{} found SimpleColorActor {}", itemName);
-                                    ((SimpleColorActor) mDevice).setSelectedColor((HSBType) command);
+                                    ((SimpleColorActor) mDevice)
+                                            .setSelectedColor(new HSBValue(((HSBType) command).toColor()));
                                 }
                             } else if (command instanceof PercentType) {
                                 if (mDevice instanceof SetPointActor) {
-                                    ((SetPointActor<?>) mDevice).setValue(((PercentType) command),
+                                    ((SetPointActor<?>) mDevice).setValue(
+                                            new PercentValue(((PercentType) command).toBigDecimal()),
                                             provider.getDeviceOptions(itemName));
                                     logger.debug("found SetpointActor");
                                 } else if (mDevice instanceof PercentTypeActor) {
-                                    ((PercentTypeActor) mDevice).setValue(((PercentType) command),
+                                    ((PercentTypeActor) mDevice).setValue(
+                                            new PercentValue(((PercentType) command).toBigDecimal()),
                                             provider.getDeviceOptions(itemName));
                                     logger.debug("found PercentType actor");
                                 } else {
@@ -824,7 +832,9 @@ public class TinkerforgeBinding extends AbstractActiveBinding<TinkerforgeBinding
                             UpDownType cmd = (UpDownType) command;
                             logger.debug("{} UpDownType command {}", itemName, cmd);
                             if (mDevice instanceof MoveActor) {
-                                ((MoveActor) mDevice).move((UpDownType) command, provider.getDeviceOptions(itemName));
+                                UpDownValue direction = (UpDownType) command == UpDownType.UP ? UpDownValue.UP
+                                        : UpDownValue.DOWN;
+                                ((MoveActor) mDevice).move(direction, provider.getDeviceOptions(itemName));
                             }
                         } else if (command instanceof StopMoveType) {
                             StopMoveType cmd = (StopMoveType) command;
@@ -839,8 +849,10 @@ public class TinkerforgeBinding extends AbstractActiveBinding<TinkerforgeBinding
                         } else if (command instanceof IncreaseDecreaseType) {
                             IncreaseDecreaseType cmd = (IncreaseDecreaseType) command;
                             if (mDevice instanceof DimmableActor) {
-                                ((DimmableActor<?>) mDevice).dimm((IncreaseDecreaseType) command,
-                                        provider.getDeviceOptions(itemName));
+                                IncreaseDecreaseValue direction = (IncreaseDecreaseType) command == IncreaseDecreaseType.INCREASE
+                                        ? IncreaseDecreaseValue.INCREASE
+                                        : IncreaseDecreaseValue.DECREASE;
+                                ((DimmableActor<?>) mDevice).dimm(direction, provider.getDeviceOptions(itemName));
                             }
                             logger.debug("{} IncreaseDecreaseType command {}", itemName, cmd);
                         }
@@ -888,7 +900,8 @@ public class TinkerforgeBinding extends AbstractActiveBinding<TinkerforgeBinding
             }
 
             ConfigurationHandler configurationHandler = new ConfigurationHandler();
-            ohConfig = configurationHandler.createConfig(config);
+            Map<String, Object> configMap = new HashMap<String, Object>();
+            ohConfig = configurationHandler.createConfig(dictionaryToMap(config, configMap));
 
             // read further config parameters here ...
             logger.debug("{} updated called", LoggerConstants.CONFIG);
@@ -897,6 +910,14 @@ public class TinkerforgeBinding extends AbstractActiveBinding<TinkerforgeBinding
             parseCfgHostsAndConnect(cfgHostsLine);
             setProperlyConfigured(true);
         }
+    }
+
+    private Map<String, ?> dictionaryToMap(Dictionary<String, ?> config, Map<String, Object> configMap) {
+        for (Enumeration<String> keys = config.keys(); keys.hasMoreElements();) {
+            String key = keys.nextElement();
+            configMap.put(key, config.get(key));
+        }
+        return configMap;
     }
 
     /**

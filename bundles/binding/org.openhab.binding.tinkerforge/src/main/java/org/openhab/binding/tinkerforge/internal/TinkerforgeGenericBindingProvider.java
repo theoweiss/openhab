@@ -8,8 +8,8 @@
  */
 package org.openhab.binding.tinkerforge.internal;
 
+import org.m1theo.tinkerforge.config.DeviceOptions;
 import org.openhab.binding.tinkerforge.TinkerforgeBindingProvider;
-import org.openhab.binding.tinkerforge.internal.config.DeviceOptions;
 import org.openhab.core.binding.BindingConfig;
 import org.openhab.core.items.Item;
 import org.openhab.model.item.binding.AbstractGenericBindingProvider;
@@ -162,17 +162,17 @@ public class TinkerforgeGenericBindingProvider extends AbstractGenericBindingPro
     /**
      * This class represents the configuration of an Item that is binded to a
      * tinkerforge device. It can hold the following information:
-     * 
+     *
      * <ul>
      * <li>The uid of the tinkerforge device.</li>
      * <li>The subid of the tinkerforge device.</li>
      * <li>The symbolic name of the tinkerforge device.</li>
      * </ul>
-     * 
+     *
      * The configuration must either declare a uid and subid (if it is a
      * tinkerforge subdevice) or a symbolic device name. The symbolic name must
      * refer to a name, which has to be configured in the openhab.cfg file.
-     * 
+     *
      * @author Theo Weiss
      * @since 1.3.0
      */

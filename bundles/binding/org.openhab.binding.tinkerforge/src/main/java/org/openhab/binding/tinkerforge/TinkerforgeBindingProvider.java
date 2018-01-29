@@ -8,7 +8,7 @@
  */
 package org.openhab.binding.tinkerforge;
 
-import org.openhab.binding.tinkerforge.internal.config.DeviceOptions;
+import org.m1theo.tinkerforge.config.DeviceOptions;
 import org.openhab.core.binding.BindingProvider;
 import org.openhab.core.items.Item;
 
@@ -25,7 +25,7 @@ import org.openhab.core.items.Item;
 public interface TinkerforgeBindingProvider extends BindingProvider {
     /**
      * Returns the uid of the tinkerforge device identified by {@code itemName}.
-     * 
+     *
      * @param itemName
      *            the name of the Item to find the tinkerforge uid for.
      * @return The uid of the device identified by {@code itemName} as String.
@@ -35,7 +35,7 @@ public interface TinkerforgeBindingProvider extends BindingProvider {
     /**
      * Returns the subid of the tinkerforge device identified by
      * {@code itemName}.
-     * 
+     *
      * @param itemName
      *            the name of the Item to find the tinkerforge subid for.
      * @return The subid of the device identified by {@code itemName} as String
@@ -47,7 +47,7 @@ public interface TinkerforgeBindingProvider extends BindingProvider {
      * Returns the name of the tinkerforge device identified by {@code itemName}
      * . The name is only available if there is a configuration entry in the
      * openhab.cfg configuration file.
-     * 
+     *
      * @param itemName
      *            the name of the Item to find the device name for.
      * @return The name of the device identified by {@code itemName} as String
@@ -57,17 +57,17 @@ public interface TinkerforgeBindingProvider extends BindingProvider {
 
     /**
      * Returns the Item identified by {@code itemName}.
-     * 
+     *
      * @param itemName
      *            the name of the Item.
      * @return The Item identified by {@code itemName}.
-     * 
+     *
      */
     public Item getItem(String itemName);
 
     /**
      * Returns the Type of the Item identified by {@code itemName}
-     * 
+     *
      * @param itemName the name of the item to find the type for
      * @return the type of the Item identified by {@code itemName}
      */

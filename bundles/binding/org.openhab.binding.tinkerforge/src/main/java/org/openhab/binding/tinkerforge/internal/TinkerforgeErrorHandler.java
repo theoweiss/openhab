@@ -8,7 +8,7 @@
  */
 package org.openhab.binding.tinkerforge.internal;
 
-import org.openhab.binding.tinkerforge.internal.model.MBaseDevice;
+import org.m1theo.tinkerforge.emf.model.MBaseDevice;
 import org.slf4j.Logger;
 
 public class TinkerforgeErrorHandler {
@@ -23,7 +23,7 @@ public class TinkerforgeErrorHandler {
 
     /**
      * Logs errors from devices using the device specific logger.
-     * 
+     *
      * @param mBaseDevice The device to log errors for as {@code MBaseDevice}.
      * @param message The log message as {@code String}.
      * @param e The throwable to log as {@code Throwable}
@@ -34,7 +34,7 @@ public class TinkerforgeErrorHandler {
 
     /**
      * Logs errors using the given logger.
-     * 
+     *
      * @param logger The logger to use as {@code Logger}.
      * @param message The message to log as {@code String}.
      * @param e The throwable to log as {@code Throwable}

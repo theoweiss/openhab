@@ -8,14 +8,14 @@
  */
 package org.openhab.binding.tinkerforge.ecosystem;
 
-import org.openhab.binding.tinkerforge.internal.model.Ecosystem;
-import org.openhab.binding.tinkerforge.internal.model.LoadCellWeight;
-import org.openhab.binding.tinkerforge.internal.model.MBaseDevice;
-import org.openhab.binding.tinkerforge.internal.model.MBrickDC;
-import org.openhab.binding.tinkerforge.internal.model.MBrickletLCD20x4;
-import org.openhab.binding.tinkerforge.internal.model.MServo;
-import org.openhab.binding.tinkerforge.internal.model.OLEDBricklet;
-import org.openhab.binding.tinkerforge.internal.model.RotaryEncoder;
+import org.m1theo.tinkerforge.emf.model.Ecosystem;
+import org.m1theo.tinkerforge.emf.model.LoadCellWeight;
+import org.m1theo.tinkerforge.emf.model.MBaseDevice;
+import org.m1theo.tinkerforge.emf.model.MBrickDC;
+import org.m1theo.tinkerforge.emf.model.MBrickletLCD20x4;
+import org.m1theo.tinkerforge.emf.model.MServo;
+import org.m1theo.tinkerforge.emf.model.OLEDBricklet;
+import org.m1theo.tinkerforge.emf.model.RotaryEncoder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
