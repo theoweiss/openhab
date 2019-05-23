@@ -901,7 +901,11 @@ public class TinkerforgeBinding extends AbstractActiveBinding<TinkerforgeBinding
 
             ConfigurationHandler configurationHandler = new ConfigurationHandler();
             Map<String, Object> configMap = new HashMap<String, Object>();
-            ohConfig = configurationHandler.createConfig(dictionaryToMap(config, configMap));
+            try {
+                ohConfig = configurationHandler.createConfig(dictionaryToMap(config, configMap));
+            } catch (org.m1theo.tinkerforge.config.ConfigurationException e) {
+                logger.error("invalid configuration", e);
+            }
 
             // read further config parameters here ...
             logger.debug("{} updated called", LoggerConstants.CONFIG);
